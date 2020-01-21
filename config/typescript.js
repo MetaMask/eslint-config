@@ -14,7 +14,7 @@ module.exports = {
     '@typescript-eslint/array-type': 'error',
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/prefer-for-of': 'off',
+    '@typescript-eslint/prefer-for-of': 'error',
     '@typescript-eslint/prefer-function-type': 'error',
     '@typescript-eslint/prefer-optional-chain': 'error',
     '@typescript-eslint/triple-slash-reference': 'error',
@@ -32,7 +32,7 @@ module.exports = {
     '@typescript-eslint/func-call-spacing': 'error',
     'func-call-spacing': 'off',
 
-    '@typescript-eslint/indent': ['error', 'error', { 'SwitchCase': 1 }],
+    '@typescript-eslint/indent': ['error', 2, { 'SwitchCase': 1 }],
     'indent': 'off',
 
     '@typescript-eslint/no-array-constructor': 'error',
@@ -41,7 +41,7 @@ module.exports = {
     '@typescript-eslint/no-empty-function': 'error',
     'no-empty-function': 'off',
 
-    '@typescript-eslint/no-extra-parens': 'off',
+    '@typescript-eslint/no-extra-parens': 'error',
     'no-extra-parens': 'off',
 
     '@typescript-eslint/no-extra-semi': 'error',

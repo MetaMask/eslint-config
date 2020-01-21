@@ -9,7 +9,7 @@ module.exports = {
     'jest/consistent-test-it': ['error', { 'fn': 'it' }],
     'jest/expect-expect': 'error',
     'jest/lowercase-name': 'error',
-    'jest/no-alias-methods': 'off',
+    'jest/no-alias-methods': 'error',
     'jest/no-commented-out-tests': 'error',
     'jest/no-disabled-tests': 'error',
     'jest/no-duplicate-hooks': 'error',
