@@ -11,64 +11,64 @@ module.exports = {
   ],
   rules: {
     // Rules from @typescript-eslint/eslint-plugin
-    '@typescript-eslint/array-type': 2,
-    '@typescript-eslint/consistent-type-definitions': [2, 'type'],
-    '@typescript-eslint/no-explicit-any': 0,
-    '@typescript-eslint/prefer-for-of': 0,
-    '@typescript-eslint/prefer-function-type': 2,
-    '@typescript-eslint/prefer-optional-chain': 2,
-    '@typescript-eslint/triple-slash-reference': 2,
-    '@typescript-eslint/type-annotation-spacing': 2,
-    '@typescript-eslint/typedef': 0,
-    '@typescript-eslint/unified-signatures': 2,
+    '@typescript-eslint/array-type': 'error',
+    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/prefer-for-of': 'off',
+    '@typescript-eslint/prefer-function-type': 'error',
+    '@typescript-eslint/prefer-optional-chain': 'error',
+    '@typescript-eslint/triple-slash-reference': 'error',
+    '@typescript-eslint/type-annotation-spacing': 'error',
+    '@typescript-eslint/typedef': 'off',
+    '@typescript-eslint/unified-signatures': 'error',
 
     // "Extension Rules" from @typescript-eslint/eslint-plugin
-    '@typescript-eslint/brace-style': 2,
-    'brace-style': 0,
+    '@typescript-eslint/brace-style': 'error',
+    'brace-style': 'off',
 
-    '@typescript-eslint/default-param-last': 2,
-    'default-param-last': 0,
+    '@typescript-eslint/default-param-last': 'error',
+    'default-param-last': 'off',
 
-    '@typescript-eslint/func-call-spacing': 2,
-    'func-call-spacing': 0,
+    '@typescript-eslint/func-call-spacing': 'error',
+    'func-call-spacing': 'off',
 
-    '@typescript-eslint/indent': [2, 2, { 'SwitchCase': 1 }],
-    'indent': 0,
+    '@typescript-eslint/indent': ['error', 'error', { 'SwitchCase': 1 }],
+    'indent': 'off',
 
-    '@typescript-eslint/no-array-constructor': 2,
-    'no-array-constructor': 0,
+    '@typescript-eslint/no-array-constructor': 'error',
+    'no-array-constructor': 'off',
 
-    '@typescript-eslint/no-empty-function': 2,
-    'no-empty-function': 0,
+    '@typescript-eslint/no-empty-function': 'error',
+    'no-empty-function': 'off',
 
-    '@typescript-eslint/no-extra-parens': 0,
-    'no-extra-parens': 0,
+    '@typescript-eslint/no-extra-parens': 'off',
+    'no-extra-parens': 'off',
 
-    '@typescript-eslint/no-extra-semi': 2,
-    'no-extra-semi': 0,
+    '@typescript-eslint/no-extra-semi': 'error',
+    'no-extra-semi': 'off',
 
-    '@typescript-eslint/no-magic-numbers': 0,
-    'no-magic-numbers': 0,
+    '@typescript-eslint/no-magic-numbers': 'off',
+    'no-magic-numbers': 'off',
 
-    '@typescript-eslint/no-unused-expressions': [2, { 'allowShortCircuit': true, 'allowTernary': true }],
-    'no-unused-expressions': 0,
+    '@typescript-eslint/no-unused-expressions': ['error', { 'allowShortCircuit': true, 'allowTernary': true }],
+    'no-unused-expressions': 'off',
 
-    '@typescript-eslint/no-unused-vars': [2, { 'vars': 'all', 'args': 'all', 'argsIgnorePattern': '[_]+' }],
-    'no-unused-vars': 0,
+    '@typescript-eslint/no-unused-vars': ['error', { 'vars': 'all', 'args': 'all', 'argsIgnorePattern': '[_]+' }],
+    'no-unused-vars': 'off',
 
-    '@typescript-eslint/no-use-before-define': [2, { 'functions': false }],
-    'no-use-before-define': 0,
+    '@typescript-eslint/no-use-before-define': ['error', { 'functions': false }],
+    'no-use-before-define': 'off',
 
-    '@typescript-eslint/no-useless-constructor': 2,
-    'no-useless-constructor': 0,
+    '@typescript-eslint/no-useless-constructor': 'error',
+    'no-useless-constructor': 'off',
 
-    '@typescript-eslint/quotes': [2, 'single', { 'avoidEscape': true, 'allowTemplateLiterals': true }],
-    'quotes': 0,
+    '@typescript-eslint/quotes': ['error', 'single', { 'avoidEscape': true, 'allowTemplateLiterals': true }],
+    'quotes': 'off',
 
-    '@typescript-eslint/semi': [2, 'always'],
-    'semi': 0,
+    '@typescript-eslint/semi': ['error', 'always'],
+    'semi': 'off',
 
-    '@typescript-eslint/space-before-function-paren': [2, 'always'],
-    'space-before-function-paren': 0,
+    '@typescript-eslint/space-before-function-paren': ['error', 'always'],
+    'space-before-function-paren': 'off',
   },
 }
