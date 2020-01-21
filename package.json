@@ -7,6 +7,9 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
+  "files": [
+    "config/"
+  ],
   "scripts": {
     "test": "eslint ."
   },
