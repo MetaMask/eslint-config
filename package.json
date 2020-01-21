@@ -8,7 +8,7 @@
     "access": "public"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\""
+    "test": "eslint ."
   },
   "repository": {
     "type": "git",
