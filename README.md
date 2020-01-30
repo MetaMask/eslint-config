@@ -11,10 +11,10 @@ We export four ESLint configurations.
 Our default export contains a base set of ESLint rules for ES6+:
 
 ```bash
-yarn add --dev eslint @metamask/eslint-config`
+yarn add --dev eslint @metamask/eslint-config
 ```
 
-List `@metamask/eslint-config` in your ESLint `extends`:
+List `@metamask/eslint-config` to your ESLint config via `extends`:
 
 ```js
 module.exports = {
@@ -60,7 +60,7 @@ module.exports = {
 
 ### TypeScript
 
-An additional config that adds support for Jest:
+An additional config that adds support for TypeScript:
 
 ```bash
 yarn add --dev \
