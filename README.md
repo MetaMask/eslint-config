@@ -44,7 +44,7 @@ To lint the `.eslintrc.js` file itself, you will **need** to add this config in 
 An additional config that adds support for Jest:
 
 ```bash
-yarn add --dev eslint @metamask/eslint-config eslint-plugin-jest`
+yarn add --dev eslint @metamask/eslint-config eslint-plugin-jest
 ```
 
 ```js
