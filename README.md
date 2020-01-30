@@ -1,7 +1,5 @@
 # `@metamask/eslint-config`
 
-[![MetaMask](https://circleci.com/gh/MetaMask/eslint-config/tree/master.svg?style=svg)](https://circleci.com/gh/MetaMask/eslint-config/tree/master)
-
 This package provides MetaMask's ESLint configuration as an extensible shared config.
 
 ## Usage
