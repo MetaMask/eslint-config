@@ -57,6 +57,26 @@ module.exports = {
 }
 ```
 
+### Mocha
+
+An additional config that adds support for Mocha:
+
+```bash
+yarn add --dev eslint @metamask/eslint-config eslint-plugin-mocha
+```
+
+```js
+module.exports = {
+  root: true,
+  extends: [
+    '@metamask/eslint-config',
+    '@metamask/eslint-config/config/mocha',
+  ],
+}
+```
+
+If your project has `prefer-arrow-callback` you will need to disable that and replace it with `mocha/prefer-arrow-callback`.
+
 ### TypeScript
 
 An additional config that adds support for TypeScript:
