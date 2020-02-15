@@ -6,6 +6,7 @@ module.exports = {
   rules: {
     'accessor-pairs': 'error',
     'arrow-spacing': ['error', { 'before': true, 'after': true }],
+    'arrow-parens': 'error',
     'block-spacing': ['error', 'always'],
     'brace-style': 'error',
     'camelcase': ['error', { 'properties': 'never', 'allow': ['^UNSAFE_'] }],
