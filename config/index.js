@@ -60,6 +60,7 @@ module.exports = {
     'no-label-var': 'error',
     'no-labels': ['error', { 'allowLoop': false, 'allowSwitch': false }],
     'no-lone-blocks': 'error',
+    'no-mixed-operators': 'error',
     'no-mixed-spaces-and-tabs': 'error',
     'no-multi-spaces': 'error',
     'no-multi-str': 'error',
