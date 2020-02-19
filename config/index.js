@@ -275,7 +275,7 @@ module.exports = {
     'switch-colon-spacing': 'error',
     'symbol-description': 'error',
     'template-curly-spacing': ['error', 'never'],
-    'template-tag-spacing': ['error', 'never'],
+    'template-tag-spacing': 'error',
     'unicode-bom': 'error',
     'use-isnan': 'error',
     'valid-jsdoc': 'off', // Deprecated in ESLint v5.10.0
