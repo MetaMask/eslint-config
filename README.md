@@ -11,7 +11,7 @@ We export four ESLint configurations.
 Our default export contains a base set of ESLint rules for ES6+:
 
 ```bash
-yarn add --dev eslint @metamask/eslint-config
+yarn add --dev eslint @metamask/eslint-config eslint-plugin-import
 ```
 
 List `@metamask/eslint-config` to your ESLint config via `extends`:
