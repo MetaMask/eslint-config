@@ -175,7 +175,7 @@ module.exports = {
     'no-restricted-properties': 'off',
     'no-restricted-syntax': 'off',
     'no-return-assign': ['error', 'except-parens'],
-    'no-return-await': 'error',
+    'no-return-await': 'off', // See https://gist.github.com/Gudahtt/618b89f40164af323e08bbdbd17a1769#gistcomment-3182478
     'no-script-url': 'error',
     'no-self-assign': 'error',
     'no-self-compare': 'error',
