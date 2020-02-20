@@ -11,7 +11,7 @@ module.exports = {
 
   rules: {
     'mocha/handle-done-callback': 'error',
-    'mocha/max-top-level-suites': [ 'error', { limit: 1 } ],
+    'mocha/max-top-level-suites': ['error', { limit: 1 }],
     'mocha/no-async-describe': 'error',
     'mocha/no-exclusive-tests': 'error',
     'mocha/no-global-tests': 'error',
@@ -32,13 +32,13 @@ module.exports = {
     'mocha/valid-suite-description': [
       'error',
       simpleTestNameRegex,
-      [ 'describe', 'context', 'suite' ],
+      ['describe', 'context', 'suite'],
       'Invalid test suite description found',
     ],
     'mocha/valid-test-description': [
       'error',
       simpleTestNameRegex,
-      [ 'it', 'test', 'specify' ],
+      ['it', 'test', 'specify'],
       'Invalid test description found',
     ],
   },
