@@ -126,7 +126,7 @@ module.exports = {
     '@typescript-eslint/no-empty-function': 'error',
     'no-empty-function': 'off',
 
-    '@typescript-eslint/no-extra-parens': 'error',
+    '@typescript-eslint/no-extra-parens': 'off',
     'no-extra-parens': 'off',
 
     '@typescript-eslint/no-extra-semi': 'error',
