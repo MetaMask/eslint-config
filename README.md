@@ -44,7 +44,7 @@ To lint the `.eslintrc.js` file itself, you will **need** to add this config in 
 An additional config that adds support for Jest:
 
 ```bash
-yarn add --dev eslint @metamask/eslint-config eslint-plugin-jest
+yarn add --dev eslint @metamask/eslint-config eslint-plugin-{import,jest}
 ```
 
 ```js
@@ -62,7 +62,7 @@ module.exports = {
 An additional config that adds support for Mocha:
 
 ```bash
-yarn add --dev eslint @metamask/eslint-config eslint-plugin-mocha
+yarn add --dev eslint @metamask/eslint-config eslint-plugin-{import,mocha}
 ```
 
 ```js
@@ -85,6 +85,7 @@ An additional config that adds support for TypeScript:
 yarn add --dev \
   eslint \
   @metamask/eslint-config \
+  eslint-plugin-import \
   @typescript-eslint/eslint-plugin \
   @typescript-eslint/parser
 ```
