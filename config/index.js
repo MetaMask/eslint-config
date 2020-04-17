@@ -257,7 +257,7 @@ module.exports = {
     'quotes': ['error', 'single', { 'avoidEscape': true, 'allowTemplateLiterals': true }],
     'radix': 'error',
     'require-atomic-updates': 'error',
-    'require-await': 'error',
+    'require-await': 'off',
     'require-jsdoc': 'off', // Deprecated in ESLint v5.10.0
     'require-unicode-regexp': 'error',
     'require-yield': 'error',
