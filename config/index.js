@@ -165,7 +165,7 @@ module.exports = {
     'no-octal-escape': 'error',
     'no-param-reassign': 'error',
     'no-path-concat': 'error',
-    'no-plusplus': ['error', { "allowForLoopAfterthoughts": true }],
+    'no-plusplus': ['error', { 'allowForLoopAfterthoughts': true }],
     'no-process-env': 'off',
     'no-process-exit': 'error',
     'no-proto': 'error',
