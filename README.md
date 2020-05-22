@@ -11,7 +11,10 @@ We export four ESLint configurations.
 Our default export contains a base set of ESLint rules for ES6+:
 
 ```bash
-yarn add --dev eslint @metamask/eslint-config eslint-plugin-import
+yarn add --dev \
+    eslint@^6.8.0 \
+    eslint-plugin-import@^2.20.1 \
+    @metamask/eslint-config@^2.0.0
 ```
 
 List `@metamask/eslint-config` to your ESLint config via `extends`:
@@ -44,7 +47,11 @@ To lint the `.eslintrc.js` file itself, you will **need** to add this config in 
 An additional config that adds support for Jest:
 
 ```bash
-yarn add --dev eslint @metamask/eslint-config eslint-plugin-{import,jest}
+yarn add --dev \
+    eslint@^6.8.0 \
+    eslint-plugin-import@^2.20.1 \
+    eslint-plugin-jest@^23.6.0 \
+    @metamask/eslint-config@^2.0.0
 ```
 
 ```js
@@ -62,7 +69,11 @@ module.exports = {
 An additional config that adds support for Mocha:
 
 ```bash
-yarn add --dev eslint @metamask/eslint-config eslint-plugin-{import,mocha}
+yarn add --dev \
+    eslint@^6.8.0 \
+    eslint-plugin-import@^2.20.1 \
+    eslint-plugin-mocha@^6.2.2 \
+    @metamask/eslint-config@^2.0.0
 ```
 
 ```js
@@ -83,11 +94,11 @@ An additional config that adds support for TypeScript:
 
 ```bash
 yarn add --dev \
-  eslint \
-  @metamask/eslint-config \
-  eslint-plugin-import \
-  @typescript-eslint/eslint-plugin \
-  @typescript-eslint/parser
+    eslint@^6.8.0 \
+    eslint-plugin-import@^2.20.1 \
+    @typescript-eslint/eslint-plugin@^2.20.0 \
+    @typescript-eslint/parser@^2.17.0 \
+    @metamask/eslint-config@^2.0.0
 ```
 
 ```js
