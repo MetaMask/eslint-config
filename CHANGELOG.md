@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.2.0] - 2020-07-14
+
+## Changed
+
+- Relax no-plusplus rule (#44)
+
 ## [2.1.1] - 2020-04-17
 
 ## Changed
@@ -54,6 +60,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Add base, TypeScript, and Jest configs (#3)
 
 [Unreleased]: https://github.com/MetaMask/eslint-config/compare/v2.1.1...HEAD
+[2.2.0]:https://github.com/MetaMask/eslint-config/compare/v2.1.1...v2.2.0
 [2.1.1]:https://github.com/MetaMask/eslint-config/compare/v2.1.0...v2.1.1
 [2.1.0]:https://github.com/MetaMask/eslint-config/compare/v2.0.0...v2.1.0
 [2.0.0]:https://github.com/MetaMask/eslint-config/compare/v1.2.0...v2.0.0
