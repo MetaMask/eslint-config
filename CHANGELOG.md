@@ -6,21 +6,28 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [2.3.0] - 2020-08-11
+
+### Changed
+
+- Disallow all anonymous default exports (#52)
+- Set maximum empty lines to 1 (#51)
+
 ## [2.2.0] - 2020-07-14
 
-## Changed
+### Changed
 
 - Relax no-plusplus rule (#44)
 
 ## [2.1.1] - 2020-04-17
 
-## Changed
+### Changed
 
 - Disable `require-await` (#37)
 
 ## [2.1.0] - 2020-02-24
 
-## Changed
+### Changed
 
 - Disable `@typescript-eslint/no-extra-parens` (#29)
 
