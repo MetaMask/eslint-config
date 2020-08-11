@@ -246,7 +246,7 @@ module.exports = {
     'prefer-exponentiation-operator': 'off',
     'prefer-named-capture-group': 'off',
     'prefer-numeric-literals': 'error',
-    'prefer-object-spread': 'error',
+    'prefer-object-spread': 'off', // Requires ES2018
     'prefer-promise-reject-errors': 'error',
     'prefer-reflect': 'off', // Deprecated in ESLint v3.9.0
     'prefer-regex-literals': 'error',
