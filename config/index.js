@@ -149,7 +149,7 @@ module.exports = {
     'no-multi-assign': 'error',
     'no-multi-spaces': 'error',
     'no-multi-str': 'error',
-    'no-multiple-empty-lines': ['error', { 'max': 2 }],
+    'no-multiple-empty-lines': ['error', { 'max': 1 }],
     'no-native-reassign': 'error',
     'no-negated-condition': 'error',
     'no-negated-in-lhs': 'error',
