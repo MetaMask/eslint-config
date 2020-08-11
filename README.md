@@ -14,7 +14,7 @@ Our default export contains a base set of ESLint rules for ES6+:
 yarn add --dev \
     eslint@^6.8.0 \
     eslint-plugin-import@^2.20.1 \
-    @metamask/eslint-config@^2.0.0
+    @metamask/eslint-config@^3.0.0
 ```
 
 List `@metamask/eslint-config` to your ESLint config via `extends`:
@@ -51,7 +51,7 @@ yarn add --dev \
     eslint@^6.8.0 \
     eslint-plugin-import@^2.20.1 \
     eslint-plugin-jest@^23.6.0 \
-    @metamask/eslint-config@^2.0.0
+    @metamask/eslint-config@^3.0.0
 ```
 
 ```js
@@ -73,7 +73,7 @@ yarn add --dev \
     eslint@^6.8.0 \
     eslint-plugin-import@^2.20.1 \
     eslint-plugin-mocha@^6.2.2 \
-    @metamask/eslint-config@^2.0.0
+    @metamask/eslint-config@^3.0.0
 ```
 
 ```js
@@ -98,7 +98,7 @@ yarn add --dev \
     eslint-plugin-import@^2.20.1 \
     @typescript-eslint/eslint-plugin@^2.20.0 \
     @typescript-eslint/parser@^2.17.0 \
-    @metamask/eslint-config@^2.0.0
+    @metamask/eslint-config@^3.0.0
 ```
 
 ```js
