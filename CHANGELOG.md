@@ -6,21 +6,28 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [3.0.0] - 2020-08-11
+
+### Changed
+
+- Disallow all anonymous default exports (#52)
+- Set maximum empty lines to 1 (#51)
+
 ## [2.2.0] - 2020-07-14
 
-## Changed
+### Changed
 
 - Relax no-plusplus rule (#44)
 
 ## [2.1.1] - 2020-04-17
 
-## Changed
+### Changed
 
 - Disable `require-await` (#37)
 
 ## [2.1.0] - 2020-02-24
 
-## Changed
+### Changed
 
 - Disable `@typescript-eslint/no-extra-parens` (#29)
 
@@ -59,7 +66,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Add base, TypeScript, and Jest configs (#3)
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v2.2.0...HEAD
+[Unreleased]:https://github.com/MetaMask/eslint-config/compare/v3.0.0...HEAD
+[3.0.0]:https://github.com/MetaMask/eslint-config/compare/v2.2.0...v3.0.0
 [2.2.0]:https://github.com/MetaMask/eslint-config/compare/v2.1.1...v2.2.0
 [2.1.1]:https://github.com/MetaMask/eslint-config/compare/v2.1.0...v2.1.1
 [2.1.0]:https://github.com/MetaMask/eslint-config/compare/v2.0.0...v2.1.0
