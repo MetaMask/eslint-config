@@ -242,7 +242,22 @@ module.exports = {
     ],
     'prefer-arrow-callback': 'off',
     'prefer-const': 'error',
-    'prefer-destructuring': 'error',
+    'prefer-destructuring': [
+      'error',
+      {
+        'VariableDeclarator': {
+          'array': false,
+          'object': true,
+        },
+        'AssignmentExpression': {
+          'array': false,
+          'object': false,
+        },
+      },
+      {
+        'enforceForRenamedProperties': false,
+      },
+    ],
     'prefer-exponentiation-operator': 'off',
     'prefer-named-capture-group': 'off',
     'prefer-numeric-literals': 'error',
