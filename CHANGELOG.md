@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-## [3.0.1] - 2020-08-19
+## [3.1.0] - 2020-08-19
 
 ### Changed
 
@@ -72,8 +72,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Add base, TypeScript, and Jest configs (#3)
 
-[Unreleased]:https://github.com/MetaMask/eslint-config/compare/v3.0.1...HEAD
-[3.0.1]:https://github.com/MetaMask/eslint-config/compare/v3.0.0...v3.0.1
+[Unreleased]:https://github.com/MetaMask/eslint-config/compare/v3.1.0...HEAD
+[3.1.0]:https://github.com/MetaMask/eslint-config/compare/v3.0.0...v3.1.0
 [3.0.0]:https://github.com/MetaMask/eslint-config/compare/v2.2.0...v3.0.0
 [2.2.0]:https://github.com/MetaMask/eslint-config/compare/v2.1.1...v2.2.0
 [2.1.1]:https://github.com/MetaMask/eslint-config/compare/v2.1.0...v2.1.1
