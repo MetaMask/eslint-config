@@ -18,7 +18,7 @@ module.exports = {
     'block-scoped-var': 'error',
     'block-spacing': ['error', 'always'],
     'brace-style': 'error',
-    'callback-return': 'error',
+    'callback-return': 'off', // Deprecated in ESLint v7.0.0
     'camelcase': ['error', { 'properties': 'never', 'allow': ['^UNSAFE_'] }],
     'capitalized-comments': 'off',
     'class-methods-use-this': 'off',
@@ -46,10 +46,10 @@ module.exports = {
     'function-paren-newline': ['error', 'consistent'],
     'generator-star-spacing': ['error', { 'before': true, 'after': true }],
     'getter-return': 'error',
-    'global-require': 'error',
+    'global-require': 'off',
     'grouped-accessor-pairs': 'error',
     'guard-for-in': 'error',
-    'handle-callback-err': ['error', '^(err|error)$'],
+    'handle-callback-err': 'off', // Deprecated in ESLint v7.0.0
     'id-blacklist': 'off',
     'id-length': 'off',
     'id-match': 'off',
@@ -144,7 +144,7 @@ module.exports = {
     'no-magic-numbers': 'off',
     'no-misleading-character-class': 'error',
     'no-mixed-operators': 'error',
-    'no-mixed-requires': 'error',
+    'no-mixed-requires': 'off', // Deprecated in ESLint v7.0.0
     'no-mixed-spaces-and-tabs': 'error',
     'no-multi-assign': 'error',
     'no-multi-spaces': 'error',
@@ -157,24 +157,24 @@ module.exports = {
     'no-new': 'error',
     'no-new-func': 'error',
     'no-new-object': 'error',
-    'no-new-require': 'error',
+    'no-new-require': 'off', // Deprecated in ESLint v7.0.0
     'no-new-symbol': 'error',
     'no-new-wrappers': 'error',
     'no-obj-calls': 'error',
     'no-octal': 'error',
     'no-octal-escape': 'error',
     'no-param-reassign': 'error',
-    'no-path-concat': 'error',
+    'no-path-concat': 'off', // Deprecated in ESLint v7.0.0
     'no-plusplus': ['error', { 'allowForLoopAfterthoughts': true }],
-    'no-process-env': 'off',
-    'no-process-exit': 'error',
+    'no-process-env': 'off', // Deprecated in ESLint v7.0.0
+    'no-process-exit': 'off', // Deprecated in ESLint v7.0.0
     'no-proto': 'error',
     'no-prototype-builtins': 'error',
     'no-redeclare': 'error',
     'no-regex-spaces': 'error',
     'no-restricted-globals': ['error', 'event'],
     'no-restricted-imports': 'off',
-    'no-restricted-modules': 'off',
+    'no-restricted-modules': 'off', // Deprecated in ESLint v7.0.0
     'no-restricted-properties': 'off',
     'no-restricted-syntax': 'off',
     'no-return-assign': ['error', 'except-parens'],
@@ -188,7 +188,7 @@ module.exports = {
     'no-shadow-restricted-names': 'error',
     'no-spaced-func': 'error',
     'no-sparse-arrays': 'error',
-    'no-sync': 'off',
+    'no-sync': 'off', // Deprecated in ESLint v7.0.0
     'no-tabs': 'error',
     'no-template-curly-in-string': 'error',
     'no-ternary': 'off',
