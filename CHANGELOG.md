@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [4.0.0] - 2020-10-20
+
+### Changed
+
+- **Breaking**: Update to ESLint v7 (#46, #58, #62, #63)
+- Relax `member-delimiter-style` for TypeScript ([#68](https://github.com/MetaMask/eslint-config/pull/68))
+- Disable `space-before-function-paren` for TypeScript ([#65](https://github.com/MetaMask/eslint-config/pull/65))
+
 ## [3.2.0] - 2020-08-20
 
 ### Changed
@@ -78,7 +86,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Add base, TypeScript, and Jest configs (#3)
 
-[Unreleased]:https://github.com/MetaMask/eslint-config/compare/v3.2.0...HEAD
+[Unreleased]:https://github.com/MetaMask/eslint-config/compare/v4.0.0...HEAD
+[4.0.0]:https://github.com/MetaMask/eslint-config/compare/v3.2.0...v4.0.0
 [3.2.0]:https://github.com/MetaMask/eslint-config/compare/v3.1.0...v3.2.0
 [3.1.0]:https://github.com/MetaMask/eslint-config/compare/v3.0.0...v3.1.0
 [3.0.0]:https://github.com/MetaMask/eslint-config/compare/v2.2.0...v3.0.0
