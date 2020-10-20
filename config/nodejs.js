@@ -32,7 +32,7 @@ module.exports = {
     // Stylistic rules
     'node/callback-return': 'error',
     'node/exports-style': 'error',
-    'node/file-extension-in-import': 'error',
+    'node/file-extension-in-import': 'off',
     'node/global-require': 'error',
     'node/no-mixed-requires': 'error',
     'node/no-process-env': 'error',
