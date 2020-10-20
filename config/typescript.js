@@ -157,7 +157,14 @@ module.exports = {
     '@typescript-eslint/semi': ['error', 'always'],
     'semi': 'off',
 
-    '@typescript-eslint/space-before-function-paren': ['error', 'always'],
+    '@typescript-eslint/space-before-function-paren': [
+      'error',
+      {
+        'anonymous': 'always',
+        'named': 'never',
+        'asyncArrow': 'always',
+      },
+    ],
     'space-before-function-paren': 'off',
   },
 }
