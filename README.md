@@ -31,6 +31,14 @@ module.exports = {
 
 An additional config that supports Node.js-specific environments:
 
+```bash
+yarn add --dev \
+    eslint@^7.7.0 \
+    eslint-plugin-import@^2.22.0 \
+    eslint-plugin-node@^11.1.0 \
+    @metamask/eslint-config@^4.0.0
+```
+
 ```js
 module.exports = {
   extends: [
