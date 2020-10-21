@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [4.1.0] - 2020-10-21
+
+### Changed
+
+- Disable `node/no-missing-import` ([#75](https://github.com/MetaMask/eslint-config/pull/75))
+- Disable `node/no-missing-require` ([#75](https://github.com/MetaMask/eslint-config/pull/75))
+
 ## [4.0.0] - 2020-10-20
 
 ### Changed
@@ -86,7 +93,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Add base, TypeScript, and Jest configs (#3)
 
-[Unreleased]:https://github.com/MetaMask/eslint-config/compare/v4.0.0...HEAD
+[Unreleased]:https://github.com/MetaMask/eslint-config/compare/v4.1.0...HEAD
+[4.1.0]:https://github.com/MetaMask/eslint-config/compare/v4.0.0...v4.1.0
 [4.0.0]:https://github.com/MetaMask/eslint-config/compare/v3.2.0...v4.0.0
 [3.2.0]:https://github.com/MetaMask/eslint-config/compare/v3.1.0...v3.2.0
 [3.1.0]:https://github.com/MetaMask/eslint-config/compare/v3.0.0...v3.1.0
