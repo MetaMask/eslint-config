@@ -12,8 +12,8 @@ module.exports = {
     'node/no-exports-assign': 'error',
     'node/no-extraneous-import': 'error',
     'node/no-extraneous-require': 'error',
-    'node/no-missing-import': 'error',
-    'node/no-missing-require': 'error',
+    'node/no-missing-import': 'off', // Duplicates `import/no-unresolved`
+    'node/no-missing-require': 'off', // Duplicates `import/no-unresolved`
     'node/no-new-require': 'error',
     'node/no-path-concat': 'error',
     'node/no-process-exit': 'error',
