@@ -60,7 +60,7 @@ module.exports = {
     'key-spacing': 'error',
     'keyword-spacing': ['error', { 'before': true, 'after': true }],
     'line-comment-position': 'off',
-    'linebreak-style': 'error',
+    'linebreak-style': ['error', 'unix'],
     'lines-around-comment': 'error',
     'lines-around-directive': 'off', // Deprecated in in ESLint v4.0.0
     'lines-between-class-members': 'error',
