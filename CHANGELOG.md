@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [5.0.0] - 2021-02-02
+
+### Changed
+
+- **(SEMVER-MAJOR)** Enable `semi` in base config ([#101](https://github.com/MetaMask/eslint-config/pull/101))
+  - This may just be fixable with `eslint . --fix`, but we consider it breaking because it's a major stylistic change.
+- Disallow spaces before parentheses of named functions ([#101](https://github.com/MetaMask/eslint-config/pull/101))
+
 ## [4.1.0] - 2020-10-21
 
 ### Changed
@@ -17,7 +25,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
-- **Breaking**: Update to ESLint v7 (#46, #58, #62, #63)
+- **(SEMVER-MAJOR)** Update to ESLint v7 (#46, #58, #62, #63)
 - Relax `member-delimiter-style` for TypeScript ([#68](https://github.com/MetaMask/eslint-config/pull/68))
 - Disable `space-before-function-paren` for TypeScript ([#65](https://github.com/MetaMask/eslint-config/pull/65))
 
@@ -93,7 +101,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Add base, TypeScript, and Jest configs (#3)
 
-[Unreleased]:https://github.com/MetaMask/eslint-config/compare/v4.1.0...HEAD
+[Unreleased]:https://github.com/MetaMask/eslint-config/compare/v5.0.0...HEAD
+[5.0.0]:https://github.com/MetaMask/eslint-config/compare/v4.1.0...v5.0.0
 [4.1.0]:https://github.com/MetaMask/eslint-config/compare/v4.0.0...v4.1.0
 [4.0.0]:https://github.com/MetaMask/eslint-config/compare/v3.2.0...v4.0.0
 [3.2.0]:https://github.com/MetaMask/eslint-config/compare/v3.1.0...v3.2.0
