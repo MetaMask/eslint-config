@@ -4,4 +4,4 @@ module.exports = {
     './config/index.js',
     './config/nodejs.js',
   ],
-}
+};
