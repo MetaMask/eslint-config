@@ -277,22 +277,21 @@ module.exports = {
     'require-unicode-regexp': 'error',
     'require-yield': 'error',
     'rest-spread-spacing': 'error',
-    'semi': ['error', 'always'],	
+    'semi': ['error', 'always'],
     'semi-spacing': ['error', { 'before': false, 'after': true }],
     'semi-style': 'error',
     'sort-imports': 'off',
     'sort-keys': 'off',
     'sort-vars': 'off',
     'space-before-blocks': ['error', 'always'],
-    'space-before-function-paren': [	
-        'error',	
-        {	
-          anonymous: 'always',	
-          asyncArrow: 'always',	
-          named: 'never',	
-        },	
-      ],	
-    },
+    'space-before-function-paren': [
+      'error',
+      {
+        anonymous: 'always',
+        asyncArrow: 'always',
+        named: 'never',
+      },
+    ],
     'space-in-parens': ['error', 'never'],
     'space-infix-ops': 'error',
     'space-unary-ops': ['error', { 'words': true, 'nonwords': false }],
@@ -353,4 +352,4 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'import/unambiguous': 'error',
   },
-}
+};
