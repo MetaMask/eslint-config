@@ -278,7 +278,7 @@ module.exports = {
     'require-yield': 'error',
     'rest-spread-spacing': 'error',
     'semi': ['error', 'always'],	
-    'semi-spacing': ['error', { before: false, after: true }],
+    'semi-spacing': ['error', { 'before': false, 'after': true }],
     'semi-style': 'error',
     'sort-imports': 'off',
     'sort-keys': 'off',
