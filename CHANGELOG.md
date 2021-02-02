@@ -11,8 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - **(SEMVER-MAJOR)** Enable `semi` in base config ([#101](https://github.com/MetaMask/eslint-config/pull/101))
-  - This may just be fixable with `eslint . --fix`, but we consider it breaking because it's a major stylistic change.
-- Disallow spaces before parentheses of named functions ([#101](https://github.com/MetaMask/eslint-config/pull/101))
+- **(SEMVER-MAJOR)** Disallow spaces before parentheses of named functions ([#101](https://github.com/MetaMask/eslint-config/pull/101))
 
 ## [4.1.0] - 2020-10-21
 
