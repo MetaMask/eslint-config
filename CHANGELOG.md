@@ -13,6 +13,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - **(SEMVER-MAJOR)** Enable `semi` in base config ([#101](https://github.com/MetaMask/eslint-config/pull/101))
 - **(SEMVER-MAJOR)** Disallow spaces before parentheses of named functions ([#101](https://github.com/MetaMask/eslint-config/pull/101))
 
+### Fixed
+
+- Update `jest` config to account for breaking changes in `eslint-plugin-jest@^24.0.0` ([#90](https://github.com/MetaMask/eslint-config/pull/90))
+
 ## [4.1.0] - 2020-10-21
 
 ### Changed
