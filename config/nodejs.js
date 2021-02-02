@@ -49,4 +49,4 @@ module.exports = {
     'node/prefer-promises/dns': 'error',
     'node/prefer-promises/fs': 'error',
   },
-}
+};

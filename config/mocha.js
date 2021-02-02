@@ -1,4 +1,4 @@
-const simpleTestNameRegex = '^[#_]{0,2}[A-Za-z0-9]'
+const simpleTestNameRegex = '^[#_]{0,2}[A-Za-z0-9]';
 
 module.exports = {
   plugins: [
@@ -42,4 +42,4 @@ module.exports = {
       'Invalid test description found',
     ],
   },
-}
+};
