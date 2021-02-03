@@ -10,9 +10,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
-- **(SEMVER-MAJOR)** Enable `semi` in base config ([#101](https://github.com/MetaMask/eslint-config/pull/101))
-- **(SEMVER-MAJOR)** Disallow spaces before parentheses of named functions ([#101](https://github.com/MetaMask/eslint-config/pull/101))
-- **(SEMVER-MAJOR)** Upgrade to TypeScript v4 and corresponding `@typescript-eslint` dependencies ([#79](https://github.com/MetaMask/eslint-config/pull/79), [#80](https://github.com/MetaMask/eslint-config/pull/80), [#103](https://github.com/MetaMask/eslint-config/pull/103))
+- **BREAKING:** Enable `semi` in base config ([#101](https://github.com/MetaMask/eslint-config/pull/101))
+- **BREAKING:** Disallow spaces before parentheses of named functions ([#101](https://github.com/MetaMask/eslint-config/pull/101))
+- **BREAKING:** Upgrade to TypeScript v4 and corresponding `@typescript-eslint` dependencies ([#79](https://github.com/MetaMask/eslint-config/pull/79), [#80](https://github.com/MetaMask/eslint-config/pull/80), [#103](https://github.com/MetaMask/eslint-config/pull/103))
 
 ## [4.1.0] - 2020-10-21
 
@@ -25,7 +25,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
-- **(SEMVER-MAJOR)** Update to ESLint v7 (#46, #58, #62, #63)
+- **BREAKING:** Update to ESLint v7 (#46, #58, #62, #63)
 - Relax `member-delimiter-style` for TypeScript ([#68](https://github.com/MetaMask/eslint-config/pull/68))
 - Disable `space-before-function-paren` for TypeScript ([#65](https://github.com/MetaMask/eslint-config/pull/65))
 
