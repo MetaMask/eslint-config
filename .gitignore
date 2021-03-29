@@ -2,6 +2,7 @@
 *.har
 dist/
 build-artifacts/
+./packages/**/yarn.lock
 
 # Logs
 logs
