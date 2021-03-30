@@ -1,6 +1,10 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "lint": "yarn eslint . --ext ts,js",
+    "lint:fix": "yarn lint --fix"
+  },
   "workspaces": [
     "packages/base",
     "packages/jest",
