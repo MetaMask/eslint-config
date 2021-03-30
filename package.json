@@ -5,13 +5,16 @@
     "node": ">=12.0.0"
   },
   "scripts": {
-    "lint": "yarn eslint . --ext ts,js",
-    "lint:fix": "yarn lint --fix"
+    "lint:eslint": "yarn eslint . --ext ts,js",
+    "lint:rules": "node ./scripts/validate-prettier-rules.js",
+    "lint": "yarn lint:eslint && yarn lint:rules",
+    "lint:fix": "yarn lint:eslint --fix && yarn lint:rules"
   },
   "workspaces": [
     "packages/*"
   ],
   "devDependencies": {
+    "eslint-config-prettier": "^8.1.0",
     "lerna": "^4.0.0"
   }
 }
