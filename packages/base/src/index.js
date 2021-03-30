@@ -97,12 +97,8 @@ module.exports = {
 
     // Core rules
     'accessor-pairs': 'error',
-    'array-bracket-spacing': ['error', 'never'],
     'array-callback-return': 'error',
-    'arrow-parens': 'error',
     'block-scoped-var': 'error',
-    'block-spacing': ['error', 'always'],
-    'brace-style': 'error',
     'camelcase': [
       'error',
       {
@@ -110,31 +106,15 @@ module.exports = {
         allow: ['^UNSAFE_'],
       },
     ],
-    'comma-dangle': ['error', 'always-multiline'],
-    'comma-style': ['error', 'last'],
-    'computed-property-spacing': 'error',
     'consistent-return': 'error',
     'consistent-this': ['error', 'self'],
     'default-case': 'error',
     'default-param-last': 'error',
-    'dot-location': ['error', 'property'],
     'dot-notation': 'error',
-    'eol-last': 'error',
     'eqeqeq': ['error', 'allow-null'],
-    'func-call-spacing': 'error',
     'func-name-matching': 'error',
     'grouped-accessor-pairs': 'error',
     'guard-for-in': 'error',
-    'jsx-quotes': ['error', 'prefer-double'],
-    'key-spacing': 'error',
-    'keyword-spacing': [
-      'error',
-      {
-        before: true,
-        after: true,
-      },
-    ],
-    'linebreak-style': 'error',
     'lines-between-class-members': 'error',
     'max-statements-per-line': [
       'error',
@@ -149,7 +129,6 @@ module.exports = {
         capIsNew: false,
       },
     ],
-    'new-parens': 'error',
     'no-alert': 'error',
     'no-array-constructor': 'error',
     'no-bitwise': 'error',
@@ -165,8 +144,6 @@ module.exports = {
     'no-extend-native': 'error',
     'no-extra-bind': 'error',
     'no-extra-label': 'error',
-    'no-extra-parens': ['error', 'functions'],
-    'no-floating-decimal': 'error',
     'no-implicit-coercion': 'error',
     'no-implicit-globals': 'error',
     'no-implied-eval': 'error',
@@ -185,14 +162,7 @@ module.exports = {
     'no-lonely-if': 'error',
     'no-loop-func': 'error',
     'no-multi-assign': 'error',
-    'no-multi-spaces': 'error',
     'no-multi-str': 'error',
-    'no-multiple-empty-lines': [
-      'error',
-      {
-        max: 1,
-      },
-    ],
     'no-native-reassign': 'error',
     'no-negated-condition': 'error',
     'no-negated-in-lhs': 'error',
@@ -216,10 +186,8 @@ module.exports = {
     'no-script-url': 'error',
     'no-self-compare': 'error',
     'no-shadow': 'error',
-    'no-spaced-func': 'error',
     'no-template-curly-in-string': 'error',
     'no-throw-literal': 'error',
-    'no-trailing-spaces': 'error',
     'no-undef-init': 'error',
     'no-unmodified-loop-condition': 'error',
     'no-unneeded-ternary': [
@@ -257,16 +225,6 @@ module.exports = {
     'no-useless-return': 'error',
     'no-var': 'error',
     'no-void': 'error',
-    'no-whitespace-before-property': 'error',
-    'nonblock-statement-body-position': 'error',
-    'object-curly-newline': [
-      'error',
-      {
-        consistent: true,
-        multiline: true,
-      },
-    ],
-    'object-curly-spacing': ['error', 'always'],
     'object-shorthand': 'error',
     'one-var': [
       'error',
@@ -275,16 +233,6 @@ module.exports = {
       },
     ],
     'operator-assignment': 'error',
-    'operator-linebreak': [
-      'error',
-      'after',
-      {
-        overrides: {
-          '?': 'ignore',
-          ':': 'ignore',
-        },
-      },
-    ],
     'padding-line-between-statements': [
       'error',
       {
@@ -325,34 +273,6 @@ module.exports = {
     'radix': 'error',
     'require-atomic-updates': 'error',
     'require-unicode-regexp': 'error',
-    'rest-spread-spacing': 'error',
-    'semi': ['error', 'always'],
-    'semi-spacing': [
-      'error',
-      {
-        before: false,
-        after: true,
-      },
-    ],
-    'semi-style': 'error',
-    'space-before-blocks': ['error', 'always'],
-    'space-before-function-paren': [
-      'error',
-      {
-        anonymous: 'always',
-        asyncArrow: 'always',
-        named: 'never',
-      },
-    ],
-    'space-in-parens': ['error', 'never'],
-    'space-infix-ops': 'error',
-    'space-unary-ops': [
-      'error',
-      {
-        words: true,
-        nonwords: false,
-      },
-    ],
     'spaced-comment': [
       'error',
       'always',
@@ -369,13 +289,7 @@ module.exports = {
         exceptions: ['=', '-'],
       },
     ],
-    'switch-colon-spacing': 'error',
     'symbol-description': 'error',
-    'template-curly-spacing': ['error', 'never'],
-    'template-tag-spacing': 'error',
-    'unicode-bom': 'error',
-    'wrap-iife': ['error', 'any'],
-    'yield-star-spacing': ['error', 'both'],
     'yoda': ['error', 'never'],
 
     // import plugin rules
