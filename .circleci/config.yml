@@ -37,4 +37,4 @@ jobs:
           at: .
       - run:
           name: Lint
-          command: yarn eslint .
+          command: yarn lint
