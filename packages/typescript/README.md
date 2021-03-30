@@ -10,24 +10,38 @@ yarn add --dev \
     eslint-plugin-import@^2.22.0 \
     @typescript-eslint/eslint-plugin@^3.9.1 \
     @typescript-eslint/parser@^3.9.1 \
+    @metamask/eslint-config@^5.0.0 \
     @metamask/eslint-config-typescript@^5.0.0
 ```
 
 ```js
 module.exports = {
   root: true,
+
   extends: [
-    '@metamask/eslint-config-typescript',
+    '@metamask/eslint-config',
   ],
-  // If you have JS files for config, etc. you'll need to set their sourceType
-  // explicitly as the default sourceType for TS projects is 'module'
-  overrides: [{
-    files: [
-      '.eslintrc.js',
-    ],
-    parserOptions: {
-      sourceType: 'script',
+
+  overrides: [
+    // The TypeScript config disables certain rules that you want to keep for
+    // .js files, so it should be added in an override.
+    {
+      files: ['*.ts'],
+      extends: [
+        '@metamask/eslint-config-typescript',
+      ],
     },
-  }],
+
+    // If you have JS files for config, etc. you'll need to set their sourceType
+    // explicitly as the default sourceType for TS projects is 'module'
+    {
+      files: [
+        '.eslintrc.js',
+      ],
+      parserOptions: {
+        sourceType: 'script',
+      },
+    },
+  ],
 };
 ```

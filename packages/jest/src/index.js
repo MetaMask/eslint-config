@@ -2,13 +2,16 @@ module.exports = {
   plugins: [
     'jest',
   ],
+
   env: {
     'jest/globals': true,
   },
+
   extends: [
     'plugin:jest/recommended',
     'plugin:jest/style',
   ],
+
   rules: {
     'jest/consistent-test-it': ['error', { 'fn': 'it' }],
     'jest/lowercase-name': ['error', { 'ignore': ['describe'] }],
