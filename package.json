@@ -1,6 +1,9 @@
 {
   "name": "root",
   "private": true,
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "scripts": {
     "lint": "yarn eslint . --ext ts,js",
     "lint:fix": "yarn lint --fix"
