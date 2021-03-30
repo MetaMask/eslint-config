@@ -31,17 +31,6 @@ module.exports = {
         '@metamask/eslint-config-typescript',
       ],
     },
-
-    // If you have JS files for config, etc. you'll need to set their sourceType
-    // explicitly as the default sourceType for TS projects is 'module'
-    {
-      files: [
-        '.eslintrc.js',
-      ],
-      parserOptions: {
-        sourceType: 'script',
-      },
-    },
   ],
 };
 ```
