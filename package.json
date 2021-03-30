@@ -6,11 +6,7 @@
     "lint:fix": "yarn lint --fix"
   },
   "workspaces": [
-    "packages/base",
-    "packages/jest",
-    "packages/mocha",
-    "packages/nodejs",
-    "packages/typescript"
+    "packages/*"
   ],
   "devDependencies": {
     "lerna": "^4.0.0"
