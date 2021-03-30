@@ -17,7 +17,6 @@
     "type": "git",
     "url": "git+https://github.com/MetaMask/eslint-config.git"
   },
-  "author": "Whymarrh Whitby <whymarrh.whitby@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/MetaMask/eslint-config/issues"
