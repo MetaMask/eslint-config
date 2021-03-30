@@ -2,7 +2,11 @@
   "name": "root",
   "private": true,
   "workspaces": [
-    "packages/base"
+    "packages/base",
+    "packages/jest",
+    "packages/mocha",
+    "packages/nodejs",
+    "packages/typescript"
   ],
   "devDependencies": {
     "lerna": "^4.0.0"
