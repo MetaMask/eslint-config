@@ -335,6 +335,8 @@ module.exports = {
     'wrap-regex': 'error',
     'yield-star-spacing': ['error', 'both'],
     'yoda': ['error', 'never'],
+
+    // import plugin rules
     'import/default': 'error',
     'import/export': 'error',
     'import/extensions': [
