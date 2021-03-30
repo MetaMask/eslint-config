@@ -3,6 +3,9 @@
   "version": "5.0.0",
   "description": "Shareable MetaMask ESLint config for Mocha.",
   "main": "src/index.js",
+  "engines": {
+    "node": "^14.15.1"
+  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
