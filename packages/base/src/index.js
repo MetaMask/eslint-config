@@ -4,22 +4,102 @@ module.exports = {
     'shared-node-browser': true,
   },
 
-  plugins: ['import'],
+  plugins: ['import', 'prettier'],
 
-  extends: ['eslint:recommended'],
+  extends: ['eslint:recommended', 'plugin:prettier/recommended'],
 
   rules: {
+    // Rules required for Prettier
+
+    'prettier/prettier': [
+      'error',
+      {
+        singleQuote: true,
+        trailingComma: 'all',
+        quoteProps: 'consistent',
+      },
+      {
+        // Allow consumers to override this prettier config.
+        usePrettierrc: true,
+      },
+    ],
+
+    // In order to match the prettier spec, you have to enable lines around
+    // comments before and after blocks, objects, and arrays.
+    // https://github.com/prettier/eslint-config-prettier#lines-around-comment
+    'lines-around-comment': [
+      'error',
+      {
+        beforeBlockComment: true,
+        afterLineComment: false,
+        allowBlockStart: true,
+        allowBlockEnd: true,
+        allowObjectStart: true,
+        allowObjectEnd: true,
+        allowArrayStart: true,
+        allowArrayEnd: true,
+      },
+    ],
+
+    // Prettier has some opinions on mixed-operators, and there is ongoing work
+    // to make the output code clear. It is better today then it was when the first
+    // PR to add prettier. That being said, the workaround for keeping this rule enabled
+    // requires breaking parts of operations into different variables -- which I believe
+    // to be worse. https://github.com/prettier/eslint-config-prettier#no-mixed-operators
+    'no-mixed-operators': 'off',
+
+    // Prettier wraps single line functions with ternaries, etc in parens by default, but
+    // if the line is long enough it breaks it into a separate line and removes the parens.
+    // The second behavior conflicts with this rule. There is some guides on the repo about
+    // how you can keep it enabled:
+    // https://github.com/prettier/eslint-config-prettier#no-confusing-arrow
+    // However, in practice this conflicts with prettier adding parens around short lines,
+    // when autofixing in vscode and others.
+    'no-confusing-arrow': 'off',
+
+    // There is no configuration in prettier for how it stylizes regexes, which conflicts
+    // with wrap-regex.
+    'wrap-regex': 'off',
+
+    // Prettier handles all indentation automagically. it can be configured here
+    // https://prettier.io/docs/en/options.html#tab-width but the default matches our
+    // style.
+    'indent': 'off',
+
+    // This rule conflicts with the way that prettier breaks code across multiple lines when
+    // it exceeds the maximum length. Prettier optimizes for readability while simultaneously
+    // maximizing the amount of code per line.
+    'function-paren-newline': 'off',
+
+    // This rule throws an error when there is a line break in an arrow function declaration
+    // but prettier breaks arrow function declarations to be as readable as possible while
+    // still conforming to the width rules.
+    'implicit-arrow-linebreak': 'off',
+
+    // This rule would result in an increase in white space in lines with generator functions,
+    // which impacts prettier's goal of maximizing code per line and readability. There is no
+    // current workaround.
+    'generator-star-spacing': 'off',
+
+    'arrow-body-style': 'off',
+    'arrow-spacing': 'off',
+    'comma-spacing': 'off',
+    'curly': ['error', 'all'],
+    'max-len': 'off',
+    'no-tabs': 'error',
+    'no-unexpected-multiline': 'off',
+    'prefer-arrow-callback': 'off',
+    'quotes': 'off',
+
+    // Not required by prettier, but potentially gotchas
+    'no-restricted-syntax': ['error', 'SequenceExpression'],
+    'no-sequences': 'off',
+
+    // Core rules
     'accessor-pairs': 'error',
     'array-bracket-spacing': ['error', 'never'],
     'array-callback-return': 'error',
     'arrow-parens': 'error',
-    'arrow-spacing': [
-      'error',
-      {
-        before: true,
-        after: true,
-      },
-    ],
     'block-scoped-var': 'error',
     'block-spacing': ['error', 'always'],
     'brace-style': 'error',
@@ -31,18 +111,10 @@ module.exports = {
       },
     ],
     'comma-dangle': ['error', 'always-multiline'],
-    'comma-spacing': [
-      'error',
-      {
-        before: false,
-        after: true,
-      },
-    ],
     'comma-style': ['error', 'last'],
     'computed-property-spacing': 'error',
     'consistent-return': 'error',
     'consistent-this': ['error', 'self'],
-    'curly': 'error',
     'default-case': 'error',
     'default-param-last': 'error',
     'dot-location': ['error', 'property'],
@@ -51,24 +123,8 @@ module.exports = {
     'eqeqeq': ['error', 'allow-null'],
     'func-call-spacing': 'error',
     'func-name-matching': 'error',
-    'function-paren-newline': ['error', 'consistent'],
-    'generator-star-spacing': [
-      'error',
-      {
-        before: true,
-        after: true,
-      },
-    ],
     'grouped-accessor-pairs': 'error',
     'guard-for-in': 'error',
-    'implicit-arrow-linebreak': 'error',
-    'indent': [
-      'error',
-      2,
-      {
-        SwitchCase: 1,
-      },
-    ],
     'jsx-quotes': ['error', 'prefer-double'],
     'key-spacing': 'error',
     'keyword-spacing': [
@@ -79,7 +135,6 @@ module.exports = {
       },
     ],
     'linebreak-style': 'error',
-    'lines-around-comment': 'error',
     'lines-between-class-members': 'error',
     'max-statements-per-line': [
       'error',
@@ -100,7 +155,6 @@ module.exports = {
     'no-bitwise': 'error',
     'no-buffer-constructor': 'error',
     'no-caller': 'error',
-    'no-confusing-arrow': 'error',
     'no-constructor-return': 'error',
     'no-div-regex': 'error',
     'no-duplicate-imports': 'error',
@@ -130,7 +184,6 @@ module.exports = {
     'no-lone-blocks': 'error',
     'no-lonely-if': 'error',
     'no-loop-func': 'error',
-    'no-mixed-operators': 'error',
     'no-multi-assign': 'error',
     'no-multi-spaces': 'error',
     'no-multi-str': 'error',
@@ -162,10 +215,8 @@ module.exports = {
     'no-return-await': 'off', // See https://gist.github.com/Gudahtt/618b89f40164af323e08bbdbd17a1769#gistcomment-3182478
     'no-script-url': 'error',
     'no-self-compare': 'error',
-    'no-sequences': 'error',
     'no-shadow': 'error',
     'no-spaced-func': 'error',
-    'no-tabs': 'error',
     'no-template-curly-in-string': 'error',
     'no-throw-literal': 'error',
     'no-trailing-spaces': 'error',
@@ -271,14 +322,6 @@ module.exports = {
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
     'prefer-template': 'error',
-    'quotes': [
-      'error',
-      'single',
-      {
-        avoidEscape: true,
-        allowTemplateLiterals: true,
-      },
-    ],
     'radix': 'error',
     'require-atomic-updates': 'error',
     'require-unicode-regexp': 'error',
@@ -332,13 +375,13 @@ module.exports = {
     'template-tag-spacing': 'error',
     'unicode-bom': 'error',
     'wrap-iife': ['error', 'any'],
-    'wrap-regex': 'error',
     'yield-star-spacing': ['error', 'both'],
     'yoda': ['error', 'never'],
 
     // import plugin rules
     'import/default': 'error',
     'import/export': 'error',
+    'import/exports-last': 'off',
     'import/extensions': [
       'error',
       'never',
@@ -368,6 +411,7 @@ module.exports = {
         commonjs: true,
       },
     ],
+    'import/no-unused-modules': 'off',
     'import/no-useless-path-segments': [
       'error',
       {

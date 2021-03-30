@@ -1,7 +1,5 @@
 module.exports = {
-  plugins: [
-    'node',
-  ],
+  plugins: ['node'],
 
   env: {
     node: true,

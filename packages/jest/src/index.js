@@ -1,20 +1,15 @@
 module.exports = {
-  plugins: [
-    'jest',
-  ],
+  plugins: ['jest'],
 
   env: {
     'jest/globals': true,
   },
 
-  extends: [
-    'plugin:jest/recommended',
-    'plugin:jest/style',
-  ],
+  extends: ['plugin:jest/recommended', 'plugin:jest/style'],
 
   rules: {
-    'jest/consistent-test-it': ['error', { 'fn': 'it' }],
-    'jest/lowercase-name': ['error', { 'ignore': ['describe'] }],
+    'jest/consistent-test-it': ['error', { fn: 'it' }],
+    'jest/lowercase-name': ['error', { ignore: ['describe'] }],
     'jest/no-duplicate-hooks': 'error',
     'jest/no-hooks': 'off',
     'jest/no-if': 'error',
@@ -28,15 +23,16 @@ module.exports = {
     'jest/prefer-todo': 'error',
     'jest/require-top-level-describe': 'error',
     'jest/require-to-throw-message': 'error',
-    'jest/valid-expect': ['error', { 'alwaysAwait': true }],
+    'jest/valid-expect': ['error', { alwaysAwait: true }],
     'jest/no-restricted-matchers': [
       'error',
       {
-        'resolves': 'Use `expect(await promise)` instead.',
-        'toBeFalsy': 'Avoid `toBeFalsy`',
-        'toBeTruthy': 'Avoid `toBeTruthy`',
-        'toMatchSnapshot': 'Use `toMatchInlineSnapshot()` instead',
-        'toThrowErrorMatchingSnapshot': 'Use `toThrowErrorMatchingInlineSnapshot()` instead',
+        resolves: 'Use `expect(await promise)` instead.',
+        toBeFalsy: 'Avoid `toBeFalsy`',
+        toBeTruthy: 'Avoid `toBeTruthy`',
+        toMatchSnapshot: 'Use `toMatchInlineSnapshot()` instead',
+        toThrowErrorMatchingSnapshot:
+          'Use `toThrowErrorMatchingInlineSnapshot()` instead',
       },
     ],
   },
