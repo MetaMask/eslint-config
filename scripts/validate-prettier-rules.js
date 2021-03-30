@@ -36,7 +36,6 @@ const eslintConfigs = fs
 
 // Iterate over our configs, identify rules that are enabled even though they shouldn't be,
 // and throw an error if any are found.
-// TODO: Collect violations for all packages.
 Object.entries(eslintConfigs).forEach(
   ([packageName, { rules: currentRuleSet }]) => {
     const violations = [];
