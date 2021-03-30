@@ -1,11 +1,14 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
+
   parserOptions: {
     'sourceType': 'module',
   },
+
   plugins: [
     '@typescript-eslint',
   ],
+
   rules: {
     // Checked by TypeScript - ts(2378)
     'getter-return': 'off',

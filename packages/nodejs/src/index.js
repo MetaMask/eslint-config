@@ -2,9 +2,11 @@ module.exports = {
   plugins: [
     'node',
   ],
+
   env: {
     node: true,
   },
+
   rules: {
     // Possible Errors
     'node/handle-callback-err': ['error', '^(err|error)$'],

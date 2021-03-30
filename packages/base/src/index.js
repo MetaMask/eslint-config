@@ -3,9 +3,11 @@ module.exports = {
     'es6': true,
     'shared-node-browser': true,
   },
+
   plugins: [
     'import',
   ],
+
   rules: {
     'accessor-pairs': 'error',
     'array-bracket-newline': 'off',
