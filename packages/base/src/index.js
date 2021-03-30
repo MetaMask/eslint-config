@@ -9,8 +9,6 @@ module.exports = {
   extends: ['eslint:recommended', 'plugin:prettier/recommended'],
 
   rules: {
-    // Rules required for Prettier
-
     'prettier/prettier': [
       'error',
       {
