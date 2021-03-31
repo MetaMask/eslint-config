@@ -1,14 +1,12 @@
 module.exports = {
   env: {
-    'es6': true,
-    'shared-node-browser': true,
-  },
-
-  parserOptions: {
-    // As of 2021-03-31, ES2017 is our effective minimum version due to the use
+    // Specifying the ES version automatically sets the correct parser option.
+    // https://eslint.org/docs/user-guide/configuring/language-options#specifying-environments
+    // For JavaScript, ES2017 is our effective minimum version due to the use
     // of Esprima by transitive dependencies.
     // It doesn't handle object rest spread, which is a 2018 feature.
-    ecmaVersion: 2017,
+    'es2017': true,
+    'shared-node-browser': true,
   },
 
   plugins: ['import', 'prettier'],
