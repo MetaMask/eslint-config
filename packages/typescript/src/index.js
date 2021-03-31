@@ -1,10 +1,15 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
 
-  parserOptions: {
-    // Should always to the latest release (not pre-release) here:
+  env: {
+    // Specifying the ES version automatically sets the correct parser option.
+    // https://eslint.org/docs/user-guide/configuring/language-options#specifying-environments
+    // For TypeScript, this should always be the latest release (not pre-release) here:
     // https://github.com/tc39/ecma262/releases
-    ecmaVersion: 2020,
+    es2020: true,
+  },
+
+  parserOptions: {
     sourceType: 'module',
   },
 
