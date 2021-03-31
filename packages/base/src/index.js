@@ -9,6 +9,7 @@ module.exports = {
   extends: ['eslint:recommended', 'plugin:prettier/recommended'],
 
   rules: {
+    /* Prettier rules */
     'prettier/prettier': [
       'error',
       {
@@ -23,15 +24,15 @@ module.exports = {
     ],
 
     // Prettier has some opinions on mixed-operators, and there is ongoing work
-    // to make the output code clear. It is better today then it was when the first
-    // PR to add prettier. That being said, the workaround for keeping this rule enabled
-    // requires breaking parts of operations into different variables -- which I believe
-    // to be worse. https://github.com/prettier/eslint-config-prettier#no-mixed-operators
+    // to make the output code clear. The workaround for keeping this rule enabled
+    // requires breaking parts of operations into different variables -- which we
+    // decided to be worse.
+    // https://github.com/prettier/eslint-config-prettier#no-mixed-operators
     'no-mixed-operators': 'off',
 
-    // Prettier wraps single line functions with ternaries, etc in parens by default, but
+    // Prettier wraps e.g. single line functions with ternaries in parens by default, but
     // if the line is long enough it breaks it into a separate line and removes the parens.
-    // The second behavior conflicts with this rule. There is some guides on the repo about
+    // The second behavior conflicts with this rule. There is some advice on the repo about
     // how you can keep it enabled:
     // https://github.com/prettier/eslint-config-prettier#no-confusing-arrow
     // However, in practice this conflicts with prettier adding parens around short lines,
@@ -42,9 +43,9 @@ module.exports = {
     // with wrap-regex.
     'wrap-regex': 'off',
 
-    // Prettier handles all indentation automagically. it can be configured here
-    // https://prettier.io/docs/en/options.html#tab-width but the default matches our
-    // style.
+    // Prettier handles all indentation automagically. It defaults to 2 spaces,
+    // which is what we want.
+    // https://prettier.io/docs/en/options.html#tab-width
     'indent': 'off',
 
     // This rule conflicts with the way that prettier breaks code across multiple lines when
@@ -72,11 +73,11 @@ module.exports = {
     'prefer-arrow-callback': 'off',
     'quotes': 'off',
 
-    // Not required by prettier, but potentially gotchas
+    // Not required by prettier, but potentially gotchas.
     'no-restricted-syntax': ['error', 'SequenceExpression'],
     'no-sequences': 'off',
 
-    // Core rules
+    /* Core rules */
     'accessor-pairs': 'error',
     'array-callback-return': 'error',
     'block-scoped-var': 'error',
@@ -273,7 +274,7 @@ module.exports = {
     'symbol-description': 'error',
     'yoda': ['error', 'never'],
 
-    // import plugin rules
+    /* import plugin rules */
     'import/default': 'error',
     'import/export': 'error',
     'import/exports-last': 'off',
