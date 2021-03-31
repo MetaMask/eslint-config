@@ -4,6 +4,13 @@ module.exports = {
     'shared-node-browser': true,
   },
 
+  parserOptions: {
+    // As of 2021-03-31, ES2017 is our effective minimum version due to the use
+    // of Esprima by transitive dependencies.
+    // It doesn't handle object rest spread, which is a 2018 feature.
+    ecmaVersion: 2017,
+  },
+
   plugins: ['import', 'prettier'],
 
   extends: ['eslint:recommended', 'plugin:prettier/recommended'],
