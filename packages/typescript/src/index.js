@@ -2,6 +2,9 @@ module.exports = {
   parser: '@typescript-eslint/parser',
 
   parserOptions: {
+    // Should always to the latest release (not pre-release) here:
+    // https://github.com/tc39/ecma262/releases
+    ecmaVersion: 2020,
     sourceType: 'module',
   },
 
