@@ -13,11 +13,15 @@ yarn add --dev \
     @metamask/eslint-config@^5.0.0
 ```
 
-List `@metamask/eslint-config` to your ESLint config via `extends`:
+The order in which you extend ESLint rules matters.
+The `@metamask/*` eslint configs should be added to the `extends` array _last_,
+with `@metamask/eslint-config` first, and `@metamask/eslint-config-*` in any
+order thereafter.
 
 ```js
 module.exports = {
   extends: [
+    // This should be added last unless you know what you're doing.
     '@metamask/eslint-config',
   ],
 }

@@ -14,17 +14,23 @@ yarn add --dev \
     @metamask/eslint-config-typescript@^5.0.0
 ```
 
+The order in which you extend ESLint rules matters.
+The `@metamask/*` eslint configs should be added to the `extends` array _last_,
+with `@metamask/eslint-config` first, and `@metamask/eslint-config-*` in any
+order thereafter.
+
 ```js
 module.exports = {
   root: true,
 
   extends: [
+    // This should be added last unless you know what you're doing.
     '@metamask/eslint-config',
   ],
 
   overrides: [
     // The TypeScript config disables certain rules that you want to keep for
-    // .js files, so it should be added in an override.
+    // non-TypeScript files, so it should be added in an override.
     {
       files: ['*.ts'],
       extends: [
