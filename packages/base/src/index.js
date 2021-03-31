@@ -22,23 +22,6 @@ module.exports = {
       },
     ],
 
-    // In order to match the prettier spec, you have to enable lines around
-    // comments before and after blocks, objects, and arrays.
-    // https://github.com/prettier/eslint-config-prettier#lines-around-comment
-    'lines-around-comment': [
-      'error',
-      {
-        beforeBlockComment: true,
-        afterLineComment: false,
-        allowBlockStart: true,
-        allowBlockEnd: true,
-        allowObjectStart: true,
-        allowObjectEnd: true,
-        allowArrayStart: true,
-        allowArrayEnd: true,
-      },
-    ],
-
     // Prettier has some opinions on mixed-operators, and there is ongoing work
     // to make the output code clear. It is better today then it was when the first
     // PR to add prettier. That being said, the workaround for keeping this rule enabled
