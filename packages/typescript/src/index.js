@@ -2,12 +2,10 @@ module.exports = {
   parser: '@typescript-eslint/parser',
 
   parserOptions: {
-    'sourceType': 'module',
+    sourceType: 'module',
   },
 
-  plugins: [
-    '@typescript-eslint',
-  ],
+  plugins: ['@typescript-eslint'],
 
   rules: {
     // Checked by TypeScript - ts(2378)
@@ -44,16 +42,6 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-member-accessibility': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/member-delimiter-style': ['error', {
-      'multiline': {
-        'delimiter': 'semi',
-        'requireLast': true,
-      },
-      'singleline': {
-        'delimiter': 'semi',
-        'requireLast': false,
-      },
-    }],
     '@typescript-eslint/member-ordering': 'off',
     '@typescript-eslint/naming-convention': 'off', // Requires type information
     '@typescript-eslint/no-dynamic-delete': 'off',
@@ -67,7 +55,10 @@ module.exports = {
     '@typescript-eslint/no-inferrable-types': 'error',
     '@typescript-eslint/no-misused-new': 'error',
     '@typescript-eslint/no-misused-promises': 'off', // Requires type information
-    '@typescript-eslint/no-namespace': ['error', { 'allowDefinitionFiles': true }],
+    '@typescript-eslint/no-namespace': [
+      'error',
+      { allowDefinitionFiles: true },
+    ],
     '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
     '@typescript-eslint/no-non-null-assertion': 'error',
     '@typescript-eslint/no-parameter-properties': 'error',
@@ -99,26 +90,13 @@ module.exports = {
     '@typescript-eslint/strict-boolean-expressions': 'off', // Requires type information
     '@typescript-eslint/switch-exhaustiveness-check': 'off', // Requires type information
     '@typescript-eslint/triple-slash-reference': 'error',
-    '@typescript-eslint/type-annotation-spacing': 'error',
     '@typescript-eslint/typedef': 'off',
     '@typescript-eslint/unbound-method': 'off', // Requires type information
     '@typescript-eslint/unified-signatures': 'error',
 
     // "Extension Rules" from @typescript-eslint/eslint-plugin
-    '@typescript-eslint/brace-style': 'error',
-    'brace-style': 'off',
-
-    '@typescript-eslint/comma-spacing': 'error',
-    'comma-spacing': 'off',
-
     '@typescript-eslint/default-param-last': 'error',
     'default-param-last': 'off',
-
-    '@typescript-eslint/func-call-spacing': 'error',
-    'func-call-spacing': 'off',
-
-    '@typescript-eslint/indent': ['error', 2, { 'SwitchCase': 1 }],
-    'indent': 'off',
 
     '@typescript-eslint/no-array-constructor': 'error',
     'no-array-constructor': 'off',
@@ -132,42 +110,36 @@ module.exports = {
     '@typescript-eslint/no-extra-parens': 'off',
     'no-extra-parens': 'off',
 
-    '@typescript-eslint/no-extra-semi': 'error',
-    'no-extra-semi': 'off',
-
     '@typescript-eslint/no-magic-numbers': 'off',
     'no-magic-numbers': 'off',
 
-    '@typescript-eslint/no-unused-expressions': ['error', { 'allowShortCircuit': true, 'allowTernary': true }],
+    '@typescript-eslint/no-unused-expressions': [
+      'error',
+      { allowShortCircuit: true, allowTernary: true },
+    ],
     'no-unused-expressions': 'off',
 
-    '@typescript-eslint/no-unused-vars': ['error', { 'vars': 'all', 'args': 'all', 'argsIgnorePattern': '[_]+' }],
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      { vars: 'all', args: 'all', argsIgnorePattern: '[_]+' },
+    ],
     'no-unused-vars': 'off',
 
-    '@typescript-eslint/no-use-before-define': ['error', { 'functions': false }],
+    '@typescript-eslint/no-use-before-define': ['error', { functions: false }],
     'no-use-before-define': 'off',
 
     '@typescript-eslint/no-useless-constructor': 'error',
     'no-useless-constructor': 'off',
 
-    '@typescript-eslint/quotes': ['error', 'single', { 'avoidEscape': true, 'allowTemplateLiterals': true }],
+    '@typescript-eslint/quotes': [
+      'error',
+      'single',
+      { avoidEscape: true, allowTemplateLiterals: true },
+    ],
     'quotes': 'off',
 
     '@typescript-eslint/require-await': 'off', // Requires type information
 
     '@typescript-eslint/return-await': 'off', // Requires type information
-
-    '@typescript-eslint/semi': ['error', 'always'],
-    'semi': 'off',
-
-    '@typescript-eslint/space-before-function-paren': [
-      'error',
-      {
-        'anonymous': 'always',
-        'named': 'never',
-        'asyncArrow': 'always',
-      },
-    ],
-    'space-before-function-paren': 'off',
   },
 };

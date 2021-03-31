@@ -1,12 +1,10 @@
 const simpleTestNameRegex = '^[#_]{0,2}[A-Za-z0-9]';
 
 module.exports = {
-  plugins: [
-    'mocha',
-  ],
+  plugins: ['mocha'],
 
   env: {
-    'mocha': true,
+    mocha: true,
   },
 
   rules: {
