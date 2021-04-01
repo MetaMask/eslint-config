@@ -25,6 +25,20 @@ const WRITE_MODE = ['--write', '-w'].includes(process.argv[2]);
 
 main();
 
+/**
+ * This script accomplishes 2 things:
+ *
+ * 1. It ensures that neither we nor any config that we extend enables any
+ *    Prettier rules that should be disabled.
+ * 2. Creates rule snapshots to make it easy to understand the impact of any
+ *    changes we make to our configs, such as changing our specified rules or
+ *    the configs that we extend.
+ *
+ * If the script is in write mode (by being given the argument --write or -w),
+ * it will overwrite the existing rule snapshots. Otherwise, it will compare the
+ * computed snapshot to the snapshot stored on disk, and exit with an error if
+ * they aren't equal.
+ */
 async function main() {
   const metamaskConfigs = getMetamaskConfigs();
   const requiredPrettierRules = getRequiredPrettierRules();
