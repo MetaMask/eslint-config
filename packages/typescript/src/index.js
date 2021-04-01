@@ -15,7 +15,12 @@ module.exports = {
 
   plugins: ['@typescript-eslint'],
 
+  extends: ['plugin:@typescript-eslint/recommended'],
+
   rules: {
+    // Should be disabled per Prettier
+    '@typescript-eslint/no-extra-semi': 'off',
+
     // Checked by TypeScript - ts(2378)
     'getter-return': 'off',
     // Checked by TypeScript - ts(2300)
