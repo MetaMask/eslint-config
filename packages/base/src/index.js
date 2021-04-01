@@ -24,6 +24,7 @@ module.exports = {
       },
       {
         // Allow consumers to override this prettier config.
+        // This is the default, but we specify it for the sake of clarity.
         usePrettierrc: true,
       },
     ],

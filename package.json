@@ -6,19 +6,21 @@
   },
   "scripts": {
     "lint:eslint": "yarn eslint . --ext ts,js",
-    "lint:rules": "node ./scripts/validate-prettier-rules.js",
+    "lint:rules": "node ./scripts/validate-rules.js",
     "lint": "yarn lint:eslint && yarn lint:rules",
-    "lint:fix": "yarn lint:eslint --fix && yarn lint:rules"
+    "lint:fix": "yarn lint:eslint --fix && yarn lint:rules --write"
   },
   "workspaces": [
     "packages/*"
   ],
   "devDependencies": {
+    "@eslint/eslintrc": "^0.4.0",
     "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.3.1",
+    "fast-deep-equal": "^3.1.3",
     "lerna": "^4.0.0",
     "prettier": "^2.2.1"
   }

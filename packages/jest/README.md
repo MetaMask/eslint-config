@@ -6,7 +6,7 @@ MetaMask's [Jest](https://jestjs.io/) ESLint configuration.
 
 ```bash
 yarn add --dev \
-    eslint@^7.7.0 \
+    eslint@^7.23.0 \
     eslint-plugin-import@^2.22.0 \
     eslint-plugin-jest@^23.6.0 \
     @metamask/eslint-config@^5.0.0 \
