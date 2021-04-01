@@ -128,7 +128,10 @@ async function validateRulesSnapshot(
 
 async function writeRulesSnapshot(snapshotFilePath, flatRules) {
   try {
-    await fs.writeFile(snapshotFilePath, JSON.stringify(flatRules, null, 2));
+    await fs.writeFile(
+      snapshotFilePath,
+      `${JSON.stringify(flatRules, null, 2)}\n`,
+    );
   } catch (error) {
     console.error(
       `Encountered error while writing file "${snapshotFilePath}".`,
