@@ -20,9 +20,9 @@ const RULES_SNAPSHOT_PATH = 'rules-snapshot.json';
 // Whether this program was configured to be in write mode.
 const WRITE_MODE = ['--write', '-w'].includes(process.argv[2]);
 
-// /
+//----------------
 // Main
-// /
+//----------------
 
 main();
 
@@ -44,7 +44,7 @@ async function main() {
   const metamaskConfigs = getMetamaskConfigs();
   const requiredPrettierRules = getRequiredPrettierRules();
 
-  const prettierViolations = getConfigViolationsMap(metamaskConfigs);
+  const prettierViolations = getPrettierViolationsMap(metamaskConfigs);
   const snapshotViolations = [];
 
   // Iterates over this monorepo's config packages and validates their rules.
@@ -88,47 +88,65 @@ async function main() {
   process.exit(failures);
 }
 
+//----------------
+// Validation
+//----------------
+
 /**
- * Assuming the given violations map contains violations, prints these in a
- * readable format to console.error.
+ * Checks whether the given package violates any of the given Prettier rules,
+ * and stores those violations in the given violations map.
  *
- * @param {Record<string, string[]>} prettierViolations - A map containing
- * Prettier violations.
+ * Mutates the violations map in place.
+ *
+ * @param {string} packageName - The name of the config package.
+ * @param {Record<string, unknown>} flatRules - The package's flattened rules.
+ * @param {Record<string, 'off' | unknown>} prettierRules - The required Prettier rules.
+ * @param {Record<string, string[]>} violations - A map to store violations in.
  */
-function logPrettierViolations(prettierViolations) {
-  let str = `\nError: Detected Prettier rule violations. Disable the specified rule(s) in the following package(s):\n`;
-  Object.entries(prettierViolations).forEach(([packageName, violatedRules]) => {
-    if (prettierViolations[packageName].length > 0) {
-      str += `\n${tabs(1)}${packageName}\n${tabs(2)}${violatedRules.join(
-        `${tabs(2)}\n`,
-      )}\n`;
+function validatePrettierRules(
+  packageName,
+  flatRules,
+  prettierRules,
+  violations,
+) {
+  prettierRules.forEach((ruleName) => {
+    if (ruleName in flatRules && flatRules[ruleName] !== OFF) {
+      violations[packageName].push(ruleName);
     }
   });
-  console.error(str);
 }
 
 /**
- * Assuming the given violations map contains violations, prints these in a
- * readable format to console.error.
+ * Checks whether a config violations map contains any violations.
  *
- * @param {Record<string, string[]>} snapshotViolations - A map containing
- * snapshot violations.
+ * @param {Record<string, string[]>} - A map of package names to arrays with
+ * violated rules, if any.
+ * @returns {boolean} Whether the given map contains any violations.
  */
-function logSnapshotViolations(snapshotViolations) {
-  console.error(
-    `\nError: Computed snapshot differs from the existing snapshot for the following package(s). Take a new snapshot and try again.\n\n${tabs(
-      1,
-    )}${snapshotViolations.join(`${tabs(1)}\n`)}`,
-  );
+function hasPrettierViolations(violationsMap) {
+  for (const violations of Object.values(violationsMap)) {
+    if (violations.length > 0) {
+      return true;
+    }
+  }
+  return false;
 }
 
 /**
- * @param {number} numTabs - The number of tabs to return.
- * @returns {string} A string consisting of numTabs 4-space "tabs".
+ * Takes a { [packageName]: any } map and returns a map with with the same keys
+ * and empty array values, for storing rule violations that can be logged to the
+ * console and fixed manually.
+ *
+ * @param {Record<string, unknown>} configs - An object with package name keys and arbitrary
+ * values.
+ * @returns {Record<string, string[]>} An object with the same keys and empty
+ * array values.
  */
-function tabs(numTabs) {
-  const TAB = '    ';
-  return TAB + new Array(numTabs).join(TAB);
+function getPrettierViolationsMap(configs) {
+  return Object.keys(configs).reduce((map, packageName) => {
+    map[packageName] = [];
+    return map;
+  }, {});
 }
 
 /**
@@ -195,66 +213,9 @@ async function writeRulesSnapshot(snapshotFilePath, flatRules) {
   }
 }
 
-/**
- * Checks whether the given package violates any of the given Prettier rules,
- * and stores those violations in the given violations map.
- *
- * Mutates the violations map in place.
- *
- * @param {string} packageName - The name of the config package.
- * @param {Record<string, unknown>} flatRules - The package's flattened rules.
- * @param {Record<string, 'off' | unknown>} prettierRules - The required Prettier rules.
- * @param {Record<string, string[]>} violations - A map to store violations in.
- */
-function validatePrettierRules(
-  packageName,
-  flatRules,
-  prettierRules,
-  violations,
-) {
-  prettierRules.forEach((ruleName) => {
-    if (ruleName in flatRules && flatRules[ruleName] !== OFF) {
-      violations[packageName].push(ruleName);
-    }
-  });
-}
-
-/**
- * Checks whether a config violations map contains any violations.
- *
- * @param {Record<string, string[]>} - A map of package names to arrays with
- * violated rules, if any.
- * @returns {boolean} Whether the given map contains any violations.
- */
-function hasPrettierViolations(violationsMap) {
-  for (const violations of Object.values(violationsMap)) {
-    if (violations.length > 0) {
-      return true;
-    }
-  }
-  return false;
-}
-
-/**
- * Takes a { [packageName]: any } map and returns a map with with the same keys
- * and empty array values, for storing rule violations that can be logged to the
- * console and fixed manually.
- *
- * @param {Record<string, unknown>} configs - An object with package name keys and arbitrary
- * values.
- * @returns {Record<string, string[]>} An object with the same keys and empty
- * array values.
- */
-function getConfigViolationsMap(configs) {
-  return Object.keys(configs).reduce((map, packageName) => {
-    map[packageName] = [];
-    return map;
-  }, {});
-}
-
-// /
+//----------------
 // Specific config getters.
-// /
+//----------------
 
 /**
  * Iterates over the packages in this monorepo and returns an object of package
@@ -305,9 +266,9 @@ function getRequiredPrettierRules() {
   );
 }
 
-// /
+//----------------
 // ESLint config parsing utilities.
-// /
+//----------------
 
 /**
  * Takes an eslint config object and returns its own rules and the rules of its
@@ -380,4 +341,51 @@ function populateRecommendedRules(configArray) {
       throw new Error(`Unrecognized ruleset: ${config}`);
     }
   }
+}
+
+//----------------
+// Logging
+//----------------
+
+/**
+ * Assuming the given violations map contains violations, prints these in a
+ * readable format to console.error.
+ *
+ * @param {Record<string, string[]>} prettierViolations - A map containing
+ * Prettier violations.
+ */
+function logPrettierViolations(prettierViolations) {
+  let str = `\nError: Detected Prettier rule violations. Disable the specified rule(s) in the following package(s):\n`;
+  Object.entries(prettierViolations).forEach(([packageName, violatedRules]) => {
+    if (prettierViolations[packageName].length > 0) {
+      str += `\n${tabs(1)}${packageName}\n${tabs(2)}${violatedRules.join(
+        `${tabs(2)}\n`,
+      )}\n`;
+    }
+  });
+  console.error(str);
+}
+
+/**
+ * Assuming the given violations map contains violations, prints these in a
+ * readable format to console.error.
+ *
+ * @param {Record<string, string[]>} snapshotViolations - A map containing
+ * snapshot violations.
+ */
+function logSnapshotViolations(snapshotViolations) {
+  console.error(
+    `\nError: Computed snapshot differs from the existing snapshot for the following package(s). Take a new snapshot and try again.\n\n${tabs(
+      1,
+    )}${snapshotViolations.join(`${tabs(1)}\n`)}`,
+  );
+}
+
+/**
+ * @param {number} numTabs - The number of tabs to return.
+ * @returns {string} A string consisting of numTabs 4-space "tabs".
+ */
+function tabs(numTabs) {
+  const TAB = '    ';
+  return TAB + new Array(numTabs).join(TAB);
 }
