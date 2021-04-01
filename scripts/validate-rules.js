@@ -17,6 +17,7 @@ const PACKAGES_DIR_PATH = pathUtils.join(__dirname, '../packages');
 // The path to the rules snapshot file, relative to a package root.
 const RULES_SNAPSHOT_PATH = 'rules-snapshot.json';
 
+// Whether this program was configured to be in write mode.
 const WRITE_MODE = ['--write', '-w'].includes(process.argv[2]);
 
 // /
