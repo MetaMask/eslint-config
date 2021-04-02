@@ -58,6 +58,7 @@
   "@typescript-eslint/triple-slash-reference": "error",
   "@typescript-eslint/unified-signatures": "error",
   "constructor-super": "off",
+  "default-param-last": "off",
   "getter-return": "off",
   "import/no-unresolved": "off",
   "no-array-constructor": "off",

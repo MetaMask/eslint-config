@@ -37,12 +37,14 @@ module.exports = {
     '@typescript-eslint/prefer-function-type': 'error',
     '@typescript-eslint/prefer-optional-chain': 'error',
     '@typescript-eslint/unified-signatures': 'error',
-    '@typescript-eslint/default-param-last': 'error',
     '@typescript-eslint/no-dupe-class-members': 'error',
     '@typescript-eslint/no-unused-vars': [
       'error',
       { vars: 'all', args: 'all', argsIgnorePattern: '[_]+' },
     ],
+
+    '@typescript-eslint/default-param-last': 'error',
+    'default-param-last': 'off',
 
     '@typescript-eslint/no-unused-expressions': [
       'error',
