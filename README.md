@@ -1,14 +1,14 @@
 # `@metamask/eslint-config`
 
 This monorepo contains MetaMask's ESLint configurations as npm packages.
-The different configs are split up into individual packages so that we can correctly
-specify their peer dependencies.
+The different configs are split up into individual packages so that we can
+correctly specify their peer dependencies.
 
 ## Updating or Adding Configs
 
 Configs targeting an entirely new environment should be added in a new package.
-Our rule validation script (see `./scripts/validate-rules.js`) forbids the following
-rules:
+Our rule validation script (see `./scripts/validate-rules.js`) forbids the
+following rules:
 
 - Rules that override Prettier's recommended ESLint rules
 - Uselessly configured rules, meaning:
