@@ -44,15 +44,6 @@ module.exports = {
       { vars: 'all', args: 'all', argsIgnorePattern: '[_]+' },
     ],
 
-    // This is configured to work with Prettier
-    // https://github.com/prettier/eslint-config-prettier/#quotes
-    // TODO: Actually, do we need this?
-    '@typescript-eslint/quotes': [
-      'error',
-      'single',
-      { avoidEscape: true, allowTemplateLiterals: true },
-    ],
-
     '@typescript-eslint/no-unused-expressions': [
       'error',
       { allowShortCircuit: true, allowTernary: true },
