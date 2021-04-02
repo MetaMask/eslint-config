@@ -451,8 +451,8 @@ function populateRecommendedRules(configArray) {
 //----------------
 
 /**
- * Assuming the given violations map contains violations, prints these in a
- * readable format to console.error.
+ * Prints Prettier violations to console.error in a readable format.
+ * Assumes that the given violations map contains violations.
  *
  * @param {Record<string, string[]>} prettierViolations - A map containing
  * Prettier violations.
@@ -463,12 +463,27 @@ function logPrettierViolations(prettierViolations) {
   console.error(str);
 }
 
+/**
+ * Prints minimalism violations to console.error in a readable format.
+ * Assumes that the given violations map contains violations.
+ *
+ * @param {Record<string, string[]>} prettierViolations - A map containing
+ * minimalism violations.
+ */
 function logMinimalismViolations(minimalismViolations) {
   let str = `\nError: Detected redundantly configured rules. Remove the specified rule(s) in the following package(s):\n`;
   str += getViolationsString(minimalismViolations);
   console.error(str);
 }
 
+/**
+ * Assuming the given violations map contains violations, returns a formatted
+ * string describing them.
+ *
+ * @param {Record<string, string[]>} violationsMap - A map of config package
+ * names to rules flagged as violations.
+ * @returns {string} A formatted string listing the violations.
+ */
 function getViolationsString(violationsMap) {
   let str = '';
   Object.entries(violationsMap).forEach(([packageName, violatedRules]) => {
@@ -482,11 +497,10 @@ function getViolationsString(violationsMap) {
 }
 
 /**
- * Assuming the given violations map contains violations, prints these in a
- * readable format to console.error.
+ * Assuming the given array contains offending packages, prints them to the
+ * console in a readable format.
  *
- * @param {Record<string, string[]>} snapshotViolations - A map containing
- * snapshot violations.
+ * @param {string[]} snapshotViolations - A map containing snapshot violations.
  */
 function logSnapshotViolations(snapshotViolations) {
   console.error(
