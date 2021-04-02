@@ -6,9 +6,9 @@
   },
   "scripts": {
     "lint:eslint": "yarn eslint . --ext ts,js",
-    "lint:rules": "node ./scripts/validate-rules.js",
-    "lint": "yarn lint:eslint && yarn lint:rules",
-    "lint:fix": "yarn lint:eslint --fix && yarn lint:rules --write"
+    "lint:config-validation": "node ./scripts/validate-configs.js",
+    "lint": "yarn lint:eslint && yarn lint:config-validation",
+    "lint:fix": "yarn lint:eslint --fix && yarn lint:config-validation --write"
   },
   "workspaces": [
     "packages/*"
