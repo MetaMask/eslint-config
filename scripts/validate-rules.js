@@ -44,23 +44,32 @@ async function main() {
   const metamaskConfigs = getMetamaskConfigs();
   const requiredPrettierRules = getRequiredPrettierRules();
 
-  const prettierViolations = getPrettierViolationsMap(metamaskConfigs);
+  const prettierViolations = getViolationsMap(metamaskConfigs);
+  const minimalismViolations = getViolationsMap(metamaskConfigs);
   const snapshotViolations = [];
 
   // Iterates over this monorepo's config packages and validates their rules.
   await Promise.all(
     Object.entries(metamaskConfigs).map(
-      async ([packageName, { flatRules, packagePath }]) => {
+      async ([packageName, { config, flatRules, packagePath }]) => {
         validatePrettierRules(
           packageName,
-          flatRules,
+          flatRules.full,
           requiredPrettierRules,
           prettierViolations,
         );
+
+        validateConfigMinimalism(
+          packageName,
+          config,
+          flatRules.extended,
+          minimalismViolations,
+        );
+
         await validateOrWriteRulesSnapshot(
           packageName,
           packagePath,
-          flatRules,
+          flatRules.full,
           snapshotViolations,
         );
       },
@@ -68,9 +77,14 @@ async function main() {
   );
 
   let failures = 0;
-  if (hasPrettierViolations(prettierViolations)) {
+  if (hasViolations(prettierViolations)) {
     failures += 1;
     logPrettierViolations(prettierViolations);
+  }
+
+  if (hasViolations(minimalismViolations)) {
+    failures += 1;
+    logMinimalismViolations(minimalismViolations);
   }
 
   if (snapshotViolations.length > 0) {
@@ -123,7 +137,7 @@ function validatePrettierRules(
  * violated rules, if any.
  * @returns {boolean} Whether the given map contains any violations.
  */
-function hasPrettierViolations(violationsMap) {
+function hasViolations(violationsMap) {
   for (const violations of Object.values(violationsMap)) {
     if (violations.length > 0) {
       return true;
@@ -142,11 +156,40 @@ function hasPrettierViolations(violationsMap) {
  * @returns {Record<string, string[]>} An object with the same keys and empty
  * array values.
  */
-function getPrettierViolationsMap(configs) {
+function getViolationsMap(configs) {
   return Object.keys(configs).reduce((map, packageName) => {
     map[packageName] = [];
     return map;
   }, {});
+}
+
+/**
+ * Records whether the given config has any uselessly specified rules relative
+ * to the config's flat extended rules. "Uselessly" means either that the rule
+ * is explicitly disabled without ever being enabled, or that its configured
+ * identically in the flat extended rules.
+ *
+ * @param {string} packageName - The name of the config package.
+ * @param {Record<string, unknown>} config - The package's eslint config object
+ * (i.e. its .eslintrc.js export).
+ * @param {Record<string, unknown>} flatExtendedRules - The flattened rules of
+ * every config extended by the package config.
+ * @param {Record<string, string[]>} violations - A map to store violations in.
+ */
+function validateConfigMinimalism(
+  packageName,
+  config,
+  flatExtendedRules,
+  violations,
+) {
+  Object.entries(config.rules || {}).forEach(([ruleName, ruleValue]) => {
+    if (
+      deepEqual(flatExtendedRules[ruleName], ruleValue) ||
+      (!(ruleName in flatExtendedRules) && ruleValue === OFF)
+    ) {
+      violations[packageName].push(ruleName);
+    }
+  });
 }
 
 /**
@@ -233,15 +276,45 @@ function getMetamaskConfigs() {
     const { name: packageName } = JSON.parse(
       readFileSync(manifestPath, 'utf-8'),
     );
-
     const config = require(packagePath);
+
     allConfigs[packageName] = {
       config,
-      flatRules: getFlatRules(config),
+      flatRules: getExtendedAndFullFlatRules(config),
       packagePath,
     };
     return allConfigs;
   }, {});
+}
+
+/**
+ * Gets the extended and full flat rules for the given config.
+ * The extended flat rules are the combined flat rules for every config extended by
+ * the given config.
+ * The full flat rules
+ *
+ * @param {Record<string, unknown>} config - An eslint config object (e.g. .eslintrc.js).
+ * @returns {{ extended: Record<string, unknown>, full: Record<string, unknown>}} An
+ * object containing the extended and full flat rules.
+ */
+function getExtendedAndFullFlatRules(config) {
+  const flatConfig = getFlatConfig(config);
+
+  // If the flat config is of length 1, the given config doesn't extend
+  // anything.
+  if (flatConfig.length === 1) {
+    return { extended: {}, full: getFlatRules(flatConfig) };
+  }
+
+  const extendedFlatRules = getFlatRules(flatConfig.slice(0, -1));
+
+  return {
+    extended: extendedFlatRules,
+    full: getFlatRules([
+      { rules: extendedFlatRules },
+      flatConfig[flatConfig.length - 1],
+    ]),
+  };
 }
 
 /**
@@ -252,7 +325,7 @@ function getMetamaskConfigs() {
  * disabled when using Prettier.
  */
 function getRequiredPrettierRules() {
-  return Object.entries(getFlatRules(prettierConfig)).reduce(
+  return Object.entries(getFlatRules(getFlatConfig(prettierConfig))).reduce(
     (allRules, [ruleName, ruleValue]) => {
       // Rules set to 'off' should never be enabled.
       // Rules set to 0 (number) may sometimes be included. We don't attend to those.
@@ -267,20 +340,18 @@ function getRequiredPrettierRules() {
 }
 
 //----------------
-// ESLint config parsing utilities.
+// ESLint config parsing utilities
 //----------------
 
 /**
- * Takes an eslint config object and returns its own rules and the rules of its
- * extended configs (if any) in a single, flat object.
+ * Takes an eslint flat config array and returns its own rules and the rules
+ * of its extended configs (if any) in a single, flat object.
  *
- * @param {Record<string, unknown>} configObject - An eslint config object (e.g. .eslintrc.js).
+ * @param {Record<string, unknown>[]} flatConfig - A flat eslint config array.
  * @returns {Record<string, unknown>} An object of eslint rule names and their
  * configuration.
  */
-function getFlatRules(configObject) {
-  const flatConfig = getFlatConfig(configObject);
-
+function getFlatRules(flatConfig) {
   // Flatten the config array into a single object
   const rawFlatRules = flatConfig.reduce((flatRules, config) => {
     if (RULES in config) {
@@ -293,11 +364,22 @@ function getFlatRules(configObject) {
   }, {});
 
   // Sort the flat rules alphabetically and return them
-  return Object.keys(rawFlatRules)
+  return sortObject(rawFlatRules);
+}
+
+/**
+ * Sorts the keys of the given object, inserts them in that order in a new
+ * object, and returns that object.
+ *
+ * @param {Record<string, unknown>} obj - The object to sort.
+ * @returns {Record<string, unknown>} The sorted object.
+ */
+function sortObject(obj) {
+  return Object.keys(obj)
     .sort()
-    .reduce((flatRules, ruleName) => {
-      flatRules[ruleName] = rawFlatRules[ruleName];
-      return flatRules;
+    .reduce((sortedObj, key) => {
+      sortedObj[key] = obj[key];
+      return sortedObj;
     }, {});
 }
 
@@ -356,14 +438,26 @@ function populateRecommendedRules(configArray) {
  */
 function logPrettierViolations(prettierViolations) {
   let str = `\nError: Detected Prettier rule violations. Disable the specified rule(s) in the following package(s):\n`;
-  Object.entries(prettierViolations).forEach(([packageName, violatedRules]) => {
-    if (prettierViolations[packageName].length > 0) {
-      str += `\n${tabs(1)}${packageName}\n${tabs(2)}${violatedRules.join(
-        `${tabs(2)}\n`,
-      )}\n`;
+  str += getViolationsString(prettierViolations);
+  console.error(str);
+}
+
+function logMinimalismViolations(minimalismViolations) {
+  let str = `\nError: Detected redundantly configured rules. Remove the specified rule(s) in the following package(s):\n`;
+  str += getViolationsString(minimalismViolations);
+  console.error(str);
+}
+
+function getViolationsString(violationsMap) {
+  let str = '';
+  Object.entries(violationsMap).forEach(([packageName, violatedRules]) => {
+    if (violationsMap[packageName].length > 0) {
+      str += `\n${tabs(1)}${packageName}\n${tabs(2)}${violatedRules
+        .sort()
+        .join(`\n${tabs(2)}`)}\n`;
     }
   });
-  console.error(str);
+  return str;
 }
 
 /**
@@ -377,7 +471,7 @@ function logSnapshotViolations(snapshotViolations) {
   console.error(
     `\nError: Computed snapshot differs from the existing snapshot for the following package(s). Take a new snapshot and try again.\n\n${tabs(
       1,
-    )}${snapshotViolations.join(`${tabs(1)}\n`)}`,
+    )}${snapshotViolations.join(`\n${tabs(1)}`)}`,
   );
 }
 
