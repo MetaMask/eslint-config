@@ -45,43 +45,14 @@ module.exports = {
     // when autofixing in vscode and others.
     'no-confusing-arrow': 'off',
 
-    // There is no configuration in prettier for how it stylizes regexes, which conflicts
-    // with wrap-regex.
-    'wrap-regex': 'off',
-
-    // Prettier handles all indentation automagically. It defaults to 2 spaces,
-    // which is what we want.
-    // https://prettier.io/docs/en/options.html#tab-width
-    'indent': 'off',
-
-    // This rule conflicts with the way that prettier breaks code across multiple lines when
-    // it exceeds the maximum length. Prettier optimizes for readability while simultaneously
-    // maximizing the amount of code per line.
-    'function-paren-newline': 'off',
-
-    // This rule throws an error when there is a line break in an arrow function declaration
-    // but prettier breaks arrow function declarations to be as readable as possible while
-    // still conforming to the width rules.
-    'implicit-arrow-linebreak': 'off',
-
-    // This rule would result in an increase in white space in lines with generator functions,
-    // which impacts prettier's goal of maximizing code per line and readability. There is no
-    // current workaround.
-    'generator-star-spacing': 'off',
-
-    'arrow-body-style': 'off',
-    'arrow-spacing': 'off',
-    'comma-spacing': 'off',
     'curly': ['error', 'all'],
     'max-len': 'off',
     'no-tabs': 'error',
     'no-unexpected-multiline': 'off',
-    'prefer-arrow-callback': 'off',
     'quotes': 'off',
 
     // Not required by prettier, but potentially gotchas.
     'no-restricted-syntax': ['error', 'SequenceExpression'],
-    'no-sequences': 'off',
 
     /* Core rules */
     'accessor-pairs': 'error',
@@ -170,7 +141,6 @@ module.exports = {
     'no-proto': 'error',
     'no-restricted-globals': ['error', 'event'],
     'no-return-assign': ['error', 'except-parens'],
-    'no-return-await': 'off', // See https://gist.github.com/Gudahtt/618b89f40164af323e08bbdbd17a1769#gistcomment-3182478
     'no-script-url': 'error',
     'no-self-compare': 'error',
     'no-shadow': 'error',
@@ -252,7 +222,6 @@ module.exports = {
       },
     ],
     'prefer-numeric-literals': 'error',
-    'prefer-object-spread': 'off', // TODO: Enable
     'prefer-promise-reject-errors': 'error',
     'prefer-regex-literals': 'error',
     'prefer-rest-params': 'error',
@@ -283,7 +252,6 @@ module.exports = {
     /* import plugin rules */
     'import/default': 'error',
     'import/export': 'error',
-    'import/exports-last': 'off',
     'import/extensions': [
       'error',
       'never',
@@ -313,7 +281,6 @@ module.exports = {
         commonjs: true,
       },
     ],
-    'import/no-unused-modules': 'off',
     'import/no-useless-path-segments': [
       'error',
       {

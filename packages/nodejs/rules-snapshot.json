@@ -2,7 +2,6 @@
   "no-process-exit": "off",
   "node/callback-return": "error",
   "node/exports-style": "error",
-  "node/file-extension-in-import": "off",
   "node/global-require": "error",
   "node/handle-callback-err": [
     "error",
