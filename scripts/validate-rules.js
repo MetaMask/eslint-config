@@ -38,7 +38,8 @@ main();
  *    rules that should be disabled.
  * 2. Ensures that we only usefully configure rules, meaning our configs only
  *    contain rules that are configured differently from or do not exist in
- *    any config that we extend.
+ *    any config that we extend, or our base config, which should always be
+ *    extended by the consumer in practice.
  * 3. Creates rule snapshots to make it easy to understand the impact of any
  *    changes we make to our configs, such as changing our specified rules or
  *    the configs that we extend.
