@@ -7,6 +7,7 @@ const {
 } = require('eslint-plugin-prettier');
 const deepEqual = require('fast-deep-equal');
 
+const BASE_CONFIG_NAME = '@metamask/eslint-config';
 const ESLINT_RECOMMENDED = 'eslint:recommended';
 const RULES = 'rules';
 const OFF = 'off';
@@ -283,7 +284,7 @@ function getMetamaskConfigs() {
 
     allConfigs[packageName] = {
       config,
-      flatRules: getExtendedAndFullFlatRules(config),
+      flatRules: getExtendedAndFullFlatRules(packageName, config),
       packagePath,
     };
     return allConfigs;
@@ -291,33 +292,50 @@ function getMetamaskConfigs() {
 }
 
 /**
- * Gets the extended and full flat rules for the given config.
- * The extended flat rules are the combined flat rules for every config extended by
- * the given config.
- * The full flat rules
+ * Gets the full and extended flat rules for the given config.
+ * The full flat rules are the combined flat rules for every config extended by
+ * the given config, and the config's own rules.
+ * The extended flat rules are the combined flat rules for every config extended
+ * by the given config, _and_ the MetaMask base config.
  *
+ * The extended flat rules are computed in this way because we assume that
+ * consumers will extend our base config first, and then others. We want to
+ * disable some rules in e.g. our TypeScript config that are enabled in our
+ * base config. If we did not compute the extended flat rules in this way, our
+ * rule minimization script would erroneously flag certain rules as useless.
+ *
+ * @param {string} packageName - The name of the config package.
  * @param {Record<string, unknown>} config - An eslint config object (e.g. .eslintrc.js).
  * @returns {{ extended: Record<string, unknown>, full: Record<string, unknown>}} An
  * object containing the extended and full flat rules.
  */
-function getExtendedAndFullFlatRules(config) {
-  const flatConfig = getFlatConfig(config);
-
-  // If the flat config is of length 1, the given config doesn't extend
-  // anything.
-  if (flatConfig.length === 1) {
-    return { extended: {}, full: getFlatRules(flatConfig) };
-  }
+function getExtendedAndFullFlatRules(packageName, config) {
+  const isBaseConfig = packageName === BASE_CONFIG_NAME;
+  const flatConfig = isBaseConfig
+    ? getFlatConfig(config)
+    : getFlatConfigWithBaseConfig(config);
 
   const extendedFlatRules = getFlatRules(flatConfig.slice(0, -1));
 
   return {
     extended: extendedFlatRules,
-    full: getFlatRules([
-      { rules: extendedFlatRules },
-      flatConfig[flatConfig.length - 1],
-    ]),
+    full: getFlatRules(isBaseConfig ? flatConfig : getFlatConfig(config)),
   };
+}
+
+/**
+ * Prepends the base config to the "extends" array of the given config and
+ * computes its flat config array.
+ *
+ * @param {Record<string, unknown>} configObject - An eslint config object (e.g. .eslintrc.js).
+ * @returns {Record<string, unknown>[]} An array of parsed eslint config objects.
+ */
+function getFlatConfigWithBaseConfig(configObject) {
+  const configCopy = { ...configObject };
+  configCopy.extends = Array.isArray(configObject.extends)
+    ? [BASE_CONFIG_NAME, ...configCopy.extends]
+    : [BASE_CONFIG_NAME];
+  return getFlatConfig(configCopy);
 }
 
 /**

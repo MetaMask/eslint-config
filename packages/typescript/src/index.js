@@ -39,20 +39,33 @@ module.exports = {
     '@typescript-eslint/unified-signatures': 'error',
     '@typescript-eslint/default-param-last': 'error',
     '@typescript-eslint/no-dupe-class-members': 'error',
-    '@typescript-eslint/no-unused-expressions': [
-      'error',
-      { allowShortCircuit: true, allowTernary: true },
-    ],
     '@typescript-eslint/no-unused-vars': [
       'error',
       { vars: 'all', args: 'all', argsIgnorePattern: '[_]+' },
     ],
-    '@typescript-eslint/no-use-before-define': ['error', { functions: false }],
-    '@typescript-eslint/no-useless-constructor': 'error',
+
+    // This is configured to work with Prettier
+    // https://github.com/prettier/eslint-config-prettier/#quotes
+    // TODO: Actually, do we need this?
     '@typescript-eslint/quotes': [
       'error',
       'single',
       { avoidEscape: true, allowTemplateLiterals: true },
     ],
+
+    '@typescript-eslint/no-unused-expressions': [
+      'error',
+      { allowShortCircuit: true, allowTernary: true },
+    ],
+    'no-unused-expressions': 'off',
+
+    '@typescript-eslint/no-use-before-define': ['error', { functions: false }],
+    'no-use-before-define': 'off',
+
+    '@typescript-eslint/no-useless-constructor': 'error',
+    'no-useless-constructor': 'off',
+
+    // Handled by TypeScript
+    'import/no-unresolved': 'off',
   },
 };
