@@ -7,10 +7,14 @@ const {
 } = require('eslint-plugin-prettier');
 const deepEqual = require('fast-deep-equal');
 
+// For config parsing, validation, and rule flattening
 const BASE_CONFIG_NAME = '@metamask/eslint-config';
 const ESLINT_RECOMMENDED = 'eslint:recommended';
 const RULES = 'rules';
 const OFF = 'off';
+
+// For logging
+const TAB = '    ';
 
 // The path to the monorepo packages directory
 const PACKAGES_DIR_PATH = pathUtils.join(__dirname, '../packages');
@@ -515,6 +519,5 @@ function logSnapshotViolations(snapshotViolations) {
  * @returns {string} A string consisting of numTabs 4-space "tabs".
  */
 function tabs(numTabs) {
-  const TAB = '    ';
   return TAB + new Array(numTabs).join(TAB);
 }
