@@ -96,15 +96,15 @@ async function main() {
  * Prettier violations.
  */
 function logPrettierViolations(prettierViolations) {
-  console.error(
-    `\nError: Detected Prettier rule violations. Disable the specified rule(s) in the following package(s):\n\n${Object.entries(
-      prettierViolations,
-    )
-      .map(([packageName, rules]) => {
-        return `${tabs(1)}${packageName}\n${rules.join(`${tabs(2)}\n`)}`;
-      })
-      .join(`\n${tabs(1)}`)}`,
-  );
+  let str = `\nError: Detected Prettier rule violations. Disable the specified rule(s) in the following package(s):\n`;
+  Object.entries(prettierViolations).forEach(([packageName, violatedRules]) => {
+    if (prettierViolations[packageName].length > 0) {
+      str += `\n${tabs(1)}${packageName}\n${tabs(2)}${violatedRules.join(
+        `${tabs(2)}\n`,
+      )}\n`;
+    }
+  });
+  console.error(str);
 }
 
 /**

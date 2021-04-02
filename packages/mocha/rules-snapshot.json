@@ -8,6 +8,7 @@
   ],
   "mocha/no-async-describe": "error",
   "mocha/no-exclusive-tests": "error",
+  "mocha/no-exports": "error",
   "mocha/no-global-tests": "error",
   "mocha/no-hooks": "off",
   "mocha/no-hooks-for-single-case": "error",

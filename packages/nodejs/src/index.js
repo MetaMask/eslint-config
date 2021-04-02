@@ -5,6 +5,8 @@ module.exports = {
     node: true,
   },
 
+  extends: ['plugin:node/recommended'],
+
   rules: {
     // Possible Errors
     'node/handle-callback-err': ['error', '^(err|error)$'],
@@ -48,5 +50,9 @@ module.exports = {
     'node/prefer-global/url': 'error',
     'node/prefer-promises/dns': 'error',
     'node/prefer-promises/fs': 'error',
+
+    // Deprecated eslint core rule, erroneously enabled by recommended Node rules
+    // https://eslint.org/docs/rules/no-process-exit
+    'no-process-exit': 'off',
   },
 };

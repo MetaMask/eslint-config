@@ -7,6 +7,8 @@ module.exports = {
     mocha: true,
   },
 
+  extends: ['plugin:mocha/recommended'],
+
   rules: {
     'mocha/handle-done-callback': 'error',
     'mocha/max-top-level-suites': ['error', { limit: 1 }],
