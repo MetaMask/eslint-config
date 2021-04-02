@@ -27,16 +27,19 @@ const WRITE_MODE = ['--write', '-w'].includes(process.argv[2]);
 main();
 
 /**
- * This script accomplishes 2 things:
+ * This script accomplishes 3 things:
  *
- * 1. It ensures that neither we nor any config that we extend enables any
- *    Prettier rules that should be disabled.
- * 2. Creates rule snapshots to make it easy to understand the impact of any
+ * 1. Ensures that neither we nor any config that we extend enables any Prettier
+ *    rules that should be disabled.
+ * 2. Ensures that we only usefully configure rules, meaning our configs only
+ *    contain rules that are configured differently from or do not exist in
+ *    any config that we extend.
+ * 3. Creates rule snapshots to make it easy to understand the impact of any
  *    changes we make to our configs, such as changing our specified rules or
  *    the configs that we extend.
  *
  * If the script is in write mode (by being given the argument --write or -w),
- * it will overwrite the existing rule snapshots. Otherwise, it will compare the
+ * it will overwrite any existing rule snapshots. Otherwise, it will compare the
  * computed snapshot to the snapshot stored on disk, and exit with an error if
  * they aren't equal.
  */
@@ -131,6 +134,35 @@ function validatePrettierRules(
 }
 
 /**
+ * Records whether the given config has any uselessly specified rules relative
+ * to the config's flat extended rules. "Uselessly" means either that the rule
+ * is explicitly disabled without ever being enabled, or that its configured
+ * identically in the flat extended rules.
+ *
+ * @param {string} packageName - The name of the config package.
+ * @param {Record<string, unknown>} config - The package's eslint config object
+ * (i.e. its .eslintrc.js export).
+ * @param {Record<string, unknown>} flatExtendedRules - The flattened rules of
+ * every config extended by the package config.
+ * @param {Record<string, string[]>} violations - A map to store violations in.
+ */
+function validateConfigMinimalism(
+  packageName,
+  config,
+  flatExtendedRules,
+  violations,
+) {
+  Object.entries(config.rules || {}).forEach(([ruleName, ruleValue]) => {
+    if (
+      deepEqual(flatExtendedRules[ruleName], ruleValue) ||
+      (!(ruleName in flatExtendedRules) && ruleValue === OFF)
+    ) {
+      violations[packageName].push(ruleName);
+    }
+  });
+}
+
+/**
  * Checks whether a config violations map contains any violations.
  *
  * @param {Record<string, string[]>} - A map of package names to arrays with
@@ -161,35 +193,6 @@ function getViolationsMap(configs) {
     map[packageName] = [];
     return map;
   }, {});
-}
-
-/**
- * Records whether the given config has any uselessly specified rules relative
- * to the config's flat extended rules. "Uselessly" means either that the rule
- * is explicitly disabled without ever being enabled, or that its configured
- * identically in the flat extended rules.
- *
- * @param {string} packageName - The name of the config package.
- * @param {Record<string, unknown>} config - The package's eslint config object
- * (i.e. its .eslintrc.js export).
- * @param {Record<string, unknown>} flatExtendedRules - The flattened rules of
- * every config extended by the package config.
- * @param {Record<string, string[]>} violations - A map to store violations in.
- */
-function validateConfigMinimalism(
-  packageName,
-  config,
-  flatExtendedRules,
-  violations,
-) {
-  Object.entries(config.rules || {}).forEach(([ruleName, ruleValue]) => {
-    if (
-      deepEqual(flatExtendedRules[ruleName], ruleValue) ||
-      (!(ruleName in flatExtendedRules) && ruleValue === OFF)
-    ) {
-      violations[packageName].push(ruleName);
-    }
-  });
 }
 
 /**
@@ -257,7 +260,7 @@ async function writeRulesSnapshot(snapshotFilePath, flatRules) {
 }
 
 //----------------
-// Specific config getters.
+// Specific config getters
 //----------------
 
 /**
