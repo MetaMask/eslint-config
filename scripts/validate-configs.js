@@ -520,5 +520,8 @@ function logSnapshotViolations(snapshotViolations) {
  * @returns {string} A string consisting of numTabs 4-space "tabs".
  */
 function tabs(numTabs) {
-  return TAB + new Array(numTabs).join(TAB);
+  if (numTabs < 1 || !Number.isInteger(numTabs)) {
+    throw new Error('Expected positive integer.');
+  }
+  return numTabs === 1 ? TAB : TAB + new Array(numTabs).join(TAB);
 }
