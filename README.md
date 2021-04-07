@@ -26,3 +26,15 @@ extended configs, each package has a `rules-snapshot.json` fill which contains
 all rules of the particular config and its extended configs in a single
 dictionary. When editing a package, always check its rules snapshots after
 running `yarn lint:fix` to understand which rules changed.
+
+## Releasing
+
+The `@metamask/eslint-config` are version-locked.
+If you bump the version of one, you must bump the version of them all.
+When `main` is in a state that you want to release, complete the following steps:
+
+- Run `yarn create-release-pr <patch|minor|major>`
+  - This will bump the version of all packages and create a PR with a new patch, minor, or major version, per the argument given.
+- Update the changelogs of the packages that changed and push the changelog updates to the release PR
+- Once the release PR is merged, pull `main` and run `yarn publish-all`
+  - This will publish new versions of all packages.
