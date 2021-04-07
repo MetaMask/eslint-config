@@ -53,11 +53,14 @@ async function main() {
   const metamaskConfigs = getMetamaskConfigs();
   const requiredPrettierRules = getRequiredPrettierRules();
 
+  // Violated rules are appended to these objects inside their respective
+  // validation functions.
   const prettierViolations = getViolationsMap(metamaskConfigs);
   const minimalismViolations = getViolationsMap(metamaskConfigs);
   const snapshotViolations = [];
 
-  // Iterates over this monorepo's config packages and validates their rules.
+  // Iterate over this monorepo's config packages and validate their rules,
+  // appending any violations to the violation objects.
   await Promise.all(
     Object.entries(metamaskConfigs).map(
       async ([packageName, { config, flatRules, packagePath }]) => {
@@ -85,6 +88,7 @@ async function main() {
     ),
   );
 
+  // Log any rule violations, and exit with an appropriate code.
   let failures = 0;
   if (hasViolations(prettierViolations)) {
     failures += 1;
