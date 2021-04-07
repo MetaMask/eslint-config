@@ -83,7 +83,6 @@
   "implicit-arrow-linebreak": "off",
   "import/default": "error",
   "import/export": "error",
-  "import/exports-last": "off",
   "import/extensions": [
     "error",
     "never",
@@ -113,7 +112,6 @@
       "commonjs": true
     }
   ],
-  "import/no-unused-modules": "off",
   "import/no-useless-path-segments": [
     "error",
     {
@@ -259,11 +257,9 @@
     "error",
     "except-parens"
   ],
-  "no-return-await": "off",
   "no-script-url": "error",
   "no-self-assign": "error",
   "no-self-compare": "error",
-  "no-sequences": "off",
   "no-setter-return": "error",
   "no-shadow": "error",
   "no-shadow-restricted-names": "error",
@@ -370,7 +366,6 @@
     }
   ],
   "prefer-numeric-literals": "error",
-  "prefer-object-spread": "off",
   "prefer-promise-reject-errors": "error",
   "prefer-regex-literals": "error",
   "prefer-rest-params": "error",
