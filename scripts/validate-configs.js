@@ -63,7 +63,7 @@ async function main() {
       async ([packageName, { config, flatRules, packagePath }]) => {
         validatePrettierRules(
           packageName,
-          flatRules.full,
+          flatRules.own,
           requiredPrettierRules,
           prettierViolations,
         );
@@ -78,7 +78,7 @@ async function main() {
         await validateOrWriteRulesSnapshot(
           packageName,
           packagePath,
-          flatRules.full,
+          flatRules.own,
           snapshotViolations,
         );
       },
@@ -176,12 +176,9 @@ function validateConfigMinimalism(
  * @returns {boolean} Whether the given map contains any violations.
  */
 function hasViolations(violationsMap) {
-  for (const violations of Object.values(violationsMap)) {
-    if (violations.length > 0) {
-      return true;
-    }
-  }
-  return false;
+  return Object.values(violationsMap).some(
+    (violations) => violations.length > 0,
+  );
 }
 
 /**
@@ -289,7 +286,7 @@ function getMetamaskConfigs() {
 
     allConfigs[packageName] = {
       config,
-      flatRules: getExtendedAndFullFlatRules(packageName, config),
+      flatRules: getOwnAndExtendedFlatRules(packageName, config),
       packagePath,
     };
     return allConfigs;
@@ -297,11 +294,11 @@ function getMetamaskConfigs() {
 }
 
 /**
- * Gets the full and extended flat rules for the given config.
- * The full flat rules are the combined flat rules for every config extended by
+ * Gets the "own" and "extended" flat rules for the given config.
+ * The own flat rules are the combined flat rules for every config extended by
  * the given config, and the config's own rules.
- * The extended flat rules are the combined flat rules for every config extended
- * by the given config, _and_ the MetaMask base config.
+ * The extended flat rules are config's own flat rules combined with the flat
+ * rules of the MetaMask base config.
  *
  * The extended flat rules are computed in this way because we assume that
  * consumers will extend our base config first, and then others. We want to
@@ -311,20 +308,28 @@ function getMetamaskConfigs() {
  *
  * @param {string} packageName - The name of the config package.
  * @param {Record<string, unknown>} config - An eslint config object (e.g. .eslintrc.js).
- * @returns {{ extended: Record<string, unknown>, full: Record<string, unknown>}} An
- * object containing the extended and full flat rules.
+ * @returns {{ extended: Record<string, unknown>, own: Record<string, unknown>}} An
+ * object containing the config's own and extended flat rules.
  */
-function getExtendedAndFullFlatRules(packageName, config) {
-  const isBaseConfig = packageName === BASE_CONFIG_NAME;
-  const flatConfig = isBaseConfig
-    ? getFlatConfig(config)
-    : getFlatConfigWithBaseConfig(config);
+function getOwnAndExtendedFlatRules(packageName, config) {
+  let flatConfig, ownFlatRules;
+  if (packageName === BASE_CONFIG_NAME) {
+    flatConfig = getFlatConfig(config);
+    ownFlatRules = getFlatRules(flatConfig);
+  } else {
+    flatConfig = getFlatConfigWithBaseConfig(config);
+    ownFlatRules = getFlatRules(getFlatConfig(config));
+  }
 
+  // The below call returns the flat rules for everything except the last item
+  // in the flat config array.
+  // The last item in the flat config is our config, and the preceding items are
+  // its extended configs.
   const extendedFlatRules = getFlatRules(flatConfig.slice(0, -1));
 
   return {
     extended: extendedFlatRules,
-    full: getFlatRules(isBaseConfig ? flatConfig : getFlatConfig(config)),
+    own: ownFlatRules,
   };
 }
 
@@ -492,7 +497,7 @@ function logMinimalismViolations(minimalismViolations) {
 function getViolationsString(violationsMap) {
   let str = '';
   Object.entries(violationsMap).forEach(([packageName, violatedRules]) => {
-    if (violationsMap[packageName].length > 0) {
+    if (violatedRules.length > 0) {
       str += `\n${tabs(1)}${packageName}\n${tabs(2)}${violatedRules
         .sort()
         .join(`\n${tabs(2)}`)}\n`;
