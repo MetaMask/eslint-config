@@ -8,7 +8,11 @@
     "lint:eslint": "yarn eslint . --ext ts,js",
     "lint:config-validation": "node ./scripts/validate-configs.js",
     "lint": "yarn lint:eslint && yarn lint:config-validation",
-    "lint:fix": "yarn lint:eslint --fix && yarn lint:config-validation --write"
+    "lint:fix": "yarn lint:eslint --fix && yarn lint:config-validation --write",
+    "link-packages": "./scripts/link-packages.sh",
+    "create-release-pr": "./scripts/create-release-pr.sh",
+    "prepare": "yarn lint",
+    "publish-all": "lerna publish from-package"
   },
   "workspaces": [
     "packages/*"
