@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
+- **(BREAKING)** Set minimum Node.js version to `^12.0.0` ([#144](https://github.com/MetaMask/eslint-config/pull/144))
 - **(BREAKING)** Enable [`mocha/no-exports`](https://github.com/lo1tuma/eslint-plugin-mocha/blob/bb203bc/docs/rules/no-exports.md) ([#156](https://github.com/MetaMask/eslint-config/pull/156))
 - Publish this config as its own package ([#141](https://github.com/MetaMask/eslint-config/pull/141))
   - The contents of this package were previously published as part of [`@metamask/eslint-config`](https://npmjs.com/package/@metamask/eslint-config).

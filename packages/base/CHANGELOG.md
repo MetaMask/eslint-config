@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Changed
 
+- **(BREAKING)** Set minimum Node.js version to `^12.0.0` ([#144](https://github.com/MetaMask/eslint-config/pull/144))
 - **(BREAKING)** Add the [Prettier](https://prettier.io) ESLint plugin and extend the recommended Prettier ESLint config ([#96](https://github.com/MetaMask/eslint-config/pull/96))
   - See [here](https://github.com/prettier/eslint-plugin-prettier/blob/d993f24/eslint-plugin-prettier.js#L62-L73) for the `eslint-plugin-prettier` rules and [here](https://github.com/prettier/eslint-config-prettier/blob/abf3ba1/index.js) for the rules of `eslint-config-prettier`, which the plugin extends.
   - The rules of this config should otherwise be unchanged.
