@@ -6,13 +6,34 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [6.0.0] - 2021-04-08
+
+## Changed
+
+- **(BREAKING)** Set minimum Node.js version to `^12.0.0` ([#144](https://github.com/MetaMask/eslint-config/pull/144))
+- **(BREAKING)** Set ECMAScript version to `es2017`/`8` ([#150](https://github.com/MetaMask/eslint-config/pull/150))
+- **(BREAKING)** Add the [Prettier](https://prettier.io) ESLint plugin and extend the recommended Prettier ESLint config ([#96](https://github.com/MetaMask/eslint-config/pull/96))
+  - See [here](https://github.com/prettier/eslint-plugin-prettier/blob/d993f24/eslint-plugin-prettier.js#L62-L73) for the `eslint-plugin-prettier` rules and [here](https://github.com/prettier/eslint-config-prettier/blob/abf3ba1/index.js) for the rules of `eslint-config-prettier`, which the plugin extends.
+  - The rules of this config should otherwise be unchanged.
+- Update `eslint` and other ESLint peer dependencies ([#151](https://github.com/MetaMask/eslint-config/pull/151))
+
+## Removed
+
+- **(BREAKING)** All configs except the base config ([#141](https://github.com/MetaMask/eslint-config/pull/141))
+  - All configs are now published as separate packages, and must be extended by referencing their package names:
+    - [`@metamask/eslint-config`](https://npmjs.com/package/@metamask/eslint-config) (the base config)
+    - [`@metamask/eslint-config-jest`](https://npmjs.com/package/@metamask/eslint-config-jest)
+    - [`@metamask/eslint-config-mocha`](https://npmjs.com/package/@metamask/eslint-config-mocha)
+    - [`@metamask/eslint-config-nodejs`](https://npmjs.com/package/@metamask/eslint-config-nodejs)
+    - [`@metamask/eslint-config-typescript`](https://npmjs.com/package/@metamask/eslint-config-typescript)
+
 ## [5.0.0] - 2021-02-02
 
 ### Changed
 
-- **BREAKING:** Enable `semi` in base config ([#101](https://github.com/MetaMask/eslint-config/pull/101))
-- **BREAKING:** Disallow spaces before parentheses of named functions ([#101](https://github.com/MetaMask/eslint-config/pull/101))
-- **BREAKING:** Upgrade to TypeScript v4 and corresponding `@typescript-eslint` dependencies ([#79](https://github.com/MetaMask/eslint-config/pull/79), [#80](https://github.com/MetaMask/eslint-config/pull/80), [#103](https://github.com/MetaMask/eslint-config/pull/103))
+- **(BREAKING)** Enable `semi` in base config ([#101](https://github.com/MetaMask/eslint-config/pull/101))
+- **(BREAKING)** Disallow spaces before parentheses of named functions ([#101](https://github.com/MetaMask/eslint-config/pull/101))
+- **(BREAKING)** Upgrade to TypeScript v4 and corresponding `@typescript-eslint` dependencies ([#79](https://github.com/MetaMask/eslint-config/pull/79), [#80](https://github.com/MetaMask/eslint-config/pull/80), [#103](https://github.com/MetaMask/eslint-config/pull/103))
 
 ## [4.1.0] - 2020-10-21
 
@@ -25,7 +46,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
-- **BREAKING:** Update to ESLint v7 (#46, #58, #62, #63)
+- **(BREAKING)** Update to ESLint v7 (#46, #58, #62, #63)
 - Relax `member-delimiter-style` for TypeScript ([#68](https://github.com/MetaMask/eslint-config/pull/68))
 - Disable `space-before-function-paren` for TypeScript ([#65](https://github.com/MetaMask/eslint-config/pull/65))
 
@@ -101,7 +122,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Add base, TypeScript, and Jest configs (#3)
 
-[Unreleased]:https://github.com/MetaMask/eslint-config/compare/v5.0.0...HEAD
+[Unreleased]:https://github.com/MetaMask/eslint-config/compare/v6.0.0...HEAD
+[6.0.0]:https://github.com/MetaMask/eslint-config/compare/v5.0.0...v6.0.0
 [5.0.0]:https://github.com/MetaMask/eslint-config/compare/v4.1.0...v5.0.0
 [4.1.0]:https://github.com/MetaMask/eslint-config/compare/v4.0.0...v4.1.0
 [4.0.0]:https://github.com/MetaMask/eslint-config/compare/v3.2.0...v4.0.0

@@ -1,6 +1,6 @@
 {
   "name": "@metamask/eslint-config-typescript",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "Shareable MetaMask ESLint config for TypeScript.",
   "main": "src/index.js",
   "publishConfig": {

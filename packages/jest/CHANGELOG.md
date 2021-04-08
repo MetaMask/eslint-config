@@ -6,8 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-The contents of this package were previosly published as part of [`@metamask/eslint-config`](https://npmjs.com/package/@metamask/eslint-config).
-For changes prior to version `6.0.0`, please refer to the changelog of that package.
+## [6.0.0] - 2021-04-08
 
-[Unreleased]:https://github.com/MetaMask/eslint-config/compare/v5.0.0...HEAD
-<!-- [6.0.0]:https://github.com/MetaMask/eslint-config/tree/v6.0.0 -->
+### Changed
+
+- **(BREAKING)** Set minimum Node.js version to `^12.0.0` ([#144](https://github.com/MetaMask/eslint-config/pull/144))
+- Publish this config as its own package ([#141](https://github.com/MetaMask/eslint-config/pull/141))
+  - The contents of this package were previously published as part of [`@metamask/eslint-config`](https://npmjs.com/package/@metamask/eslint-config).
+  For changes prior to version `6.0.0`, please refer to the changelog of that package.
+  - To continue extending this config, install this package and update your `.eslintrc.js` `extends` array to include `@metamask/eslint-config-jest` instead of `@metamask/eslint-config/jest`.
+- Update `eslint` and other ESLint peer dependencies ([#151](https://github.com/MetaMask/eslint-config/pull/151))
+
+[Unreleased]:https://github.com/MetaMask/eslint-config/compare/v6.0.0...HEAD
+[6.0.0]:https://github.com/MetaMask/eslint-config/tree/v6.0.0
