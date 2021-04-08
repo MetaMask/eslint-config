@@ -14,10 +14,13 @@ function push_version_bump() {
   local newVersion
   newVersion=$(node -p 'require("./lerna.json").version')
 
-  git checkout -b "${newVersion}"
+  local branchName
+  branchName="release-v${newVersion}"
+
+  git checkout -b "${branchName}"
   git add .
-  git commit -m "${newVersion}" || true
-  git push -u origin "${newVersion}"
+  git commit -m "${branchName}" || true
+  git push -u origin "${branchName}"
 }
 
 # bump version of all packages
