@@ -19,7 +19,7 @@ function push_version_bump() {
 
   git checkout -b "${branchName}"
   git add .
-  git commit -m "${branchName}" || true
+  git commit -m "${newVersion}"
   git push -u origin "${branchName}"
 }
 
