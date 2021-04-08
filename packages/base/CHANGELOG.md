@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - **(BREAKING)** Add the [Prettier](https://prettier.io) ESLint plugin and extend the recommended Prettier ESLint config ([#96](https://github.com/MetaMask/eslint-config/pull/96))
   - See [here](https://github.com/prettier/eslint-plugin-prettier/blob/d993f24/eslint-plugin-prettier.js#L62-L73) for the `eslint-plugin-prettier` rules and [here](https://github.com/prettier/eslint-config-prettier/blob/abf3ba1/index.js) for the rules of `eslint-config-prettier`, which the plugin extends.
   - The rules of this config should otherwise be unchanged.
+- Update `eslint` and other ESLint peer dependencies ([#151](https://github.com/MetaMask/eslint-config/pull/151))
 
 ## Removed
 
