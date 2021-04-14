@@ -143,7 +143,7 @@ module.exports = {
     'no-return-assign': ['error', 'except-parens'],
     'no-script-url': 'error',
     'no-self-compare': 'error',
-    'no-shadow': 'error',
+    'no-shadow': ['error', { builtinGlobals: true, hoist: 'functions' }],
     'no-template-curly-in-string': 'error',
     'no-throw-literal': 'error',
     'no-undef-init': 'error',

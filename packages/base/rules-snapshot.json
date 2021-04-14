@@ -261,7 +261,13 @@
   "no-self-assign": "error",
   "no-self-compare": "error",
   "no-setter-return": "error",
-  "no-shadow": "error",
+  "no-shadow": [
+    "error",
+    {
+      "builtinGlobals": true,
+      "hoist": "functions"
+    }
+  ],
   "no-shadow-restricted-names": "error",
   "no-space-before-semi": "off",
   "no-spaced-func": "off",

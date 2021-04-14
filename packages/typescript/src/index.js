@@ -50,6 +50,12 @@ module.exports = {
     'default-param-last': 'off',
     '@typescript-eslint/default-param-last': 'error',
 
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': [
+      'error',
+      { builtinGlobals: true, hoist: 'functions' },
+    ],
+
     'no-unused-expressions': 'off',
     '@typescript-eslint/no-unused-expressions': [
       'error',
