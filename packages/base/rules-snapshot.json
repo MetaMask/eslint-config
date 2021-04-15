@@ -264,8 +264,7 @@
   "no-shadow": [
     "error",
     {
-      "builtinGlobals": true,
-      "hoist": "functions"
+      "builtinGlobals": true
     }
   ],
   "no-shadow-restricted-names": "error",

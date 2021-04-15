@@ -29,8 +29,7 @@
   "@typescript-eslint/no-shadow": [
     "error",
     {
-      "builtinGlobals": true,
-      "hoist": "functions"
+      "builtinGlobals": true
     }
   ],
   "@typescript-eslint/no-this-alias": "error",
