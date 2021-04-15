@@ -21,6 +21,10 @@ module.exports = {
     // Should be disabled per Prettier
     '@typescript-eslint/no-extra-semi': 'off',
 
+    // Handled by TypeScript
+    'import/no-unresolved': 'off',
+
+    // Our rules
     '@typescript-eslint/array-type': 'error',
     '@typescript-eslint/consistent-type-assertions': 'error',
     '@typescript-eslint/consistent-type-definitions': 'error',
@@ -43,22 +47,22 @@ module.exports = {
       { vars: 'all', args: 'all', argsIgnorePattern: '[_]+' },
     ],
 
-    '@typescript-eslint/default-param-last': 'error',
     'default-param-last': 'off',
+    '@typescript-eslint/default-param-last': 'error',
 
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': ['error', { builtinGlobals: true }],
+
+    'no-unused-expressions': 'off',
     '@typescript-eslint/no-unused-expressions': [
       'error',
       { allowShortCircuit: true, allowTernary: true },
     ],
-    'no-unused-expressions': 'off',
 
-    '@typescript-eslint/no-use-before-define': ['error', { functions: false }],
     'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['error', { functions: false }],
 
-    '@typescript-eslint/no-useless-constructor': 'error',
     'no-useless-constructor': 'off',
-
-    // Handled by TypeScript
-    'import/no-unresolved': 'off',
+    '@typescript-eslint/no-useless-constructor': 'error',
   },
 };
