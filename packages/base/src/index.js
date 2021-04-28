@@ -29,27 +29,8 @@ module.exports = {
       },
     ],
 
-    // Prettier has some opinions on mixed-operators, and there is ongoing work
-    // to make the output code clear. The workaround for keeping this rule enabled
-    // requires breaking parts of operations into different variables -- which we
-    // decided to be worse.
-    // https://github.com/prettier/eslint-config-prettier#no-mixed-operators
-    'no-mixed-operators': 'off',
-
-    // Prettier wraps e.g. single line functions with ternaries in parens by default, but
-    // if the line is long enough it breaks it into a separate line and removes the parens.
-    // The second behavior conflicts with this rule. There is some advice on the repo about
-    // how you can keep it enabled:
-    // https://github.com/prettier/eslint-config-prettier#no-confusing-arrow
-    // However, in practice this conflicts with prettier adding parens around short lines,
-    // when autofixing in vscode and others.
-    'no-confusing-arrow': 'off',
-
     'curly': ['error', 'all'],
-    'max-len': 'off',
     'no-tabs': 'error',
-    'no-unexpected-multiline': 'off',
-    'quotes': 'off',
 
     // Not required by prettier, but potentially gotchas.
     'no-restricted-syntax': ['error', 'SequenceExpression'],

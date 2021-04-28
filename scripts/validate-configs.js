@@ -360,18 +360,17 @@ function getFlatConfigWithBaseConfig(configObject) {
  * disabled when using Prettier.
  */
 function getRequiredPrettierRules() {
-  return Object.entries(getFlatRules(getFlatConfig(prettierConfig))).reduce(
-    (allRules, [ruleName, ruleValue]) => {
-      // Rules set to 'off' should never be enabled.
-      // Rules set to 0 (number) may sometimes be included. We don't attend to those.
-      // https://github.com/Prettier/eslint-config-Prettier/blob/abf3ba1/index.js#L7-L9
-      if (ruleValue === OFF) {
-        allRules.push(ruleName);
-      }
-      return allRules;
-    },
-    [],
-  );
+  return Object.entries(
+    getFlatRules(getFlatConfig(prettierConfig), false),
+  ).reduce((allRules, [ruleName, ruleValue]) => {
+    // Rules set to 'off' should never be enabled.
+    // Rules set to 0 (number) may sometimes be included. We don't attend to those.
+    // https://github.com/Prettier/eslint-config-Prettier/blob/abf3ba1/index.js#L7-L9
+    if (ruleValue === OFF) {
+      allRules.push(ruleName);
+    }
+    return allRules;
+  }, []);
 }
 
 //----------------
@@ -383,10 +382,13 @@ function getRequiredPrettierRules() {
  * of its extended configs (if any) in a single, flat object.
  *
  * @param {Record<string, unknown>[]} flatConfig - A flat eslint config array.
+ * @param {boolean} [normalizeRules] - Whether to normalize rule config values
+ * to use string notation (off, warn, error) instead of numerical notation
+ * (0, 1, 2). Non-numerical values are passed through.
  * @returns {Record<string, unknown>} An object of eslint rule names and their
  * configuration.
  */
-function getFlatRules(flatConfig) {
+function getFlatRules(flatConfig, normalizeRules = true) {
   // Flatten the config array into a single object
   const rawFlatRules = flatConfig.reduce((flatRules, config) => {
     if (RULES in config) {
@@ -399,23 +401,53 @@ function getFlatRules(flatConfig) {
   }, {});
 
   // Sort the flat rules alphabetically and return them
-  return sortObject(rawFlatRules);
+  return normalizeRules
+    ? normalizeObject(rawFlatRules, normalizeRuleConfigValue)
+    : normalizeObject(rawFlatRules);
 }
 
 /**
  * Sorts the keys of the given object, inserts them in that order in a new
- * object, and returns that object.
+ * object, and returns that object. Optionally normalizes the values of the
+ * object during sorting.
  *
  * @param {Record<string, unknown>} obj - The object to sort.
+ * @param {Function} [valueNormalizer] - A function that takes a value and
+ * returns a "normalized" version of it. The value of every key on the sorted
+ * object will be passed through this function, if present.
  * @returns {Record<string, unknown>} The sorted object.
  */
-function sortObject(obj) {
+function normalizeObject(obj, valueNormalizer) {
   return Object.keys(obj)
     .sort()
     .reduce((sortedObj, key) => {
-      sortedObj[key] = obj[key];
+      sortedObj[key] = valueNormalizer ? valueNormalizer(obj[key]) : obj[key];
       return sortedObj;
     }, {});
+}
+
+/**
+ * Given an ESLint rule config value, converts it from numerical (0, 1, 2) to
+ * string (off, warn, error) notation, or just returns the given value.
+ *
+ * @param {unknown} configValue - The rule config value to normalize.
+ * @returns {string | typeof configValue} The normalized rule config value.
+ */
+function normalizeRuleConfigValue(configValue) {
+  if (typeof configValue !== 'number' && typeof configValue !== 'string') {
+    return configValue;
+  }
+
+  switch (String(configValue)) {
+    case '0':
+      return 'off';
+    case '1':
+      return 'warn';
+    case '2':
+      return 'error';
+    default:
+      return configValue;
+  }
 }
 
 /**
@@ -520,7 +552,7 @@ function logSnapshotViolations(snapshotViolations) {
   console.error(
     `\nError: Computed snapshot differs from the existing snapshot for the following package(s). Take a new snapshot and try again.\n\n${tabs(
       1,
-    )}${snapshotViolations.join(`\n${tabs(1)}`)}`,
+    )}${snapshotViolations.join(`\n${tabs(1)}`)}\n`,
   );
 }
 
