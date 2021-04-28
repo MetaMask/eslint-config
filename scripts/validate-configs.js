@@ -402,13 +402,14 @@ function getFlatRules(flatConfig, normalizeRules = true) {
 
   // Sort the flat rules alphabetically and return them
   return normalizeRules
-    ? sortObject(rawFlatRules, normalizeRuleConfigValue)
-    : sortObject(rawFlatRules);
+    ? normalizeObject(rawFlatRules, normalizeRuleConfigValue)
+    : normalizeObject(rawFlatRules);
 }
 
 /**
  * Sorts the keys of the given object, inserts them in that order in a new
- * object, and returns that object.
+ * object, and returns that object. Optionally normalizes the values of the
+ * object during sorting.
  *
  * @param {Record<string, unknown>} obj - The object to sort.
  * @param {Function} [valueNormalizer] - A function that takes a value and
@@ -416,7 +417,7 @@ function getFlatRules(flatConfig, normalizeRules = true) {
  * object will be passed through this function, if present.
  * @returns {Record<string, unknown>} The sorted object.
  */
-function sortObject(obj, valueNormalizer) {
+function normalizeObject(obj, valueNormalizer) {
   return Object.keys(obj)
     .sort()
     .reduce((sortedObj, key) => {
