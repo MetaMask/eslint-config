@@ -5,7 +5,7 @@ module.exports = {
     // For JavaScript, ES2017 is our effective minimum version due to the use
     // of Esprima by transitive dependencies.
     // It doesn't handle object rest spread, which is a 2018 feature.
-    'es2017': true,
+    es2017: true,
     'shared-node-browser': true,
   },
 
@@ -18,9 +18,12 @@ module.exports = {
     'prettier/prettier': [
       'error',
       {
+        // All of these are defaults except singleQuote, but we specify them
+        // for explicitness
+        quoteProps: 'as-needed',
         singleQuote: true,
+        tabWidth: 2,
         trailingComma: 'all',
-        quoteProps: 'consistent',
       },
       {
         // Allow consumers to override this prettier config.
@@ -29,7 +32,7 @@ module.exports = {
       },
     ],
 
-    'curly': ['error', 'all'],
+    curly: ['error', 'all'],
     'no-tabs': 'error',
 
     // Not required by prettier, but potentially gotchas.
@@ -39,7 +42,7 @@ module.exports = {
     'accessor-pairs': 'error',
     'array-callback-return': 'error',
     'block-scoped-var': 'error',
-    'camelcase': [
+    camelcase: [
       'error',
       {
         properties: 'never',
@@ -51,7 +54,7 @@ module.exports = {
     'default-case': 'error',
     'default-param-last': 'error',
     'dot-notation': 'error',
-    'eqeqeq': ['error', 'allow-null'],
+    eqeqeq: ['error', 'allow-null'],
     'func-name-matching': 'error',
     'grouped-accessor-pairs': 'error',
     'guard-for-in': 'error',
@@ -208,7 +211,7 @@ module.exports = {
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
     'prefer-template': 'error',
-    'radix': 'error',
+    radix: 'error',
     'require-atomic-updates': 'error',
     'require-unicode-regexp': 'error',
     'spaced-comment': [
@@ -228,7 +231,7 @@ module.exports = {
       },
     ],
     'symbol-description': 'error',
-    'yoda': ['error', 'never'],
+    yoda: ['error', 'never'],
 
     /* import plugin rules */
     'import/default': 'error',
