@@ -379,9 +379,10 @@
   "prettier/prettier": [
     "error",
     {
+      "quoteProps": "as-needed",
       "singleQuote": true,
-      "trailingComma": "all",
-      "quoteProps": "consistent"
+      "tabWidth": 2,
+      "trailingComma": "all"
     },
     {
       "usePrettierrc": true
