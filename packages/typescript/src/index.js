@@ -15,7 +15,10 @@ module.exports = {
 
   plugins: ['@typescript-eslint'],
 
-  extends: ['plugin:@typescript-eslint/recommended'],
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'plugin:import/typescript',
+  ],
 
   rules: {
     // Should be disabled per Prettier
@@ -49,9 +52,6 @@ module.exports = {
 
     'default-param-last': 'off',
     '@typescript-eslint/default-param-last': 'error',
-
-    'import/no-duplicates': 'off',
-    '@typescript-eslint/no-duplicate-imports': 'error',
 
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': ['error', { builtinGlobals: true }],
