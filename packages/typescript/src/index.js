@@ -15,7 +15,10 @@ module.exports = {
 
   plugins: ['@typescript-eslint'],
 
-  extends: ['plugin:@typescript-eslint/recommended'],
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'plugin:import/typescript',
+  ],
 
   rules: {
     // Should be disabled per Prettier

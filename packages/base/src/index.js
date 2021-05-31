@@ -9,9 +9,13 @@ module.exports = {
     'shared-node-browser': true,
   },
 
-  plugins: ['import', 'prettier'],
+  plugins: ['prettier'],
 
-  extends: ['eslint:recommended', 'plugin:prettier/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:prettier/recommended',
+    'plugin:import/recommended',
+  ],
 
   rules: {
     /* Prettier rules */
@@ -79,7 +83,6 @@ module.exports = {
     'no-caller': 'error',
     'no-constructor-return': 'error',
     'no-div-regex': 'error',
-    'no-duplicate-imports': 'error',
     'no-else-return': 'error',
     'no-empty-function': 'error',
     'no-eq-null': 'error',
@@ -234,8 +237,6 @@ module.exports = {
     yoda: ['error', 'never'],
 
     /* import plugin rules */
-    'import/default': 'error',
-    'import/export': 'error',
     'import/extensions': [
       'error',
       'never',
@@ -244,8 +245,6 @@ module.exports = {
       },
     ],
     'import/first': 'error',
-    'import/named': 'error',
-    'import/namespace': 'error',
     'import/newline-after-import': 'error',
     'import/no-absolute-path': 'error',
     'import/no-amd': 'error',

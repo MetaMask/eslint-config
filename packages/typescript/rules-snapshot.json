@@ -66,6 +66,7 @@
   "constructor-super": "off",
   "default-param-last": "off",
   "getter-return": "off",
+  "import/named": "off",
   "import/no-unresolved": "off",
   "no-array-constructor": "off",
   "no-const-assign": "off",
