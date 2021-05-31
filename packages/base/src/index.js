@@ -79,7 +79,6 @@ module.exports = {
     'no-caller': 'error',
     'no-constructor-return': 'error',
     'no-div-regex': 'error',
-    'no-duplicate-imports': 'error',
     'no-else-return': 'error',
     'no-empty-function': 'error',
     'no-eq-null': 'error',
