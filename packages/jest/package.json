@@ -26,10 +26,12 @@
   },
   "homepage": "https://github.com/MetaMask/eslint-config#readme",
   "devDependencies": {
+    "@metamask/eslint-config": "^6.0.0",
     "eslint": "^7.23.0",
     "eslint-plugin-jest": "^24.1.3"
   },
   "peerDependencies": {
+    "@metamask/eslint-config": "^6.0.0",
     "eslint": "^7.23.0",
     "eslint-plugin-jest": "^24.1.3"
   }
