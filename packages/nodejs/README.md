@@ -29,7 +29,7 @@ module.exports = {
     '@metamask/eslint-config',
     '@metamask/eslint-config-nodejs',
   ],
-}
+};
 ```
 
 To lint the `.eslintrc.js` file itself, you will **need** to add this config in addition to the base config.

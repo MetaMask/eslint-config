@@ -15,8 +15,8 @@ following rules:
   - Rules that are disabled but never enabled by an extended config.
   - Rules that are configured identically by the package's extended configs.
 - For the purpose of determining the "usefulness" of rules, we include our base
-config (`@metamask/eslint-config`) in the set of extended configs, since it
-should always be extended by the consumer in practice.
+  config (`@metamask/eslint-config`) in the set of extended configs, since it
+  should always be extended by the consumer in practice.
 
 Linting will fail in CI if any of the above conditions are violated in any
 config.
