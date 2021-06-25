@@ -37,9 +37,7 @@ module.exports = {
     // non-TypeScript files, so it should be added in an override.
     {
       files: ['*.ts'],
-      extends: [
-        '@metamask/eslint-config-typescript',
-      ],
+      extends: ['@metamask/eslint-config-typescript'],
     },
   ],
 };

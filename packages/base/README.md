@@ -27,5 +27,5 @@ module.exports = {
     // This should be added last unless you know what you're doing.
     '@metamask/eslint-config',
   ],
-}
+};
 ```
