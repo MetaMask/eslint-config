@@ -30,7 +30,7 @@ module.exports = {
     '@metamask/eslint-config',
     '@metamask/eslint-config-mocha',
   ],
-}
+};
 ```
 
 If your project has `prefer-arrow-callback` you will need to disable that and replace it with `mocha/prefer-arrow-callback`.

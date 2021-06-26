@@ -30,5 +30,5 @@ module.exports = {
     '@metamask/eslint-config',
     '@metamask/eslint-config-jest',
   ],
-}
+};
 ```
