@@ -14,7 +14,8 @@
     "node": ">=12.0.0"
   },
   "scripts": {
-    "test": "eslint ."
+    "test": "eslint .",
+    "publish": "npm publish"
   },
   "repository": {
     "type": "git",
