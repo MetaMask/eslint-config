@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [7.0.0]
+### Uncategorized
+- Add release automation GitHub Action workflows ([#182](https://github.com/MetaMask/eslint-config/pull/182))
+- Update install instructions in READMEs ([#185](https://github.com/MetaMask/eslint-config/pull/185))
+- Use recommended `eslint-plugin-import` rule sets ([#184](https://github.com/MetaMask/eslint-config/pull/184))
+- Bump eslint-config-prettier from 8.1.0 to 8.3.0 ([#177](https://github.com/MetaMask/eslint-config/pull/177))
+- quoteProps: as-needed ([#181](https://github.com/MetaMask/eslint-config/pull/181))
+- Normalize rule config values ([#169](https://github.com/MetaMask/eslint-config/pull/169))
+- Update no-shadow config ([#168](https://github.com/MetaMask/eslint-config/pull/168))
+
 ## [6.0.0] - 2021-04-08
 ### Changed
 - **(BREAKING)** Set minimum Node.js version to `^12.0.0` ([#144](https://github.com/MetaMask/eslint-config/pull/144))
@@ -91,7 +101,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add base, TypeScript, and Jest configs (#3)
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v6.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v7.0.0...HEAD
+[7.0.0]: https://github.com/MetaMask/eslint-config/compare/v6.0.0...v7.0.0
 [6.0.0]: https://github.com/MetaMask/eslint-config/compare/v5.0.0...v6.0.0
 [5.0.0]: https://github.com/MetaMask/eslint-config/compare/v4.1.0...v5.0.0
 [4.1.0]: https://github.com/MetaMask/eslint-config/compare/v4.0.0...v4.1.0

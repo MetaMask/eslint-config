@@ -1,6 +1,6 @@
 {
   "name": "@metamask/eslint-config",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "description": "Shareable MetaMask ESLint config.",
   "main": "src/index.js",
   "publishConfig": {
