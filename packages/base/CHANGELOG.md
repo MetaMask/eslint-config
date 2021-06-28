@@ -7,14 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [7.0.0]
-### Uncategorized
-- Add release automation GitHub Action workflows ([#182](https://github.com/MetaMask/eslint-config/pull/182))
-- Update install instructions in READMEs ([#185](https://github.com/MetaMask/eslint-config/pull/185))
+### Changed
+- **(BREAKING)** Update Prettier `quoteProps` rule to `as-needed` ([#181](https://github.com/MetaMask/eslint-config/pull/181))
+- **(BREAKING)** Update ESLint `no-shadow` config ([#168](https://github.com/MetaMask/eslint-config/pull/168))
 - Use recommended `eslint-plugin-import` rule sets ([#184](https://github.com/MetaMask/eslint-config/pull/184))
-- Bump eslint-config-prettier from 8.1.0 to 8.3.0 ([#177](https://github.com/MetaMask/eslint-config/pull/177))
-- quoteProps: as-needed ([#181](https://github.com/MetaMask/eslint-config/pull/181))
+  - This only removed or disabled rules, and is not breaking.
+- Update install instructions in readme ([#185](https://github.com/MetaMask/eslint-config/pull/185))
 - Normalize rule config values ([#169](https://github.com/MetaMask/eslint-config/pull/169))
-- Update no-shadow config ([#168](https://github.com/MetaMask/eslint-config/pull/168))
 
 ## [6.0.0] - 2021-04-08
 ### Changed

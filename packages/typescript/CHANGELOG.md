@@ -7,12 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [7.0.0]
-### Uncategorized
-- Add release automation GitHub Action workflows ([#182](https://github.com/MetaMask/eslint-config/pull/182))
-- Update install instructions in READMEs ([#185](https://github.com/MetaMask/eslint-config/pull/185))
-- Add base package as a peer dependency ([#186](https://github.com/MetaMask/eslint-config/pull/186))
+### Changed
+- **(BREAKING)** Update `@typescript/no-shadow` config ([#168](https://github.com/MetaMask/eslint-config/pull/168))
 - Use recommended `eslint-plugin-import` rule sets ([#184](https://github.com/MetaMask/eslint-config/pull/184))
-- Update no-shadow config ([#168](https://github.com/MetaMask/eslint-config/pull/168))
+  - This only removed or disabled rules, and is not breaking.
+- Update install instructions in readme ([#185](https://github.com/MetaMask/eslint-config/pull/185))
+
+### Fixed
+- Add `@metamask/eslint-config` as a peer dependency ([#186](https://github.com/MetaMask/eslint-config/pull/186))
+  - This package is designed to be used in conjunction with the MetaMask base ESLint config, so this should always have been a peer dependency.
 
 ## [6.0.0] - 2021-04-08
 ### Changed
