@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [7.0.0]
+### Changed
+- **(BREAKING)** Update Prettier `quoteProps` rule to `as-needed` ([#181](https://github.com/MetaMask/eslint-config/pull/181))
+- **(BREAKING)** Update ESLint `no-shadow` config ([#168](https://github.com/MetaMask/eslint-config/pull/168))
+- Use recommended `eslint-plugin-import` rule sets ([#184](https://github.com/MetaMask/eslint-config/pull/184))
+  - This only removed or disabled rules, and is not breaking.
+- Update install instructions in readme ([#185](https://github.com/MetaMask/eslint-config/pull/185))
+- Normalize rule config values ([#169](https://github.com/MetaMask/eslint-config/pull/169))
+
 ## [6.0.0] - 2021-04-08
 ### Changed
 - **(BREAKING)** Set minimum Node.js version to `^12.0.0` ([#144](https://github.com/MetaMask/eslint-config/pull/144))
@@ -91,7 +100,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add base, TypeScript, and Jest configs (#3)
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v6.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v7.0.0...HEAD
+[7.0.0]: https://github.com/MetaMask/eslint-config/compare/v6.0.0...v7.0.0
 [6.0.0]: https://github.com/MetaMask/eslint-config/compare/v5.0.0...v6.0.0
 [5.0.0]: https://github.com/MetaMask/eslint-config/compare/v4.1.0...v5.0.0
 [4.1.0]: https://github.com/MetaMask/eslint-config/compare/v4.0.0...v4.1.0
