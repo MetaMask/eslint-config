@@ -7,9 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [7.0.1]
-### Uncategorized
-- Fix parserOptions for various configs ([#193](https://github.com/MetaMask/eslint-config/pull/193))
-- Add publish script ([#191](https://github.com/MetaMask/eslint-config/pull/191))
+### Fixed
+- Restore default `parserOptions` ([#193](https://github.com/MetaMask/eslint-config/pull/193))
+  - By extending the recommended `eslint-plugin-import` rules, we accidentally changed the default `parserOptions.sourceType` to `module`.
+  The `sourceType` is now explicitly set to `script`.
+  - In some cases, `parserOptions.ecmaVersion` could also be set to an incorrect version.
+  The `ecmaVersion` is now explicitly set to `2017`, matching the corresponding setting in `env`.
 
 ## [7.0.0]
 ### Changed

@@ -7,9 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [7.0.1]
-### Uncategorized
-- Fix parserOptions for various configs ([#193](https://github.com/MetaMask/eslint-config/pull/193))
-- Add publish script ([#191](https://github.com/MetaMask/eslint-config/pull/191))
+### Fixed
+- Restore default `parserOptions.ecmaVersion` ([#193](https://github.com/MetaMask/eslint-config/pull/193))
+  - In some cases, `parserOptions.ecmaVersion` could be set to an incorrect version.
+  The `ecmaVersion` is now explicitly set to `2020`, matching the corresponding setting in `env`.
 
 ## [7.0.0]
 ### Changed
