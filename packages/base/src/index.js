@@ -1,12 +1,21 @@
 module.exports = {
   env: {
-    // Specifying the ES version automatically sets the correct parser option.
-    // https://eslint.org/docs/user-guide/configuring/language-options#specifying-environments
+    // See comment under `parserOptions` below.
+    es2017: true,
+    'shared-node-browser': true,
+  },
+
+  parserOptions: {
+    // The `esXXXX` option under `env` is supposed to set the correct
+    // `ecmaVersion` option here, but we've had issues with it being
+    // overridden in the past and therefore set it explicitly.
+    //
     // For JavaScript, ES2017 is our effective minimum version due to the use
     // of Esprima by transitive dependencies.
     // It doesn't handle object rest spread, which is a 2018 feature.
-    es2017: true,
-    'shared-node-browser': true,
+    ecmaVersion: 2017,
+    // We want to default to 'script' and only use 'module' explicitly.
+    sourceType: 'script',
   },
 
   plugins: ['prettier'],
