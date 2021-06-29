@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [7.0.1]
+### Uncategorized
+- Fix parserOptions for various configs ([#193](https://github.com/MetaMask/eslint-config/pull/193))
+- Add publish script ([#191](https://github.com/MetaMask/eslint-config/pull/191))
+
 ## [7.0.0]
 ### Changed
 - **(BREAKING)** Update `@typescript/no-shadow` config ([#168](https://github.com/MetaMask/eslint-config/pull/168))
@@ -33,6 +38,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - To continue extending this config, install this package and update your `.eslintrc.js` `extends` array to include `@metamask/eslint-config-typescript` instead of `@metamask/eslint-config/typescript`.
 - Update `eslint` and other ESLint peer dependencies ([#151](https://github.com/MetaMask/eslint-config/pull/151))
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v7.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v7.0.1...HEAD
+[7.0.1]: https://github.com/MetaMask/eslint-config/compare/v7.0.0...v7.0.1
 [7.0.0]: https://github.com/MetaMask/eslint-config/compare/v6.0.0...v7.0.0
 [6.0.0]: https://github.com/MetaMask/eslint-config/releases/tag/v6.0.0

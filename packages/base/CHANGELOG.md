@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [7.0.1]
+### Uncategorized
+- Fix parserOptions for various configs ([#193](https://github.com/MetaMask/eslint-config/pull/193))
+- Add publish script ([#191](https://github.com/MetaMask/eslint-config/pull/191))
+
 ## [7.0.0]
 ### Changed
 - **(BREAKING)** Update Prettier `quoteProps` rule to `as-needed` ([#181](https://github.com/MetaMask/eslint-config/pull/181))
@@ -100,7 +105,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add base, TypeScript, and Jest configs (#3)
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v7.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v7.0.1...HEAD
+[7.0.1]: https://github.com/MetaMask/eslint-config/compare/v7.0.0...v7.0.1
 [7.0.0]: https://github.com/MetaMask/eslint-config/compare/v6.0.0...v7.0.0
 [6.0.0]: https://github.com/MetaMask/eslint-config/compare/v5.0.0...v6.0.0
 [5.0.0]: https://github.com/MetaMask/eslint-config/compare/v4.1.0...v5.0.0
