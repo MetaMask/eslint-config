@@ -2,7 +2,18 @@ module.exports = {
   plugins: ['node'],
 
   env: {
+    // See comment under `parserOptions` below.
+    es2017: true,
     node: true,
+  },
+
+  // The recommended Node.js plugin config sets the correct `sourceType` per the
+  // `type` field of the local package.json file, so we don't set that here.
+  parserOptions: {
+    // The EcmaScript version option here and for `env` above need to be set to
+    // the same values as in the base config, or they will be overwritten by the
+    // recommended Node.js plugin rules.
+    ecmaVersion: 2017,
   },
 
   extends: ['plugin:node/recommended'],
