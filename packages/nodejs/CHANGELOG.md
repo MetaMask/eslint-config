@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [7.0.1]
+### Fixed
+- Restore default `parserOptions` ([#193](https://github.com/MetaMask/eslint-config/pull/193))
+  - By extending the recommended `eslint-plugin-import` rules, we accidentally changed the default `parserOptions.sourceType` to `module`.
+  The `sourceType` is now explicitly set to `script`.
+  - In some cases, `parserOptions.ecmaVersion` could also be set to an incorrect version.
+  The `ecmaVersion` is now explicitly set to `2017`, matching the corresponding setting in `env`.
+
 ## [7.0.0]
 ### Changed
 - Update install instructions in readme ([#185](https://github.com/MetaMask/eslint-config/pull/185))
@@ -23,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - To continue extending this config, install this package and update your `.eslintrc.js` `extends` array to include `@metamask/eslint-config-nodejs` instead of `@metamask/eslint-config/nodejs`.
 - Update `eslint` and other ESLint peer dependencies ([#151](https://github.com/MetaMask/eslint-config/pull/151))
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v7.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v7.0.1...HEAD
+[7.0.1]: https://github.com/MetaMask/eslint-config/compare/v7.0.0...v7.0.1
 [7.0.0]: https://github.com/MetaMask/eslint-config/compare/v6.0.0...v7.0.0
 [6.0.0]: https://github.com/MetaMask/eslint-config/releases/tag/v6.0.0
