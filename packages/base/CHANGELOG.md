@@ -7,8 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [8.0.0]
-### Uncategorized
-- Require newlines between multiline blocks and expressions ([#197](https://github.com/MetaMask/eslint-config/pull/197))
+### Changed
+- **(BREAKING)** Require newlines between multiline blocks and expressions ([#197](https://github.com/MetaMask/eslint-config/pull/197))
 
 ## [7.0.1]
 ### Fixed
