@@ -199,6 +199,11 @@ module.exports = {
         prev: 'directive',
         next: 'directive',
       },
+      {
+        blankLine: 'always',
+        prev: ['multiline-block-like', 'multiline-expression'],
+        next: ['multiline-block-like', 'multiline-expression'],
+      },
     ],
     'prefer-const': 'error',
     'prefer-destructuring': [
