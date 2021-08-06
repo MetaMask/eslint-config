@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [8.0.0]
+### Uncategorized
+- Require newlines between multiline blocks and expressions ([#197](https://github.com/MetaMask/eslint-config/pull/197))
+
 ## [7.0.1]
 ### Fixed
 - Restore default `parserOptions` ([#193](https://github.com/MetaMask/eslint-config/pull/193))
@@ -108,7 +112,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add base, TypeScript, and Jest configs (#3)
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v7.0.1...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v8.0.0...HEAD
+[8.0.0]: https://github.com/MetaMask/eslint-config/compare/v7.0.1...v8.0.0
 [7.0.1]: https://github.com/MetaMask/eslint-config/compare/v7.0.0...v7.0.1
 [7.0.0]: https://github.com/MetaMask/eslint-config/compare/v6.0.0...v7.0.0
 [6.0.0]: https://github.com/MetaMask/eslint-config/compare/v5.0.0...v6.0.0
