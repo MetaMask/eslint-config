@@ -33,6 +33,7 @@
     }
   ],
   "@typescript-eslint/no-this-alias": "error",
+  "@typescript-eslint/no-throw-literal": "error",
   "@typescript-eslint/no-unused-expressions": [
     "error",
     {
@@ -83,6 +84,7 @@
   "no-setter-return": "off",
   "no-shadow": "off",
   "no-this-before-super": "off",
+  "no-throw-literal": "off",
   "no-undef": "off",
   "no-unreachable": "off",
   "no-unsafe-negation": "off",
