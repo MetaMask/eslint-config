@@ -27,21 +27,13 @@
   "mocha/valid-suite-description": [
     "error",
     "^[#_]{0,2}[A-Za-z0-9]",
-    [
-      "describe",
-      "context",
-      "suite"
-    ],
+    ["describe", "context", "suite"],
     "Invalid test suite description found"
   ],
   "mocha/valid-test-description": [
     "error",
     "^[#_]{0,2}[A-Za-z0-9]",
-    [
-      "it",
-      "test",
-      "specify"
-    ],
+    ["it", "test", "specify"],
     "Invalid test description found"
   ]
 }

@@ -6,6 +6,7 @@ const {
   configs: { recommended: prettierConfig },
 } = require('eslint-plugin-prettier');
 const deepEqual = require('fast-deep-equal');
+const prettier = require('prettier');
 
 // For config parsing, validation, and rule flattening
 const BASE_CONFIG_NAME = '@metamask/eslint-config';
@@ -252,11 +253,12 @@ async function validateOrWriteRulesSnapshot(
  * @param {Record<string, unknown>} flatRules - The rules to write.
  */
 async function writeRulesSnapshot(snapshotFilePath, flatRules) {
+  const stringifiedRules = JSON.stringify(flatRules, null, 2);
+  const formattedRules = prettier.format(stringifiedRules, {
+    filepath: snapshotFilePath,
+  });
   try {
-    await fs.writeFile(
-      snapshotFilePath,
-      `${JSON.stringify(flatRules, null, 2)}\n`,
-    );
+    await fs.writeFile(snapshotFilePath, formattedRules);
   } catch (error) {
     console.error(
       `Encountered error while writing file "${snapshotFilePath}".`,
