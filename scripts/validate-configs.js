@@ -176,7 +176,7 @@ function validateConfigMinimalism(
 /**
  * Checks whether a config violations map contains any violations.
  *
- * @param {Record<string, string[]>} - A map of package names to arrays with
+ * @param {Record<string, string[]>} violationsMap - A map of package names to arrays with
  * violated rules, if any.
  * @returns {boolean} Whether the given map contains any violations.
  */
@@ -275,11 +275,11 @@ async function writeRulesSnapshot(snapshotFilePath, flatRules) {
 /**
  * Iterates over the packages in this monorepo and returns an object of package
  * name keys with object values containing:
- * - The raw config
- * - Its flattened, complete rule set
- * - The path to the package
+ * - The raw config.
+ * - Its flattened, complete rule set.
+ * - The path to the package.
  *
- * @returns {Record<string, Record<string, Object|string>} The config map.
+ * @returns {Record<string, Record<string, object|string>>} The config map.
  */
 function getMetamaskConfigs() {
   return readdirSync(PACKAGES_DIR_PATH).reduce((allConfigs, dirName) => {
@@ -433,7 +433,7 @@ function normalizeObject(obj, valueNormalizer) {
  * string (off, warn, error) notation, or just returns the given value.
  *
  * @param {unknown} configValue - The rule config value to normalize.
- * @returns {string | typeof configValue} The normalized rule config value.
+ * @returns {string | unknown} The normalized rule config value.
  */
 function normalizeRuleConfigValue(configValue) {
   if (typeof configValue !== 'number' && typeof configValue !== 'string') {
@@ -469,7 +469,7 @@ function getFlatConfig(configObject) {
 }
 
 /**
- * getFlatConfig helper.
+ * A helper for the `getFlatConfig` function.
  * Looks for for the string 'eslint:recommended' in the given config array
  * and replaces it with its corresponding rules object.
  * Mutates the given array in place.
@@ -515,7 +515,7 @@ function logPrettierViolations(prettierViolations) {
  * Prints minimalism violations to console.error in a readable format.
  * Assumes that the given violations map contains violations.
  *
- * @param {Record<string, string[]>} prettierViolations - A map containing
+ * @param {Record<string, string[]>} minimalismViolations - A map containing
  * minimalism violations.
  */
 function logMinimalismViolations(minimalismViolations) {
@@ -559,6 +559,8 @@ function logSnapshotViolations(snapshotViolations) {
 }
 
 /**
+ * Returns the requested number of tabs.
+ *
  * @param {number} numTabs - The number of tabs to return.
  * @returns {string} A string consisting of numTabs 4-space "tabs".
  */
