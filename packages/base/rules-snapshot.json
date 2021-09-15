@@ -147,7 +147,9 @@
     "always",
     {
       "tags": {
-        "returns": "never"
+        "returns": "never",
+        "template": "always",
+        "throws": "never"
       }
     }
   ],
@@ -155,9 +157,7 @@
   "jsdoc/require-param": [
     "error",
     {
-      "unnamedRootBase": [
-        "options"
-      ]
+      "unnamedRootBase": ["options"]
     }
   ],
   "jsdoc/require-param-description": "error",
