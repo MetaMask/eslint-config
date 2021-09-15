@@ -34,9 +34,7 @@
     "error",
     {
       "properties": "never",
-      "allow": [
-        "^UNSAFE_"
-      ]
+      "allow": ["^UNSAFE_"]
     }
   ],
   "comma-dangle": "off",
@@ -44,24 +42,15 @@
   "comma-style": "off",
   "computed-property-spacing": "off",
   "consistent-return": "error",
-  "consistent-this": [
-    "error",
-    "self"
-  ],
+  "consistent-this": ["error", "self"],
   "constructor-super": "error",
-  "curly": [
-    "error",
-    "all"
-  ],
+  "curly": ["error", "all"],
   "default-case": "error",
   "default-param-last": "error",
   "dot-location": "off",
   "dot-notation": "error",
   "eol-last": "off",
-  "eqeqeq": [
-    "error",
-    "allow-null"
-  ],
+  "eqeqeq": ["error", "allow-null"],
   "flowtype/boolean-style": "off",
   "flowtype/delimiter-dangle": "off",
   "flowtype/generic-spacing": "off",
@@ -197,10 +186,7 @@
   "no-implicit-globals": "error",
   "no-implied-eval": "error",
   "no-import-assign": "error",
-  "no-inner-declarations": [
-    "error",
-    "functions"
-  ],
+  "no-inner-declarations": ["error", "functions"],
   "no-invalid-regexp": "error",
   "no-invalid-this": "error",
   "no-irregular-whitespace": "error",
@@ -247,18 +233,9 @@
   "no-redeclare": "error",
   "no-regex-spaces": "error",
   "no-reserved-keys": "off",
-  "no-restricted-globals": [
-    "error",
-    "event"
-  ],
-  "no-restricted-syntax": [
-    "error",
-    "SequenceExpression"
-  ],
-  "no-return-assign": [
-    "error",
-    "except-parens"
-  ],
+  "no-restricted-globals": ["error", "event"],
+  "no-restricted-syntax": ["error", "SequenceExpression"],
+  "no-return-assign": ["error", "except-parens"],
   "no-script-url": "error",
   "no-self-assign": "error",
   "no-self-compare": "error",
@@ -355,14 +332,8 @@
     },
     {
       "blankLine": "always",
-      "prev": [
-        "multiline-block-like",
-        "multiline-expression"
-      ],
-      "next": [
-        "multiline-block-like",
-        "multiline-expression"
-      ]
+      "prev": ["multiline-block-like", "multiline-expression"],
+      "next": ["multiline-block-like", "multiline-expression"]
     }
   ],
   "prefer-arrow-callback": "off",
@@ -452,10 +423,7 @@
         "!",
         ","
       ],
-      "exceptions": [
-        "=",
-        "-"
-      ]
+      "exceptions": ["=", "-"]
     }
   ],
   "standard/array-bracket-even-spacing": "off",
@@ -510,8 +478,5 @@
   "wrap-iife": "off",
   "wrap-regex": "off",
   "yield-star-spacing": "off",
-  "yoda": [
-    "error",
-    "never"
-  ]
+  "yoda": ["error", "never"]
 }

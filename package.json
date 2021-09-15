@@ -10,7 +10,7 @@
     "lint:eslint": "yarn eslint . --ext ts,js",
     "lint:config-validation": "node ./scripts/validate-configs.js",
     "lint:misc": "prettier '**/*.json' '**/*.md' '!**/CHANGELOG.md' '**/*.yml' --ignore-path .gitignore",
-    "lint": "yarn lint:eslint && yarn lint:misc && yarn lint:config-validation",
+    "lint": "yarn lint:eslint && yarn lint:misc --check && yarn lint:config-validation",
     "lint:fix": "yarn lint:eslint --fix && yarn lint:misc --write && yarn lint:config-validation --write"
   },
   "workspaces": [

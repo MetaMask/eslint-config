@@ -9,9 +9,7 @@
   "jest/lowercase-name": [
     "error",
     {
-      "ignore": [
-        "describe"
-      ]
+      "ignore": ["describe"]
     }
   ],
   "jest/no-alias-methods": "warn",
