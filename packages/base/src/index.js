@@ -54,6 +54,7 @@ module.exports = {
     /* Core rules */
     'accessor-pairs': 'error',
     'array-callback-return': 'error',
+    'arrow-body-style': 'error',
     'block-scoped-var': 'error',
     camelcase: [
       'error',
