@@ -17,7 +17,7 @@ module.exports = {
     sourceType: 'module',
   },
 
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'jsdoc'],
 
   extends: [
     'plugin:@typescript-eslint/recommended',
@@ -74,5 +74,22 @@ module.exports = {
 
     'no-useless-constructor': 'off',
     '@typescript-eslint/no-useless-constructor': 'error',
+
+    /* jsdoc plugin rules */
+
+    'jsdoc/check-syntax': 'error',
+
+    // This is enabled here rather than in the base config because it doesn't play nicely with
+    // multi-line JSDoc types.
+    'jsdoc/check-indentation': 'error',
+
+    // Use TypeScript types rather than JSDoc types.
+    'jsdoc/no-types': 'error',
+
+    // These all conflict with `jsdoc/no-types`.
+    'jsdoc/require-param-type': 'off',
+    'jsdoc/require-property-type': 'off',
+    'jsdoc/require-returns-type': 'off',
+    'jsdoc/valid-types': 'off',
   },
 };
