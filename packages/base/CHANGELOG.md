@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [9.0.0]
+### Uncategorized
+- Add JSDoc ESLint rules ([#203](https://github.com/MetaMask/eslint-config/pull/203))
+- Fix the `lint` script ([#204](https://github.com/MetaMask/eslint-config/pull/204))
+
 ## [8.0.0]
 ### Changed
 - **(BREAKING)** Require newlines between multiline blocks and expressions ([#197](https://github.com/MetaMask/eslint-config/pull/197))
@@ -112,7 +117,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add base, TypeScript, and Jest configs (#3)
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v8.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v9.0.0...HEAD
+[9.0.0]: https://github.com/MetaMask/eslint-config/compare/v8.0.0...v9.0.0
 [8.0.0]: https://github.com/MetaMask/eslint-config/compare/v7.0.1...v8.0.0
 [7.0.1]: https://github.com/MetaMask/eslint-config/compare/v7.0.0...v7.0.1
 [7.0.0]: https://github.com/MetaMask/eslint-config/compare/v6.0.0...v7.0.0
