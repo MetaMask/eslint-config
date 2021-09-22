@@ -138,7 +138,7 @@ function validatePrettierRules(
   violations,
 ) {
   prettierRules.forEach((ruleName) => {
-    if (ruleName in flatRules && flatRules[ruleName] !== OFF) {
+    if (hasProperty(flatRules, ruleName) && flatRules[ruleName] !== OFF) {
       violations[packageName].push(ruleName);
     }
   });
@@ -166,7 +166,7 @@ function validateConfigMinimalism(
   Object.entries(config.rules || {}).forEach(([ruleName, ruleValue]) => {
     if (
       deepEqual(flatExtendedRules[ruleName], ruleValue) ||
-      (!(ruleName in flatExtendedRules) && ruleValue === OFF)
+      (!hasProperty(flatExtendedRules, ruleName) && ruleValue === OFF)
     ) {
       violations[packageName].push(ruleName);
     }
@@ -393,7 +393,7 @@ function getRequiredPrettierRules() {
 function getFlatRules(flatConfig, normalizeRules = true) {
   // Flatten the config array into a single object
   const rawFlatRules = flatConfig.reduce((flatRules, config) => {
-    if (RULES in config) {
+    if (hasProperty(config, RULES)) {
       return {
         ...flatRules,
         ...config[RULES],
@@ -569,4 +569,17 @@ function tabs(numTabs) {
     throw new Error('Expected positive integer.');
   }
   return numTabs === 1 ? TAB : TAB + new Array(numTabs).join(TAB);
+}
+
+/**
+ * Checks whether the object has an own property with the given name, by means
+ * of Reflect.hasOwnProperty.
+ *
+ * @param {Record<string | number | symbol, unknown>} object - The object whose
+ * properties to check.
+ * @param {string} key - The property name to check for.
+ * @returns {boolean} Whether the object has an own property with the specified name.
+ */
+function hasProperty(object, key) {
+  return Reflect.hasOwnProperty.call(object, key);
 }
