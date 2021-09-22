@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - **BREAKING** Add JSDoc ESLint rules ([#203](https://github.com/MetaMask/eslint-config/pull/203))
 
+### Changed
+- **BREAKING** Disable `no-throw-literal` and enable `@typescript-eslint/no-throw-literal`
+  - This rule requires type information, which requires [additional project setup](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md).
+
 ## [8.0.0]
 
 ## [7.0.1]
