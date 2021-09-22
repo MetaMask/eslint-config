@@ -6,8 +6,8 @@ MetaMask's [TypeScript](https://www.typescriptlang.org) ESLint configuration.
 
 ```bash
 yarn add --dev \
-    @metamask/eslint-config@^7.0.0 \
-    @metamask/eslint-config-typescript@^7.0.0 \
+    @metamask/eslint-config@^9.0.0 \
+    @metamask/eslint-config-typescript@^9.0.0 \
     @typescript-eslint/eslint-plugin@^4.20.0 \
     @typescript-eslint/parser@^4.20.0 \
     eslint@^7.23.0 \
