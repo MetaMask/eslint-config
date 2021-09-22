@@ -7,17 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [9.0.1]
-### Uncategorized
+### Changed
 - Disable `@typescript-eslint/no-throw-literal` ([#210](https://github.com/MetaMask/eslint-config/pull/210))
-- Update v9.0.0 changelog for `@metamask/eslint-config-typescript`. ([#208](https://github.com/MetaMask/eslint-config/pull/208))
+  - The introduction of this rule was one of the two breaking changes in the previous release. It was included unintentionally, and has now been removed to make updating to v9 easier.
 
 ## [9.0.0]
 ### Added
 - **BREAKING** Add JSDoc ESLint rules ([#203](https://github.com/MetaMask/eslint-config/pull/203))
 
 ### Changed
-- **BREAKING** Disable `no-throw-literal` and enable `@typescript-eslint/no-throw-literal`
+- **BREAKING** Disable `no-throw-literal` and enable `@typescript-eslint/no-throw-literal` ([#201](https://github.com/MetaMask/eslint-config/pull/201))
   - This rule requires type information, which requires [additional project setup](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md).
+  - Note: This change has been undone in v9.0.1. You can ignore this change if you're updating to v9.0.1 or greater.
 
 ## [8.0.0]
 
