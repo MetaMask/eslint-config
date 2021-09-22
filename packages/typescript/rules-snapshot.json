@@ -33,7 +33,6 @@
     }
   ],
   "@typescript-eslint/no-this-alias": "error",
-  "@typescript-eslint/no-throw-literal": "error",
   "@typescript-eslint/no-unused-expressions": [
     "error",
     {
