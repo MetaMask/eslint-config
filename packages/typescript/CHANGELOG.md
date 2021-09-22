@@ -7,9 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [9.0.0]
-### Uncategorized
-- Add JSDoc ESLint rules ([#203](https://github.com/MetaMask/eslint-config/pull/203))
-- Fix no-throw-literal config for TypeScript ([#201](https://github.com/MetaMask/eslint-config/pull/201))
+### Added
+- **BREAKING** Add JSDoc ESLint rules ([#203](https://github.com/MetaMask/eslint-config/pull/203))
 
 ## [8.0.0]
 
