@@ -40,6 +40,22 @@ module.exports = {
       files: ['*.ts'],
       extends: ['@metamask/eslint-config-typescript'],
     },
+    // An alternative `tsconfig` file for tests is specified here so that test files can be linted
+    // without building them during the normal build process. This file should have `noEmit` set to
+    // `true`.
+    {
+      files: ['*.test.ts'],
+      parserOptions: {
+        project: './tsconfig.test.json',
+      },
+    },
   ],
+
+  // This is required for rules that use type information.
+  // See here for more information: https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md
+  parserOptions: {
+    project: './tsconfig.json',
+    tsconfigRootDir: __dirname,
+  },
 };
 ```
