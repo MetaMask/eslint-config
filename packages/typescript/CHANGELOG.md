@@ -21,6 +21,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Note: This change has been undone in v9.0.1. You can ignore this change if you're updating to v9.0.1 or greater.
 
 ## [8.0.0]
+### Changed
+- ***BREAKING*** The peer dependency `@metamask/eslint-config` has been updated from v7 to v8.
 
 ## [7.0.1]
 ### Fixed

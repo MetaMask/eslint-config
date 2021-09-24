@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **BREAKING** Add JSDoc ESLint rules ([#203](https://github.com/MetaMask/eslint-config/pull/203))
 
 ## [8.0.0]
+### Changed
+- ***BREAKING*** The peer dependency `@metamask/eslint-config` has been updated from v7 to v8.
 
 ## [7.0.0]
 ### Changed
