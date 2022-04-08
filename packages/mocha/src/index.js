@@ -9,6 +9,10 @@ module.exports = {
 
   extends: ['plugin:mocha/recommended'],
 
+  parserOptions: {
+    ecmaVersion: '2020',
+  },
+
   rules: {
     'mocha/no-exclusive-tests': 'error',
     'mocha/no-hooks-for-single-case': 'error',
