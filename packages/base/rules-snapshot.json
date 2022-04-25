@@ -340,7 +340,8 @@
     {
       "vars": "all",
       "args": "all",
-      "argsIgnorePattern": "[_]+"
+      "argsIgnorePattern": "[_]+",
+      "ignoreRestSiblings": true
     }
   ],
   "no-use-before-define": [

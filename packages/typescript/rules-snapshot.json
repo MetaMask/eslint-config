@@ -45,7 +45,8 @@
     {
       "vars": "all",
       "args": "all",
-      "argsIgnorePattern": "[_]+"
+      "argsIgnorePattern": "[_]+",
+      "ignoreRestSiblings": true
     }
   ],
   "@typescript-eslint/no-use-before-define": [
