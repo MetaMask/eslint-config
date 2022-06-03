@@ -13,6 +13,7 @@
   "@typescript-eslint/object-curly-spacing": "off",
   "@typescript-eslint/quotes": "off",
   "@typescript-eslint/semi": "off",
+  "@typescript-eslint/space-before-blocks": "off",
   "@typescript-eslint/space-before-function-paren": "off",
   "@typescript-eslint/space-infix-ops": "off",
   "@typescript-eslint/type-annotation-spacing": "off",
@@ -261,6 +262,7 @@
   "no-lone-blocks": "error",
   "no-lonely-if": "error",
   "no-loop-func": "error",
+  "no-loss-of-precision": "error",
   "no-misleading-character-class": "error",
   "no-mixed-operators": "off",
   "no-mixed-spaces-and-tabs": "off",
@@ -277,6 +279,7 @@
   "no-new-object": "error",
   "no-new-symbol": "error",
   "no-new-wrappers": "error",
+  "no-nonoctal-decimal-escape": "error",
   "no-obj-calls": "error",
   "no-octal": "error",
   "no-octal-escape": "error",
@@ -327,6 +330,7 @@
   "no-unreachable": "error",
   "no-unsafe-finally": "error",
   "no-unsafe-negation": "error",
+  "no-unsafe-optional-chaining": "error",
   "no-unused-expressions": [
     "error",
     {
@@ -350,6 +354,7 @@
       "functions": false
     }
   ],
+  "no-useless-backreference": "error",
   "no-useless-call": "error",
   "no-useless-catch": "error",
   "no-useless-computed-key": "error",
@@ -529,6 +534,7 @@
   "vue/object-curly-spacing": "off",
   "vue/object-property-newline": "off",
   "vue/operator-linebreak": "off",
+  "vue/quote-props": "off",
   "vue/script-indent": "off",
   "vue/singleline-html-element-content-newline": "off",
   "vue/space-in-parens": "off",
