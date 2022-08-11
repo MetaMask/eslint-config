@@ -1,6 +1,6 @@
 {
   "name": "@metamask/eslint-config-mocha",
-  "version": "9.0.0",
+  "version": "9.0.1",
   "description": "Shareable MetaMask ESLint config for Mocha.",
   "main": "src/index.js",
   "publishConfig": {

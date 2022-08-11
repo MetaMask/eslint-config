@@ -1,6 +1,6 @@
 {
   "name": "@metamask/eslint-config-jest",
-  "version": "9.0.0",
+  "version": "9.0.1",
   "description": "Shareable MetaMask ESLint config for Jest.",
   "main": "src/index.js",
   "publishConfig": {

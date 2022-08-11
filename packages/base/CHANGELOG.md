@@ -120,7 +120,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add base, TypeScript, and Jest configs (#3)
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v9.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v9.0.1...HEAD
+[9.0.1]: https://github.com/MetaMask/eslint-config/compare/v9.0.0...v9.0.1
 [9.0.0]: https://github.com/MetaMask/eslint-config/compare/v8.0.0...v9.0.0
 [8.0.0]: https://github.com/MetaMask/eslint-config/compare/v7.0.1...v8.0.0
 [7.0.1]: https://github.com/MetaMask/eslint-config/compare/v7.0.0...v7.0.1
