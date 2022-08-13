@@ -6,12 +6,6 @@
     }
   ],
   "jest/expect-expect": "warn",
-  "jest/lowercase-name": [
-    "error",
-    {
-      "ignore": ["describe"]
-    }
-  ],
   "jest/no-alias-methods": "warn",
   "jest/no-commented-out-tests": "warn",
   "jest/no-conditional-expect": "error",
@@ -41,6 +35,12 @@
   "jest/no-test-prefixes": "error",
   "jest/no-test-return-statement": "error",
   "jest/prefer-hooks-on-top": "error",
+  "jest/prefer-lowercase-title": [
+    "error",
+    {
+      "ignore": ["describe"]
+    }
+  ],
   "jest/prefer-spy-on": "error",
   "jest/prefer-strict-equal": "error",
   "jest/prefer-to-be": "error",
