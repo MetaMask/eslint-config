@@ -186,6 +186,7 @@ module.exports = {
         vars: 'all',
         args: 'all',
         argsIgnorePattern: '[_]+',
+        ignoreRestSiblings: true,
       },
     ],
     'no-use-before-define': [

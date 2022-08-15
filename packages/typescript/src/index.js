@@ -34,8 +34,7 @@ module.exports = {
     // Our rules
     '@typescript-eslint/array-type': 'error',
     '@typescript-eslint/consistent-type-assertions': 'error',
-    '@typescript-eslint/consistent-type-definitions': 'error',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-namespace': [
       'error',
@@ -51,7 +50,12 @@ module.exports = {
     '@typescript-eslint/no-dupe-class-members': 'error',
     '@typescript-eslint/no-unused-vars': [
       'error',
-      { vars: 'all', args: 'all', argsIgnorePattern: '[_]+' },
+      {
+        vars: 'all',
+        args: 'all',
+        argsIgnorePattern: '[_]+',
+        ignoreRestSiblings: true,
+      },
     ],
 
     'default-param-last': 'off',
@@ -61,7 +65,7 @@ module.exports = {
     '@typescript-eslint/no-shadow': ['error', { builtinGlobals: true }],
 
     'no-throw-literal': 'off',
-    '@typescript-eslint/no-throw-literal': 'error',
+    // '@typescript-eslint/no-throw-literal' is left disabled because it requires type information
 
     'no-unused-expressions': 'off',
     '@typescript-eslint/no-unused-expressions': [

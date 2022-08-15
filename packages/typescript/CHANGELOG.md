@@ -6,7 +6,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [9.0.1]
+### Changed
+- Disable `@typescript-eslint/no-throw-literal` ([#210](https://github.com/MetaMask/eslint-config/pull/210))
+  - The introduction of this rule was one of the two breaking changes in the previous release. It was included unintentionally, and has now been removed to make updating to v9 easier.
+
+## [9.0.0]
+### Added
+- **BREAKING** Add JSDoc ESLint rules ([#203](https://github.com/MetaMask/eslint-config/pull/203))
+
+### Changed
+- **BREAKING** Disable `no-throw-literal` and enable `@typescript-eslint/no-throw-literal` ([#201](https://github.com/MetaMask/eslint-config/pull/201))
+  - This rule requires type information, which requires [additional project setup](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md).
+  - Note: This change has been undone in v9.0.1. You can ignore this change if you're updating to v9.0.1 or greater.
+
 ## [8.0.0]
+### Changed
+- ***BREAKING*** The peer dependency `@metamask/eslint-config` has been updated from v7 to v8.
 
 ## [7.0.1]
 ### Fixed
@@ -41,7 +57,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - To continue extending this config, install this package and update your `.eslintrc.js` `extends` array to include `@metamask/eslint-config-typescript` instead of `@metamask/eslint-config/typescript`.
 - Update `eslint` and other ESLint peer dependencies ([#151](https://github.com/MetaMask/eslint-config/pull/151))
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v8.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v9.0.1...HEAD
+[9.0.1]: https://github.com/MetaMask/eslint-config/compare/v9.0.0...v9.0.1
+[9.0.0]: https://github.com/MetaMask/eslint-config/compare/v8.0.0...v9.0.0
 [8.0.0]: https://github.com/MetaMask/eslint-config/compare/v7.0.1...v8.0.0
 [7.0.1]: https://github.com/MetaMask/eslint-config/compare/v7.0.0...v7.0.1
 [7.0.0]: https://github.com/MetaMask/eslint-config/compare/v6.0.0...v7.0.0
