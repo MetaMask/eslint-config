@@ -91,7 +91,7 @@
     {
       "min": 2,
       "properties": "never",
-      "exceptionPatterns": ["_", "i", "j", "k"]
+      "exceptionPatterns": ["_", "a", "b", "i", "j", "k"]
     }
   ],
   "implicit-arrow-linebreak": "off",

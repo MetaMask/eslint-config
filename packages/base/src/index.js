@@ -92,7 +92,7 @@ module.exports = {
       {
         min: 2,
         properties: 'never',
-        exceptionPatterns: ['_', 'i', 'j', 'k'],
+        exceptionPatterns: ['_', 'a', 'b', 'i', 'j', 'k'],
       },
     ],
     'lines-between-class-members': 'error',
