@@ -147,11 +147,6 @@ module.exports = {
         selector: `BinaryExpression[operator='in']`,
         message: 'The "in" operator is not allowed',
       },
-      {
-        selector: `BinaryExpression[operator='instanceof'][right.name!='Error']`,
-        message:
-          'The "instanceof" operator may only be used with "Error" as the right-hand operand',
-      },
       // Sequence expressions have potential gotchas with Prettier, and are also
       // weird!
       {

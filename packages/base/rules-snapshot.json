@@ -308,10 +308,6 @@
       "message": "The \"in\" operator is not allowed"
     },
     {
-      "selector": "BinaryExpression[operator='instanceof'][right.name!='Error']",
-      "message": "The \"instanceof\" operator may only be used with \"Error\" as the right-hand operand"
-    },
-    {
       "selector": "SequenceExpression",
       "message": "Sequence expressions are not allowed"
     }
