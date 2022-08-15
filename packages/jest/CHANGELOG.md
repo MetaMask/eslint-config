@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [10.0.0]
+### Uncategorized
+- Update ESLint from v7 to v8 ([#233](https://github.com/MetaMask/eslint-config/pull/233))
+- BREAKING: Bump eslint-plugin-jest to ^26.x ([#228](https://github.com/MetaMask/eslint-config/pull/228))
+- Bump to Node 14, test on Node 18 ([#225](https://github.com/MetaMask/eslint-config/pull/225))
+- Add missing change entries for v8 ([#212](https://github.com/MetaMask/eslint-config/pull/212))
+
 ## [9.0.0]
 ### Added
 - **BREAKING** Add JSDoc ESLint rules ([#203](https://github.com/MetaMask/eslint-config/pull/203))
@@ -31,7 +38,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - To continue extending this config, install this package and update your `.eslintrc.js` `extends` array to include `@metamask/eslint-config-jest` instead of `@metamask/eslint-config/jest`.
 - Update `eslint` and other ESLint peer dependencies ([#151](https://github.com/MetaMask/eslint-config/pull/151))
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v9.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v10.0.0...HEAD
+[10.0.0]: https://github.com/MetaMask/eslint-config/compare/v9.0.0...v10.0.0
 [9.0.0]: https://github.com/MetaMask/eslint-config/compare/v8.0.0...v9.0.0
 [8.0.0]: https://github.com/MetaMask/eslint-config/compare/v7.0.0...v8.0.0
 [7.0.0]: https://github.com/MetaMask/eslint-config/compare/v6.0.0...v7.0.0

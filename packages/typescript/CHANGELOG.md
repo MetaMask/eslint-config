@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [10.0.0]
+### Uncategorized
+- Update ESLint from v7 to v8 ([#233](https://github.com/MetaMask/eslint-config/pull/233))
+- Update `@typescript-eslint` parser and plugin ([#230](https://github.com/MetaMask/eslint-config/pull/230))
+- Bump to Node 14, test on Node 18 ([#225](https://github.com/MetaMask/eslint-config/pull/225))
+- Ignore rest siblings for `no-unused-vars` ([#213](https://github.com/MetaMask/eslint-config/pull/213))
+- Forbid TypeScript interfaces ([#216](https://github.com/MetaMask/eslint-config/pull/216))
+- Add missing change entries for v8 ([#212](https://github.com/MetaMask/eslint-config/pull/212))
+
 ## [9.0.1]
 ### Changed
 - Disable `@typescript-eslint/no-throw-literal` ([#210](https://github.com/MetaMask/eslint-config/pull/210))
@@ -57,7 +66,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - To continue extending this config, install this package and update your `.eslintrc.js` `extends` array to include `@metamask/eslint-config-typescript` instead of `@metamask/eslint-config/typescript`.
 - Update `eslint` and other ESLint peer dependencies ([#151](https://github.com/MetaMask/eslint-config/pull/151))
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v9.0.1...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v10.0.0...HEAD
+[10.0.0]: https://github.com/MetaMask/eslint-config/compare/v9.0.1...v10.0.0
 [9.0.1]: https://github.com/MetaMask/eslint-config/compare/v9.0.0...v9.0.1
 [9.0.0]: https://github.com/MetaMask/eslint-config/compare/v8.0.0...v9.0.0
 [8.0.0]: https://github.com/MetaMask/eslint-config/compare/v7.0.1...v8.0.0
