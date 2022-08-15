@@ -6,6 +6,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [10.0.0]
+### Changed
+- **(BREAKING)** Update ESLint from v7 to v8 ([#233](https://github.com/MetaMask/eslint-config/pull/233))
+  - This is breaking because `eslint` is a `peerDependency`.
+  - Four new rules have been added:
+    - [`no-loss-of-precision`](https://eslint.org/docs/latest/rules/no-loss-of-precision)
+    - [`no-nonoctal-decimal-escape`](https://eslint.org/docs/latest/rules/no-nonoctal-decimal-escape)
+    - [`no-unsafe-optional-chaining`](https://eslint.org/docs/latest/rules/no-unsafe-optional-chaining)
+    - [`no-useless-backreference`](https://eslint.org/docs/latest/rules/no-useless-backreference)
+- **(BREAKING)** Update `eslint-plugin-prettier` from v3 to v4 ([#231](https://github.com/MetaMask/eslint-config/pull/231))
+  - This is breaking beacuse `eslint-plugin-prettier` is a `peerDependency`.
+- **(BREAKING)** Update minimium Node.js version to v14 ([#225](https://github.com/MetaMask/eslint-config/pull/225))
+- Ignore rest siblings for `no-unused-vars` ([#213](https://github.com/MetaMask/eslint-config/pull/213))
+  - This makes the `no-unused-vars` rule more permissive
+
 ## [9.0.0]
 ### Added
 - **BREAKING** Add JSDoc ESLint rules ([#203](https://github.com/MetaMask/eslint-config/pull/203))
@@ -116,7 +131,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add base, TypeScript, and Jest configs (#3)
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v9.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v10.0.0...HEAD
+[10.0.0]: https://github.com/MetaMask/eslint-config/compare/v9.0.0...v10.0.0
 [9.0.0]: https://github.com/MetaMask/eslint-config/compare/v8.0.0...v9.0.0
 [8.0.0]: https://github.com/MetaMask/eslint-config/compare/v7.0.1...v8.0.0
 [7.0.1]: https://github.com/MetaMask/eslint-config/compare/v7.0.0...v7.0.1

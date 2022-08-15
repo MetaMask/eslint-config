@@ -6,6 +6,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [10.0.0]
+### Changed
+- **(BREAKING)** Update ESLint from v7 to v8 ([#233](https://github.com/MetaMask/eslint-config/pull/233))
+  - This is breaking because `eslint` is a `peerDependency`.
+  - Four new rules have been added:
+    - [`no-loss-of-precision`](https://eslint.org/docs/latest/rules/no-loss-of-precision)
+    - [`no-nonoctal-decimal-escape`](https://eslint.org/docs/latest/rules/no-nonoctal-decimal-escape)
+    - [`no-unsafe-optional-chaining`](https://eslint.org/docs/latest/rules/no-unsafe-optional-chaining)
+    - [`no-useless-backreference`](https://eslint.org/docs/latest/rules/no-useless-backreference)
+- **(BREAKING)** Update `@typescript-eslint` parser and plugin ([#230](https://github.com/MetaMask/eslint-config/pull/230))
+  - This is breaking because these two packages are `peerDependencies`
+  - There are two new rules:
+    - [`@typescript-eslint/no-loss-of-precision`](https://typescript-eslint.io/rules/no-loss-of-precision)
+    - [`@typescript-eslint/no-unnecessary-type-constraint`](https://typescript-eslint.io/rules/no-unnecessary-type-constraint).
+- **(BREAKING)** Update minimium Node.js version to v14 ([#225](https://github.com/MetaMask/eslint-config/pull/225))
+- **(BREAKING)** Forbid TypeScript interfaces ([#216](https://github.com/MetaMask/eslint-config/pull/216))
+- Ignore rest siblings for `no-unused-vars` ([#213](https://github.com/MetaMask/eslint-config/pull/213))
+  - This makes the `no-unused-vars` rule more permissive
+
 ## [9.0.1]
 ### Changed
 - Disable `@typescript-eslint/no-throw-literal` ([#210](https://github.com/MetaMask/eslint-config/pull/210))
@@ -57,7 +76,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - To continue extending this config, install this package and update your `.eslintrc.js` `extends` array to include `@metamask/eslint-config-typescript` instead of `@metamask/eslint-config/typescript`.
 - Update `eslint` and other ESLint peer dependencies ([#151](https://github.com/MetaMask/eslint-config/pull/151))
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v9.0.1...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v10.0.0...HEAD
+[10.0.0]: https://github.com/MetaMask/eslint-config/compare/v9.0.1...v10.0.0
 [9.0.1]: https://github.com/MetaMask/eslint-config/compare/v9.0.0...v9.0.1
 [9.0.0]: https://github.com/MetaMask/eslint-config/compare/v8.0.0...v9.0.0
 [8.0.0]: https://github.com/MetaMask/eslint-config/compare/v7.0.1...v8.0.0
