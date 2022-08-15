@@ -7,13 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [10.0.0]
-### Uncategorized
-- Update ESLint from v7 to v8 ([#233](https://github.com/MetaMask/eslint-config/pull/233))
-- Update `@typescript-eslint` parser and plugin ([#230](https://github.com/MetaMask/eslint-config/pull/230))
-- Bump to Node 14, test on Node 18 ([#225](https://github.com/MetaMask/eslint-config/pull/225))
+### Changed
+- **(BREAKING)** Update ESLint from v7 to v8 ([#233](https://github.com/MetaMask/eslint-config/pull/233))
+  - This is breaking because `eslint` is a `peerDependency`.
+  - Four new rules have been added:
+    - [`no-loss-of-precision`](https://eslint.org/docs/latest/rules/no-loss-of-precision)
+    - [`no-nonoctal-decimal-escape`](https://eslint.org/docs/latest/rules/no-nonoctal-decimal-escape)
+    - [`no-unsafe-optional-chaining`](https://eslint.org/docs/latest/rules/no-unsafe-optional-chaining)
+    - [`no-useless-backreference`](https://eslint.org/docs/latest/rules/no-useless-backreference)
+- **(BREAKING)** Update `@typescript-eslint` parser and plugin ([#230](https://github.com/MetaMask/eslint-config/pull/230))
+  - This is breaking because these two packages are `peerDependencies`
+  - There are two new rules:
+    - [`@typescript-eslint/no-loss-of-precision`](https://typescript-eslint.io/rules/no-loss-of-precision)
+    - [`@typescript-eslint/no-unnecessary-type-constraint`](https://typescript-eslint.io/rules/no-unnecessary-type-constraint).
+- **(BREAKING)** Update minimium Node.js version to v14 ([#225](https://github.com/MetaMask/eslint-config/pull/225))
+- **(BREAKING)** Forbid TypeScript interfaces ([#216](https://github.com/MetaMask/eslint-config/pull/216))
 - Ignore rest siblings for `no-unused-vars` ([#213](https://github.com/MetaMask/eslint-config/pull/213))
-- Forbid TypeScript interfaces ([#216](https://github.com/MetaMask/eslint-config/pull/216))
-- Add missing change entries for v8 ([#212](https://github.com/MetaMask/eslint-config/pull/212))
+  - This makes the `no-unused-vars` rule more permissive
 
 ## [9.0.1]
 ### Changed

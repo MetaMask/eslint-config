@@ -7,10 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [10.0.0]
-### Uncategorized
-- Update ESLint from v7 to v8 ([#233](https://github.com/MetaMask/eslint-config/pull/233))
-- Bump to Node 14, test on Node 18 ([#225](https://github.com/MetaMask/eslint-config/pull/225))
-- Add missing change entries for v8 ([#212](https://github.com/MetaMask/eslint-config/pull/212))
+### Changed
+- **(BREAKING)** Update ESLint from v7 to v8 ([#233](https://github.com/MetaMask/eslint-config/pull/233))
+  - This is breaking because `eslint` is a `peerDependency`.
+  - Four new rules have been added:
+    - [`no-loss-of-precision`](https://eslint.org/docs/latest/rules/no-loss-of-precision)
+    - [`no-nonoctal-decimal-escape`](https://eslint.org/docs/latest/rules/no-nonoctal-decimal-escape)
+    - [`no-unsafe-optional-chaining`](https://eslint.org/docs/latest/rules/no-unsafe-optional-chaining)
+    - [`no-useless-backreference`](https://eslint.org/docs/latest/rules/no-useless-backreference)
+- **(BREAKING)** Update minimium Node.js version to v14 ([#225](https://github.com/MetaMask/eslint-config/pull/225))
 
 ## [9.0.0]
 ### Added
