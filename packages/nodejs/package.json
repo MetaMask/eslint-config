@@ -29,7 +29,12 @@
   "devDependencies": {
     "@metamask/eslint-config": "^9.0.0",
     "eslint": "^8.21.0",
-    "eslint-plugin-node": "^11.1.0"
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsdoc": "^39.2.9",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.2.1"
   },
   "peerDependencies": {
     "@metamask/eslint-config": "^9.0.0",
