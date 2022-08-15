@@ -35,7 +35,6 @@ module.exports = {
     '@typescript-eslint/array-type': 'error',
     '@typescript-eslint/consistent-type-assertions': 'error',
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-namespace': [
       'error',
