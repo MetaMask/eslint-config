@@ -1,6 +1,7 @@
 const { readdirSync, readFileSync, promises: fs } = require('fs');
 const pathUtils = require('path');
 const { FlatCompat } = require('@eslint/eslintrc');
+const { hasProperty } = require('@metamask/utils');
 const eslintRecommendedConfig = require('eslint/conf/eslint-recommended');
 const {
   configs: { recommended: prettierConfig },
@@ -569,17 +570,4 @@ function tabs(numTabs) {
     throw new Error('Expected positive integer.');
   }
   return numTabs === 1 ? TAB : TAB + new Array(numTabs).join(TAB);
-}
-
-/**
- * Checks whether the object has an own property with the given name, by means
- * of Reflect.hasOwnProperty.
- *
- * @param {Record<string | number | symbol, unknown>} object - The object whose
- * properties to check.
- * @param {string} key - The property name to check for.
- * @returns {boolean} Whether the object has an own property with the specified name.
- */
-function hasProperty(object, key) {
-  return Reflect.hasOwnProperty.call(object, key);
 }
