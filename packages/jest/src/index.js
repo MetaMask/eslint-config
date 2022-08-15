@@ -9,11 +9,11 @@ module.exports = {
 
   rules: {
     'jest/consistent-test-it': ['error', { fn: 'it' }],
-    'jest/lowercase-name': ['error', { ignore: ['describe'] }],
     'jest/no-duplicate-hooks': 'error',
     'jest/no-if': 'error',
     'jest/no-test-return-statement': 'error',
     'jest/prefer-hooks-on-top': 'error',
+    'jest/prefer-lowercase-title': ['error', { ignore: ['describe'] }],
     'jest/prefer-spy-on': 'error',
     'jest/prefer-strict-equal': 'error',
     'jest/prefer-todo': 'error',

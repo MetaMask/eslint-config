@@ -35,7 +35,6 @@ module.exports = {
     '@typescript-eslint/array-type': 'error',
     '@typescript-eslint/consistent-type-assertions': 'error',
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-namespace': [
       'error',
@@ -51,7 +50,12 @@ module.exports = {
     '@typescript-eslint/no-dupe-class-members': 'error',
     '@typescript-eslint/no-unused-vars': [
       'error',
-      { vars: 'all', args: 'all', argsIgnorePattern: '[_]+' },
+      {
+        vars: 'all',
+        args: 'all',
+        argsIgnorePattern: '[_]+',
+        ignoreRestSiblings: true,
+      },
     ],
 
     'default-param-last': 'off',
