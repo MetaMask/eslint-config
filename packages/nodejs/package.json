@@ -1,6 +1,6 @@
 {
   "name": "@metamask/eslint-config-nodejs",
-  "version": "10.0.0",
+  "version": "11.0.0",
   "description": "Shareable MetaMask ESLint config for Node.js.",
   "main": "src/index.js",
   "publishConfig": {
@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/MetaMask/eslint-config#readme",
   "devDependencies": {
-    "@metamask/eslint-config": "^10.0.0",
+    "@metamask/eslint-config": "^11.0.0",
     "eslint": "^8.21.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-import": "^2.26.0",
@@ -37,7 +37,7 @@
     "prettier": "^2.2.1"
   },
   "peerDependencies": {
-    "@metamask/eslint-config": "^10.0.0",
+    "@metamask/eslint-config": "^11.0.0",
     "eslint": "^8.21.0",
     "eslint-plugin-node": "^11.1.0"
   }
