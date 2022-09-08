@@ -48,9 +48,6 @@ module.exports = {
     curly: ['error', 'all'],
     'no-tabs': 'error',
 
-    // Not required by prettier, but potentially gotchas.
-    'no-restricted-syntax': ['error', 'SequenceExpression'],
-
     /* Core rules */
     'accessor-pairs': 'error',
     'array-callback-return': 'error',
@@ -160,6 +157,27 @@ module.exports = {
     ],
     'no-proto': 'error',
     'no-restricted-globals': ['error', 'event'],
+    'no-restricted-syntax': [
+      'error',
+      {
+        selector: 'FunctionExpression',
+        message: 'Function expressions are not allowed',
+      },
+      {
+        selector: 'WithStatement',
+        message: 'With statements are not allowed',
+      },
+      {
+        selector: `BinaryExpression[operator='in']`,
+        message: 'The "in" operator is not allowed',
+      },
+      // Sequence expressions have potential gotchas with Prettier, and are also
+      // weird!
+      {
+        selector: 'SequenceExpression',
+        message: 'Sequence expressions are not allowed',
+      },
+    ],
     'no-return-assign': ['error', 'except-parens'],
     'no-script-url': 'error',
     'no-self-compare': 'error',

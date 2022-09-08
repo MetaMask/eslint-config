@@ -1,6 +1,7 @@
 const { readdirSync, readFileSync, promises: fs } = require('fs');
 const pathUtils = require('path');
 const { FlatCompat } = require('@eslint/eslintrc');
+const { hasProperty } = require('@metamask/utils');
 const { recommendedConfig: eslintRecommendedConfig } = require('eslint');
 const {
   configs: { recommended: prettierConfig },
@@ -138,7 +139,7 @@ function validatePrettierRules(
   violations,
 ) {
   prettierRules.forEach((ruleName) => {
-    if (ruleName in flatRules && flatRules[ruleName] !== OFF) {
+    if (hasProperty(flatRules, ruleName) && flatRules[ruleName] !== OFF) {
       violations[packageName].push(ruleName);
     }
   });
@@ -166,7 +167,7 @@ function validateConfigMinimalism(
   Object.entries(config.rules || {}).forEach(([ruleName, ruleValue]) => {
     if (
       deepEqual(flatExtendedRules[ruleName], ruleValue) ||
-      (!(ruleName in flatExtendedRules) && ruleValue === OFF)
+      (!hasProperty(flatExtendedRules, ruleName) && ruleValue === OFF)
     ) {
       violations[packageName].push(ruleName);
     }
@@ -393,7 +394,7 @@ function getRequiredPrettierRules() {
 function getFlatRules(flatConfig, normalizeRules = true) {
   // Flatten the config array into a single object
   const rawFlatRules = flatConfig.reduce((flatRules, config) => {
-    if (RULES in config) {
+    if (hasProperty(config, RULES)) {
       return {
         ...flatRules,
         ...config[RULES],

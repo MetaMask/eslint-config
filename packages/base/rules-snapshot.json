@@ -317,7 +317,25 @@
   "no-regex-spaces": "error",
   "no-reserved-keys": "off",
   "no-restricted-globals": ["error", "event"],
-  "no-restricted-syntax": ["error", "SequenceExpression"],
+  "no-restricted-syntax": [
+    "error",
+    {
+      "selector": "FunctionExpression",
+      "message": "Function expressions are not allowed"
+    },
+    {
+      "selector": "WithStatement",
+      "message": "With statements are not allowed"
+    },
+    {
+      "selector": "BinaryExpression[operator='in']",
+      "message": "The \"in\" operator is not allowed"
+    },
+    {
+      "selector": "SequenceExpression",
+      "message": "Sequence expressions are not allowed"
+    }
+  ],
   "no-return-assign": ["error", "except-parens"],
   "no-script-url": "error",
   "no-self-assign": "error",
