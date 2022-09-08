@@ -71,6 +71,30 @@ module.exports = {
     'func-name-matching': 'error',
     'grouped-accessor-pairs': 'error',
     'guard-for-in': 'error',
+    'id-denylist': [
+      // This sets this rule to 'error', the rest are the forbidden IDs.
+      'error',
+      // These are basically all useless contractions.
+      'buf',
+      'cat',
+      'err',
+      'cb',
+      'cfg',
+      'hex',
+      'int',
+      'msg',
+      'num',
+      'opt',
+      'sig',
+    ],
+    'id-length': [
+      'error',
+      {
+        min: 2,
+        properties: 'never',
+        exceptionPatterns: ['_', 'a', 'b', 'i', 'j', 'k'],
+      },
+    ],
     'lines-between-class-members': 'error',
     'max-statements-per-line': [
       'error',

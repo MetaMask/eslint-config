@@ -72,6 +72,28 @@
   "getter-return": "error",
   "grouped-accessor-pairs": "error",
   "guard-for-in": "error",
+  "id-denylist": [
+    "error",
+    "buf",
+    "cat",
+    "err",
+    "cb",
+    "cfg",
+    "hex",
+    "int",
+    "msg",
+    "num",
+    "opt",
+    "sig"
+  ],
+  "id-length": [
+    "error",
+    {
+      "min": 2,
+      "properties": "never",
+      "exceptionPatterns": ["_", "a", "b", "i", "j", "k"]
+    }
+  ],
   "implicit-arrow-linebreak": "off",
   "import/default": "error",
   "import/export": "error",
