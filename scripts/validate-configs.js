@@ -2,7 +2,7 @@ const { readdirSync, readFileSync, promises: fs } = require('fs');
 const pathUtils = require('path');
 const { FlatCompat } = require('@eslint/eslintrc');
 const { hasProperty } = require('@metamask/utils');
-const eslintRecommendedConfig = require('eslint/conf/eslint-recommended');
+const { recommendedConfig: eslintRecommendedConfig } = require('eslint');
 const {
   configs: { recommended: prettierConfig },
 } = require('eslint-plugin-prettier');

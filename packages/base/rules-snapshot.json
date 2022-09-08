@@ -72,6 +72,28 @@
   "getter-return": "error",
   "grouped-accessor-pairs": "error",
   "guard-for-in": "error",
+  "id-denylist": [
+    "error",
+    "buf",
+    "cat",
+    "err",
+    "cb",
+    "cfg",
+    "hex",
+    "int",
+    "msg",
+    "num",
+    "opt",
+    "sig"
+  ],
+  "id-length": [
+    "error",
+    {
+      "min": 2,
+      "properties": "never",
+      "exceptionPatterns": ["_", "a", "b", "i", "j", "k"]
+    }
+  ],
   "implicit-arrow-linebreak": "off",
   "import/default": "error",
   "import/export": "error",
@@ -261,6 +283,7 @@
   "no-lone-blocks": "error",
   "no-lonely-if": "error",
   "no-loop-func": "error",
+  "no-loss-of-precision": "error",
   "no-misleading-character-class": "error",
   "no-mixed-operators": "off",
   "no-mixed-spaces-and-tabs": "off",
@@ -277,6 +300,7 @@
   "no-new-object": "error",
   "no-new-symbol": "error",
   "no-new-wrappers": "error",
+  "no-nonoctal-decimal-escape": "error",
   "no-obj-calls": "error",
   "no-octal": "error",
   "no-octal-escape": "error",
@@ -345,6 +369,7 @@
   "no-unreachable": "error",
   "no-unsafe-finally": "error",
   "no-unsafe-negation": "error",
+  "no-unsafe-optional-chaining": "error",
   "no-unused-expressions": [
     "error",
     {
@@ -368,6 +393,7 @@
       "functions": false
     }
   ],
+  "no-useless-backreference": "error",
   "no-useless-call": "error",
   "no-useless-catch": "error",
   "no-useless-computed-key": "error",
