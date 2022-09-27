@@ -22,7 +22,7 @@
     "@metamask/auto-changelog": "^2.3.0",
     "@metamask/eslint-config": "*",
     "@metamask/eslint-config-nodejs": "*",
-    "@metamask/utils": "^2.1.0",
+    "@metamask/utils": "^3.0.3",
     "eslint": "^8.21.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-import": "^2.26.0",
