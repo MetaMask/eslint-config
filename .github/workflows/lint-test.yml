@@ -33,10 +33,10 @@ jobs:
       - run: yarn lint # "Testing" (i.e. config validation) is also done here
       - name: Validate RC changelog
         if: ${{ startsWith(github.ref, 'release/') }}
-        run: yarn workspaces run auto-changelog validate --rc
+        run: yarn workspaces foreach --exclude root run auto-changelog validate --rc
       - name: Validate changelog
         if: ${{ !startsWith(github.ref, 'release/') }}
-        run: yarn workspaces run auto-changelog validate
+        run: yarn workspaces foreach --exclude root run auto-changelog validate
       - name: Require clean working directory
         shell: bash
         run: |
