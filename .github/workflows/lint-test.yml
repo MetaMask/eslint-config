@@ -30,7 +30,6 @@ jobs:
           path: ${{ steps.yarn-cache-dir.outputs.YARN_CACHE_DIR }}
           key: yarn-cache-${{ runner.os }}-${{ steps.yarn-version.outputs.YARN_VERSION }}-${{ hashFiles('yarn.lock') }}
       - run: yarn --immutable
-      - run: yarn patch-package
       - run: yarn lint # "Testing" (i.e. config validation) is also done here
       - name: Validate RC changelog
         if: ${{ startsWith(github.ref, 'release/') }}
