@@ -28,31 +28,30 @@ const MESSAGE_OVERRIDES = {
  * Get a rule for a given module name.
  *
  * @param {string} name - The module name.
- * @returns {{ name: string; message: string; }[] | string[]} An array of
+ * @returns {{ name: string; message: string; }[]} An array of
  * restricted modules.
  */
 const getModuleRule = (name) => {
-  if (MESSAGE_OVERRIDES[name]) {
-    return [
-      {
-        name,
-        message: MESSAGE_OVERRIDES[name],
-      },
-      {
-        name: `node:${name}`,
-        message: MESSAGE_OVERRIDES[name],
-      },
-    ];
-  }
+  const message =
+    MESSAGE_OVERRIDES[name] || 'This module is not available in the browser.';
 
-  return [name, `node:${name}`];
+  return [
+    {
+      name,
+      message,
+    },
+    {
+      name: `node:${name}`,
+      message,
+    },
+  ];
 };
 
 /**
  * Get a list of restricted globals. This is a list of all globals that are
  * not available in both the browser and Node.js.
  *
- * @returns {{ name: string; message: string; }[] | string[]} An array of
+ * @returns {{ name: string; message: string; }[]} An array of
  * restricted globals.
  */
 const getGlobals = () => {
@@ -66,16 +65,12 @@ const getGlobals = () => {
     .filter(
       (item) => !Object.keys(globals['shared-node-browser']).includes(item),
     )
-    .map((name) => {
-      if (MESSAGE_OVERRIDES[name]) {
-        return {
-          name,
-          message: MESSAGE_OVERRIDES[name],
-        };
-      }
-
-      return name;
-    });
+    .map((name) => ({
+      name,
+      message:
+        MESSAGE_OVERRIDES[name] ||
+        'This global is not available in both the browser and Node.js.',
+    }));
 };
 
 const generateRules = () => {
