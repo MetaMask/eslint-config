@@ -90,6 +90,13 @@
   "no-new-symbol": "off",
   "no-obj-calls": "off",
   "no-redeclare": "off",
+  "no-restricted-syntax": [
+    "error",
+    {
+      "selector": "PropertyDefinition[accessibility='private'], MethodDefinition[accessibility='private'], TSParameterProperty[accessibility='private']",
+      "message": "Use a hash name instead."
+    }
+  ],
   "no-setter-return": "off",
   "no-shadow": "off",
   "no-this-before-super": "off",
