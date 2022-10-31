@@ -95,5 +95,15 @@ module.exports = {
     'jsdoc/require-property-type': 'off',
     'jsdoc/require-returns-type': 'off',
     'jsdoc/valid-types': 'off',
+
+    // Prefer hash names over TypeScript's `private` modifier.
+    'no-restricted-syntax': [
+      'error',
+      {
+        selector:
+          "PropertyDefinition[accessibility='private'], MethodDefinition[accessibility='private'], TSParameterProperty[accessibility='private']",
+        message: 'Use a hash name instead.',
+      },
+    ],
   },
 };
