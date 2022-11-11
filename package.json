@@ -10,7 +10,7 @@
     "packages/*"
   ],
   "scripts": {
-    "lint": "yarn lint:eslint && yarn lint:misc --check && yarn lint:config-validation && yarn lint:changelogs",
+    "lint": "yarn lint:eslint && yarn lint:misc --check && yarn lint:config-validation",
     "lint:changelogs": "yarn workspaces foreach --parallel --verbose run lint:changelog",
     "lint:config-validation": "node ./scripts/validate-configs.js",
     "lint:eslint": "yarn eslint . --ext ts,js",
