@@ -1,5 +1,3 @@
-const { readdirSync, readFileSync, promises: fs } = require('fs');
-const pathUtils = require('path');
 const { FlatCompat } = require('@eslint/eslintrc');
 const { hasProperty } = require('@metamask/utils');
 const { recommendedConfig: eslintRecommendedConfig } = require('eslint');
@@ -7,6 +5,8 @@ const {
   configs: { recommended: prettierConfig },
 } = require('eslint-plugin-prettier');
 const deepEqual = require('fast-deep-equal');
+const { readdirSync, readFileSync, promises: fs } = require('fs');
+const pathUtils = require('path');
 const prettier = require('prettier');
 
 // For config parsing, validation, and rule flattening
