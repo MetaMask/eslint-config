@@ -15,7 +15,7 @@
     "lint:config-validation": "node ./scripts/validate-configs.js",
     "lint:eslint": "yarn eslint . --ext ts,js",
     "lint:fix": "yarn lint:eslint --fix && yarn lint:misc --write && yarn lint:config-validation --write",
-    "lint:misc": "prettier '**/*.json' '!**/rules-snapshot.json' '**/*.md' '!**/CHANGELOG.md' '**/*.yml' --ignore-path .gitignore"
+    "lint:misc": "prettier '**/*.json' '!**/rules-snapshot.json' '**/*.md' '!**/CHANGELOG.md' '**/*.yml' '!.yarnrc.yml' --ignore-path .gitignore"
   },
   "resolutions": {
     "eslint@^8.21.0": "patch:eslint@npm%3A8.21.0#./.yarn/patches/eslint-npm-8.21.0-b57f835038.patch"
