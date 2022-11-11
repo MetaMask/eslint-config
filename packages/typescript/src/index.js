@@ -15,12 +15,19 @@ module.exports = {
     // (not pre-release) here: https://github.com/tc39/ecma262/releases
     ecmaVersion: 2020,
     sourceType: 'module',
+
+    // This enables support for linting rules that require type information. We
+    // assume that the project has a `tsconfig.json` file in the directory where
+    // ESLint is being run.
+    tsconfigRootDir: process.cwd(),
+    project: ['./tsconfig.json'],
   },
 
   plugins: ['@typescript-eslint', 'jsdoc'],
 
   extends: [
     'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:import/typescript',
   ],
 
@@ -58,6 +65,58 @@ module.exports = {
         ignoreRestSiblings: true,
       },
     ],
+
+    // Recommended rules that require type information
+    '@typescript-eslint/no-unsafe-argument': 'off',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-call': 'off',
+    '@typescript-eslint/no-unsafe-member-access': 'off',
+    '@typescript-eslint/no-unsafe-return': 'off',
+    '@typescript-eslint/restrict-template-expressions': 'off',
+
+    // Our rules that require type information
+    '@typescript-eslint/consistent-type-exports': 'error',
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        selector: 'default',
+        format: ['camelCase'],
+        leadingUnderscore: 'forbid',
+        trailingUnderscore: 'forbid',
+      },
+      {
+        selector: 'enumMember',
+        format: ['PascalCase'],
+      },
+      {
+        selector: 'variable',
+        format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
+      },
+      {
+        selector: 'typeLike',
+        format: ['PascalCase'],
+      },
+      {
+        selector: 'interface',
+        format: ['PascalCase'],
+        custom: {
+          regex: '^I[A-Z]',
+          match: false,
+        },
+      },
+    ],
+    '@typescript-eslint/no-confusing-void-expression': 'error',
+    '@typescript-eslint/no-meaningless-void-operator': 'error',
+    '@typescript-eslint/no-unnecessary-boolean-literal-compare': ' error',
+    '@typescript-eslint/no-unnecessary-qualifier': 'error',
+    '@typescript-eslint/no-unnecessary-type-arguments': 'error',
+    '@typescript-eslint/prefer-includes': 'error',
+    '@typescript-eslint/prefer-nullish-coalescing': 'error',
+    '@typescript-eslint/prefer-readonly': 'error',
+    '@typescript-eslint/prefer-reduce-type-parameter': 'error',
+    '@typescript-eslint/prefer-string-starts-ends-with': 'error',
+    '@typescript-eslint/promise-function-async': 'error',
+    '@typescript-eslint/switch-exhaustiveness-check': 'error',
 
     'default-param-last': 'off',
     '@typescript-eslint/default-param-last': 'error',
