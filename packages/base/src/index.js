@@ -329,7 +329,30 @@ module.exports = {
       },
     ],
     'import/no-webpack-loader-syntax': 'error',
-    'import/order': 'error',
+    'import/order': [
+      'error',
+      {
+        // This means that there will always be a newline between the import
+        // groups as defined below.
+        'newlines-between': 'always',
+
+        groups: [
+          // "builtin" is Node.js modules that are built into the runtime, and
+          // "external" is everything else from node_modules.
+          ['builtin', 'external'],
+
+          // "internal" is unused, but could be used for absolute imports from
+          // the project root.
+          ['internal', 'parent', 'sibling', 'index'],
+        ],
+
+        // Alphabetically sort the imports within each group.
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
+      },
+    ],
     'import/unambiguous': 'error',
 
     /* jsdoc plugin rules */
