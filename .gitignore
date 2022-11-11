@@ -1,8 +1,7 @@
-*.lerna_backup
-*.har
+.DS_Store
 dist/
-build-artifacts/
-./packages/**/yarn.lock
+coverage/
+docs/
 
 # Logs
 logs
