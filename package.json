@@ -2,19 +2,19 @@
   "name": "root",
   "version": "10.0.0",
   "private": true,
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "scripts": {
-    "lint:eslint": "yarn eslint . --ext ts,js",
-    "lint:config-validation": "node ./scripts/validate-configs.js",
-    "lint:misc": "prettier '**/*.json' '!**/rules-snapshot.json' '**/*.md' '!**/CHANGELOG.md' '**/*.yml' --ignore-path .gitignore",
-    "lint": "yarn lint:eslint && yarn lint:misc --check && yarn lint:config-validation",
-    "lint:fix": "yarn lint:eslint --fix && yarn lint:misc --write && yarn lint:config-validation --write"
-  },
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "lint": "yarn lint:eslint && yarn lint:misc --check && yarn lint:config-validation",
+    "lint:config-validation": "node ./scripts/validate-configs.js",
+    "lint:eslint": "yarn eslint . --ext ts,js",
+    "lint:fix": "yarn lint:eslint --fix && yarn lint:misc --write && yarn lint:config-validation --write",
+    "lint:misc": "prettier '**/*.json' '!**/rules-snapshot.json' '**/*.md' '!**/CHANGELOG.md' '**/*.yml' --ignore-path .gitignore"
+  },
+  "resolutions": {
+    "eslint@^8.21.0": "patch:eslint@npm%3A8.21.0#./.yarn/patches/eslint-npm-8.21.0-b57f835038.patch"
+  },
   "devDependencies": {
     "@eslint/eslintrc": "^1.3.0",
     "@lavamoat/allow-scripts": "^2.0.3",
@@ -29,15 +29,16 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.2.1",
     "fast-deep-equal": "^3.1.3",
-    "prettier": "^2.2.1"
+    "prettier": "^2.7.1",
+    "prettier-plugin-packagejson": "^2.2.18"
+  },
+  "packageManager": "yarn@3.2.4",
+  "engines": {
+    "node": ">=14.0.0"
   },
   "lavamoat": {
     "allowScripts": {
       "@lavamoat/preinstall-always-fail": false
     }
-  },
-  "packageManager": "yarn@3.2.4",
-  "resolutions": {
-    "eslint@^8.21.0": "patch:eslint@npm%3A8.21.0#./.yarn/patches/eslint-npm-8.21.0-b57f835038.patch"
   }
 }

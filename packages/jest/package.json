@@ -2,30 +2,23 @@
   "name": "@metamask/eslint-config-jest",
   "version": "10.0.0",
   "description": "Shareable MetaMask ESLint config for Jest.",
-  "main": "src/index.js",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
-  },
-  "files": [
-    "src/"
-  ],
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "scripts": {
-    "test": "eslint .",
-    "publish": "npm publish"
+  "homepage": "https://github.com/MetaMask/eslint-config#readme",
+  "bugs": {
+    "url": "https://github.com/MetaMask/eslint-config/issues"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/MetaMask/eslint-config.git"
   },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/MetaMask/eslint-config/issues"
+  "main": "src/index.js",
+  "files": [
+    "src/"
+  ],
+  "scripts": {
+    "publish": "npm publish",
+    "test": "eslint ."
   },
-  "homepage": "https://github.com/MetaMask/eslint-config#readme",
   "devDependencies": {
     "@metamask/eslint-config": "^10.0.0",
     "eslint": "^8.21.0",
@@ -40,5 +33,12 @@
     "@metamask/eslint-config": "^10.0.0",
     "eslint": "^8.21.0",
     "eslint-plugin-jest": "^26.8.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
