@@ -134,7 +134,20 @@
     }
   ],
   "import/no-webpack-loader-syntax": "error",
-  "import/order": "error",
+  "import/order": [
+    "error",
+    {
+      "newlines-between": "always",
+      "groups": [
+        ["builtin", "external"],
+        ["internal", "parent", "sibling", "index"]
+      ],
+      "alphabetize": {
+        "order": "asc",
+        "caseInsensitive": true
+      }
+    }
+  ],
   "import/unambiguous": "error",
   "indent": "off",
   "indent-legacy": "off",
