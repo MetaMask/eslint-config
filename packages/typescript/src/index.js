@@ -89,20 +89,24 @@ module.exports = {
         format: ['PascalCase'],
       },
       {
-        selector: 'variable',
-        format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
-      },
-      {
-        selector: 'typeLike',
-        format: ['PascalCase'],
-      },
-      {
         selector: 'interface',
         format: ['PascalCase'],
         custom: {
           regex: '^I[A-Z]',
           match: false,
         },
+      },
+      {
+        selector: 'objectLiteralProperty',
+        format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+      },
+      {
+        selector: 'typeLike',
+        format: ['PascalCase'],
+      },
+      {
+        selector: 'variable',
+        format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
       },
     ],
     '@typescript-eslint/no-meaningless-void-operator': 'error',
