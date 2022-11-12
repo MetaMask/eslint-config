@@ -127,7 +127,7 @@
   "@typescript-eslint/restrict-template-expressions": "off",
   "@typescript-eslint/switch-exhaustiveness-check": "error",
   "@typescript-eslint/triple-slash-reference": "error",
-  "@typescript-eslint/unbound-method": "error",
+  "@typescript-eslint/unbound-method": "off",
   "@typescript-eslint/unified-signatures": "error",
   "constructor-super": "off",
   "default-param-last": "off",
