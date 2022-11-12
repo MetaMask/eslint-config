@@ -134,7 +134,7 @@ module.exports = {
     '@typescript-eslint/no-shadow': ['error', { builtinGlobals: true }],
 
     'no-throw-literal': 'off',
-    // '@typescript-eslint/no-throw-literal' is left disabled because it requires type information
+    '@typescript-eslint/no-throw-literal': 'error',
 
     'no-unused-expressions': 'off',
     '@typescript-eslint/no-unused-expressions': [
