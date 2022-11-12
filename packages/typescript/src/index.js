@@ -97,6 +97,10 @@ module.exports = {
         },
       },
       {
+        selector: 'objectLiteralMethod',
+        format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+      },
+      {
         selector: 'objectLiteralProperty',
         format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
       },
