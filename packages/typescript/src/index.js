@@ -82,7 +82,7 @@ module.exports = {
       {
         selector: 'default',
         format: ['camelCase'],
-        leadingUnderscore: 'forbid',
+        leadingUnderscore: 'allow',
         trailingUnderscore: 'forbid',
       },
       {
@@ -112,6 +112,7 @@ module.exports = {
       {
         selector: 'variable',
         format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
+        leadingUnderscore: 'allow',
       },
     ],
     '@typescript-eslint/no-meaningless-void-operator': 'error',

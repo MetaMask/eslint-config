@@ -13,7 +13,7 @@
     {
       "selector": "default",
       "format": ["camelCase"],
-      "leadingUnderscore": "forbid",
+      "leadingUnderscore": "allow",
       "trailingUnderscore": "forbid"
     },
     {
@@ -42,7 +42,8 @@
     },
     {
       "selector": "variable",
-      "format": ["camelCase", "UPPER_CASE", "PascalCase"]
+      "format": ["camelCase", "UPPER_CASE", "PascalCase"],
+      "leadingUnderscore": "allow"
     }
   ],
   "@typescript-eslint/no-array-constructor": "error",
