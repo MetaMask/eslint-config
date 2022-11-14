@@ -18,7 +18,7 @@
     "lint:misc": "prettier '**/*.json' '!**/rules-snapshot.json' '**/*.md' '!**/CHANGELOG.md' '**/*.yml' '!.yarnrc.yml' --ignore-path .gitignore"
   },
   "resolutions": {
-    "eslint@^8.21.0": "patch:eslint@npm%3A8.21.0#./.yarn/patches/eslint-npm-8.21.0-b57f835038.patch"
+    "eslint@^8.27.0": "patch:eslint@npm%3A8.27.0#./.yarn/patches/eslint-npm-8.27.0-2f252732ca.patch"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^1.3.0",
@@ -27,10 +27,10 @@
     "@metamask/eslint-config": "*",
     "@metamask/eslint-config-nodejs": "*",
     "@metamask/utils": "^3.3.1",
-    "eslint": "^8.21.0",
-    "eslint-config-prettier": "^8.1.0",
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsdoc": "^39.2.9",
+    "eslint-plugin-jsdoc": "^39.6.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.2.1",
     "fast-deep-equal": "^3.1.3",

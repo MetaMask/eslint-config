@@ -6,17 +6,16 @@ MetaMask's [TypeScript](https://www.typescriptlang.org) ESLint configuration.
 
 ```bash
 yarn add --dev \
-    @metamask/eslint-config@^9.0.0 \
-    @metamask/eslint-config-typescript@^9.0.1 \
-    @typescript-eslint/eslint-plugin@^5.33.0 \
-    @typescript-eslint/parser@^5.33.0 \
-    eslint@^7.23.0 \
-    eslint-config-prettier@^8.1.0 \
-    eslint-plugin-import@^2.22.1 \
-    eslint-plugin-jsdoc@^39.2.9 \
-    eslint-plugin-prettier@^3.3.1 \
-    prettier@^2.2.1
-
+    @metamask/eslint-config@^10.0.0 \
+    @metamask/eslint-config-typescript@^10.0.0 \
+    @typescript-eslint/eslint-plugin@^5.42.1 \
+    @typescript-eslint/parser@^5.42.1 \
+    eslint@^8.27.0 \
+    eslint-config-prettier@^8.5.0 \
+    eslint-plugin-import@^2.26.0 \
+    eslint-plugin-jsdoc@^39.6.2 \
+    eslint-plugin-prettier@^4.2.1 \
+    prettier@^2.7.1
 ```
 
 The order in which you extend ESLint rules matters.
