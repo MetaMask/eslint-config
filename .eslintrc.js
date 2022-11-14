@@ -5,7 +5,11 @@ module.exports = {
     ecmaVersion: 2018,
   },
 
-  extends: ['@metamask/eslint-config', '@metamask/eslint-config-nodejs'],
+  extends: [
+    '@metamask/eslint-config',
+    '@metamask/eslint-config-nodejs',
+    '@metamask/eslint-config-jest',
+  ],
 
   rules: {
     'import/no-dynamic-require': 'off',
