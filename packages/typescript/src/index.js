@@ -72,7 +72,6 @@ module.exports = {
     '@typescript-eslint/no-unsafe-call': 'off',
     '@typescript-eslint/no-unsafe-member-access': 'off',
     '@typescript-eslint/no-unsafe-return': 'off',
-    '@typescript-eslint/restrict-template-expressions': 'off',
     '@typescript-eslint/unbound-method': 'off',
 
     // Our rules that require type information
@@ -125,6 +124,14 @@ module.exports = {
     '@typescript-eslint/prefer-reduce-type-parameter': 'error',
     '@typescript-eslint/prefer-string-starts-ends-with': 'error',
     '@typescript-eslint/promise-function-async': 'error',
+    '@typescript-eslint/restrict-template-expressions': [
+      'error',
+      {
+        allowAny: true,
+        allowBoolean: true,
+        allowNumber: true,
+      },
+    ],
     '@typescript-eslint/switch-exhaustiveness-check': 'error',
 
     'default-param-last': 'off',
