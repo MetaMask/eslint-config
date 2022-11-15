@@ -7,13 +7,11 @@ describe('index', () => {
   it('is a valid ESLint config', async () => {
     const api = new ESLint({
       baseConfig: config,
+      useEslintrc: false,
       overrideConfig: {
         env: {
           node: true,
         },
-      },
-      useEslintrc: false,
-      overrideConfig: {
         parserOptions: {
           tsconfigRootDir: resolve(__dirname, '..'),
           project: 'tsconfig.json',
