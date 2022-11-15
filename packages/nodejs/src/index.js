@@ -1,3 +1,5 @@
+const environmentRules = require('./environment.json');
+
 module.exports = {
   plugins: ['node'],
 
@@ -19,6 +21,8 @@ module.exports = {
   extends: ['plugin:node/recommended'],
 
   rules: {
+    ...environmentRules,
+
     // Possible Errors
     'node/handle-callback-err': ['error', '^(err|error)$'],
     'node/no-callback-literal': 'error',
