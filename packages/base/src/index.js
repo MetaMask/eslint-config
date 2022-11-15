@@ -313,6 +313,7 @@ module.exports = {
     'import/no-named-as-default': 'error',
     'import/no-named-as-default-member': 'error',
     'import/no-named-default': 'error',
+    'import/no-nodejs-modules': 'error',
     'import/no-self-import': 'error',
     'import/no-unassigned-import': 'error',
     'import/no-unresolved': [

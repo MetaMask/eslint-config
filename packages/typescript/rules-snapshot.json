@@ -101,7 +101,7 @@
   "no-shadow": "off",
   "no-this-before-super": "off",
   "no-throw-literal": "off",
-  "no-undef": "off",
+  "no-undef": "error",
   "no-unreachable": "off",
   "no-unsafe-negation": "off",
   "no-unused-expressions": "off",

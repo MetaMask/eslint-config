@@ -6,6 +6,11 @@ describe('index', () => {
   it('is a valid ESLint config', async () => {
     const api = new ESLint({
       baseConfig: config,
+      overrideConfig: {
+        env: {
+          node: true,
+        },
+      },
       useEslintrc: false,
     });
 
