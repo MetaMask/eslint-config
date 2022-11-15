@@ -72,7 +72,6 @@ module.exports = {
     '@typescript-eslint/no-unsafe-call': 'off',
     '@typescript-eslint/no-unsafe-member-access': 'off',
     '@typescript-eslint/no-unsafe-return': 'off',
-    '@typescript-eslint/unbound-method': 'off',
 
     // Our rules that require type information
     '@typescript-eslint/consistent-type-exports': 'error',
