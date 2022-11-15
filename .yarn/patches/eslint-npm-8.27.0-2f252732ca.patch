@@ -1,0 +1,20 @@
+diff --git a/lib/api.js b/lib/api.js
+index 3dde0985505a07ed8b64250bb96f470a0b17ace1..2118593ccb1326c25d4d500a9ecdaccc1e00e2e3 100644
+--- a/lib/api.js
++++ b/lib/api.js
+@@ -13,6 +13,7 @@ const { ESLint } = require("./eslint");
+ const { Linter } = require("./linter");
+ const { RuleTester } = require("./rule-tester");
+ const { SourceCode } = require("./source-code");
++const recommendedConfig = require("../conf/eslint-recommended");
+ 
+ //-----------------------------------------------------------------------------
+ // Exports
+@@ -22,5 +23,6 @@ module.exports = {
+     Linter,
+     ESLint,
+     RuleTester,
+-    SourceCode
++    SourceCode,
++    recommendedConfig
+ };

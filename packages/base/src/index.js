@@ -48,9 +48,6 @@ module.exports = {
     curly: ['error', 'all'],
     'no-tabs': 'error',
 
-    // Not required by prettier, but potentially gotchas.
-    'no-restricted-syntax': ['error', 'SequenceExpression'],
-
     /* Core rules */
     'accessor-pairs': 'error',
     'array-callback-return': 'error',
@@ -71,6 +68,30 @@ module.exports = {
     'func-name-matching': 'error',
     'grouped-accessor-pairs': 'error',
     'guard-for-in': 'error',
+    'id-denylist': [
+      // This sets this rule to 'error', the rest are the forbidden IDs.
+      'error',
+      // These are basically all useless contractions.
+      'buf',
+      'cat',
+      'err',
+      'cb',
+      'cfg',
+      'hex',
+      'int',
+      'msg',
+      'num',
+      'opt',
+      'sig',
+    ],
+    'id-length': [
+      'error',
+      {
+        min: 2,
+        properties: 'never',
+        exceptionPatterns: ['_', 'a', 'b', 'i', 'j', 'k'],
+      },
+    ],
     'lines-between-class-members': 'error',
     'max-statements-per-line': [
       'error',
@@ -136,6 +157,27 @@ module.exports = {
     ],
     'no-proto': 'error',
     'no-restricted-globals': ['error', 'event'],
+    'no-restricted-syntax': [
+      'error',
+      {
+        selector: 'FunctionExpression',
+        message: 'Function expressions are not allowed',
+      },
+      {
+        selector: 'WithStatement',
+        message: 'With statements are not allowed',
+      },
+      {
+        selector: `BinaryExpression[operator='in']`,
+        message: 'The "in" operator is not allowed',
+      },
+      // Sequence expressions have potential gotchas with Prettier, and are also
+      // weird!
+      {
+        selector: 'SequenceExpression',
+        message: 'Sequence expressions are not allowed',
+      },
+    ],
     'no-return-assign': ['error', 'except-parens'],
     'no-script-url': 'error',
     'no-self-compare': 'error',
@@ -163,6 +205,7 @@ module.exports = {
         vars: 'all',
         args: 'all',
         argsIgnorePattern: '[_]+',
+        ignoreRestSiblings: true,
       },
     ],
     'no-use-before-define': [
@@ -270,6 +313,7 @@ module.exports = {
     'import/no-named-as-default': 'error',
     'import/no-named-as-default-member': 'error',
     'import/no-named-default': 'error',
+    'import/no-nodejs-modules': 'error',
     'import/no-self-import': 'error',
     'import/no-unassigned-import': 'error',
     'import/no-unresolved': [
@@ -286,7 +330,30 @@ module.exports = {
       },
     ],
     'import/no-webpack-loader-syntax': 'error',
-    'import/order': 'error',
+    'import/order': [
+      'error',
+      {
+        // This means that there will always be a newline between the import
+        // groups as defined below.
+        'newlines-between': 'always',
+
+        groups: [
+          // "builtin" is Node.js modules that are built into the runtime, and
+          // "external" is everything else from node_modules.
+          ['builtin', 'external'],
+
+          // "internal" is unused, but could be used for absolute imports from
+          // the project root.
+          ['internal', 'parent', 'sibling', 'index'],
+        ],
+
+        // Alphabetically sort the imports within each group.
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
+      },
+    ],
     'import/unambiguous': 'error',
 
     /* jsdoc plugin rules */

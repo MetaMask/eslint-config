@@ -13,6 +13,7 @@
   "@typescript-eslint/object-curly-spacing": "off",
   "@typescript-eslint/quotes": "off",
   "@typescript-eslint/semi": "off",
+  "@typescript-eslint/space-before-blocks": "off",
   "@typescript-eslint/space-before-function-paren": "off",
   "@typescript-eslint/space-infix-ops": "off",
   "@typescript-eslint/type-annotation-spacing": "off",
@@ -72,6 +73,28 @@
   "getter-return": "error",
   "grouped-accessor-pairs": "error",
   "guard-for-in": "error",
+  "id-denylist": [
+    "error",
+    "buf",
+    "cat",
+    "err",
+    "cb",
+    "cfg",
+    "hex",
+    "int",
+    "msg",
+    "num",
+    "opt",
+    "sig"
+  ],
+  "id-length": [
+    "error",
+    {
+      "min": 2,
+      "properties": "never",
+      "exceptionPatterns": ["_", "a", "b", "i", "j", "k"]
+    }
+  ],
   "implicit-arrow-linebreak": "off",
   "import/default": "error",
   "import/export": "error",
@@ -96,6 +119,7 @@
   "import/no-named-as-default": "error",
   "import/no-named-as-default-member": "error",
   "import/no-named-default": "error",
+  "import/no-nodejs-modules": "error",
   "import/no-self-import": "error",
   "import/no-unassigned-import": "error",
   "import/no-unresolved": [
@@ -112,7 +136,20 @@
     }
   ],
   "import/no-webpack-loader-syntax": "error",
-  "import/order": "error",
+  "import/order": [
+    "error",
+    {
+      "newlines-between": "always",
+      "groups": [
+        ["builtin", "external"],
+        ["internal", "parent", "sibling", "index"]
+      ],
+      "alphabetize": {
+        "order": "asc",
+        "caseInsensitive": true
+      }
+    }
+  ],
   "import/unambiguous": "error",
   "indent": "off",
   "indent-legacy": "off",
@@ -261,6 +298,7 @@
   "no-lone-blocks": "error",
   "no-lonely-if": "error",
   "no-loop-func": "error",
+  "no-loss-of-precision": "error",
   "no-misleading-character-class": "error",
   "no-mixed-operators": "off",
   "no-mixed-spaces-and-tabs": "off",
@@ -277,6 +315,7 @@
   "no-new-object": "error",
   "no-new-symbol": "error",
   "no-new-wrappers": "error",
+  "no-nonoctal-decimal-escape": "error",
   "no-obj-calls": "error",
   "no-octal": "error",
   "no-octal-escape": "error",
@@ -293,7 +332,25 @@
   "no-regex-spaces": "error",
   "no-reserved-keys": "off",
   "no-restricted-globals": ["error", "event"],
-  "no-restricted-syntax": ["error", "SequenceExpression"],
+  "no-restricted-syntax": [
+    "error",
+    {
+      "selector": "FunctionExpression",
+      "message": "Function expressions are not allowed"
+    },
+    {
+      "selector": "WithStatement",
+      "message": "With statements are not allowed"
+    },
+    {
+      "selector": "BinaryExpression[operator='in']",
+      "message": "The \"in\" operator is not allowed"
+    },
+    {
+      "selector": "SequenceExpression",
+      "message": "Sequence expressions are not allowed"
+    }
+  ],
   "no-return-assign": ["error", "except-parens"],
   "no-script-url": "error",
   "no-self-assign": "error",
@@ -327,6 +384,7 @@
   "no-unreachable": "error",
   "no-unsafe-finally": "error",
   "no-unsafe-negation": "error",
+  "no-unsafe-optional-chaining": "error",
   "no-unused-expressions": [
     "error",
     {
@@ -340,7 +398,8 @@
     {
       "vars": "all",
       "args": "all",
-      "argsIgnorePattern": "[_]+"
+      "argsIgnorePattern": "[_]+",
+      "ignoreRestSiblings": true
     }
   ],
   "no-use-before-define": [
@@ -349,6 +408,7 @@
       "functions": false
     }
   ],
+  "no-useless-backreference": "error",
   "no-useless-call": "error",
   "no-useless-catch": "error",
   "no-useless-computed-key": "error",
@@ -528,6 +588,7 @@
   "vue/object-curly-spacing": "off",
   "vue/object-property-newline": "off",
   "vue/operator-linebreak": "off",
+  "vue/quote-props": "off",
   "vue/script-indent": "off",
   "vue/singleline-html-element-content-newline": "off",
   "vue/space-in-parens": "off",

@@ -6,11 +6,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [10.0.0]
+### Changed
+- **(BREAKING)** Update ESLint from v7 to v8 ([#233](https://github.com/MetaMask/eslint-config/pull/233))
+  - This is breaking because `eslint` is a `peerDependency`.
+  - Four new rules have been added:
+    - [`no-loss-of-precision`](https://eslint.org/docs/latest/rules/no-loss-of-precision)
+    - [`no-nonoctal-decimal-escape`](https://eslint.org/docs/latest/rules/no-nonoctal-decimal-escape)
+    - [`no-unsafe-optional-chaining`](https://eslint.org/docs/latest/rules/no-unsafe-optional-chaining)
+    - [`no-useless-backreference`](https://eslint.org/docs/latest/rules/no-useless-backreference)
+- **(BREAKING)** Update `eslint-plugin-mocha` from v8 to v10 ([#232](https://github.com/MetaMask/eslint-config/pull/232))
+  - This is breaking because `eslint-plugin-mocha` is a `peerDependency`.
+  - The rule [`mocha/no-empty-description`](https://github.com/lo1tuma/eslint-plugin-mocha/blob/master/docs/rules/no-empty-description.md) was added.
+- **(BREAKING)** Update minimium Node.js version to v14 ([#225](https://github.com/MetaMask/eslint-config/pull/225))
+- Update Mocha ecmaVersion ([#218](https://github.com/MetaMask/eslint-config/pull/218))
+  - This lets us use newer JavaScript features in our Mocha tests.
+
 ## [9.0.0]
 ### Added
 - **BREAKING** Add JSDoc ESLint rules ([#203](https://github.com/MetaMask/eslint-config/pull/203))
 
 ## [8.0.0]
+### Changed
+- ***BREAKING*** The peer dependency `@metamask/eslint-config` has been updated from v7 to v8.
 
 ## [7.0.0]
 ### Changed
@@ -30,7 +48,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - To continue extending this config, install this package and update your `.eslintrc.js` `extends` array to include `@metamask/eslint-config-mocha` instead of `@metamask/eslint-config/mocha`.
 - Update `eslint` and other ESLint peer dependencies ([#151](https://github.com/MetaMask/eslint-config/pull/151))
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v9.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v10.0.0...HEAD
+[10.0.0]: https://github.com/MetaMask/eslint-config/compare/v9.0.0...v10.0.0
 [9.0.0]: https://github.com/MetaMask/eslint-config/compare/v8.0.0...v9.0.0
 [8.0.0]: https://github.com/MetaMask/eslint-config/compare/v7.0.0...v8.0.0
 [7.0.0]: https://github.com/MetaMask/eslint-config/compare/v6.0.0...v7.0.0

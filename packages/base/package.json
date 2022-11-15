@@ -1,45 +1,47 @@
 {
   "name": "@metamask/eslint-config",
-  "version": "9.0.0",
+  "version": "10.0.0",
   "description": "Shareable MetaMask ESLint config.",
-  "main": "src/index.js",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
-  },
-  "files": [
-    "src/"
-  ],
-  "engines": {
-    "node": ">=12.0.0"
-  },
-  "scripts": {
-    "test": "eslint .",
-    "publish": "npm publish"
+  "homepage": "https://github.com/MetaMask/eslint-config#readme",
+  "bugs": {
+    "url": "https://github.com/MetaMask/eslint-config/issues"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/MetaMask/eslint-config.git"
   },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/MetaMask/eslint-config/issues"
+  "main": "src/index.js",
+  "files": [
+    "src/"
+  ],
+  "scripts": {
+    "lint:changelog": "auto-changelog validate",
+    "publish": "npm publish",
+    "test": "eslint ."
   },
-  "homepage": "https://github.com/MetaMask/eslint-config#readme",
   "devDependencies": {
-    "eslint": "^7.23.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsdoc": "^36.1.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "prettier": "^2.2.1"
+    "@metamask/auto-changelog": "^3.0.0",
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsdoc": "^39.6.2",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1"
   },
   "peerDependencies": {
-    "eslint": "^7.23.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsdoc": "^36.1.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "prettier": "^2.2.1"
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsdoc": "^39.6.2",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }

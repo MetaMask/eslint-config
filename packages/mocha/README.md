@@ -6,15 +6,15 @@ MetaMask's [Mocha](https://mochajs.org/) ESLint configuration.
 
 ```bash
 yarn add --dev \
-    @metamask/eslint-config@^9.0.0 \
-    @metamask/eslint-config-mocha@^9.0.0 \
-    eslint@^7.23.0 \
-    eslint-config-prettier@^8.1.0 \
-    eslint-plugin-import@^2.22.1 \
-    eslint-plugin-jsdoc@^36.1.0 \
-    eslint-plugin-mocha@^8.1.0 \
-    eslint-plugin-prettier@^3.3.1 \
-    prettier@^2.2.1
+    @metamask/eslint-config@^10.0.0 \
+    @metamask/eslint-config-mocha@^10.0.0 \
+    eslint@^8.27.0 \
+    eslint-config-prettier@^8.5.0 \
+    eslint-plugin-import@^2.26.0 \
+    eslint-plugin-jsdoc@^39.6.2 \
+    eslint-plugin-mocha@^10.1.0 \
+    eslint-plugin-prettier@^4.2.1 \
+    prettier@^2.7.1
 ```
 
 The order in which you extend ESLint rules matters.
