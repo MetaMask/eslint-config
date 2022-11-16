@@ -70,4 +70,7 @@ const writeRules = async () => {
   }
 };
 
-writeRules().catch(console.error);
+writeRules().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});
