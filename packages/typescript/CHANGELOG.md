@@ -7,15 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [11.0.0]
-### Uncategorized
-- Remove no-undef in favour of custom environments configuration ([#254](https://github.com/MetaMask/eslint-config/pull/254))
+### Added
 - Add more setup instructions to `@metamask/typescript-eslint-config` README ([#209](https://github.com/MetaMask/eslint-config/pull/209))
-- Add rules that require type information ([#250](https://github.com/MetaMask/eslint-config/pull/250))
-- Add rules for hybrid Node.js and browser environments ([#242](https://github.com/MetaMask/eslint-config/pull/242))
-- Test ESLint configs ([#253](https://github.com/MetaMask/eslint-config/pull/253))
+- **BREAKING:** Add rules that require type information ([#250](https://github.com/MetaMask/eslint-config/pull/250))
+  - This requires setting some parser options. See the README for more details.
 - Bump all ESLint dependencies to the latest version ([#252](https://github.com/MetaMask/eslint-config/pull/252))
-- Adapt package to latest module template standards ([#249](https://github.com/MetaMask/eslint-config/pull/249))
-- Forbid TypeScript's private modifier in favour of hash names ([#244](https://github.com/MetaMask/eslint-config/pull/244))
+- **BREAKING:** Forbid TypeScript's private modifier in favour of hash names ([#244](https://github.com/MetaMask/eslint-config/pull/244))
 
 ## [10.0.0]
 ### Changed

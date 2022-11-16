@@ -7,10 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [11.0.0]
-### Uncategorized
-- Test ESLint configs ([#253](https://github.com/MetaMask/eslint-config/pull/253))
+### Changed
 - Bump all ESLint dependencies to the latest version ([#252](https://github.com/MetaMask/eslint-config/pull/252))
-- Adapt package to latest module template standards ([#249](https://github.com/MetaMask/eslint-config/pull/249))
 
 ## [10.0.0]
 ### Changed

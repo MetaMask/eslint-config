@@ -7,15 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [11.0.0]
-### Uncategorized
-- Remove no-undef in favour of custom environments configuration ([#254](https://github.com/MetaMask/eslint-config/pull/254))
-- Add rules for hybrid Node.js and browser environments ([#242](https://github.com/MetaMask/eslint-config/pull/242))
-- Test ESLint configs ([#253](https://github.com/MetaMask/eslint-config/pull/253))
+### Added
+- **BREAKING:** Enable id-denylist and id-length in base config ([#200](https://github.com/MetaMask/eslint-config/pull/200))
+- **BREAKING:** Add rules for hybrid Node.js and browser environments ([#242](https://github.com/MetaMask/eslint-config/pull/242))
+  - The base config now only allows globals and modules that are available in both Node.js and browsers.
+  - This adds a new `@metamask/eslint-config-browser` package, to be used in browser-only environments.
+  - The `@metamask/eslint-config-nodejs` package has been updated to allow Node.js-only globals and modules.
+
+### Changed
+- **BREAKING:** Remove no-undef in favour of custom environments configuration ([#254](https://github.com/MetaMask/eslint-config/pull/254))
 - Bump all ESLint dependencies to the latest version ([#252](https://github.com/MetaMask/eslint-config/pull/252))
-- Adapt package to latest module template standards ([#249](https://github.com/MetaMask/eslint-config/pull/249))
-- Automatically sort imports ([#248](https://github.com/MetaMask/eslint-config/pull/248))
-- Disable more undesired syntax ([#207](https://github.com/MetaMask/eslint-config/pull/207))
-- Enable id-denylist and id-length in base config ([#200](https://github.com/MetaMask/eslint-config/pull/200))
+- **BREAKING:** Automatically sort imports ([#248](https://github.com/MetaMask/eslint-config/pull/248))
+- **BREAKING:** Disable more undesired syntax ([#207](https://github.com/MetaMask/eslint-config/pull/207))
+  - This disables the `with` statement, function expressions, and the `in` operator.
 
 ## [10.0.0]
 ### Changed
