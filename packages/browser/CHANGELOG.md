@@ -6,4 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/
+## [11.0.0]
+### Added
+- Initial release of this package.
+
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v11.0.0...HEAD
+[11.0.0]: https://github.com/MetaMask/eslint-config/releases/tag/v11.0.0
