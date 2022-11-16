@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [11.0.0]
+### Uncategorized
+- Remove no-undef in favour of custom environments configuration ([#254](https://github.com/MetaMask/eslint-config/pull/254))
+- Add rules for hybrid Node.js and browser environments ([#242](https://github.com/MetaMask/eslint-config/pull/242))
+- Test ESLint configs ([#253](https://github.com/MetaMask/eslint-config/pull/253))
+- Bump all ESLint dependencies to the latest version ([#252](https://github.com/MetaMask/eslint-config/pull/252))
+- Adapt package to latest module template standards ([#249](https://github.com/MetaMask/eslint-config/pull/249))
+- Automatically sort imports ([#248](https://github.com/MetaMask/eslint-config/pull/248))
+- Disable more undesired syntax ([#207](https://github.com/MetaMask/eslint-config/pull/207))
+- Enable id-denylist and id-length in base config ([#200](https://github.com/MetaMask/eslint-config/pull/200))
+
 ## [10.0.0]
 ### Changed
 - **(BREAKING)** Update ESLint from v7 to v8 ([#233](https://github.com/MetaMask/eslint-config/pull/233))
@@ -131,7 +142,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add base, TypeScript, and Jest configs (#3)
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v10.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v11.0.0...HEAD
+[11.0.0]: https://github.com/MetaMask/eslint-config/compare/v10.0.0...v11.0.0
 [10.0.0]: https://github.com/MetaMask/eslint-config/compare/v9.0.0...v10.0.0
 [9.0.0]: https://github.com/MetaMask/eslint-config/compare/v8.0.0...v9.0.0
 [8.0.0]: https://github.com/MetaMask/eslint-config/compare/v7.0.1...v8.0.0
