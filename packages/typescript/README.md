@@ -40,5 +40,11 @@ module.exports = {
       extends: ['@metamask/eslint-config-typescript'],
     },
   ],
+
+  // This is required for rules that use type information.
+  // See here for more information: https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md
+  parserOptions: {
+    tsconfigRootDir: __dirname,
+  },
 };
 ```
