@@ -8,10 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [11.0.0]
 ### Added
-- Add more setup instructions to `@metamask/typescript-eslint-config` README ([#209](https://github.com/MetaMask/eslint-config/pull/209))
 - **BREAKING:** Add rules that require type information ([#250](https://github.com/MetaMask/eslint-config/pull/250))
   - This requires setting some parser options. See the README for more details.
-- Bump all ESLint dependencies to the latest version ([#252](https://github.com/MetaMask/eslint-config/pull/252))
+- **BREAKING:** Bump all ESLint dependencies to the latest version ([#252](https://github.com/MetaMask/eslint-config/pull/252))
+  - This includes peer dependencies.
 - **BREAKING:** Forbid TypeScript's private modifier in favour of hash names ([#244](https://github.com/MetaMask/eslint-config/pull/244))
 
 ## [10.0.0]

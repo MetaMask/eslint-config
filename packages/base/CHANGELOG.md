@@ -16,7 +16,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - **BREAKING:** Remove no-undef in favour of custom environments configuration ([#254](https://github.com/MetaMask/eslint-config/pull/254))
-- Bump all ESLint dependencies to the latest version ([#252](https://github.com/MetaMask/eslint-config/pull/252))
+- **BREAKING:** Bump all ESLint dependencies to the latest version ([#252](https://github.com/MetaMask/eslint-config/pull/252))
+  - This includes peer dependencies.
 - **BREAKING:** Automatically sort imports ([#248](https://github.com/MetaMask/eslint-config/pull/248))
 - **BREAKING:** Disable more undesired syntax ([#207](https://github.com/MetaMask/eslint-config/pull/207))
   - This disables the `with` statement, function expressions, and the `in` operator.
