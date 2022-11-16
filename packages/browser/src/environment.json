@@ -1,0 +1,45 @@
+{
+  "no-restricted-globals": [
+    "error",
+    {
+      "name": "__dirname",
+      "message": "This global is not available in the browser environment."
+    },
+    {
+      "name": "__filename",
+      "message": "This global is not available in the browser environment."
+    },
+    {
+      "name": "Buffer",
+      "message": "This global is not available in the browser environment."
+    },
+    {
+      "name": "clearImmediate",
+      "message": "This global is not available in the browser environment."
+    },
+    {
+      "name": "exports",
+      "message": "This global is not available in the browser environment."
+    },
+    {
+      "name": "global",
+      "message": "This global is not available in the browser environment."
+    },
+    {
+      "name": "module",
+      "message": "This global is not available in the browser environment."
+    },
+    {
+      "name": "process",
+      "message": "This global is not available in the browser environment."
+    },
+    {
+      "name": "require",
+      "message": "This global is not available in the browser environment."
+    },
+    {
+      "name": "setImmediate",
+      "message": "This global is not available in the browser environment."
+    }
+  ]
+}

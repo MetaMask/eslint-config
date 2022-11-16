@@ -1,3 +1,5 @@
+const environmentRules = require('./environment.json');
+
 module.exports = {
   env: {
     // See comment under `parserOptions` below.
@@ -27,6 +29,8 @@ module.exports = {
   ],
 
   rules: {
+    ...environmentRules,
+
     /* Prettier rules */
     'prettier/prettier': [
       'error',
@@ -156,7 +160,6 @@ module.exports = {
       },
     ],
     'no-proto': 'error',
-    'no-restricted-globals': ['error', 'event'],
     'no-restricted-syntax': [
       'error',
       {

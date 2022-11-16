@@ -39,7 +39,6 @@ module.exports = {
     'import/no-unresolved': 'off',
 
     // Our rules
-    'no-undef': 'error',
     '@typescript-eslint/array-type': 'error',
     '@typescript-eslint/consistent-type-assertions': 'error',
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
