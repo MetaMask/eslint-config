@@ -55,5 +55,9 @@ module.exports = {
     // Deprecated eslint core rule, erroneously enabled by recommended Node rules
     // https://eslint.org/docs/rules/no-process-exit
     'no-process-exit': 'off',
+
+    // Enabled in the base config, but this should be allowed in Node.js
+    // projects.
+    'import/no-nodejs-modules': 'off',
   },
 };
