@@ -1,4 +1,5 @@
 {
+  "import/no-nodejs-modules": "off",
   "no-process-exit": "off",
   "no-restricted-globals": [
     "error",
