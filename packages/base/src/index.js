@@ -163,10 +163,6 @@ module.exports = {
     'no-restricted-syntax': [
       'error',
       {
-        selector: 'FunctionExpression',
-        message: 'Function expressions are not allowed',
-      },
-      {
         selector: 'WithStatement',
         message: 'With statements are not allowed',
       },
