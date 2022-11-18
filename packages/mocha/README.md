@@ -6,7 +6,7 @@ MetaMask's [Mocha](https://mochajs.org/) ESLint configuration.
 
 ```bash
 yarn add --dev \
-    @metamask/eslint-config@^11.0.0 \
+    @metamask/eslint-config@^11.0.1 \
     @metamask/eslint-config-mocha@^11.0.0 \
     eslint@^8.27.0 \
     eslint-config-prettier@^8.5.0 \
