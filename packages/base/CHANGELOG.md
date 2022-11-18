@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [11.0.1]
+### Uncategorized
+- Enable function expressions again ([#258](https://github.com/MetaMask/eslint-config/pull/258))
+
 ## [11.0.0]
 ### Added
 - **BREAKING:** Enable id-denylist and id-length in base config ([#200](https://github.com/MetaMask/eslint-config/pull/200))
@@ -147,7 +151,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add base, TypeScript, and Jest configs (#3)
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v11.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v11.0.1...HEAD
+[11.0.1]: https://github.com/MetaMask/eslint-config/compare/v11.0.0...v11.0.1
 [11.0.0]: https://github.com/MetaMask/eslint-config/compare/v10.0.0...v11.0.0
 [10.0.0]: https://github.com/MetaMask/eslint-config/compare/v9.0.0...v10.0.0
 [9.0.0]: https://github.com/MetaMask/eslint-config/compare/v8.0.0...v9.0.0
