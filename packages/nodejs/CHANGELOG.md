@@ -7,8 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [11.0.1]
-### Uncategorized
+### Fixed
 - Disable import/no-nodejs-modules in Node.js config ([#257](https://github.com/MetaMask/eslint-config/pull/257))
+  - This rule was added to the base config, but we accidentally forgot to disable it here.
 
 ## [11.0.0]
 ### Changed

@@ -7,8 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [11.0.1]
-### Uncategorized
+### Fixed
 - Enable function expressions again ([#258](https://github.com/MetaMask/eslint-config/pull/258))
+  - We didn't realize this rule would disallow class methods, even class constructors. This was too disruptive.
 
 ## [11.0.0]
 ### Added
