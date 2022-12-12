@@ -111,6 +111,11 @@ module.exports = {
         format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
         leadingUnderscore: 'allow',
       },
+      {
+        selector: 'parameter',
+        format: ['camelCase', 'PascalCase'],
+        leadingUnderscore: 'allow',
+      },
     ],
     '@typescript-eslint/no-meaningless-void-operator': 'error',
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
