@@ -72,6 +72,9 @@ module.exports = {
     '@typescript-eslint/no-unsafe-member-access': 'off',
     '@typescript-eslint/no-unsafe-return': 'off',
 
+    // Recommended rules that we do not want to use
+    '@typescript-eslint/require-await': 'off',
+
     // Our rules that require type information
     '@typescript-eslint/consistent-type-exports': 'error',
     '@typescript-eslint/naming-convention': [
