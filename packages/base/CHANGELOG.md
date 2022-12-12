@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [11.0.2]
-### Uncategorized
+### Changed
 - Stop requiring newlines between multiline blocks/expressions ([#263](https://github.com/MetaMask/eslint-config/pull/263))
 
 ## [11.0.1]

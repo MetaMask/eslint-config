@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [11.0.2]
-### Uncategorized
+### Changed
 - Allow async functions without any 'await' ([#262](https://github.com/MetaMask/eslint-config/pull/262))
 - Allow parameters to use PascalCase ([#264](https://github.com/MetaMask/eslint-config/pull/264))
 
