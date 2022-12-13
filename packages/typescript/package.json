@@ -13,7 +13,9 @@
   "license": "MIT",
   "main": "src/index.js",
   "files": [
-    "src/"
+    "src/",
+    "!src/**/*.test.js",
+    "!src/**/__test__"
   ],
   "scripts": {
     "lint:changelog": "auto-changelog validate",
