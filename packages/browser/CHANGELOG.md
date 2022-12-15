@@ -6,9 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [11.1.0]
+### Uncategorized
+- Exclude test files from package ([#266](https://github.com/MetaMask/eslint-config/pull/266))
+
 ## [11.0.0]
 ### Added
 - Initial release of this package.
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v11.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v11.1.0...HEAD
+[11.1.0]: https://github.com/MetaMask/eslint-config/compare/v11.0.0...v11.1.0
 [11.0.0]: https://github.com/MetaMask/eslint-config/releases/tag/v11.0.0

@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [11.1.0]
+### Uncategorized
+- Exclude test files from package ([#266](https://github.com/MetaMask/eslint-config/pull/266))
+
 ## [11.0.2]
 ### Changed
 - Stop requiring newlines between multiline blocks/expressions ([#263](https://github.com/MetaMask/eslint-config/pull/263))
@@ -156,7 +160,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add base, TypeScript, and Jest configs (#3)
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v11.0.2...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v11.1.0...HEAD
+[11.1.0]: https://github.com/MetaMask/eslint-config/compare/v11.0.2...v11.1.0
 [11.0.2]: https://github.com/MetaMask/eslint-config/compare/v11.0.1...v11.0.2
 [11.0.1]: https://github.com/MetaMask/eslint-config/compare/v11.0.0...v11.0.1
 [11.0.0]: https://github.com/MetaMask/eslint-config/compare/v10.0.0...v11.0.0

@@ -1,6 +1,6 @@
 {
   "name": "@metamask/eslint-config-nodejs",
-  "version": "11.0.1",
+  "version": "11.1.0",
   "description": "Shareable MetaMask ESLint config for Node.js.",
   "homepage": "https://github.com/MetaMask/eslint-config#readme",
   "bugs": {
