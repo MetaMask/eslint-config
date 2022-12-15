@@ -1,0 +1,2825 @@
+{
+  "no-restricted-globals": [
+    "error",
+    {
+      "name": "addEventListener",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "alert",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "AnalyserNode",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Animation",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "AnimationEffectReadOnly",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "AnimationEffectTiming",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "AnimationEffectTimingReadOnly",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "AnimationEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "AnimationPlaybackEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "AnimationTimeline",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "applicationCache",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ApplicationCache",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ApplicationCacheErrorEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Attr",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Audio",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "AudioBuffer",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "AudioBufferSourceNode",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "AudioContext",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "AudioDestinationNode",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "AudioListener",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "AudioNode",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "AudioParam",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "AudioProcessingEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "AudioScheduledSourceNode",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "AudioWorkletGlobalScope",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "AudioWorkletNode",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "AudioWorkletProcessor",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "BarProp",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "BaseAudioContext",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "BatteryManager",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "BeforeUnloadEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "BiquadFilterNode",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Blob",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "BlobEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "blur",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "BroadcastChannel",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "BudgetService",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ByteLengthQueuingStrategy",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Cache",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "caches",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CacheStorage",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "cancelAnimationFrame",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "cancelIdleCallback",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CanvasCaptureMediaStreamTrack",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CanvasGradient",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CanvasPattern",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CanvasRenderingContext2D",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ChannelMergerNode",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ChannelSplitterNode",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CharacterData",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "clientInformation",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ClipboardEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "close",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "closed",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CloseEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Comment",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CompositionEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "confirm",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ConstantSourceNode",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ConvolverNode",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CountQueuingStrategy",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "createImageBitmap",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Credential",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CredentialsContainer",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "crypto",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Crypto",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CryptoKey",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CSS",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CSSConditionRule",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CSSFontFaceRule",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CSSGroupingRule",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CSSImportRule",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CSSKeyframeRule",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CSSKeyframesRule",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CSSMatrixComponent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CSSMediaRule",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CSSNamespaceRule",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CSSPageRule",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CSSPerspective",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CSSRotate",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CSSRule",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CSSRuleList",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CSSScale",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CSSSkew",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CSSSkewX",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CSSSkewY",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CSSStyleDeclaration",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CSSStyleRule",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CSSStyleSheet",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CSSSupportsRule",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CSSTransformValue",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CSSTranslate",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CustomElementRegistry",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "customElements",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "CustomEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "DataTransfer",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "DataTransferItem",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "DataTransferItemList",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "defaultstatus",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "defaultStatus",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "DelayNode",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "DeviceMotionEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "DeviceOrientationEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "devicePixelRatio",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "dispatchEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "document",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Document",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "DocumentFragment",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "DocumentType",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "DOMError",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "DOMImplementation",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "DOMMatrix",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "DOMMatrixReadOnly",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "DOMParser",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "DOMPoint",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "DOMPointReadOnly",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "DOMQuad",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "DOMRect",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "DOMRectList",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "DOMRectReadOnly",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "DOMStringList",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "DOMStringMap",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "DOMTokenList",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "DragEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "DynamicsCompressorNode",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Element",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ErrorEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "event",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "EventSource",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "external",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "File",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "FileList",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "FileReader",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "find",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "focus",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "FocusEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "FontFace",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "FontFaceSetLoadEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "FormData",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "FormDataEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "frameElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "frames",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "GainNode",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Gamepad",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "GamepadButton",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "GamepadEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "getComputedStyle",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "getSelection",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HashChangeEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Headers",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "history",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "History",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLAllCollection",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLAnchorElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLAreaElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLAudioElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLBaseElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLBodyElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLBRElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLButtonElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLCanvasElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLCollection",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLContentElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLDataElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLDataListElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLDetailsElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLDialogElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLDirectoryElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLDivElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLDListElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLDocument",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLEmbedElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLFieldSetElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLFontElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLFormControlsCollection",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLFormElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLFrameElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLFrameSetElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLHeadElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLHeadingElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLHRElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLHtmlElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLIFrameElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLImageElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLInputElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLLabelElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLLegendElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLLIElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLLinkElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLMapElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLMarqueeElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLMediaElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLMenuElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLMetaElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLMeterElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLModElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLObjectElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLOListElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLOptGroupElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLOptionElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLOptionsCollection",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLOutputElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLParagraphElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLParamElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLPictureElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLPreElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLProgressElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLQuoteElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLScriptElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLSelectElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLShadowElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLSlotElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLSourceElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLSpanElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLStyleElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLTableCaptionElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLTableCellElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLTableColElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLTableElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLTableRowElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLTableSectionElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLTemplateElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLTextAreaElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLTimeElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLTitleElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLTrackElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLUListElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLUnknownElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "HTMLVideoElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "IDBCursor",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "IDBCursorWithValue",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "IDBDatabase",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "IDBFactory",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "IDBIndex",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "IDBKeyRange",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "IDBObjectStore",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "IDBOpenDBRequest",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "IDBRequest",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "IDBTransaction",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "IDBVersionChangeEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "IdleDeadline",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "IIRFilterNode",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Image",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ImageBitmap",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ImageBitmapRenderingContext",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ImageCapture",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ImageData",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "indexedDB",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "innerHeight",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "innerWidth",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "InputEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "IntersectionObserver",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "IntersectionObserverEntry",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "isSecureContext",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "KeyboardEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "KeyframeEffect",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "KeyframeEffectReadOnly",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "length",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "localStorage",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "location",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Location",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "locationbar",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "matchMedia",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MediaDeviceInfo",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MediaDevices",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MediaElementAudioSourceNode",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MediaEncryptedEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MediaError",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MediaKeyMessageEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MediaKeySession",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MediaKeyStatusMap",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MediaKeySystemAccess",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MediaList",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MediaMetadata",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MediaQueryList",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MediaQueryListEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MediaRecorder",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MediaSettingsRange",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MediaSource",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MediaStream",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MediaStreamAudioDestinationNode",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MediaStreamAudioSourceNode",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MediaStreamEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MediaStreamTrack",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MediaStreamTrackEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "menubar",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MIDIAccess",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MIDIConnectionEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MIDIInput",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MIDIInputMap",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MIDIMessageEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MIDIOutput",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MIDIOutputMap",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MIDIPort",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MimeType",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MimeTypeArray",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MouseEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "moveBy",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "moveTo",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MutationEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MutationObserver",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "MutationRecord",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "name",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "NamedNodeMap",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "NavigationPreloadManager",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "navigator",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Navigator",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "NetworkInformation",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Node",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "NodeFilter",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "NodeIterator",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "NodeList",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Notification",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "OfflineAudioCompletionEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "OfflineAudioContext",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "offscreenBuffering",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "OffscreenCanvas",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "OffscreenCanvasRenderingContext2D",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onabort",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onafterprint",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onanimationend",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onanimationiteration",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onanimationstart",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onappinstalled",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onauxclick",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onbeforeinstallprompt",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onbeforeprint",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onbeforeunload",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onblur",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "oncancel",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "oncanplay",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "oncanplaythrough",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onchange",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onclick",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onclose",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "oncontextmenu",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "oncuechange",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ondblclick",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ondevicemotion",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ondeviceorientation",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ondeviceorientationabsolute",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ondrag",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ondragend",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ondragenter",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ondragleave",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ondragover",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ondragstart",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ondrop",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ondurationchange",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onemptied",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onended",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onerror",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onfocus",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ongotpointercapture",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onhashchange",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "oninput",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "oninvalid",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onkeydown",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onkeypress",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onkeyup",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onlanguagechange",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onload",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onloadeddata",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onloadedmetadata",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onloadstart",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onlostpointercapture",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onmessage",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onmessageerror",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onmousedown",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onmouseenter",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onmouseleave",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onmousemove",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onmouseout",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onmouseover",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onmouseup",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onmousewheel",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onoffline",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ononline",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onpagehide",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onpageshow",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onpause",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onplay",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onplaying",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onpointercancel",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onpointerdown",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onpointerenter",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onpointerleave",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onpointermove",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onpointerout",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onpointerover",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onpointerup",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onpopstate",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onprogress",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onratechange",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onrejectionhandled",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onreset",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onresize",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onscroll",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onsearch",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onseeked",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onseeking",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onselect",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onstalled",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onstorage",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onsubmit",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onsuspend",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ontimeupdate",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ontoggle",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ontransitionend",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onunhandledrejection",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onunload",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onvolumechange",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onwaiting",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "onwheel",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "open",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "openDatabase",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "opener",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Option",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "origin",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "OscillatorNode",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "outerHeight",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "outerWidth",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "OverconstrainedError",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PageTransitionEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "pageXOffset",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "pageYOffset",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PannerNode",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "parent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Path2D",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PaymentAddress",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PaymentRequest",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PaymentRequestUpdateEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PaymentResponse",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Performance",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PerformanceEntry",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PerformanceLongTaskTiming",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PerformanceMark",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PerformanceMeasure",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PerformanceNavigation",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PerformanceNavigationTiming",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PerformanceObserver",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PerformanceObserverEntryList",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PerformancePaintTiming",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PerformanceResourceTiming",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PerformanceTiming",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PeriodicWave",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Permissions",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PermissionStatus",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "personalbar",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PhotoCapabilities",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Plugin",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PluginArray",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PointerEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PopStateEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "postMessage",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Presentation",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PresentationAvailability",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PresentationConnection",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PresentationConnectionAvailableEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PresentationConnectionCloseEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PresentationConnectionList",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PresentationReceiver",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PresentationRequest",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "print",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ProcessingInstruction",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ProgressEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PromiseRejectionEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "prompt",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PushManager",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PushSubscription",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "PushSubscriptionOptions",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "RadioNodeList",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Range",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ReadableStream",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "registerProcessor",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "RemotePlayback",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "removeEventListener",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "reportError",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Request",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "requestAnimationFrame",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "requestIdleCallback",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "resizeBy",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ResizeObserver",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ResizeObserverEntry",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "resizeTo",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Response",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "RTCCertificate",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "RTCDataChannel",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "RTCDataChannelEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "RTCDtlsTransport",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "RTCIceCandidate",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "RTCIceGatherer",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "RTCIceTransport",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "RTCPeerConnection",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "RTCPeerConnectionIceEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "RTCRtpContributingSource",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "RTCRtpReceiver",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "RTCRtpSender",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "RTCSctpTransport",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "RTCSessionDescription",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "RTCStatsReport",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "RTCTrackEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "screen",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Screen",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "screenLeft",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ScreenOrientation",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "screenTop",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "screenX",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "screenY",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ScriptProcessorNode",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "scroll",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "scrollbars",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "scrollBy",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "scrollTo",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "scrollX",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "scrollY",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SecurityPolicyViolationEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Selection",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "self",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ServiceWorker",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ServiceWorkerContainer",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ServiceWorkerRegistration",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "sessionStorage",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ShadowRoot",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SharedWorker",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SourceBuffer",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SourceBufferList",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "speechSynthesis",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SpeechSynthesisEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SpeechSynthesisUtterance",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "StaticRange",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "status",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "statusbar",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "StereoPannerNode",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "stop",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Storage",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "StorageEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "StorageManager",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "styleMedia",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "StyleSheet",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "StyleSheetList",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SubmitEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SubtleCrypto",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGAElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGAngle",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGAnimatedAngle",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGAnimatedBoolean",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGAnimatedEnumeration",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGAnimatedInteger",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGAnimatedLength",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGAnimatedLengthList",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGAnimatedNumber",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGAnimatedNumberList",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGAnimatedPreserveAspectRatio",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGAnimatedRect",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGAnimatedString",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGAnimatedTransformList",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGAnimateElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGAnimateMotionElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGAnimateTransformElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGAnimationElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGCircleElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGClipPathElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGComponentTransferFunctionElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGDefsElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGDescElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGDiscardElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGEllipseElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFEBlendElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFEColorMatrixElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFEComponentTransferElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFECompositeElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFEConvolveMatrixElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFEDiffuseLightingElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFEDisplacementMapElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFEDistantLightElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFEDropShadowElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFEFloodElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFEFuncAElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFEFuncBElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFEFuncGElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFEFuncRElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFEGaussianBlurElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFEImageElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFEMergeElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFEMergeNodeElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFEMorphologyElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFEOffsetElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFEPointLightElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFESpecularLightingElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFESpotLightElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFETileElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFETurbulenceElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGFilterElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGForeignObjectElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGGElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGGeometryElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGGradientElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGGraphicsElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGImageElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGLength",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGLengthList",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGLinearGradientElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGLineElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGMarkerElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGMaskElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGMatrix",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGMetadataElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGMPathElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGNumber",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGNumberList",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGPathElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGPatternElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGPoint",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGPointList",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGPolygonElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGPolylineElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGPreserveAspectRatio",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGRadialGradientElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGRect",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGRectElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGScriptElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGSetElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGStopElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGStringList",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGStyleElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGSVGElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGSwitchElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGSymbolElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGTextContentElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGTextElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGTextPathElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGTextPositioningElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGTitleElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGTransform",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGTransformList",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGTSpanElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGUnitTypes",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGUseElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "SVGViewElement",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "TaskAttributionTiming",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Text",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "TextEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "TextMetrics",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "TextTrack",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "TextTrackCue",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "TextTrackCueList",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "TextTrackList",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "TimeRanges",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "toolbar",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "top",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Touch",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "TouchEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "TouchList",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "TrackEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "TransformStream",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "TransitionEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "TreeWalker",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "UIEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "ValidityState",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "visualViewport",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "VisualViewport",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "VTTCue",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "WaveShaperNode",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "WebAssembly",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "WebGL2RenderingContext",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "WebGLActiveInfo",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "WebGLBuffer",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "WebGLContextEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "WebGLFramebuffer",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "WebGLProgram",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "WebGLQuery",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "WebGLRenderbuffer",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "WebGLRenderingContext",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "WebGLSampler",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "WebGLShader",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "WebGLShaderPrecisionFormat",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "WebGLSync",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "WebGLTexture",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "WebGLTransformFeedback",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "WebGLUniformLocation",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "WebGLVertexArrayObject",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "WebSocket",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "WheelEvent",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "window",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Window",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Worker",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "WritableStream",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "XMLDocument",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "XMLHttpRequest",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "XMLHttpRequestEventTarget",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "XMLHttpRequestUpload",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "XMLSerializer",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "XPathEvaluator",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "XPathExpression",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "XPathResult",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "XSLTProcessor",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "__dirname",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "__filename",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "Buffer",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "clearImmediate",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "process",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "setImmediate",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    }
+  ]
+}

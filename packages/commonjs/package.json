@@ -1,0 +1,48 @@
+{
+  "name": "@metamask/eslint-config-commonjs",
+  "version": "11.0.2",
+  "description": "Shareable MetaMask ESLint config for CommonJS projects.",
+  "homepage": "https://github.com/MetaMask/eslint-config#readme",
+  "bugs": {
+    "url": "https://github.com/MetaMask/eslint-config/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MetaMask/eslint-config.git"
+  },
+  "license": "MIT",
+  "main": "src/index.js",
+  "files": [
+    "src/",
+    "!src/**/*.test.js"
+  ],
+  "scripts": {
+    "lint:changelog": "auto-changelog validate",
+    "publish": "npm publish",
+    "test": "eslint ."
+  },
+  "devDependencies": {
+    "@metamask/auto-changelog": "^3.0.0",
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsdoc": "^39.6.2",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1"
+  },
+  "peerDependencies": {
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsdoc": "^39.6.2",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
