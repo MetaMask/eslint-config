@@ -3,23 +3,28 @@ const globals = require('globals');
 const { resolve } = require('path');
 
 /**
- * @type {Record<string, { location: string; environment: string; name: string; }>}
+ * @type {Record<string, { location: string; environments: string[]; name: string; }>}
  */
 const RULES_CONFIG = {
   'shared-node-browser': {
     location: '../packages/base/src/environment.json',
-    environment: 'shared-node-browser',
+    environments: ['shared-node-browser'],
     name: 'Node.js and browser',
   },
   browser: {
     location: '../packages/browser/src/environment.json',
-    environment: 'browser',
+    environments: ['browser'],
     name: 'browser',
   },
   node: {
     location: '../packages/nodejs/src/environment.json',
-    environment: 'node',
+    environments: ['node'],
     name: 'Node.js',
+  },
+  commonjs: {
+    location: '../packages/commonjs/src/environment.json',
+    environments: ['shared-node-browser', 'commonjs'],
+    name: 'Node.js and browser (CommonJS)',
   },
 };
 
@@ -27,26 +32,33 @@ const RULES_CONFIG = {
  * @type {string[]}
  */
 const ALL_RULES = [
-  ...Object.values(RULES_CONFIG).reduce((set, { environment }) => {
-    Object.keys(globals[environment]).forEach((key) => set.add(key));
+  ...Object.values(RULES_CONFIG).reduce((set, { environments }) => {
+    for (const environment of environments) {
+      Object.keys(globals[environment]).forEach((key) => set.add(key));
+    }
 
     return set;
   }, new Set()),
 ];
 
 /**
- * Generate rules for a specific environment.
+ * Generate rules for a specific ESLint configuration package.
  *
- * @param {string} environment - The environment to generate rules for.
+ * @param {object} options - Options.
+ * @param {string} options.environments - The environments to generate rules for.
+ * @param {string} options.name - The name of the ESLint configuration.
  * @returns {Record<string, Rule>} The generated rules.
  */
-const generateRules = (environment) => {
-  const environmentGlobals = Object.keys(globals[environment]);
+const generateRules = ({ environments, name }) => {
+  const environmentGlobals = [];
+  for (const environment of environments) {
+    environmentGlobals.push(...Object.keys(globals[environment]));
+  }
   const restrictedGlobals = ALL_RULES.filter(
     (rule) => !environmentGlobals.includes(rule),
   ).map((rule) => ({
     name: rule,
-    message: `This global is not available in the ${RULES_CONFIG[environment].name} environment.`,
+    message: `This global is not available in the ${name} environment.`,
   }));
 
   return {
@@ -60,8 +72,8 @@ const generateRules = (environment) => {
  * @returns {Promise<void>}
  */
 const writeRules = async () => {
-  for (const { location, environment } of Object.values(RULES_CONFIG)) {
-    const rules = generateRules(environment);
+  for (const { location, environments, name } of Object.values(RULES_CONFIG)) {
+    const rules = generateRules({ environments, name });
 
     await fs.writeFile(
       resolve(__dirname, location),
