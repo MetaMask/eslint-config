@@ -124,6 +124,7 @@ module.exports = {
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
     '@typescript-eslint/no-unnecessary-qualifier': 'error',
     '@typescript-eslint/no-unnecessary-type-arguments': 'error',
+    '@typescript-eslint/prefer-enum-initializers': 'error',
     '@typescript-eslint/prefer-includes': 'error',
     '@typescript-eslint/prefer-nullish-coalescing': 'error',
     '@typescript-eslint/prefer-readonly': 'error',
