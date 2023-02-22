@@ -968,15 +968,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@metamask/utils@npm:^3.3.1":
-  version: 3.5.0
-  resolution: "@metamask/utils@npm:3.5.0"
+"@metamask/utils@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@metamask/utils@npm:4.0.0"
   dependencies:
     "@types/debug": ^4.1.7
     debug: ^4.3.4
     semver: ^7.3.8
     superstruct: ^1.0.3
-  checksum: 534de66eaada4ae7306fcb69eed89c547bf635850f4f2e7924b3a930fb82edea2950c835f649f60131b057f294bfa3c59415d1a116e69ab24e645836b2d4eb07
+  checksum: 6d4edca78fe1f66504ed5e5ca021a67f4b4e0893e86484c746b87039c2161c39d3b8bd8e4b9235ddfd023b2d76dd54210af94ec5550e27bc4ad9c0d7d5f3f231
   languageName: node
   linkType: hard
 
@@ -5396,7 +5396,7 @@ __metadata:
     "@metamask/auto-changelog": ^3.0.0
     "@metamask/eslint-config": ^11.0.0
     "@metamask/eslint-config-nodejs": ^11.0.0
-    "@metamask/utils": ^3.3.1
+    "@metamask/utils": ^4.0.0
     "@types/jest": ^29.2.2
     eslint: ^8.27.0
     eslint-config-prettier: ^8.5.0
