@@ -87,6 +87,9 @@ module.exports = {
       'num',
       'opt',
       'sig',
+      'req',
+      'res',
+      'tx',
     ],
     'id-length': [
       'error',
