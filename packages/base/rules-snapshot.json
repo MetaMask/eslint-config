@@ -85,7 +85,10 @@
     "msg",
     "num",
     "opt",
-    "sig"
+    "sig",
+    "req",
+    "res",
+    "tx"
   ],
   "id-length": [
     "error",
