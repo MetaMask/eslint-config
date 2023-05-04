@@ -20,7 +20,7 @@ module.exports = {
     sourceType: 'script',
   },
 
-  plugins: ['jsdoc', 'prettier'],
+  plugins: ['jsdoc', 'prettier', 'promise'],
 
   extends: [
     'eslint:recommended',
@@ -394,5 +394,7 @@ module.exports = {
     'jsdoc/require-yields-check': 'error',
     'jsdoc/tag-lines': 'error',
     'jsdoc/valid-types': 'error',
+
+    'promise/no-multiple-resolved': 'error',
   },
 };
