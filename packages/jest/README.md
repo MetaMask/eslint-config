@@ -14,6 +14,7 @@ yarn add --dev \
     eslint-plugin-jsdoc@^39.6.2 \
     eslint-plugin-jest@^27.1.5 \
     eslint-plugin-prettier@^4.2.1 \
+    eslint-plugin-promise@^6.1.1 \
     prettier@^2.7.1
 ```
 
