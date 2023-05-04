@@ -3320,6 +3320,7 @@
       "usePrettierrc": true
     }
   ],
+  "promise/no-multiple-resolved": "error",
   "quote-props": "off",
   "quotes": "off",
   "radix": "error",
