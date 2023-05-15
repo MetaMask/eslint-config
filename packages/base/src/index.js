@@ -366,7 +366,6 @@ module.exports = {
       { tags: { param: true, returns: true } },
     ],
     'jsdoc/multiline-blocks': 'error',
-    'jsdoc/newline-after-description': 'error',
     'jsdoc/no-bad-blocks': 'error',
     'jsdoc/no-defaults': 'error',
     'jsdoc/no-multi-asterisks': 'error',
