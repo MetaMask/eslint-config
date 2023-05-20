@@ -882,22 +882,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@metamask/eslint-config-commonjs@workspace:packages/commonjs":
-  version: 0.0.0-use.local
-  resolution: "@metamask/eslint-config-commonjs@workspace:packages/commonjs"
-  dependencies:
-    "@metamask/auto-changelog": ^3.0.0
-    eslint: ^8.27.0
-    eslint-config-prettier: ^8.5.0
-    eslint-plugin-import: ^2.26.0
-    eslint-plugin-jsdoc: ^41.1.2
-    eslint-plugin-prettier: ^4.2.1
-    prettier: ^2.7.1
-  peerDependencies:
-    "@metamask/eslint-config": ^12.0.0
-    eslint: ^8.27.0
-  languageName: unknown
-  linkType: soft
 
 "@metamask/eslint-config-jest@workspace:packages/jest":
   version: 0.0.0-use.local
@@ -999,7 +983,7 @@ __metadata:
     eslint: ^8.27.0
     eslint-config-prettier: ^8.5.0
     eslint-plugin-import: ^2.26.0
-    eslint-plugin-jsdoc: ^41.1.2
+    eslint-plugin-jsdoc: ^39.6.2 || ^41 || ^43.0.7
     eslint-plugin-prettier: ^4.2.1
     eslint-plugin-promise: ^6.1.1
     prettier: ^2.7.1
