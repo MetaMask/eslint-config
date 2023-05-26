@@ -111,6 +111,14 @@ module.exports = {
         format: ['PascalCase'],
       },
       {
+        selector: 'typeParameter',
+        format: ['PascalCase'],
+        custom: {
+          regex: '^.{3,}',
+          match: true,
+        },
+      },
+      {
         selector: 'variable',
         format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
         leadingUnderscore: 'allow',
