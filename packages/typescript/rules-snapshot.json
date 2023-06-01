@@ -58,6 +58,20 @@
       "selector": "parameter",
       "format": ["camelCase", "PascalCase"],
       "leadingUnderscore": "allow"
+    },
+    {
+      "selector": [
+        "classProperty",
+        "objectLiteralProperty",
+        "typeProperty",
+        "classMethod",
+        "objectLiteralMethod",
+        "typeMethod",
+        "accessor",
+        "enumMember"
+      ],
+      "format": null,
+      "modifiers": ["requiresQuotes"]
     }
   ],
   "@typescript-eslint/no-array-constructor": "error",
