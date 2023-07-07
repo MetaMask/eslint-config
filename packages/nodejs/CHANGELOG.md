@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [11.2.0]
+### Uncategorized
+- node/peerDeps: replace eslint-plugin-node with eslint-plugin-n ([#297](https://github.com/MetaMask/eslint-config/pull/297))
+- Add `eslint-plugin-promise` and enable `no-multiple-resolved` ([#287](https://github.com/MetaMask/eslint-config/pull/287))
+
 ## [11.1.0]
 ### Changed
 - Exclude test files from package ([#266](https://github.com/MetaMask/eslint-config/pull/266))
@@ -66,7 +71,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - To continue extending this config, install this package and update your `.eslintrc.js` `extends` array to include `@metamask/eslint-config-nodejs` instead of `@metamask/eslint-config/nodejs`.
 - Update `eslint` and other ESLint peer dependencies ([#151](https://github.com/MetaMask/eslint-config/pull/151))
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v11.1.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v11.2.0...HEAD
+[11.2.0]: https://github.com/MetaMask/eslint-config/compare/v11.1.0...v11.2.0
 [11.1.0]: https://github.com/MetaMask/eslint-config/compare/v11.0.1...v11.1.0
 [11.0.1]: https://github.com/MetaMask/eslint-config/compare/v11.0.0...v11.0.1
 [11.0.0]: https://github.com/MetaMask/eslint-config/compare/v10.0.0...v11.0.0
