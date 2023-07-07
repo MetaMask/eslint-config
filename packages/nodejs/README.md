@@ -12,7 +12,7 @@ yarn add --dev \
     eslint-config-prettier@^8.5.0 \
     eslint-plugin-import@^2.26.0 \
     eslint-plugin-jsdoc@^39.6.2 \
-    eslint-plugin-node@^11.1.0 \
+    eslint-plugin-n@^15.7.0 \
     eslint-plugin-prettier@^4.2.1 \
     eslint-plugin-promise@^6.1.1 \
     prettier@^2.7.1

@@ -1,7 +1,7 @@
 const environmentRules = require('./environment.json');
 
 module.exports = {
-  plugins: ['node'],
+  plugins: ['n'],
 
   env: {
     // See comment under `parserOptions` below.
@@ -18,43 +18,38 @@ module.exports = {
     ecmaVersion: 2017,
   },
 
-  extends: ['plugin:node/recommended'],
+  extends: ['plugin:n/recommended'],
 
   rules: {
     ...environmentRules,
 
     // Possible Errors
-    'node/handle-callback-err': ['error', '^(err|error)$'],
-    'node/no-callback-literal': 'error',
-    'node/no-missing-import': 'off', // Duplicates `import/no-unresolved`
-    'node/no-missing-require': 'off', // Duplicates `import/no-unresolved`
-    'node/no-new-require': 'error',
-    'node/no-path-concat': 'error',
-    'node/no-process-exit': 'error',
-    'node/no-unsupported-features/es-syntax': 'off',
+    'n/handle-callback-err': ['error', '^(err|error)$'],
+    'n/no-callback-literal': 'error',
+    'n/no-missing-import': 'off', // Duplicates `import/no-unresolved`
+    'n/no-missing-require': 'off', // Duplicates `import/no-unresolved`
+    'n/no-new-require': 'error',
+    'n/no-path-concat': 'error',
+    'n/no-unsupported-features/es-syntax': 'off',
 
     // Stylistic rules
-    'node/callback-return': 'error',
-    'node/exports-style': 'error',
-    'node/global-require': 'error',
-    'node/no-mixed-requires': 'error',
-    'node/no-process-env': 'error',
-    'node/no-restricted-import': 'error',
-    'node/no-restricted-require': 'error',
-    'node/no-sync': 'error',
-    'node/prefer-global/buffer': 'error',
-    'node/prefer-global/console': 'error',
-    'node/prefer-global/process': 'error',
-    'node/prefer-global/text-decoder': 'error',
-    'node/prefer-global/text-encoder': 'error',
-    'node/prefer-global/url-search-params': 'error',
-    'node/prefer-global/url': 'error',
-    'node/prefer-promises/dns': 'error',
-    'node/prefer-promises/fs': 'error',
-
-    // Deprecated eslint core rule, erroneously enabled by recommended Node rules
-    // https://eslint.org/docs/rules/no-process-exit
-    'no-process-exit': 'off',
+    'n/callback-return': 'error',
+    'n/exports-style': 'error',
+    'n/global-require': 'error',
+    'n/no-mixed-requires': 'error',
+    'n/no-process-env': 'error',
+    'n/no-restricted-import': 'error',
+    'n/no-restricted-require': 'error',
+    'n/no-sync': 'error',
+    'n/prefer-global/buffer': 'error',
+    'n/prefer-global/console': 'error',
+    'n/prefer-global/process': 'error',
+    'n/prefer-global/text-decoder': 'error',
+    'n/prefer-global/text-encoder': 'error',
+    'n/prefer-global/url-search-params': 'error',
+    'n/prefer-global/url': 'error',
+    'n/prefer-promises/dns': 'error',
+    'n/prefer-promises/fs': 'error',
 
     // Enabled in the base config, but this should be allowed in Node.js
     // projects.
