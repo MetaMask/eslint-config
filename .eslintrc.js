@@ -14,10 +14,10 @@ module.exports = {
   rules: {
     'import/no-dynamic-require': 'off',
     'import/no-nodejs-modules': 'off',
-    'node/global-require': 'off',
-    'node/no-process-exit': 'off',
-    'node/no-sync': 'off',
-    'node/no-unpublished-require': 'off',
+    'n/global-require': 'off',
+    'n/no-process-exit': 'off',
+    'n/no-sync': 'off',
+    'n/no-unpublished-require': 'off',
   },
 
   ignorePatterns: ['!.eslintrc.js'],
