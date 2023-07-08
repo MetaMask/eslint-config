@@ -7,12 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [11.2.0]
-### Uncategorized
-- Disable naming convention for properties that require quotes ([#293](https://github.com/MetaMask/eslint-config/pull/293))
+### Added
 - Add rule to enforce generic parameters have a length of at least 3 characters ([#292](https://github.com/MetaMask/eslint-config/pull/292))
 - Add `eslint-plugin-promise` and enable `no-multiple-resolved` ([#287](https://github.com/MetaMask/eslint-config/pull/287))
 - Enable '@typescript-eslint/consistent-type-imports' rule ([#284](https://github.com/MetaMask/eslint-config/pull/284))
 - Add rule `@typescript-eslint/prefer-enum-initializers` ([#269](https://github.com/MetaMask/eslint-config/pull/269))
+
+###Changed
+- Disable naming convention for properties that require quotes ([#293](https://github.com/MetaMask/eslint-config/pull/293))
 
 ## [11.1.0]
 ### Changed

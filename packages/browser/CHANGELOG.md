@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [11.2.0]
-### Uncategorized
+### Added
 - Add `eslint-plugin-promise` and enable `no-multiple-resolved` ([#287](https://github.com/MetaMask/eslint-config/pull/287))
 
 ## [11.1.0]
