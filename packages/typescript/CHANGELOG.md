@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [11.2.0]
+## [12.0.0]
 ### Added
 - **BREAKING:** Add rule to enforce generic parameters have a length of at least 3 characters ([#292](https://github.com/MetaMask/eslint-config/pull/292))
 - **BREAKING:** Enable `@typescript-eslint/consistent-type-imports` rule ([#284](https://github.com/MetaMask/eslint-config/pull/284))
