@@ -7,8 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [12.0.0]
-### Uncategorized
-- Revert "11.2.0 (#298)" ([#298](https://github.com/MetaMask/eslint-config/pull/298))
+### Added
+- **BREAKING:** Add `eslint-plugin-promise` peer dependency, and enable `no-multiple-resolved` ([#287](https://github.com/MetaMask/eslint-config/pull/287))
 
 ## [11.1.0]
 ### Changed

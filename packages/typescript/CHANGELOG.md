@@ -6,9 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [12.0.0]
-### Uncategorized
-- Revert "11.2.0 (#298)" ([#298](https://github.com/MetaMask/eslint-config/pull/298))
+## [11.2.0]
+### Added
+- **BREAKING:** Add rule to enforce generic parameters have a length of at least 3 characters ([#292](https://github.com/MetaMask/eslint-config/pull/292))
+- **BREAKING:** Enable `@typescript-eslint/consistent-type-imports` rule ([#284](https://github.com/MetaMask/eslint-config/pull/284))
+- **BREAKING:** Enable `@typescript-eslint/prefer-enum-initializers` rule ([#269](https://github.com/MetaMask/eslint-config/pull/269))
+
+### Changed
+- **BREAKING:** Update peer dependency `@metamask/eslint-config` to v12
+- Disable naming convention for properties that require quotes ([#293](https://github.com/MetaMask/eslint-config/pull/293))
 
 ## [11.1.0]
 ### Changed
