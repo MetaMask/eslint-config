@@ -8,7 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [12.0.0]
 ### Changed
-- **BREAKING:** Update peer dependency `@metamask/eslint-config` to v12
+- **BREAKING:** Add peer dependency `@metamask/eslint-config` and remove ESLint plugin and prettier peer dependencies ([#301](https://github.com/MetaMask/eslint-config/pull/301))
+  - In the initial release, this package had the wrong list of peer dependencies. This brings this package back into alignment with the others.
 
 ## [11.1.0]
 ### Added
