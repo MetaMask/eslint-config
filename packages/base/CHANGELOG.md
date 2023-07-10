@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [11.2.0]
+### Added
+- Add `eslint-plugin-promise` and enable `no-multiple-resolved` ([#287](https://github.com/MetaMask/eslint-config/pull/287))
+
 ## [11.1.0]
 ### Changed
 - Exclude test files from package ([#266](https://github.com/MetaMask/eslint-config/pull/266))
@@ -160,7 +164,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add base, TypeScript, and Jest configs (#3)
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v11.1.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v11.2.0...HEAD
+[11.2.0]: https://github.com/MetaMask/eslint-config/compare/v11.1.0...v11.2.0
 [11.1.0]: https://github.com/MetaMask/eslint-config/compare/v11.0.2...v11.1.0
 [11.0.2]: https://github.com/MetaMask/eslint-config/compare/v11.0.1...v11.0.2
 [11.0.1]: https://github.com/MetaMask/eslint-config/compare/v11.0.0...v11.0.1
