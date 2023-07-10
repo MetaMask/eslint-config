@@ -7,8 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [12.0.0]
-### Uncategorized
-- Revert "11.2.0 (#298)" ([#298](https://github.com/MetaMask/eslint-config/pull/298))
+### Changed
+- **BREAKING:** Update peer dependency `@metamask/eslint-config` to v12
+- **BREAKING:** Replace `eslint-plugin-node` with `eslint-plugin-n` ([#297](https://github.com/MetaMask/eslint-config/pull/297))
 
 ## [11.1.0]
 ### Changed
