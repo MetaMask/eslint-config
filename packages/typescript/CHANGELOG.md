@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [12.0.0]
+### Added
+- **BREAKING:** Add rule to enforce generic parameters have a length of at least 3 characters ([#292](https://github.com/MetaMask/eslint-config/pull/292))
+- **BREAKING:** Enable `@typescript-eslint/consistent-type-imports` rule ([#284](https://github.com/MetaMask/eslint-config/pull/284))
+- **BREAKING:** Enable `@typescript-eslint/prefer-enum-initializers` rule ([#269](https://github.com/MetaMask/eslint-config/pull/269))
+
+### Changed
+- **BREAKING:** Update peer dependency `@metamask/eslint-config` to v12
+- Disable naming convention for properties that require quotes ([#293](https://github.com/MetaMask/eslint-config/pull/293))
+
 ## [11.1.0]
 ### Changed
 - Exclude test files from package ([#266](https://github.com/MetaMask/eslint-config/pull/266))
@@ -93,7 +103,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - To continue extending this config, install this package and update your `.eslintrc.js` `extends` array to include `@metamask/eslint-config-typescript` instead of `@metamask/eslint-config/typescript`.
 - Update `eslint` and other ESLint peer dependencies ([#151](https://github.com/MetaMask/eslint-config/pull/151))
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v11.1.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v12.0.0...HEAD
+[12.0.0]: https://github.com/MetaMask/eslint-config/compare/v11.1.0...v12.0.0
 [11.1.0]: https://github.com/MetaMask/eslint-config/compare/v11.0.2...v11.1.0
 [11.0.2]: https://github.com/MetaMask/eslint-config/compare/v11.0.0...v11.0.2
 [11.0.0]: https://github.com/MetaMask/eslint-config/compare/v10.0.0...v11.0.0
