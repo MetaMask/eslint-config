@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `eslint-plugin-promise` and enable `no-multiple-resolved` ([#287](https://github.com/MetaMask/eslint-config/pull/287))
 
 ### Changed
-- node/peerDeps: replace eslint-plugin-node with eslint-plugin-n ([#297](https://github.com/MetaMask/eslint-config/pull/297))
+- Replace `eslint-plugin-node` with `eslint-plugin-n` ([#297](https://github.com/MetaMask/eslint-config/pull/297))
 
 ## [11.1.0]
 ### Changed
