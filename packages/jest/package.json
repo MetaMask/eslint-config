@@ -1,6 +1,6 @@
 {
   "name": "@metamask/eslint-config-jest",
-  "version": "12.0.0",
+  "version": "12.1.0",
   "description": "Shareable MetaMask ESLint config for Jest.",
   "homepage": "https://github.com/MetaMask/eslint-config#readme",
   "bugs": {
