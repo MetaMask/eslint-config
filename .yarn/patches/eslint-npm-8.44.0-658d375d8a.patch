@@ -1,5 +1,5 @@
 diff --git a/lib/api.js b/lib/api.js
-index 3dde0985505a07ed8b64250bb96f470a0b17ace1..2118593ccb1326c25d4d500a9ecdaccc1e00e2e3 100644
+index 3dde0985505a07ed8b64250bb96f470a0b17ace1..83d5599d24c4ef18bcae459abc731dff02fea6bb 100644
 --- a/lib/api.js
 +++ b/lib/api.js
 @@ -13,6 +13,7 @@ const { ESLint } = require("./eslint");
@@ -14,7 +14,6 @@ index 3dde0985505a07ed8b64250bb96f470a0b17ace1..2118593ccb1326c25d4d500a9ecdaccc
      Linter,
      ESLint,
      RuleTester,
--    SourceCode
-+    SourceCode,
-+    recommendedConfig
++    recommendedConfig,
+     SourceCode
  };
