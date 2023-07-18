@@ -247,10 +247,6 @@
       "message": "This global is not available in the Node.js environment."
     },
     {
-      "name": "ClipboardItem",
-      "message": "This global is not available in the Node.js environment."
-    },
-    {
       "name": "close",
       "message": "This global is not available in the Node.js environment."
     },
@@ -595,6 +591,10 @@
       "message": "This global is not available in the Node.js environment."
     },
     {
+      "name": "FormData",
+      "message": "This global is not available in the Node.js environment."
+    },
+    {
       "name": "FormDataEvent",
       "message": "This global is not available in the Node.js environment."
     },
@@ -632,6 +632,10 @@
     },
     {
       "name": "HashChangeEvent",
+      "message": "This global is not available in the Node.js environment."
+    },
+    {
+      "name": "Headers",
       "message": "This global is not available in the Node.js environment."
     },
     {
@@ -1264,10 +1268,6 @@
     },
     {
       "name": "Navigator",
-      "message": "This global is not available in the Node.js environment."
-    },
-    {
-      "name": "NavigatorUAData",
       "message": "This global is not available in the Node.js environment."
     },
     {
@@ -1955,6 +1955,10 @@
       "message": "This global is not available in the Node.js environment."
     },
     {
+      "name": "Request",
+      "message": "This global is not available in the Node.js environment."
+    },
+    {
       "name": "requestAnimationFrame",
       "message": "This global is not available in the Node.js environment."
     },
@@ -1976,6 +1980,10 @@
     },
     {
       "name": "resizeTo",
+      "message": "This global is not available in the Node.js environment."
+    },
+    {
+      "name": "Response",
       "message": "This global is not available in the Node.js environment."
     },
     {
