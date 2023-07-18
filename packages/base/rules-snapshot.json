@@ -3310,6 +3310,7 @@
   "prettier/prettier": [
     "error",
     {
+      "endOfLine": "auto",
       "quoteProps": "as-needed",
       "singleQuote": true,
       "tabWidth": 2,

@@ -35,8 +35,9 @@ module.exports = {
     'prettier/prettier': [
       'error',
       {
-        // All of these are defaults except singleQuote, but we specify them
+        // All of these are defaults except singleQuote and endOfLine, but we specify them
         // for explicitness
+        endOfLine: 'auto',
         quoteProps: 'as-needed',
         singleQuote: true,
         tabWidth: 2,
