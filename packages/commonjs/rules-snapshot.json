@@ -210,6 +210,10 @@
       "message": "This global is not available in the Node.js and browser (CommonJS) environment."
     },
     {
+      "name": "ClipboardItem",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
       "name": "close",
       "message": "This global is not available in the Node.js and browser (CommonJS) environment."
     },
@@ -554,10 +558,6 @@
       "message": "This global is not available in the Node.js and browser (CommonJS) environment."
     },
     {
-      "name": "FormData",
-      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
-    },
-    {
       "name": "FormDataEvent",
       "message": "This global is not available in the Node.js and browser (CommonJS) environment."
     },
@@ -595,10 +595,6 @@
     },
     {
       "name": "HashChangeEvent",
-      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
-    },
-    {
-      "name": "Headers",
       "message": "This global is not available in the Node.js and browser (CommonJS) environment."
     },
     {
@@ -1231,6 +1227,10 @@
     },
     {
       "name": "Navigator",
+      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
+    },
+    {
+      "name": "NavigatorUAData",
       "message": "This global is not available in the Node.js and browser (CommonJS) environment."
     },
     {
@@ -1918,10 +1918,6 @@
       "message": "This global is not available in the Node.js and browser (CommonJS) environment."
     },
     {
-      "name": "Request",
-      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
-    },
-    {
       "name": "requestAnimationFrame",
       "message": "This global is not available in the Node.js and browser (CommonJS) environment."
     },
@@ -1943,10 +1939,6 @@
     },
     {
       "name": "resizeTo",
-      "message": "This global is not available in the Node.js and browser (CommonJS) environment."
-    },
-    {
-      "name": "Response",
       "message": "This global is not available in the Node.js and browser (CommonJS) environment."
     },
     {

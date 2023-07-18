@@ -541,6 +541,10 @@
       "message": "This global is not available in the Node.js and browser environment."
     },
     {
+      "name": "ClipboardItem",
+      "message": "This global is not available in the Node.js and browser environment."
+    },
+    {
       "name": "close",
       "message": "This global is not available in the Node.js and browser environment."
     },
@@ -885,10 +889,6 @@
       "message": "This global is not available in the Node.js and browser environment."
     },
     {
-      "name": "FormData",
-      "message": "This global is not available in the Node.js and browser environment."
-    },
-    {
       "name": "FormDataEvent",
       "message": "This global is not available in the Node.js and browser environment."
     },
@@ -926,10 +926,6 @@
     },
     {
       "name": "HashChangeEvent",
-      "message": "This global is not available in the Node.js and browser environment."
-    },
-    {
-      "name": "Headers",
       "message": "This global is not available in the Node.js and browser environment."
     },
     {
@@ -1562,6 +1558,10 @@
     },
     {
       "name": "Navigator",
+      "message": "This global is not available in the Node.js and browser environment."
+    },
+    {
+      "name": "NavigatorUAData",
       "message": "This global is not available in the Node.js and browser environment."
     },
     {
@@ -2249,10 +2249,6 @@
       "message": "This global is not available in the Node.js and browser environment."
     },
     {
-      "name": "Request",
-      "message": "This global is not available in the Node.js and browser environment."
-    },
-    {
       "name": "requestAnimationFrame",
       "message": "This global is not available in the Node.js and browser environment."
     },
@@ -2274,10 +2270,6 @@
     },
     {
       "name": "resizeTo",
-      "message": "This global is not available in the Node.js and browser environment."
-    },
-    {
-      "name": "Response",
       "message": "This global is not available in the Node.js and browser environment."
     },
     {
@@ -3310,6 +3302,7 @@
   "prettier/prettier": [
     "error",
     {
+      "endOfLine": "auto",
       "quoteProps": "as-needed",
       "singleQuote": true,
       "tabWidth": 2,
