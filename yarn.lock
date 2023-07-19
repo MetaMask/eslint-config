@@ -905,7 +905,7 @@ __metadata:
   resolution: "@metamask/eslint-config-browser@workspace:packages/browser"
   dependencies:
     "@metamask/auto-changelog": ^3.0.0
-    eslint: ^8.44.0
+    eslint: ^8.45.0
     eslint-config-prettier: ^8.5.0
     eslint-plugin-import: ~2.26.0
     eslint-plugin-jsdoc: ^41.1.2
@@ -922,7 +922,7 @@ __metadata:
   resolution: "@metamask/eslint-config-commonjs@workspace:packages/commonjs"
   dependencies:
     "@metamask/auto-changelog": ^3.0.0
-    eslint: ^8.44.0
+    eslint: ^8.45.0
     eslint-config-prettier: ^8.5.0
     eslint-plugin-import: ~2.26.0
     eslint-plugin-jsdoc: ^41.1.2
@@ -940,7 +940,7 @@ __metadata:
   dependencies:
     "@metamask/auto-changelog": ^3.0.0
     "@metamask/eslint-config": ^12.0.0
-    eslint: ^8.44.0
+    eslint: ^8.45.0
     eslint-config-prettier: ^8.5.0
     eslint-plugin-import: ~2.26.0
     eslint-plugin-jest: ^27.1.5
@@ -960,7 +960,7 @@ __metadata:
   dependencies:
     "@metamask/auto-changelog": ^3.0.0
     "@metamask/eslint-config": ^12.0.0
-    eslint: ^8.44.0
+    eslint: ^8.45.0
     eslint-config-prettier: ^8.5.0
     eslint-plugin-import: ~2.26.0
     eslint-plugin-jsdoc: ^41.1.2
@@ -980,7 +980,7 @@ __metadata:
   dependencies:
     "@metamask/auto-changelog": ^3.0.0
     "@metamask/eslint-config": ^12.0.0
-    eslint: ^8.44.0
+    eslint: ^8.45.0
     eslint-config-prettier: ^8.5.0
     eslint-plugin-import: ~2.26.0
     eslint-plugin-jsdoc: ^41.1.2
@@ -1002,7 +1002,7 @@ __metadata:
     "@metamask/eslint-config": ^12.0.0
     "@typescript-eslint/eslint-plugin": ^5.42.1
     "@typescript-eslint/parser": ^5.42.1
-    eslint: ^8.44.0
+    eslint: ^8.45.0
     eslint-config-prettier: ^8.5.0
     eslint-plugin-import: ~2.26.0
     eslint-plugin-jsdoc: ^41.1.2
@@ -1023,7 +1023,7 @@ __metadata:
   resolution: "@metamask/eslint-config@workspace:packages/base"
   dependencies:
     "@metamask/auto-changelog": ^3.0.0
-    eslint: ^8.44.0
+    eslint: ^8.45.0
     eslint-config-prettier: ^8.5.0
     eslint-plugin-import: ~2.26.0
     eslint-plugin-jsdoc: ^41.1.2
@@ -2644,7 +2644,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.44.0, eslint@npm:^8.45.0":
+"eslint@npm:^8.45.0":
   version: 8.45.0
   resolution: "eslint@npm:8.45.0"
   dependencies:
