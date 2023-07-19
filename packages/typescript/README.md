@@ -10,7 +10,7 @@ yarn add --dev \
     @metamask/eslint-config-typescript@^12.0.0 \
     @typescript-eslint/eslint-plugin@^5.42.1 \
     @typescript-eslint/parser@^5.42.1 \
-    eslint@^8.27.0 \
+    eslint@^8.45.0 \
     eslint-config-prettier@^8.5.0 \
     eslint-plugin-import@~2.26.0 \
     eslint-plugin-jsdoc@^41.1.2 \

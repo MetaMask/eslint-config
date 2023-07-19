@@ -1,6 +1,6 @@
 const { FlatCompat } = require('@eslint/eslintrc');
+const eslintRecommendedConfig = require('@eslint/js').configs.recommended;
 const { hasProperty } = require('@metamask/utils');
-const { recommendedConfig: eslintRecommendedConfig } = require('eslint');
 const {
   configs: { recommended: prettierConfig },
 } = require('eslint-plugin-prettier');

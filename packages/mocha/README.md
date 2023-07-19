@@ -8,7 +8,7 @@ MetaMask's [Mocha](https://mochajs.org/) ESLint configuration.
 yarn add --dev \
     @metamask/eslint-config@^12.0.0 \
     @metamask/eslint-config-mocha@^12.0.0 \
-    eslint@^8.27.0 \
+    eslint@^8.45.0 \
     eslint-config-prettier@^8.5.0 \
     eslint-plugin-import@~2.26.0 \
     eslint-plugin-jsdoc@^41.1.2 \
