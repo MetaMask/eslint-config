@@ -988,7 +988,6 @@ __metadata:
     eslint-plugin-prettier: ^4.2.1
     prettier: ^2.7.1
   peerDependencies:
-    "@metamask/eslint-config": ^12.0.0
     eslint: ^8.27.0
     eslint-plugin-n: ^15.7.0
   languageName: unknown
