@@ -6,11 +6,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [12.2.0]
-### Uncategorized
-- devDeps: eslint@8.27.0->8.45.0 ([#310](https://github.com/MetaMask/eslint-config/pull/310))
-- Use eslint-plugin-import@~2.26.0 ([#307](https://github.com/MetaMask/eslint-config/pull/307))
-
 ## [12.1.0]
 ### Changed
 - Add support for typescript 5.0.x, 5.1.x ([#288](https://github.com/MetaMask/eslint-config/pull/288))
@@ -80,8 +75,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - To continue extending this config, install this package and update your `.eslintrc.js` `extends` array to include `@metamask/eslint-config-nodejs` instead of `@metamask/eslint-config/nodejs`.
 - Update `eslint` and other ESLint peer dependencies ([#151](https://github.com/MetaMask/eslint-config/pull/151))
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v12.2.0...HEAD
-[12.2.0]: https://github.com/MetaMask/eslint-config/compare/v12.1.0...v12.2.0
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v12.1.0...HEAD
 [12.1.0]: https://github.com/MetaMask/eslint-config/compare/v12.0.0...v12.1.0
 [12.0.0]: https://github.com/MetaMask/eslint-config/compare/v11.1.0...v12.0.0
 [11.1.0]: https://github.com/MetaMask/eslint-config/compare/v11.0.1...v11.1.0
