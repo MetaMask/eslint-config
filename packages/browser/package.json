@@ -1,6 +1,6 @@
 {
   "name": "@metamask/eslint-config-browser",
-  "version": "12.1.0",
+  "version": "12.2.0",
   "description": "Shareable MetaMask ESLint plugin for browser environments.",
   "homepage": "https://github.com/MetaMask/eslint-config#readme",
   "bugs": {

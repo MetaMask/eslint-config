@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [12.2.0]
+### Uncategorized
+- devDeps: eslint@8.27.0->8.45.0 ([#310](https://github.com/MetaMask/eslint-config/pull/310))
+- fix(lint): Change endOfLine rules to better support linting on Windows ([#311](https://github.com/MetaMask/eslint-config/pull/311))
+- Use eslint-plugin-import@~2.26.0 ([#307](https://github.com/MetaMask/eslint-config/pull/307))
+- jsdoc: remove deprecated rule jsdoc/newline-after-description ([#290](https://github.com/MetaMask/eslint-config/pull/290))
+
 ## [12.1.0]
 ### Changed
 - Add support for typescript 5.0.x, 5.1.x ([#288](https://github.com/MetaMask/eslint-config/pull/288))
@@ -168,7 +175,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add base, TypeScript, and Jest configs (#3)
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v12.1.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v12.2.0...HEAD
+[12.2.0]: https://github.com/MetaMask/eslint-config/compare/v12.1.0...v12.2.0
 [12.1.0]: https://github.com/MetaMask/eslint-config/compare/v12.0.0...v12.1.0
 [12.0.0]: https://github.com/MetaMask/eslint-config/compare/v11.1.0...v12.0.0
 [11.1.0]: https://github.com/MetaMask/eslint-config/compare/v11.0.2...v11.1.0
