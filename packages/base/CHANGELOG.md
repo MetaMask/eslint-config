@@ -7,11 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [12.2.0]
-### Uncategorized
-- devDeps: eslint@8.27.0->8.45.0 ([#310](https://github.com/MetaMask/eslint-config/pull/310))
-- fix(lint): Change endOfLine rules to better support linting on Windows ([#311](https://github.com/MetaMask/eslint-config/pull/311))
-- Use eslint-plugin-import@~2.26.0 ([#307](https://github.com/MetaMask/eslint-config/pull/307))
-- jsdoc: remove deprecated rule jsdoc/newline-after-description ([#290](https://github.com/MetaMask/eslint-config/pull/290))
+### Changed
+- Remove deprecated rule `jsdoc/newline-after-description` ([#290](https://github.com/MetaMask/eslint-config/pull/290))
+  - This means the plugin can now be used with `eslint-plugin-jsdoc` versions `42` and above.
+
+### Fixed
+- Pin `eslint-plugin-import@~2.26.0` to avoid a regression in `eslint-plugin-import@2.27.0` ([#307](https://github.com/MetaMask/eslint-config/pull/307))
+- Change `endOfLine` rules to better support linting on Windows ([#311](https://github.com/MetaMask/eslint-config/pull/311))
 
 ## [12.1.0]
 ### Changed
