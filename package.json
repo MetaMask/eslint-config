@@ -1,5 +1,5 @@
 {
-  "name": "root",
+  "name": "@metamask/eslint-config-monorepo",
   "version": "12.2.0",
   "private": true,
   "repository": {
