@@ -148,6 +148,8 @@ module.exports = {
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
     '@typescript-eslint/no-unnecessary-qualifier': 'error',
     '@typescript-eslint/no-unnecessary-type-arguments': 'error',
+    // This rule seems to produce false negatives.
+    '@typescript-eslint/no-unnecessary-type-assertion': 'off',
     '@typescript-eslint/prefer-enum-initializers': 'error',
     '@typescript-eslint/prefer-includes': 'error',
     '@typescript-eslint/prefer-nullish-coalescing': 'error',
