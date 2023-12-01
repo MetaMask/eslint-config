@@ -38,7 +38,7 @@
     "eslint-plugin-n": "^15.7.0"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": "^16.20 || ^18.18 || >=20"
   },
   "publishConfig": {
     "access": "public",
