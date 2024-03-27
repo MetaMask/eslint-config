@@ -6,16 +6,16 @@ MetaMask's [Jest](https://jestjs.io/) ESLint configuration.
 
 ```bash
 yarn add --dev \
-    @metamask/eslint-config@^12.0.0 \
-    @metamask/eslint-config-jest@^12.0.0 \
-    eslint@^8.45.0 \
-    eslint-config-prettier@^8.5.0 \
+    @metamask/eslint-config@^12.2.0 \
+    @metamask/eslint-config-jest@^12.1.0 \
+    eslint@^8.57.0 \
+    eslint-config-prettier@^9.1.0 \
     eslint-plugin-import@~2.26.0 \
-    eslint-plugin-jsdoc@^41.1.2 \
-    eslint-plugin-jest@^27.1.5 \
-    eslint-plugin-prettier@^4.2.1 \
+    eslint-plugin-jsdoc@^47.0.2 \
+    eslint-plugin-jest@^27.9.0 \
+    eslint-plugin-prettier@^5.1.3 \
     eslint-plugin-promise@^6.1.1 \
-    prettier@^2.7.1
+    prettier@^3.2.5
 ```
 
 The order in which you extend ESLint rules matters.

@@ -23,24 +23,24 @@
     "test": "eslint ."
   },
   "devDependencies": {
-    "@metamask/auto-changelog": "^3.0.0",
+    "@metamask/auto-changelog": "^3.4.4",
     "@metamask/eslint-config": "^12.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.42.1",
-    "@typescript-eslint/parser": "^5.42.1",
-    "eslint": "^8.45.0",
-    "eslint-config-prettier": "^8.5.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "~2.26.0",
-    "eslint-plugin-jsdoc": "^41.1.2",
-    "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.7.1",
-    "typescript": "^5.1.6"
+    "eslint-plugin-jsdoc": "^47.0.2",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.5",
+    "typescript": "~5.4.3"
   },
   "peerDependencies": {
-    "@metamask/eslint-config": "^12.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.42.1",
-    "@typescript-eslint/parser": "^5.42.1",
-    "eslint": "^8.27.0",
-    "typescript": "~4.8.4 || ~5.0 || ~5.1"
+    "@metamask/eslint-config": "^12.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.0",
+    "typescript": "~4.8.4 || ~5.0 || ~5.1 || ~5.2 || ~5.3 || ~5.4"
   },
   "engines": {
     "node": "^16.20 || ^18.18 || >=20"
