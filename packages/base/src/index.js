@@ -98,12 +98,6 @@ module.exports = {
       },
     ],
     'lines-between-class-members': 'error',
-    'max-statements-per-line': [
-      'error',
-      {
-        max: 1,
-      },
-    ],
     'new-cap': [
       'error',
       {
@@ -392,7 +386,13 @@ module.exports = {
     'jsdoc/require-returns-type': 'error',
     'jsdoc/require-yields': 'error',
     'jsdoc/require-yields-check': 'error',
-    'jsdoc/tag-lines': 'error',
+    'jsdoc/tag-lines': [
+      'error',
+      'any',
+      {
+        startLines: 1,
+      },
+    ],
     'jsdoc/valid-types': 'error',
 
     'promise/no-multiple-resolved': 'error',

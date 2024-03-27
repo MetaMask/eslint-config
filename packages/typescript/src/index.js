@@ -32,9 +32,6 @@ module.exports = {
   ],
 
   rules: {
-    // Should be disabled per Prettier
-    '@typescript-eslint/no-extra-semi': 'off',
-
     // Handled by TypeScript
     'import/no-unresolved': 'off',
 
