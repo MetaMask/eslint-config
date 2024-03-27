@@ -50,7 +50,7 @@ module.exports = {
       { allowDefinitionFiles: true },
     ],
     '@typescript-eslint/no-non-null-assertion': 'error',
-    '@typescript-eslint/no-parameter-properties': 'error',
+    '@typescript-eslint/parameter-properties': 'error',
     '@typescript-eslint/no-require-imports': 'error',
     '@typescript-eslint/prefer-for-of': 'error',
     '@typescript-eslint/prefer-function-type': 'error',
