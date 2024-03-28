@@ -27,14 +27,11 @@ module.exports = {
 
   extends: [
     'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:@typescript-eslint/recommended-type-checked',
     'plugin:import/typescript',
   ],
 
   rules: {
-    // Should be disabled per Prettier
-    '@typescript-eslint/no-extra-semi': 'off',
-
     // Handled by TypeScript
     'import/no-unresolved': 'off',
 
@@ -50,7 +47,7 @@ module.exports = {
       { allowDefinitionFiles: true },
     ],
     '@typescript-eslint/no-non-null-assertion': 'error',
-    '@typescript-eslint/no-parameter-properties': 'error',
+    '@typescript-eslint/parameter-properties': 'error',
     '@typescript-eslint/no-require-imports': 'error',
     '@typescript-eslint/prefer-for-of': 'error',
     '@typescript-eslint/prefer-function-type': 'error',

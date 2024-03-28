@@ -1,4 +1,5 @@
 {
+  "mocha/consistent-spacing-between-blocks": "error",
   "mocha/handle-done-callback": "error",
   "mocha/max-top-level-suites": [
     "error",
