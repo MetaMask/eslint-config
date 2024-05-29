@@ -11,12 +11,12 @@ yarn add --dev \
     @typescript-eslint/eslint-plugin@^6.21.0 \
     @typescript-eslint/parser@^6.21.0 \
     eslint@^8.57.0 \
-    eslint-config-prettier@^9.1.0 \
+    eslint-config-prettier@^8.5.0 \
     eslint-plugin-import@~2.26.0 \
     eslint-plugin-jsdoc@^47.0.2 \
-    eslint-plugin-prettier@^5.1.3 \
+    eslint-plugin-prettier@^4.2.1 \
     eslint-plugin-promise@^6.1.1 \
-    prettier@^3.2.5
+    prettier@^2.7.1
 ```
 
 The order in which you extend ESLint rules matters.

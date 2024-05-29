@@ -24,7 +24,7 @@
   "devDependencies": {
     "@metamask/auto-changelog": "^3.4.4",
     "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "~2.26.0",
     "eslint-plugin-jsdoc": "^47.0.2",
     "eslint-plugin-prettier": "^4.2.1",

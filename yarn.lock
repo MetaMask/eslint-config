@@ -913,7 +913,7 @@ __metadata:
   dependencies:
     "@metamask/auto-changelog": ^3.4.4
     eslint: ^8.57.0
-    eslint-config-prettier: ^9.1.0
+    eslint-config-prettier: ^8.5.0
     eslint-plugin-import: ~2.26.0
     eslint-plugin-jsdoc: ^47.0.2
     eslint-plugin-prettier: ^4.2.1
@@ -930,7 +930,7 @@ __metadata:
   dependencies:
     "@metamask/auto-changelog": ^3.4.4
     eslint: ^8.57.0
-    eslint-config-prettier: ^9.1.0
+    eslint-config-prettier: ^8.5.0
     eslint-plugin-import: ~2.26.0
     eslint-plugin-jsdoc: ^47.0.2
     eslint-plugin-prettier: ^4.2.1
@@ -948,7 +948,7 @@ __metadata:
     "@metamask/auto-changelog": ^3.4.4
     "@metamask/eslint-config": ^12.0.0
     eslint: ^8.57.0
-    eslint-config-prettier: ^9.1.0
+    eslint-config-prettier: ^8.5.0
     eslint-plugin-import: ~2.26.0
     eslint-plugin-jest: ^27.9.0
     eslint-plugin-jsdoc: ^47.0.2
@@ -968,7 +968,7 @@ __metadata:
     "@metamask/auto-changelog": ^3.4.4
     "@metamask/eslint-config": ^12.0.0
     eslint: ^8.57.0
-    eslint-config-prettier: ^9.1.0
+    eslint-config-prettier: ^8.5.0
     eslint-plugin-import: ~2.26.0
     eslint-plugin-jsdoc: ^47.0.2
     eslint-plugin-mocha: ^10.4.1
@@ -988,7 +988,7 @@ __metadata:
     "@metamask/auto-changelog": ^3.4.4
     "@metamask/eslint-config": ^12.2.0
     eslint: ^8.57.0
-    eslint-config-prettier: ^9.1.0
+    eslint-config-prettier: ^8.5.0
     eslint-plugin-import: ~2.26.0
     eslint-plugin-jsdoc: ^47.0.2
     eslint-plugin-n: ^16.6.2
@@ -1010,7 +1010,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^6.21.0
     "@typescript-eslint/parser": ^6.21.0
     eslint: ^8.57.0
-    eslint-config-prettier: ^9.1.0
+    eslint-config-prettier: ^8.5.0
     eslint-plugin-import: ~2.26.0
     eslint-plugin-jsdoc: ^47.0.2
     eslint-plugin-prettier: ^4.2.1
@@ -1031,7 +1031,7 @@ __metadata:
   dependencies:
     "@metamask/auto-changelog": ^3.4.4
     eslint: ^8.57.0
-    eslint-config-prettier: ^9.1.0
+    eslint-config-prettier: ^8.5.0
     eslint-plugin-import: ~2.26.0
     eslint-plugin-jsdoc: ^47.0.2
     eslint-plugin-prettier: ^4.2.1
@@ -1039,7 +1039,7 @@ __metadata:
     prettier: ^2.7.1
   peerDependencies:
     eslint: ^8.57.0
-    eslint-config-prettier: ^9.1.0
+    eslint-config-prettier: ^8.5.0
     eslint-plugin-import: ~2.26.0
     eslint-plugin-jsdoc: ^47.0.2
     eslint-plugin-prettier: ^4.2.1
@@ -2641,14 +2641,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^9.1.0":
-  version: 9.1.0
-  resolution: "eslint-config-prettier@npm:9.1.0"
+"eslint-config-prettier@npm:^8.5.0":
+  version: 8.10.0
+  resolution: "eslint-config-prettier@npm:8.10.0"
   peerDependencies:
     eslint: ">=7.0.0"
   bin:
     eslint-config-prettier: bin/cli.js
-  checksum: 9229b768c879f500ee54ca05925f31b0c0bafff3d9f5521f98ff05127356de78c81deb9365c86a5ec4efa990cb72b74df8612ae15965b14136044c73e1f6a907
+  checksum: 153266badd477e49b0759816246b2132f1dbdb6c7f313ca60a9af5822fd1071c2bc5684a3720d78b725452bbac04bb130878b2513aea5e72b1b792de5a69fec8
   languageName: node
   linkType: hard
 
@@ -5564,7 +5564,7 @@ __metadata:
     "@metamask/utils": ^8.4.0
     "@types/jest": ^29.5.12
     eslint: ^8.57.0
-    eslint-config-prettier: ^9.1.0
+    eslint-config-prettier: ^8.5.0
     eslint-plugin-import: ~2.26.0
     eslint-plugin-jest: ^27.9.0
     eslint-plugin-jsdoc: ^47.0.2
