@@ -22,20 +22,20 @@
     "test": "eslint ."
   },
   "devDependencies": {
-    "@metamask/auto-changelog": "^3.0.0",
-    "eslint": "^8.45.0",
+    "@metamask/auto-changelog": "^3.4.4",
+    "eslint": "^8.57.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "~2.26.0",
-    "eslint-plugin-jsdoc": "^41.1.2",
+    "eslint-plugin-jsdoc": "^47.0.2",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.1.1",
     "prettier": "^2.7.1"
   },
   "peerDependencies": {
-    "eslint": "^8.27.0",
+    "eslint": "^8.57.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "~2.26.0",
-    "eslint-plugin-jsdoc": "^39.6.2 || ^41 || ^43.0.7",
+    "eslint-plugin-jsdoc": ">=43.0.7 <48",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.1.1",
     "prettier": "^2.7.1"

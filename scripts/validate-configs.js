@@ -255,9 +255,10 @@ async function validateOrWriteRulesSnapshot(
  */
 async function writeRulesSnapshot(snapshotFilePath, flatRules) {
   const stringifiedRules = JSON.stringify(flatRules, null, 2);
-  const formattedRules = prettier.format(stringifiedRules, {
+  const formattedRules = await prettier.format(stringifiedRules, {
     filepath: snapshotFilePath,
   });
+
   try {
     await fs.writeFile(snapshotFilePath, formattedRules);
   } catch (error) {
@@ -464,15 +465,18 @@ function getFlatConfig(configObject) {
   // FlatCompat does a lot of stuff under the hood, including resolving the
   // modules exporting the configs extended by the given config.
   // Luckily for us, that's kind of the hardest part.
-  const flatConfig = new FlatCompat().config(configObject);
+  const flatConfig = new FlatCompat({
+    recommendedConfig: eslintRecommendedConfig,
+  }).config(configObject);
+
   populateRecommendedRules(flatConfig);
   return flatConfig;
 }
 
 /**
  * A helper for the `getFlatConfig` function.
- * Looks for for the string 'eslint:recommended' in the given config array
- * and replaces it with its corresponding rules object.
+ * Looks for the string 'eslint:recommended' in the given config array and
+ * replaces it with its corresponding rules object.
  * Mutates the given array in place.
  *
  * Throws an error if the config array contains an invalid config object.

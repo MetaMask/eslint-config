@@ -212,7 +212,13 @@
   "jsdoc/require-returns-type": "error",
   "jsdoc/require-yields": "error",
   "jsdoc/require-yields-check": "error",
-  "jsdoc/tag-lines": "error",
+  "jsdoc/tag-lines": [
+    "error",
+    "any",
+    {
+      "startLines": 1
+    }
+  ],
   "jsdoc/valid-types": "error",
   "jsx-quotes": "off",
   "key-spacing": "off",
@@ -221,12 +227,7 @@
   "lines-around-comment": "off",
   "lines-between-class-members": "error",
   "max-len": "off",
-  "max-statements-per-line": [
-    "error",
-    {
-      "max": 1
-    }
-  ],
+  "max-statements-per-line": "off",
   "multiline-ternary": "off",
   "new-cap": [
     "error",
@@ -3393,6 +3394,7 @@
   "valid-typeof": "error",
   "vue/array-bracket-newline": "off",
   "vue/array-bracket-spacing": "off",
+  "vue/array-element-newline": "off",
   "vue/arrow-spacing": "off",
   "vue/block-spacing": "off",
   "vue/block-tag-newline": "off",
