@@ -290,6 +290,8 @@ function getMetamaskConfigs() {
     const { name: packageName } = JSON.parse(
       readFileSync(manifestPath, 'utf-8'),
     );
+
+    // eslint-disable-next-line import-x/no-dynamic-require
     const config = require(packagePath);
 
     allConfigs[packageName] = {

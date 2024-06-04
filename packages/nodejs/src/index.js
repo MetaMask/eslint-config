@@ -26,8 +26,8 @@ module.exports = {
     // Possible Errors
     'n/handle-callback-err': ['error', '^(err|error)$'],
     'n/no-callback-literal': 'error',
-    'n/no-missing-import': 'off', // Duplicates `import/no-unresolved`
-    'n/no-missing-require': 'off', // Duplicates `import/no-unresolved`
+    'n/no-missing-import': 'off', // Duplicates `import-x/no-unresolved`
+    'n/no-missing-require': 'off', // Duplicates `import-x/no-unresolved`
     'n/no-new-require': 'error',
     'n/no-path-concat': 'error',
     'n/no-unsupported-features/es-syntax': 'off',
@@ -53,6 +53,6 @@ module.exports = {
 
     // Enabled in the base config, but this should be allowed in Node.js
     // projects.
-    'import/no-nodejs-modules': 'off',
+    'import-x/no-nodejs-modules': 'off',
   },
 };
