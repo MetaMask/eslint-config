@@ -25,7 +25,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:prettier/recommended',
-    'plugin:import-x/recommended',
+    'plugin:import/recommended',
   ],
 
   rules: {
@@ -283,43 +283,43 @@ module.exports = {
     yoda: ['error', 'never'],
 
     /* import plugin rules */
-    'import-x/extensions': [
+    'import/extensions': [
       'error',
       'never',
       {
         json: 'always',
       },
     ],
-    'import-x/first': 'error',
-    'import-x/newline-after-import': 'error',
-    'import-x/no-absolute-path': 'error',
-    'import-x/no-amd': 'error',
-    'import-x/no-anonymous-default-export': 'error',
-    'import-x/no-duplicates': 'error',
-    'import-x/no-dynamic-require': 'error',
-    'import-x/no-extraneous-dependencies': 'error',
-    'import-x/no-mutable-exports': 'error',
-    'import-x/no-named-as-default': 'error',
-    'import-x/no-named-as-default-member': 'error',
-    'import-x/no-named-default': 'error',
-    'import-x/no-nodejs-modules': 'error',
-    'import-x/no-self-import': 'error',
-    'import-x/no-unassigned-import': 'error',
-    'import-x/no-unresolved': [
+    'import/first': 'error',
+    'import/newline-after-import': 'error',
+    'import/no-absolute-path': 'error',
+    'import/no-amd': 'error',
+    'import/no-anonymous-default-export': 'error',
+    'import/no-duplicates': 'error',
+    'import/no-dynamic-require': 'error',
+    'import/no-extraneous-dependencies': 'error',
+    'import/no-mutable-exports': 'error',
+    'import/no-named-as-default': 'error',
+    'import/no-named-as-default-member': 'error',
+    'import/no-named-default': 'error',
+    'import/no-nodejs-modules': 'error',
+    'import/no-self-import': 'error',
+    'import/no-unassigned-import': 'error',
+    'import/no-unresolved': [
       'error',
       {
         commonjs: true,
       },
     ],
-    'import-x/no-useless-path-segments': [
+    'import/no-useless-path-segments': [
       'error',
       {
         commonjs: true,
         noUselessIndex: true,
       },
     ],
-    'import-x/no-webpack-loader-syntax': 'error',
-    'import-x/order': [
+    'import/no-webpack-loader-syntax': 'error',
+    'import/order': [
       'error',
       {
         // This means that there will always be a newline between the import
@@ -343,7 +343,7 @@ module.exports = {
         },
       },
     ],
-    'import-x/unambiguous': 'error',
+    'import/unambiguous': 'error',
 
     /* jsdoc plugin rules */
     'jsdoc/check-access': 'error',

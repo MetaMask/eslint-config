@@ -12,8 +12,8 @@ module.exports = {
   ],
 
   rules: {
-    'import-x/no-dynamic-require': 'off',
-    'import-x/no-nodejs-modules': 'off',
+    'import/no-dynamic-require': 'off',
+    'import/no-nodejs-modules': 'off',
     'n/global-require': 'off',
     'n/no-process-exit': 'off',
     'n/no-sync': 'off',
