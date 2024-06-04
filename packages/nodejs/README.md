@@ -10,7 +10,7 @@ yarn add --dev \
     @metamask/eslint-config-nodejs@^12.1.0 \
     eslint@^8.57.0 \
     eslint-config-prettier@^8.5.0 \
-    eslint-plugin-import@~2.26.0 \
+    eslint-plugin-import-x@^0.5.1 \
     eslint-plugin-jsdoc@^47.0.2 \
     eslint-plugin-n@^16.6.2 \
     eslint-plugin-prettier@^4.2.1 \

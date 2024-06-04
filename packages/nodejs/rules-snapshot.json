@@ -1,5 +1,5 @@
 {
-  "import/no-nodejs-modules": "off",
+  "import-x/no-nodejs-modules": "off",
   "n/callback-return": "error",
   "n/exports-style": "error",
   "n/global-require": "error",
