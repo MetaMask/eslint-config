@@ -1040,7 +1040,7 @@ __metadata:
   peerDependencies:
     eslint: ^8.57.0
     eslint-config-prettier: ^8.5.0
-    eslint-plugin-import-x: "*"
+    eslint-plugin-import-x: ^0.5.1
     eslint-plugin-jsdoc: ">=43.0.7 <48"
     eslint-plugin-prettier: ^4.2.1
     eslint-plugin-promise: ^6.1.1
