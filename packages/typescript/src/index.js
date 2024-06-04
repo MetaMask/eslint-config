@@ -28,12 +28,12 @@ module.exports = {
   extends: [
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-type-checked',
-    'plugin:import-x/typescript',
+    'plugin:import/typescript',
   ],
 
   rules: {
     // Handled by TypeScript
-    'import-x/no-unresolved': 'off',
+    'import/no-unresolved': 'off',
 
     // Our rules
     '@typescript-eslint/array-type': 'error',
