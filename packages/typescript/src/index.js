@@ -48,7 +48,6 @@ module.exports = {
     ],
     '@typescript-eslint/no-non-null-assertion': 'error',
     '@typescript-eslint/parameter-properties': 'error',
-    '@typescript-eslint/no-require-imports': 'error',
     '@typescript-eslint/prefer-for-of': 'error',
     '@typescript-eslint/prefer-function-type': 'error',
     '@typescript-eslint/prefer-optional-chain': 'error',
@@ -167,10 +166,8 @@ module.exports = {
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': ['error', { builtinGlobals: true }],
 
-    'no-throw-literal': 'off',
     '@typescript-eslint/no-throw-literal': 'error',
 
-    'no-unused-expressions': 'off',
     '@typescript-eslint/no-unused-expressions': [
       'error',
       { allowShortCircuit: true, allowTernary: true },
