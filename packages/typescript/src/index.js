@@ -166,8 +166,6 @@ module.exports = {
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': ['error', { builtinGlobals: true }],
 
-    '@typescript-eslint/no-throw-literal': 'error',
-
     '@typescript-eslint/no-unused-expressions': [
       'error',
       { allowShortCircuit: true, allowTernary: true },
