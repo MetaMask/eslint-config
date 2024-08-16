@@ -7,11 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [13.0.0]
-### Uncategorized
-- Revert "BREAKING: Replace `eslint-plugin-import` with `eslint-plugin-import-x` (#356)" ([#356](https://github.com/MetaMask/eslint-config/pull/356))
-- BREAKING: Replace `eslint-plugin-import` with `eslint-plugin-import-x` ([#356](https://github.com/MetaMask/eslint-config/pull/356))
-- BREAKING: Bump all ESLint dependencies ([#351](https://github.com/MetaMask/eslint-config/pull/351))
-- Actually bump min Node to 16.20 ([#339](https://github.com/MetaMask/eslint-config/pull/339))
+### Changed
+- **BREAKING**: Bump all ESLint dependencies ([#351](https://github.com/MetaMask/eslint-config/pull/351))
+  - Bumps all ESLint dependencies to the latest version compatible with Node.js 16.
+- **BREAKING**: Update minimium Node.js version to v16 ([#332](https://github.com/MetaMask/eslint-config/pull/332), [#339](https://github.com/MetaMask/eslint-config/pull/339))
 
 ## [12.1.0]
 ### Changed
