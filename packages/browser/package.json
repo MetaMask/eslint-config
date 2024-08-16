@@ -1,6 +1,6 @@
 {
   "name": "@metamask/eslint-config-browser",
-  "version": "12.1.0",
+  "version": "13.0.0",
   "description": "Shareable MetaMask ESLint plugin for browser environments.",
   "homepage": "https://github.com/MetaMask/eslint-config#readme",
   "bugs": {
@@ -31,7 +31,7 @@
     "prettier": "^2.7.1"
   },
   "peerDependencies": {
-    "@metamask/eslint-config": "^12.2.0",
+    "@metamask/eslint-config": "^13.0.0",
     "eslint": "^8.57.0"
   },
   "engines": {

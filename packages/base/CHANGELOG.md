@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [13.0.0]
+### Uncategorized
+- Revert "BREAKING: Replace `eslint-plugin-import` with `eslint-plugin-import-x` (#356)" ([#356](https://github.com/MetaMask/eslint-config/pull/356))
+- BREAKING: Replace `eslint-plugin-import` with `eslint-plugin-import-x` ([#356](https://github.com/MetaMask/eslint-config/pull/356))
+- BREAKING: Bump all ESLint dependencies ([#351](https://github.com/MetaMask/eslint-config/pull/351))
+- Actually bump min Node to 16.20 ([#339](https://github.com/MetaMask/eslint-config/pull/339))
+
 ## [12.2.0]
 ### Changed
 - Remove deprecated rule `jsdoc/newline-after-description` ([#290](https://github.com/MetaMask/eslint-config/pull/290))
@@ -177,7 +184,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add base, TypeScript, and Jest configs (#3)
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v12.2.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/v13.0.0...HEAD
+[13.0.0]: https://github.com/MetaMask/eslint-config/compare/v12.2.0...v13.0.0
 [12.2.0]: https://github.com/MetaMask/eslint-config/compare/v12.1.0...v12.2.0
 [12.1.0]: https://github.com/MetaMask/eslint-config/compare/v12.0.0...v12.1.0
 [12.0.0]: https://github.com/MetaMask/eslint-config/compare/v11.1.0...v12.0.0
