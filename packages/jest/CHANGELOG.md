@@ -8,9 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [13.0.0]
 ### Changed
+- **BREAKING**: Replace `eslint-plugin-import` with `eslint-plugin-import-x` ([#366](https://github.com/MetaMask/eslint-config/pull/366))
 - **BREAKING**: Bump all ESLint dependencies ([#351](https://github.com/MetaMask/eslint-config/pull/351))
   - Bumps all ESLint dependencies to the latest version compatible with Node.js 16.
-- **BREAKING**: Update minimium Node.js version to v16 ([#332](https://github.com/MetaMask/eslint-config/pull/332), [#339](https://github.com/MetaMask/eslint-config/pull/339))
+- **BREAKING**: Bump minimum Node.js version from 14 to 16 ([#332](https://github.com/MetaMask/eslint-config/pull/332), [#339](https://github.com/MetaMask/eslint-config/pull/339))
 
 ## [12.1.0]
 ### Changed
@@ -42,7 +43,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - This is breaking because `eslint-plugin-jest` is a `peerDependency`
   - The rule [`jest/prefer-to-be`](https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-to-be.md) has replaced the old rules `jest/prefer-to-be-null` and `jest/prefer-to-be-undefined`. This is breaking because it is more broadly applicable than the two it replaces, and may force us to use `toBe` for all primatives (over `toBeEqual` or equivalent).
   - Two rules were renamed (`jest/valid-describe` => `jest/valid-describe-callback`, and `jest/lowercase-name` => `jest/prefer-lowercase-title`)
-- **BREAKING:** Update minimium Node.js version to v14 ([#225](https://github.com/MetaMask/eslint-config/pull/225))
+- **BREAKING:** Update minimum Node.js version to v14 ([#225](https://github.com/MetaMask/eslint-config/pull/225))
 
 ## [9.0.0]
 ### Added

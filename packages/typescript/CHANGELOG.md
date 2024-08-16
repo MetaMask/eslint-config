@@ -10,9 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - **BREAKING**: Bump TypeScript to v5.5 ([#364](https://github.com/MetaMask/eslint-config/pull/364))
   - Also bump relevant `@typescript-eslint` packages.
+- **BREAKING**: Replace `eslint-plugin-import` with `eslint-plugin-import-x` ([#366](https://github.com/MetaMask/eslint-config/pull/366))
 - **BREAKING**: Bump all ESLint dependencies ([#351](https://github.com/MetaMask/eslint-config/pull/351))
   - Bumps all ESLint dependencies to the latest version compatible with Node.js 16.
-- **BREAKING**: Update minimium Node.js version to v16 ([#332](https://github.com/MetaMask/eslint-config/pull/332), [#339](https://github.com/MetaMask/eslint-config/pull/339))
+- **BREAKING**: Bump minimum Node.js version from 14 to 16 ([#332](https://github.com/MetaMask/eslint-config/pull/332), [#339](https://github.com/MetaMask/eslint-config/pull/339))
 
 ## [12.1.0]
 ### Changed
@@ -59,7 +60,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - There are two new rules:
     - [`@typescript-eslint/no-loss-of-precision`](https://typescript-eslint.io/rules/no-loss-of-precision)
     - [`@typescript-eslint/no-unnecessary-type-constraint`](https://typescript-eslint.io/rules/no-unnecessary-type-constraint).
-- **BREAKING:** Update minimium Node.js version to v14 ([#225](https://github.com/MetaMask/eslint-config/pull/225))
+- **BREAKING:** Update minimum Node.js version to v14 ([#225](https://github.com/MetaMask/eslint-config/pull/225))
 - **BREAKING:** Forbid TypeScript interfaces ([#216](https://github.com/MetaMask/eslint-config/pull/216))
 - Ignore rest siblings for `no-unused-vars` ([#213](https://github.com/MetaMask/eslint-config/pull/213))
   - This makes the `no-unused-vars` rule more permissive
