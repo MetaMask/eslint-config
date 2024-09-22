@@ -11,6 +11,10 @@ import nodejs from '@metamask/eslint-config-nodejs';
  * @type {import('eslint').Linter.Config[]}
  */
 const config = [
+  {
+    ignores: ['.yarn/'],
+  },
+
   ...base,
   ...nodejs,
   ...jest,
@@ -39,8 +43,6 @@ const config = [
       'n/no-sync': 'off',
       'n/no-unpublished-require': 'off',
     },
-
-    ignores: ['!.eslint.config.mjs'],
   },
 ];
 

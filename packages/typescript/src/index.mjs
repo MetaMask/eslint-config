@@ -16,6 +16,10 @@ const config = [
     name: '@metamask/eslint-config-typescript',
 
     files: [
+      '**/*.js',
+      '**/*.jsx',
+      '**/*.mjs',
+      '**/*.cjs',
       '**/*.ts',
       '**/*.tsx',
       '**/*.mts',

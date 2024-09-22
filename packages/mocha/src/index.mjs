@@ -8,6 +8,29 @@ const SIMPLE_TEST_NAME_REGEX = '^[#_]{0,2}[A-Za-z0-9]';
 const config = [
   mocha.configs.flat.recommended,
   {
+    name: '@metamask/eslint-config-mocha',
+
+    files: [
+      '**/*.test.js',
+      '**/*.spec.js',
+      '**/*.test.mjs',
+      '**/*.spec.mjs',
+      '**/*.test.cjs',
+      '**/*.spec.cjs',
+      '**/*.test.ts',
+      '**/*.spec.ts',
+      '**/*.test.tsx',
+      '**/*.spec.tsx',
+      '**/*.test.mts',
+      '**/*.spec.mts',
+      '**/*.test.cts',
+      '**/*.spec.cts',
+      '**/*.test.mtsx',
+      '**/*.spec.mtsx',
+      '**/*.test.ctsx',
+      '**/*.spec.ctsx',
+    ],
+
     rules: {
       'mocha/no-exclusive-tests': 'error',
       'mocha/no-hooks-for-single-case': 'error',

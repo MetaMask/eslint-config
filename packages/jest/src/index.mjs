@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-shadow
 import jest from 'eslint-plugin-jest';
 import globals from 'globals';
 
@@ -9,6 +10,29 @@ const config = [
   jest.configs['flat/style'],
 
   {
+    name: '@metamask/eslint-config-jest',
+
+    files: [
+      '**/*.test.js',
+      '**/*.spec.js',
+      '**/*.test.mjs',
+      '**/*.spec.mjs',
+      '**/*.test.cjs',
+      '**/*.spec.cjs',
+      '**/*.test.ts',
+      '**/*.spec.ts',
+      '**/*.test.tsx',
+      '**/*.spec.tsx',
+      '**/*.test.mts',
+      '**/*.spec.mts',
+      '**/*.test.cts',
+      '**/*.spec.cts',
+      '**/*.test.mtsx',
+      '**/*.spec.mtsx',
+      '**/*.test.ctsx',
+      '**/*.spec.ctsx',
+    ],
+
     languageOptions: {
       globals: {
         ...globals.jest,

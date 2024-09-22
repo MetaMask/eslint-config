@@ -14,7 +14,7 @@
     "lint": "yarn lint:eslint && yarn lint:misc --check && yarn lint:config-validation",
     "lint:changelogs": "yarn workspaces foreach --parallel --verbose run lint:changelog",
     "lint:config-validation": "node scripts/validate-configs.mjs",
-    "lint:eslint": "yarn eslint . --ext ts,js",
+    "lint:eslint": "eslint",
     "lint:fix": "yarn lint:eslint --fix && yarn lint:misc --write && yarn lint:config-validation --write",
     "lint:misc": "prettier '**/*.json' '!**/rules-snapshot.json' '**/*.md' '!**/CHANGELOG.md' '**/*.yml' '!.yarnrc.yml' --ignore-path .gitignore",
     "test": "vitest"

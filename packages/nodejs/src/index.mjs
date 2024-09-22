@@ -9,6 +9,21 @@ import environmentRules from './environment.json' with { type: 'json' };
 const config = [
   node.configs['flat/recommended'],
   {
+    name: '@metamask/eslint-config-nodejs',
+
+    files: [
+      '**/*.js',
+      '**/*.jsx',
+      '**/*.mjs',
+      '**/*.cjs',
+      '**/*.ts',
+      '**/*.tsx',
+      '**/*.mts',
+      '**/*.cts',
+      '**/*.mtsx',
+      '**/*.ctsx',
+    ],
+
     languageOptions: {
       globals: {
         // See comment below.

@@ -23,6 +23,20 @@ const rules = [
 
   {
     name: '@metamask/eslint-config',
+
+    files: [
+      '**/*.js',
+      '**/*.jsx',
+      '**/*.mjs',
+      '**/*.cjs',
+      '**/*.ts',
+      '**/*.tsx',
+      '**/*.mts',
+      '**/*.cts',
+      '**/*.mtsx',
+      '**/*.ctsx',
+    ],
+
     languageOptions: {
       // The `esXXXX` option under `env` is supposed to set the correct
       // `ecmaVersion` option here, but we've had issues with it being
