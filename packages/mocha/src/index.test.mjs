@@ -7,7 +7,6 @@ describe('index', () => {
   it('is a valid ESLint config', async () => {
     const api = new ESLint({
       baseConfig: config,
-      useEslintrc: false,
     });
 
     const result = await api.lintText(`console.log('Hello, world!');\n`);
