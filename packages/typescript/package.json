@@ -23,6 +23,7 @@
     "test": "eslint ."
   },
   "devDependencies": {
+    "@jest/globals": "^29.7.0",
     "@metamask/auto-changelog": "^3.4.4",
     "@metamask/eslint-config": "^13.0.0",
     "@typescript-eslint/eslint-plugin": "^8.6.0",
@@ -48,5 +49,8 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.11.0"
   }
 }
