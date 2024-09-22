@@ -88,7 +88,7 @@ const writeRules = async () => {
     const rules = generateRules({ environments, name });
 
     await fs.writeFile(
-      resolve(__dirname, location),
+      resolve(import.meta.dirname, location),
       `${JSON.stringify(rules, null, 2)}\n`,
     );
   }

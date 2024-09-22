@@ -2,18 +2,17 @@
 
 // @ts-expect-error - `@babel/eslint-parser` doesn't have TypeScript types.
 import babel from '@babel/eslint-parser';
-import baseConfigs from '@metamask/eslint-config';
+import base from '@metamask/eslint-config';
+import nodejs from '@metamask/eslint-config-nodejs';
+import jest from '@metamask/eslint-config-jest';
 
 /**
  * @type {import('eslint').Linter.Config[]}
  */
 const config = [
-  ...baseConfigs,
-  // TODO:
-  // extends: [
-  //   '@metamask/eslint-config-nodejs',
-  //   '@metamask/eslint-config-jest',
-  // ],
+  ...base,
+  ...nodejs,
+  ...jest,
 
   {
     name: 'main',

@@ -18,7 +18,7 @@ const config = [
     rules: {
       'jest/consistent-test-it': ['error', { fn: 'it' }],
       'jest/no-duplicate-hooks': 'error',
-      'jest/no-if': 'error',
+      'jest/no-conditional-in-test': 'error',
       'jest/no-test-return-statement': 'error',
       'jest/prefer-hooks-on-top': 'error',
       'jest/prefer-lowercase-title': ['error', { ignore: ['describe'] }],
