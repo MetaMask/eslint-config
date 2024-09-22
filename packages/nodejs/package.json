@@ -11,7 +11,16 @@
     "url": "https://github.com/MetaMask/eslint-config.git"
   },
   "license": "MIT",
-  "main": "src/index.mjs",
+  "main": "./src/index.mjs",
+  "types": "./src/index.d.mts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./src/index.d.mts",
+        "default": "./src/index.mjs"
+      }
+    }
+  },
   "files": [
     "src/",
     "!src/**/*.test.js"
