@@ -3,8 +3,9 @@
 // @ts-expect-error - `@babel/eslint-parser` doesn't have TypeScript types.
 import babel from '@babel/eslint-parser';
 import base from '@metamask/eslint-config';
-import nodejs from '@metamask/eslint-config-nodejs';
+// eslint-disable-next-line no-shadow
 import jest from '@metamask/eslint-config-jest';
+import nodejs from '@metamask/eslint-config-nodejs';
 
 /**
  * @type {import('eslint').Linter.Config[]}

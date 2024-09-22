@@ -984,7 +984,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@metamask/eslint-config-jest@workspace:packages/jest":
+"@metamask/eslint-config-jest@workspace:^, @metamask/eslint-config-jest@workspace:packages/jest":
   version: 0.0.0-use.local
   resolution: "@metamask/eslint-config-jest@workspace:packages/jest"
   dependencies:
@@ -4850,6 +4850,7 @@ __metadata:
     "@lavamoat/allow-scripts": ^3.0.4
     "@metamask/auto-changelog": ^3.4.4
     "@metamask/eslint-config": ^13.0.0
+    "@metamask/eslint-config-jest": "workspace:^"
     "@metamask/eslint-config-nodejs": ^13.0.0
     "@metamask/utils": ^9.1.0
     eslint: ^9.11.0
