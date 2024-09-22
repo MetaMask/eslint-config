@@ -1,11 +1,22 @@
-const environmentRules = require('./environment.json');
+import globals from 'globals';
 
-module.exports = {
-  env: {
-    browser: true,
-  },
+import environmentRules from './environment.json' with { type: 'json' };
 
-  rules: {
-    ...environmentRules,
+/**
+ * @type {import('eslint').Linter.Config[]}
+ */
+const config = [
+  {
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+      },
+    },
+
+    rules: {
+      ...environmentRules,
+    },
   },
-};
+];
+
+export default config;
