@@ -1,3 +1,5 @@
+// TODO: This script doesn't work with ESLint flat configs.
+
 const { FlatCompat } = require('@eslint/eslintrc');
 const eslintRecommendedConfig = require('@eslint/js').configs.recommended;
 const { hasProperty } = require('@metamask/utils');

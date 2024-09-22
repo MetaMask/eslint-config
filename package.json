@@ -10,24 +10,23 @@
     "packages/*"
   ],
   "scripts": {
-    "generate": "node ./scripts/generate-configs.js",
+    "generate": "node scripts/generate-configs.mjs",
     "lint": "yarn lint:eslint && yarn lint:misc --check && yarn lint:config-validation",
     "lint:changelogs": "yarn workspaces foreach --parallel --verbose run lint:changelog",
-    "lint:config-validation": "node ./scripts/validate-configs.js",
+    "lint:config-validation": "node scripts/validate-configs.mjs",
     "lint:eslint": "yarn eslint . --ext ts,js",
     "lint:fix": "yarn lint:eslint --fix && yarn lint:misc --write && yarn lint:config-validation --write",
     "lint:misc": "prettier '**/*.json' '!**/rules-snapshot.json' '**/*.md' '!**/CHANGELOG.md' '**/*.yml' '!.yarnrc.yml' --ignore-path .gitignore",
     "test": "vitest"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.0.2",
-    "@eslint/js": "^8.57.0",
+    "@eslint/js": "^9.11.0",
     "@lavamoat/allow-scripts": "^3.0.4",
     "@metamask/auto-changelog": "^3.4.4",
     "@metamask/eslint-config": "^13.0.0",
     "@metamask/eslint-config-nodejs": "^13.0.0",
     "@metamask/utils": "^9.1.0",
-    "eslint": "^8.57.0",
+    "eslint": "^9.11.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import-x": "^0.5.1",
     "eslint-plugin-jest": "^27.9.0",
@@ -38,6 +37,7 @@
     "globals": "^15.0.0",
     "prettier": "^2.7.1",
     "prettier-plugin-packagejson": "^2.2.18",
+    "typescript": "~5.4.5",
     "vite": "^5.4.7",
     "vitest": "^2.1.1"
   },

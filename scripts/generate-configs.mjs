@@ -1,9 +1,15 @@
-const { promises: fs } = require('fs');
-const globals = require('globals');
-const { resolve } = require('path');
+// @ts-check
+
+import fs from 'fs/promises';
+import globals from 'globals';
+import { resolve } from 'path';
 
 /**
- * @type {Record<string, { location: string; environments: string[]; name: string; }>}
+ * @typedef {keyof import('globals')} Globals
+ */
+
+/**
+ * @type {Record<string, { location: string; environments: Globals[]; name: string; }>}
  */
 const RULES_CONFIG = {
   'shared-node-browser': {
@@ -45,12 +51,18 @@ const ALL_RULES = [
  * Generate rules for a specific ESLint configuration package.
  *
  * @param {object} options - Options.
- * @param {string} options.environments - The environments to generate rules for.
+ * @param {Globals[]} options.environments - The environments to
+ * generate rules for.
  * @param {string} options.name - The name of the ESLint configuration.
- * @returns {Record<string, Rule>} The generated rules.
+ * @returns {Record<string, import('eslint').Linter.RuleEntry>} The generated
+ * rules.
  */
 const generateRules = ({ environments, name }) => {
+  /**
+   * @type {string[]}
+   */
   const environmentGlobals = [];
+
   for (const environment of environments) {
     environmentGlobals.push(...Object.keys(globals[environment]));
   }
@@ -82,7 +94,4 @@ const writeRules = async () => {
   }
 };
 
-writeRules().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+await writeRules();
