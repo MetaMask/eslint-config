@@ -1,6 +1,7 @@
-const { ESLint } = require('eslint');
+import { ESLint } from 'eslint';
+import { describe, it, expect } from 'vitest';
 
-const config = require('.');
+import config from '.';
 
 describe('index', () => {
   it('is a valid ESLint config', async () => {

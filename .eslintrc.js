@@ -20,5 +20,19 @@ module.exports = {
     'n/no-unpublished-require': 'off',
   },
 
+  overrides: [
+    {
+      files: ['**/*.test.js'],
+      parserOptions: {
+        sourceType: 'module',
+        ecmaVersion: 2022,
+      },
+
+      rules: {
+        'no-shadow': 'off',
+      },
+    },
+  ],
+
   ignorePatterns: ['!.eslintrc.js'],
 };
