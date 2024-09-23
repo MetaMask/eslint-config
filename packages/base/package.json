@@ -10,10 +10,8 @@
     "type": "git",
     "url": "https://github.com/MetaMask/eslint-config.git"
   },
-  "type": "module",
   "license": "MIT",
-  "main": "./src/index.mjs",
-  "types": "./src/index.d.mts",
+  "type": "module",
   "exports": {
     ".": {
       "import": {
@@ -22,6 +20,8 @@
       }
     }
   },
+  "main": "./src/index.mjs",
+  "types": "./src/index.d.mts",
   "files": [
     "src/",
     "!src/**/*.test.js"
@@ -30,6 +30,10 @@
     "lint:changelog": "auto-changelog validate",
     "publish": "npm publish",
     "test": "eslint ."
+  },
+  "dependencies": {
+    "@eslint/js": "^9.11.0",
+    "globals": "^15.9.0"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
@@ -57,9 +61,5 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
-  },
-  "dependencies": {
-    "@eslint/js": "^9.11.0",
-    "globals": "^15.9.0"
   }
 }
