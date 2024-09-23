@@ -3,29 +3,44 @@
 // @ts-expect-error - `@babel/eslint-parser` doesn't have TypeScript types.
 import babel from '@babel/eslint-parser';
 import base from '@metamask/eslint-config';
-// eslint-disable-next-line no-shadow
 import jest from '@metamask/eslint-config-jest';
 import nodejs from '@metamask/eslint-config-nodejs';
 import typescript from '@metamask/eslint-config-typescript';
+// eslint-disable-next-line import-x/no-unresolved
+import tseslint from 'typescript-eslint';
 
-/**
- * @type {import('eslint').Linter.Config[]}
- */
-const config = [
+const config = tseslint.config(
   {
     ignores: ['.yarn/'],
   },
 
   ...base,
   ...nodejs,
-  ...jest,
 
-  // This is the recommended way to apply a config array to a subset of files:
-  // https://eslint.org/docs/latest/use/configure/combine-configs#apply-a-config-array-to-a-subset-of-files
-  ...typescript.map((typeScriptConfig) => ({
-    files: ['**/*.d.mts'],
-    ...typeScriptConfig,
-  })),
+  {
+    files: [
+      '**/*.ts',
+      '**/*.tsx',
+      '**/*.mts',
+      '**/*.cts',
+      '**/*.mtsx',
+      '**/*.ctsx',
+    ],
+    extends: typescript,
+  },
+
+  {
+    files: ['**/*.test.mjs'],
+    extends: jest,
+    rules: {
+      'no-shadow': [
+        'error',
+        {
+          allow: ['describe', 'it', 'expect'],
+        },
+      ],
+    },
+  },
 
   {
     name: 'main',
@@ -56,6 +71,6 @@ const config = [
       'n/no-unpublished-require': 'off',
     },
   },
-];
+);
 
 export default config;

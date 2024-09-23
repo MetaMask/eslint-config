@@ -23,7 +23,7 @@
   "types": "./src/index.d.mts",
   "files": [
     "src/",
-    "!src/**/*.test.js",
+    "!src/**/*.test.mjs",
     "!src/**/__test__"
   ],
   "scripts": {
@@ -44,9 +44,11 @@
     "eslint-plugin-import-x": "^4.3.0",
     "eslint-plugin-jsdoc": "^50.2.4",
     "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.9.0",
     "prettier": "^3.3.3",
     "typescript": "~5.5.4",
-    "typescript-eslint": "^8.6.0"
+    "typescript-eslint": "^8.6.0",
+    "vitest": "^2.1.1"
   },
   "peerDependencies": {
     "@metamask/eslint-config": "^13.0.0",
