@@ -21,9 +21,6 @@
     "publish": "npm publish",
     "test": "eslint ."
   },
-  "dependencies": {
-    "vitest": "^2.1.1"
-  },
   "devDependencies": {
     "@metamask/auto-changelog": "^3.4.4",
     "@metamask/eslint-config": "^13.0.0",
@@ -33,7 +30,8 @@
     "eslint-plugin-jsdoc": "^47.0.2",
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "vitest": "^2.1.1"
   },
   "peerDependencies": {
     "@metamask/eslint-config": "^13.0.0",
