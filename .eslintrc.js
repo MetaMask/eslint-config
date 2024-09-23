@@ -30,7 +30,6 @@ module.exports = {
 
       rules: {
         'no-shadow': 'off',
-        'import-x/ named': 'off',
       },
     },
   ],
