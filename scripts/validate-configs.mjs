@@ -8,6 +8,7 @@ import { format } from 'prettier';
 
 /**
  * @typedef {import('eslint').Linter.Config[]} Config
+ * @typedef {Record<string, string | Array<[string, ...unknown[]]>>} Rules
  */
 
 // The path to the monorepo packages directory
@@ -24,18 +25,61 @@ const WRITE_MODE =
 const TAB = '    ';
 
 /**
+ * Given an ESLint rule config value, convert it from numerical (0, 1, 2) to
+ * string (off, warn, error) notation, or just returns the given value.
+ *
+ * @param {unknown} configValue - The rule config value to normalize.
+ * @returns {string | unknown} The normalized rule config value.
+ */
+function normalizeRuleConfigValue(configValue) {
+  if (typeof configValue !== 'number' && typeof configValue !== 'string') {
+    return configValue;
+  }
+
+  switch (String(configValue)) {
+    case '0':
+      return 'off';
+    case '1':
+      return 'warn';
+    case '2':
+      return 'error';
+    default:
+      return configValue;
+  }
+}
+
+/**
+ * Normalize a rules object, converting numerical rule values to string rule
+ * values.
+ *
+ * @param {Rules} rules - The rules object to normalize.
+ * @returns {Rules} The normalized rules object.
+ */
+function normalizeRules(rules) {
+  // @ts-expect-error - `Object.fromEntries` doesn't infer the return type.
+  return Object.fromEntries(
+    Object.entries(rules).map(([ruleName, ruleConfig]) => [
+      ruleName,
+      Array.isArray(ruleConfig)
+        ? [normalizeRuleConfigValue(ruleConfig[0]), ...ruleConfig.slice(1)]
+        : normalizeRuleConfigValue(ruleConfig),
+    ]),
+  );
+}
+
+/**
  * Flatten a {@link ConfigArray} into a record of rule names to rule values.
  *
  * @param {ConfigArray} configArray - The config array to flatten.
- * @returns {Record<string, string | object>} The flattened rule set.
+ * @returns {Rules} The flattened rule set.
  */
 function flattenConfigArray(configArray) {
   /**
-   * @type {Record<string, string | object>}
+   * @type {Rules}
    */
   const ruleSet = configArray.reduce((flatConfig, rule) => {
     if (hasProperty(rule, 'rules')) {
-      Object.assign(flatConfig, rule.rules);
+      Object.assign(flatConfig, normalizeRules(rule.rules));
     }
 
     return flatConfig;
@@ -53,13 +97,14 @@ function flattenConfigArray(configArray) {
  * - Its flattened, complete rule set.
  * - The path to the package.
  *
- * @returns {Promise<Map<string, { packagePath: string; ruleSet: Record<string, string | object> }>>} The config map.
+ * @returns {Promise<Map<string, { packagePath: string; ruleSet: Rules }>>} The
+ * config map.
  */
 async function getMetaMaskConfigs() {
   const packages = await fs.readdir(PACKAGES_DIR_PATH);
 
   /**
-   * @type {Map<string, { packagePath: string; ruleSet: Record<string, string | object> }>}
+   * @type {Map<string, { packagePath: string; ruleSet: Rules }>}
    */
   const allConfigs = new Map();
 
