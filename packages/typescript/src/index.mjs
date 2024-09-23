@@ -16,7 +16,7 @@ const config = typescript.config({
     ...typescript.configs.recommended,
     ...typescript.configs.recommendedTypeChecked,
     importX.flatConfigs.typescript,
-    jsdoc.configs['flat/recommended-typescript'],
+    jsdoc.configs['flat/recommended-typescript-error'],
   ],
 
   files: [
