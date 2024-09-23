@@ -1,6 +1,8 @@
-import resolver from 'eslint-import-resolver-typescript';
+import * as resolver from 'eslint-import-resolver-typescript';
 import importX from 'eslint-plugin-import-x';
 import jsdoc from 'eslint-plugin-jsdoc';
+// TODO: Look into why this doesn't resolve.
+// eslint-disable-next-line import-x/no-unresolved
 import typescript from 'typescript-eslint';
 
 /**
@@ -16,10 +18,6 @@ const config = [
     name: '@metamask/eslint-config-typescript',
 
     files: [
-      '**/*.js',
-      '**/*.jsx',
-      '**/*.mjs',
-      '**/*.cjs',
       '**/*.ts',
       '**/*.tsx',
       '**/*.mts',

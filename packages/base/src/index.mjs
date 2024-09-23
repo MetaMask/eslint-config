@@ -4,6 +4,7 @@ import js from '@eslint/js';
 import importX from 'eslint-plugin-import-x';
 import jsdoc from 'eslint-plugin-jsdoc';
 import prettier from 'eslint-plugin-prettier/recommended';
+// @ts-expect-error - `eslint-plugin-promise` doesn't have TypeScript types.
 import promise from 'eslint-plugin-promise';
 import globals from 'globals';
 

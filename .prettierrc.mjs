@@ -1,6 +1,6 @@
-// All of these are defaults except singleQuote and endOfLine, but we specify them
-// for explicitness
-module.exports = {
+// All of these are defaults except singleQuote and endOfLine, but we specify
+// them for explicitness
+const config = {
   endOfLine: 'auto',
   quoteProps: 'as-needed',
   singleQuote: true,
@@ -8,3 +8,5 @@ module.exports = {
   trailingComma: 'all',
   plugins: ['prettier-plugin-packagejson'],
 };
+
+export default config;

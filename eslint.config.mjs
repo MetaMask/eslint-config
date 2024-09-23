@@ -38,6 +38,8 @@ const config = [
     rules: {
       'import-x/no-dynamic-require': 'off',
       'import-x/no-nodejs-modules': 'off',
+      'jsdoc/check-tag-names': 'off',
+      'jsdoc/no-types': 'off',
       'n/global-require': 'off',
       'n/no-process-exit': 'off',
       'n/no-sync': 'off',

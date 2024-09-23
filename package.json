@@ -6,6 +6,7 @@
     "type": "git",
     "url": "https://github.com/MetaMask/eslint-config.git"
   },
+  "type": "module",
   "workspaces": [
     "packages/*"
   ],
@@ -23,6 +24,7 @@
     "@babel/core": "^7.25.2",
     "@babel/eslint-parser": "^7.25.1",
     "@babel/plugin-syntax-import-attributes": "^7.25.6",
+    "@eslint/config-array": "^0.18.0",
     "@eslint/js": "^9.11.0",
     "@jest/globals": "^29.7.0",
     "@lavamoat/allow-scripts": "^3.0.4",
@@ -31,6 +33,9 @@
     "@metamask/eslint-config-jest": "workspace:^",
     "@metamask/eslint-config-nodejs": "^13.0.0",
     "@metamask/utils": "^9.1.0",
+    "@types/eslint__js": "^8.42.3",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^22.5.5",
     "eslint": "^9.11.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import-x": "^4.3.0",
