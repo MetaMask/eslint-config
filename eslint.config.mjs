@@ -6,6 +6,7 @@ import base from '@metamask/eslint-config';
 // eslint-disable-next-line no-shadow
 import jest from '@metamask/eslint-config-jest';
 import nodejs from '@metamask/eslint-config-nodejs';
+import typescript from '@metamask/eslint-config-typescript';
 
 /**
  * @type {import('eslint').Linter.Config[]}
@@ -19,8 +20,17 @@ const config = [
   ...nodejs,
   ...jest,
 
+  // This is the recommended way to apply a config array to a subset of files:
+  // https://eslint.org/docs/latest/use/configure/combine-configs#apply-a-config-array-to-a-subset-of-files
+  ...typescript.map((typeScriptConfig) => ({
+    files: ['**/*.d.mts'],
+    ...typeScriptConfig,
+  })),
+
   {
     name: 'main',
+    files: ['**/*.js', '**/*.mjs'],
+
     languageOptions: {
       ecmaVersion: 2022,
 
