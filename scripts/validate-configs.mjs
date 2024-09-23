@@ -3,7 +3,8 @@
 import { ConfigArray } from '@eslint/config-array';
 import { hasProperty } from '@metamask/utils';
 import fs from 'fs/promises';
-import pathUtils, { join } from 'path';
+import { fileURLToPath } from 'node:url';
+import pathUtils, { dirname, join } from 'path';
 import { format } from 'prettier';
 
 /**
@@ -11,8 +12,11 @@ import { format } from 'prettier';
  * @typedef {Record<string, string | Array<[string, ...unknown[]]>>} Rules
  */
 
+// `import.meta.dirname` but with support for Node.js 18.
+const DIRNAME = dirname(fileURLToPath(import.meta.url));
+
 // The path to the monorepo packages directory
-const PACKAGES_DIR_PATH = pathUtils.join(import.meta.dirname, '../packages');
+const PACKAGES_DIR_PATH = pathUtils.join(DIRNAME, '../packages');
 
 // The path to the rules snapshot file, relative to a package root.
 const RULES_SNAPSHOT_PATH = 'rules-snapshot.json';
