@@ -1,7 +1,8 @@
-const { ESLint } = require('eslint');
-const { resolve } = require('path');
+import { ESLint } from 'eslint';
+import { describe, it, expect } from 'vitest';
+import { resolve } from 'path';
 
-const config = require('.');
+import config from '.';
 
 describe('index', () => {
   it('is a valid ESLint config', async () => {
@@ -13,7 +14,7 @@ describe('index', () => {
           node: true,
         },
         parserOptions: {
-          tsconfigRootDir: resolve(__dirname, '..'),
+          tsconfigRootDir: resolve(import.meta.dirname, '..'),
           project: 'tsconfig.json',
         },
       },
