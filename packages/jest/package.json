@@ -11,6 +11,7 @@
     "url": "https://github.com/MetaMask/eslint-config.git"
   },
   "license": "MIT",
+  "type": "module",
   "exports": {
     ".": {
       "import": {
