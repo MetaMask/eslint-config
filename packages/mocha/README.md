@@ -6,33 +6,40 @@ MetaMask's [Mocha](https://mochajs.org/) ESLint configuration.
 
 ```bash
 yarn add --dev \
-    @metamask/eslint-config@^12.2.0 \
-    @metamask/eslint-config-mocha@^12.1.0 \
-    eslint@^8.57.0 \
-    eslint-config-prettier@^8.5.0 \
-    eslint-plugin-import-x@^0.5.1 \
-    eslint-plugin-jsdoc@^47.0.2 \
-    eslint-plugin-mocha@^10.4.1 \
-    eslint-plugin-prettier@^4.2.1 \
-    eslint-plugin-promise@^6.1.1 \
-    prettier@^2.7.1
+    @metamask/eslint-config@^13.0.0 \
+    @metamask/eslint-config-mocha@^13.0.0 \
+    eslint@^9.11.0 \
+    eslint-config-prettier@^9.1.0 \
+    eslint-plugin-import-x@^4.3.0 \
+    eslint-plugin-jsdoc@^50.2.4 \
+    eslint-plugin-mocha@^10.5.0 \
+    eslint-plugin-prettier@^5.2.1 \
+    eslint-plugin-promise@^7.1.0 \
+    prettier@^3.3.3
 ```
 
 The order in which you extend ESLint rules matters.
-The `@metamask/*` eslint configs should be added to the `extends` array _last_,
+The `@metamask/*` eslint configs should be added to the config array _last_,
 with `@metamask/eslint-config` first, and `@metamask/eslint-config-*` in any
 order thereafter.
 
 ```js
-module.exports = {
-  root: true,
+import base from '@metamask/eslint-config';
+import mocha from '@metamask/eslint-config-mocha';
 
-  extends: [
-    // These should be added last unless you know what you're doing.
-    '@metamask/eslint-config',
-    '@metamask/eslint-config-mocha',
-  ],
+const config = {
+  // Any custom shared config should be added here.
+  // ...
+
+  // This should be added last unless you know what you're doing.
+  ...base,
+  ...mocha,
+
+  {
+    // Your overrides here.
+  }
 };
 ```
 
-If your project has `prefer-arrow-callback` you will need to disable that and replace it with `mocha/prefer-arrow-callback`.
+If your project has `prefer-arrow-callback` you will need to disable that and
+replace it with `mocha/prefer-arrow-callback`.

@@ -6,46 +6,50 @@ MetaMask's [TypeScript](https://www.typescriptlang.org) ESLint configuration.
 
 ```bash
 yarn add --dev \
-    @metamask/eslint-config@^12.2.0 \
-    @metamask/eslint-config-typescript@^12.1.0 \
-    @typescript-eslint/eslint-plugin@^6.21.0 \
-    @typescript-eslint/parser@^6.21.0 \
-    eslint@^8.57.0 \
-    eslint-config-prettier@^8.5.0 \
-    eslint-plugin-import-x@^0.5.1 \
-    eslint-plugin-jsdoc@^47.0.2 \
-    eslint-plugin-prettier@^4.2.1 \
-    eslint-plugin-promise@^6.1.1 \
-    prettier@^2.7.1
+    @metamask/eslint-config@^13.0.0 \
+    @metamask/eslint-config-typescript@^13.0.0 \
+    eslint@^9.11.0 \
+    eslint-config-prettier@^9.1.0 \
+    eslint-plugin-import-x@^4.3.0 \
+    eslint-plugin-jsdoc@^50.2.4 \
+    eslint-plugin-prettier@^5.2.1 \
+    eslint-plugin-promise@^7.1.0 \
+    prettier@^3.3.3
+    typescript-eslint@^8.6.0
 ```
 
 The order in which you extend ESLint rules matters.
-The `@metamask/*` eslint configs should be added to the `extends` array _last_,
+The `@metamask/*` eslint configs should be added to the config array _last_,
 with `@metamask/eslint-config` first, and `@metamask/eslint-config-*` in any
 order thereafter.
 
 ```js
-module.exports = {
-  root: true,
+import base from '@metamask/eslint-config';
+import typescript from '@metamask/eslint-config-typescript';
+import tseslint from 'typescript-eslint';
+
+const config = tseslint.config({
+  // The TypeScript config disables certain rules that you want to keep for
+  // non-TypeScript files, so it should be added in an override.
+  files: ['**/*.ts', '**/*.mts', '**/*.cts'],
 
   extends: [
+    // Any custom shared config should be added here.
+    // ...
+
     // This should be added last unless you know what you're doing.
-    '@metamask/eslint-config',
+    ...base,
+    ...typescript,
   ],
 
-  overrides: [
-    // The TypeScript config disables certain rules that you want to keep for
-    // non-TypeScript files, so it should be added in an override.
-    {
-      files: ['*.ts'],
-      extends: ['@metamask/eslint-config-typescript'],
+  languageOptions: {
+    parserOptions: {
+      // This is required for rules that use type information.
+      // See here for more information: https://typescript-eslint.io/getting-started/typed-linting
+      tsconfigRootDir: import.meta.dirname,
     },
-  ],
-
-  // This is required for rules that use type information.
-  // See here for more information: https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md
-  parserOptions: {
-    tsconfigRootDir: __dirname,
   },
-};
+
+  // Your overrides here.
+});
 ```

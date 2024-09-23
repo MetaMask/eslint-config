@@ -8,30 +8,35 @@ Our default export contains a base set of ESLint rules for ES6+:
 
 ```bash
 yarn add --dev \
-    @metamask/eslint-config@^12.2.0 \
-    @metamask/eslint-config-browser@^12.1.0 \
-    eslint@^8.57.0 \
-    eslint-config-prettier@^8.5.0 \
-    eslint-plugin-import-x@^0.5.1 \
-    eslint-plugin-jsdoc@^47.0.2 \
-    eslint-plugin-prettier@^4.2.1 \
-    eslint-plugin-promise@^6.1.1 \
-    prettier@^2.7.1
+    @metamask/eslint-config@^13.0.0 \
+    @metamask/eslint-config-browser@^13.0.0 \
+    eslint@^9.11.0 \
+    eslint-config-prettier@^9.1.0 \
+    eslint-plugin-import-x@^4.3.0 \
+    eslint-plugin-jsdoc@^50.2.4 \
+    eslint-plugin-prettier@^5.2.1 \
+    eslint-plugin-promise@^7.1.0 \
+    prettier@^3.3.3
 ```
 
 The order in which you extend ESLint rules matters.
-The `@metamask/*` eslint configs should be added to the `extends` array _last_,
+The `@metamask/*` eslint configs should be added to the config array _last_,
 with `@metamask/eslint-config` first, and `@metamask/eslint-config-*` in any
 order thereafter.
 
 ```js
-module.exports = {
-  root: true,
+import base from '@metamask/eslint-config';
+import browser from '@metamask/eslint-config-browser';
 
-  extends: [
-    // These should be added last unless you know what you're doing.
-    '@metamask/eslint-config',
-    '@metamask/eslint-config-browser',
-  ],
+const config = {
+  // Any custom shared config should be added here.
+  // ...
+
+  // This should be added last unless you know what you're doing.
+  ...base,
+  ...browser,
+  {
+    // Your overrides here.
+  }
 };
 ```
