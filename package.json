@@ -43,7 +43,7 @@
   },
   "packageManager": "yarn@3.2.4",
   "engines": {
-    "node": "^16.20 || ^18.18 || >=20"
+    "node": "^18.18 || >=20"
   },
   "lavamoat": {
     "allowScripts": {
