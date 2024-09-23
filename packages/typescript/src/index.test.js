@@ -1,6 +1,6 @@
 import { ESLint } from 'eslint';
-import { describe, it, expect } from 'vitest';
 import { resolve } from 'path';
+import { describe, it, expect } from 'vitest';
 
 import config from '.';
 
