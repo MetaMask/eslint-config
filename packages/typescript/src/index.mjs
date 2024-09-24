@@ -85,6 +85,7 @@ const config = typescript.config({
     '@typescript-eslint/no-unsafe-return': 'off',
 
     // Recommended rules that we do not want to use
+    '@typescript-eslint/no-duplicate-type-constituents': 'off',
     '@typescript-eslint/require-await': 'off',
 
     // Our rules that require type information
