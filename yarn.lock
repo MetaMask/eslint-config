@@ -1738,16 +1738,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:^29.5.12":
-  version: 29.5.13
-  resolution: "@types/jest@npm:29.5.13"
-  dependencies:
-    expect: ^29.0.0
-    pretty-format: ^29.0.0
-  checksum: 875ac23c2398cdcf22aa56c6ba24560f11d2afda226d4fa23936322dde6202f9fdbd2b91602af51c27ecba223d9fc3c1e33c9df7e47b3bf0e2aefc6baf13ce53
-  languageName: node
-  linkType: hard
-
 "@types/json-schema@npm:*":
   version: 7.0.15
   resolution: "@types/json-schema@npm:7.0.15"
@@ -3329,7 +3319,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expect@npm:^29.0.0, expect@npm:^29.7.0":
+"expect@npm:^29.7.0":
   version: 29.7.0
   resolution: "expect@npm:29.7.0"
   dependencies:
@@ -5428,7 +5418,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pretty-format@npm:^29.0.0, pretty-format@npm:^29.7.0":
+"pretty-format@npm:^29.7.0":
   version: 29.7.0
   resolution: "pretty-format@npm:29.7.0"
   dependencies:
@@ -5693,7 +5683,6 @@ __metadata:
     "@babel/plugin-syntax-import-attributes": ^7.25.6
     "@eslint/config-array": ^0.18.0
     "@eslint/js": ^9.11.0
-    "@jest/globals": ^29.7.0
     "@lavamoat/allow-scripts": ^3.0.4
     "@metamask/auto-changelog": ^3.4.4
     "@metamask/eslint-config": ^13.0.0
@@ -5702,7 +5691,6 @@ __metadata:
     "@metamask/eslint-config-typescript": "workspace:^"
     "@metamask/utils": ^9.1.0
     "@types/eslint__js": ^8.42.3
-    "@types/jest": ^29.5.12
     "@types/node": ^22.5.5
     eslint: ^9.11.0
     eslint-config-prettier: ^9.1.0
