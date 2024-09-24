@@ -34,6 +34,7 @@ const config = typescript.config({
       // This option requires `tsconfigRootDir` to be set, but this needs to
       // be set on a per-project basis.
       projectService: true,
+      ecmaVersion: 2022,
     },
   },
 

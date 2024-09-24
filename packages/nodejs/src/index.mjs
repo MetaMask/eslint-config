@@ -1,7 +1,10 @@
 import node from 'eslint-plugin-n';
 import globals from 'globals';
+import { createRequire } from 'module';
 
-import environmentRules from './environment.json' with { type: 'json' };
+// TODO: Use import attributes when ESLint supports them.
+const customRequire = createRequire(import.meta.url);
+const environmentRules = customRequire('./environment.json');
 
 /**
  * @type {import('eslint').Linter.Config[]}

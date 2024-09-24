@@ -21,9 +21,6 @@
     "test": "vitest"
   },
   "devDependencies": {
-    "@babel/core": "^7.25.2",
-    "@babel/eslint-parser": "^7.25.1",
-    "@babel/plugin-syntax-import-attributes": "^7.25.6",
     "@eslint/config-array": "^0.18.0",
     "@eslint/js": "^9.11.0",
     "@lavamoat/allow-scripts": "^3.0.4",

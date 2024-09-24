@@ -1,7 +1,5 @@
 // @ts-check
 
-// @ts-expect-error - `@babel/eslint-parser` doesn't have TypeScript types.
-import babel from '@babel/eslint-parser';
 import base from '@metamask/eslint-config';
 import jest from '@metamask/eslint-config-jest';
 import nodejs from '@metamask/eslint-config-nodejs';
@@ -47,17 +45,7 @@ const config = tseslint.config(
     files: ['**/*.js', '**/*.mjs'],
 
     languageOptions: {
-      ecmaVersion: 2022,
-
       sourceType: 'module',
-
-      parser: babel,
-      parserOptions: {
-        requireConfigFile: false,
-        babelOptions: {
-          plugins: ['@babel/plugin-syntax-import-attributes'],
-        },
-      },
     },
 
     rules: {

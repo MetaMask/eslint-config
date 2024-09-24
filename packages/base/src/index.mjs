@@ -7,8 +7,11 @@ import prettier from 'eslint-plugin-prettier/recommended';
 // @ts-expect-error - `eslint-plugin-promise` doesn't have TypeScript types.
 import promise from 'eslint-plugin-promise';
 import globals from 'globals';
+import { createRequire } from 'module';
 
-import environmentRules from './environment.json' with { type: 'json' };
+// TODO: Use import attributes when ESLint supports them.
+const customRequire = createRequire(import.meta.url);
+const environmentRules = customRequire('./environment.json');
 
 /**
  * @type {import('eslint').Linter.Config[]}
@@ -25,24 +28,14 @@ const rules = [
   {
     name: '@metamask/eslint-config',
 
-    files: [
-      '**/*.js',
-      '**/*.jsx',
-      '**/*.mjs',
-      '**/*.cjs',
-      '**/*.ts',
-      '**/*.tsx',
-      '**/*.mts',
-      '**/*.cts',
-      '**/*.mtsx',
-      '**/*.ctsx',
-    ],
-
     languageOptions: {
       // The `esXXXX` option under `env` is supposed to set the correct
       // `ecmaVersion` option here, but we've had issues with it being
       // overridden in the past and therefore set it explicitly.
       ecmaVersion: 2022,
+      parserOptions: {
+        ecmaVersion: 2022,
+      },
 
       // We want to default to 'script' and only use 'module' explicitly.
       sourceType: 'script',
