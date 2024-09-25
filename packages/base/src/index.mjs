@@ -138,7 +138,7 @@ const rules = [
       'no-extra-bind': 'error',
       'no-extra-label': 'error',
       'no-implicit-coercion': 'error',
-      'no-implicit-globals': 'error',
+      'no-implicit-globals': 'off',
       'no-implied-eval': 'error',
       'no-inner-declarations': ['error', 'functions'],
       'no-invalid-this': 'error',
