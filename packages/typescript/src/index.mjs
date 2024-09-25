@@ -86,6 +86,7 @@ const config = typescript.config({
 
     // Recommended rules that we do not want to use
     '@typescript-eslint/no-duplicate-type-constituents': 'off',
+    '@typescript-eslint/no-redundant-type-constituents': 'off',
     '@typescript-eslint/require-await': 'off',
 
     // Our rules that require type information
