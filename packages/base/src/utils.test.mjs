@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 
-import { createConfig } from './utils.js';
+import { createConfig } from './utils.mjs';
 
 describe('createConfig', () => {
   it('returns a config array for a single config', () => {

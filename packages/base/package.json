@@ -16,15 +16,15 @@
     ".": {
       "import": {
         "types": "./src/index.d.mts",
-        "default": "./src/index.js"
+        "default": "./src/index.mjs"
       }
     }
   },
-  "main": "src/index.js",
+  "main": "./src/index.mjs",
   "types": "./src/index.d.mts",
   "files": [
     "src/",
-    "!src/**/*.test.js"
+    "!src/**/*.test.mjs"
   ],
   "scripts": {
     "lint:changelog": "auto-changelog validate",

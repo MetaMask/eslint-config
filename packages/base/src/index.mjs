@@ -9,7 +9,7 @@ import promise from 'eslint-plugin-promise';
 import globals from 'globals';
 import { createRequire } from 'module';
 
-import { createConfig } from './utils.js';
+import { createConfig } from './utils.mjs';
 
 // TODO: Use import attributes when ESLint supports them.
 const customRequire = createRequire(import.meta.url);
