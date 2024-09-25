@@ -9,7 +9,7 @@ describe('index', () => {
       baseConfig: config,
     });
 
-    const result = await api.lintText(`console.log('Hello, world!');\n`);
+    const result = await api.lintText(`export {};\n`);
 
     expect(result[0].messages).toStrictEqual([]);
     expect(result[0].warningCount).toBe(0);
