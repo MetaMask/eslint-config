@@ -1,6 +1,11 @@
+import { dirname, join, relative } from 'path';
+
+import { getConfigFiles } from './file-system.mjs';
+
 /**
  * @typedef {import('eslint').Linter.Config} Config
  * @typedef {Config & { extends?: Config | Config[] | Config[][] }} ConfigWithExtends
+ * @typedef {{ path: string; config: Config }} ConfigFile
  */
 
 /**
@@ -102,4 +107,110 @@ export function createConfig(configs) {
 
     return [getExtendedConfig(extendsValue, extension), originalConfig];
   });
+}
+
+/**
+ * Get the files array, including the path for the workspace.
+ *
+ * @param {string[]} files - The files array.
+ * @param {string} workspacePath - The path to the workspace.
+ * @returns {string[]} The files array with the workspace path.
+ */
+function getWorkspaceFiles(files, workspacePath) {
+  return files.map((file) => join(workspacePath, file));
+}
+
+/**
+ * Get the config object for the child workspace with the correct paths. This
+ * updates the `files` and `ignores` properties with the correct paths relative
+ * to the workspace root.
+ *
+ * @param {ConfigFile} configFile - The config file object.
+ * @param {Config} configFile.config - The config object.
+ * @param {string} configFile.path - The path to the config file.
+ * @param {string} workspaceRoot - The absolute path to the root directory of
+ * the workspace.
+ * @returns {Config} The config object with the correct paths.
+ */
+function getWorkspaceConfig({ config, path }, workspaceRoot) {
+  const relativePath = relative(workspaceRoot, path);
+  const baseWorkspaceDirectory = dirname(relativePath);
+
+  if (!config.files && !config.ignores) {
+    return {
+      ...config,
+      files: [join(baseWorkspaceDirectory, '**')],
+    };
+  }
+
+  const extension = {
+    ...(config.files && {
+      files: getWorkspaceFiles(config.files, baseWorkspaceDirectory),
+    }),
+    ...(config.ignores && {
+      ignores: getWorkspaceFiles(config.ignores, baseWorkspaceDirectory),
+    }),
+  };
+
+  return {
+    ...config,
+    ...extension,
+  };
+}
+
+/**
+ * Create a config object that is extendable through other config files on the
+ * file system inside the same workspace.
+ *
+ * This function is a wrapper around `createConfig`, but fetches the config
+ * objects from the file system, and merges them with the provided config
+ * objects.
+ *
+ * @param {ConfigWithExtends | ConfigWithExtends[]} configs - An array of config
+ * objects.
+ * @param {string} workspaceRoot - The absolute path to the root directory of
+ * the workspace, i.e., `import.meta.dirname`.
+ * @returns {Promise<Config[]>} A promise that resolves to an array of config
+ * objects with all `extends` properties resolved.
+ * @example Basic usage.
+ * import { createConfig } from '@metamask/eslint-config';
+ * import typescript from '@metamask/eslint-config-typescript';
+ *
+ * // Loads all child workspace configs and merges them with the provided
+ * // config objects.
+ * const configs = createWorkspaceConfig([
+ *   {
+ *     files: ['**\/*.ts'],
+ *     extends: typescript,
+ *   },
+ * ]);
+ *
+ * export default configs;
+ *
+ * @example Multiple extends are supported as well.
+ * import { createConfig } from '@metamask/eslint-config';
+ * import typescript from '@metamask/eslint-config-typescript';
+ * import nodejs from '@metamask/eslint-config-nodejs';
+ *
+ * // Loads all child workspace configs and merges them with the provided
+ * // config objects.
+ * const configs = createConfig([
+ *   {
+ *     files: ['**\/*.ts'],
+ *     extends: [typescript, nodejs],
+ *   },
+ * ]);
+ *
+ * export default configs;
+ */
+export async function createWorkspaceConfig(configs, workspaceRoot) {
+  const baseConfig = createConfig(configs);
+  const workspaceConfigs = await getConfigFiles(workspaceRoot);
+
+  return [
+    ...baseConfig,
+    ...workspaceConfigs.map((config) =>
+      getWorkspaceConfig(config, workspaceRoot),
+    ),
+  ];
 }
