@@ -1,35 +1,49 @@
-module.exports = {
-  parser: '@typescript-eslint/parser',
+import * as resolver from 'eslint-import-resolver-typescript';
+import importX from 'eslint-plugin-import-x';
+import jsdoc from 'eslint-plugin-jsdoc';
+// TODO: Look into why this doesn't resolve.
+// eslint-disable-next-line import-x/no-unresolved
+import typescript from 'typescript-eslint';
 
-  env: {
-    // See comment under `parserOptions` below.
-    es2020: true,
+const config = typescript.config({
+  name: '@metamask/eslint-config-typescript',
+
+  plugins: {
+    '@typescript-eslint': typescript.plugin,
   },
-
-  parserOptions: {
-    // The `esXXXX` option under `env` is supposed to set the correct
-    // `ecmaVersion` option here, but we've had issues with it being
-    // overridden in the past and therefore set it explicitly.
-    //
-    // For TypeScript, the EcmaScript version always be the latest release
-    // (not pre-release) here: https://github.com/tc39/ecma262/releases
-    ecmaVersion: 2020,
-    sourceType: 'module',
-
-    // This enables support for linting rules that require type information. We
-    // assume that the project has a `tsconfig.json` file in the directory where
-    // ESLint is being run.
-    tsconfigRootDir: process.cwd(),
-    project: ['./tsconfig.json'],
-  },
-
-  plugins: ['@typescript-eslint', 'jsdoc'],
 
   extends: [
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-type-checked',
-    'plugin:import-x/typescript',
+    ...typescript.configs.recommended,
+    ...typescript.configs.recommendedTypeChecked,
+    importX.flatConfigs.typescript,
+    jsdoc.configs['flat/recommended-typescript-error'],
   ],
+
+  files: [
+    '**/*.ts',
+    '**/*.tsx',
+    '**/*.mts',
+    '**/*.cts',
+    '**/*.mtsx',
+    '**/*.ctsx',
+  ],
+
+  languageOptions: {
+    sourceType: 'module',
+    parserOptions: {
+      // This option requires `tsconfigRootDir` to be set, but this needs to
+      // be set on a per-project basis.
+      projectService: true,
+      ecmaVersion: 2022,
+    },
+  },
+
+  settings: {
+    'import-x/resolver': {
+      name: 'typescript',
+      resolver,
+    },
+  },
 
   rules: {
     // Handled by TypeScript
@@ -71,6 +85,8 @@ module.exports = {
     '@typescript-eslint/no-unsafe-return': 'off',
 
     // Recommended rules that we do not want to use
+    '@typescript-eslint/no-duplicate-type-constituents': 'off',
+    '@typescript-eslint/no-redundant-type-constituents': 'off',
     '@typescript-eslint/require-await': 'off',
 
     // Our rules that require type information
@@ -204,4 +220,6 @@ module.exports = {
       },
     ],
   },
-};
+});
+
+export default config;

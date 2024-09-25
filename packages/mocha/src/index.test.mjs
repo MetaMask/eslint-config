@@ -7,10 +7,9 @@ describe('index', () => {
   it('is a valid ESLint config', async () => {
     const api = new ESLint({
       baseConfig: config,
-      useEslintrc: false,
     });
 
-    const result = await api.lintText(`console.log('Hello, world!');\n`);
+    const result = await api.lintText(`export {};\n`);
 
     expect(result[0].messages).toStrictEqual([]);
     expect(result[0].warningCount).toBe(0);

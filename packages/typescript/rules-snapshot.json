@@ -16,17 +16,11 @@
       "leadingUnderscore": "allow",
       "trailingUnderscore": "forbid"
     },
-    {
-      "selector": "enumMember",
-      "format": ["PascalCase"]
-    },
+    { "selector": "enumMember", "format": ["PascalCase"] },
     {
       "selector": "interface",
       "format": ["PascalCase"],
-      "custom": {
-        "regex": "^I[A-Z]",
-        "match": false
-      }
+      "custom": { "regex": "^I[A-Z]", "match": false }
     },
     {
       "selector": "objectLiteralMethod",
@@ -36,17 +30,11 @@
       "selector": "objectLiteralProperty",
       "format": ["camelCase", "PascalCase", "UPPER_CASE"]
     },
-    {
-      "selector": "typeLike",
-      "format": ["PascalCase"]
-    },
+    { "selector": "typeLike", "format": ["PascalCase"] },
     {
       "selector": "typeParameter",
       "format": ["PascalCase"],
-      "custom": {
-        "regex": "^.{3,}",
-        "match": true
-      }
+      "custom": { "regex": "^.{3,}", "match": true }
     },
     {
       "selector": "variable",
@@ -78,7 +66,7 @@
   "@typescript-eslint/no-base-to-string": "error",
   "@typescript-eslint/no-dupe-class-members": "error",
   "@typescript-eslint/no-duplicate-enum-values": "error",
-  "@typescript-eslint/no-duplicate-type-constituents": "error",
+  "@typescript-eslint/no-duplicate-type-constituents": "off",
   "@typescript-eslint/no-empty-object-type": "error",
   "@typescript-eslint/no-explicit-any": "off",
   "@typescript-eslint/no-extra-non-null-assertion": "error",
@@ -90,20 +78,13 @@
   "@typescript-eslint/no-misused-promises": "error",
   "@typescript-eslint/no-namespace": [
     "error",
-    {
-      "allowDefinitionFiles": true
-    }
+    { "allowDefinitionFiles": true }
   ],
   "@typescript-eslint/no-non-null-asserted-optional-chain": "error",
   "@typescript-eslint/no-non-null-assertion": "error",
-  "@typescript-eslint/no-redundant-type-constituents": "error",
+  "@typescript-eslint/no-redundant-type-constituents": "off",
   "@typescript-eslint/no-require-imports": "error",
-  "@typescript-eslint/no-shadow": [
-    "error",
-    {
-      "builtinGlobals": true
-    }
-  ],
+  "@typescript-eslint/no-shadow": ["error", { "builtinGlobals": true }],
   "@typescript-eslint/no-this-alias": "error",
   "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
   "@typescript-eslint/no-unnecessary-qualifier": "error",
@@ -121,10 +102,7 @@
   "@typescript-eslint/no-unsafe-unary-minus": "error",
   "@typescript-eslint/no-unused-expressions": [
     "error",
-    {
-      "allowShortCircuit": true,
-      "allowTernary": true
-    }
+    { "allowShortCircuit": true, "allowTernary": true }
   ],
   "@typescript-eslint/no-unused-vars": [
     "error",
@@ -135,12 +113,7 @@
       "ignoreRestSiblings": true
     }
   ],
-  "@typescript-eslint/no-use-before-define": [
-    "error",
-    {
-      "functions": false
-    }
-  ],
+  "@typescript-eslint/no-use-before-define": ["error", { "functions": false }],
   "@typescript-eslint/no-useless-constructor": "error",
   "@typescript-eslint/no-wrapper-object-types": "error",
   "@typescript-eslint/only-throw-error": "error",
@@ -162,10 +135,7 @@
   "@typescript-eslint/restrict-plus-operands": "error",
   "@typescript-eslint/restrict-template-expressions": [
     "error",
-    {
-      "allowBoolean": true,
-      "allowNumber": true
-    }
+    { "allowBoolean": true, "allowNumber": true }
   ],
   "@typescript-eslint/switch-exhaustiveness-check": "error",
   "@typescript-eslint/triple-slash-reference": "error",
@@ -176,12 +146,62 @@
   "getter-return": "off",
   "import-x/named": "off",
   "import-x/no-unresolved": "off",
+  "jsdoc/check-access": "error",
+  "jsdoc/check-alignment": "error",
+  "jsdoc/check-examples": "off",
   "jsdoc/check-indentation": "error",
+  "jsdoc/check-line-alignment": "off",
+  "jsdoc/check-param-names": "error",
+  "jsdoc/check-property-names": "error",
   "jsdoc/check-syntax": "error",
+  "jsdoc/check-tag-names": ["error", { "typed": true }],
+  "jsdoc/check-template-names": "off",
+  "jsdoc/check-types": "error",
+  "jsdoc/check-values": "error",
+  "jsdoc/convert-to-jsdoc-comments": "off",
+  "jsdoc/empty-tags": "error",
+  "jsdoc/implements-on-classes": "error",
+  "jsdoc/imports-as-dependencies": "off",
+  "jsdoc/informative-docs": "off",
+  "jsdoc/lines-before-block": "off",
+  "jsdoc/match-description": "off",
+  "jsdoc/match-name": "off",
+  "jsdoc/multiline-blocks": "error",
+  "jsdoc/no-bad-blocks": "off",
+  "jsdoc/no-blank-block-descriptions": "off",
+  "jsdoc/no-blank-blocks": "off",
+  "jsdoc/no-defaults": "error",
+  "jsdoc/no-missing-syntax": "off",
+  "jsdoc/no-multi-asterisks": "error",
+  "jsdoc/no-restricted-syntax": "off",
   "jsdoc/no-types": "error",
+  "jsdoc/no-undefined-types": "off",
+  "jsdoc/require-asterisk-prefix": "off",
+  "jsdoc/require-description": "off",
+  "jsdoc/require-description-complete-sentence": "off",
+  "jsdoc/require-example": "off",
+  "jsdoc/require-file-overview": "off",
+  "jsdoc/require-hyphen-before-param-description": "off",
+  "jsdoc/require-jsdoc": "error",
+  "jsdoc/require-param": "error",
+  "jsdoc/require-param-description": "error",
+  "jsdoc/require-param-name": "error",
   "jsdoc/require-param-type": "off",
+  "jsdoc/require-property": "error",
+  "jsdoc/require-property-description": "error",
+  "jsdoc/require-property-name": "error",
   "jsdoc/require-property-type": "off",
+  "jsdoc/require-returns": "error",
+  "jsdoc/require-returns-check": "error",
+  "jsdoc/require-returns-description": "error",
   "jsdoc/require-returns-type": "off",
+  "jsdoc/require-template": "off",
+  "jsdoc/require-throws": "off",
+  "jsdoc/require-yields": "error",
+  "jsdoc/require-yields-check": "error",
+  "jsdoc/sort-tags": "off",
+  "jsdoc/tag-lines": "error",
+  "jsdoc/text-escaping": "off",
   "jsdoc/valid-types": "off",
   "no-array-constructor": "off",
   "no-const-assign": "off",

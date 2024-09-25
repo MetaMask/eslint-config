@@ -1,12 +1,7 @@
 {
   "mocha/consistent-spacing-between-blocks": "error",
   "mocha/handle-done-callback": "error",
-  "mocha/max-top-level-suites": [
-    "error",
-    {
-      "limit": 1
-    }
-  ],
+  "mocha/max-top-level-suites": ["error", { "limit": 1 }],
   "mocha/no-async-describe": "error",
   "mocha/no-empty-description": "error",
   "mocha/no-exclusive-tests": "error",

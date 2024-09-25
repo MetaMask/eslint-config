@@ -1,14 +1,10 @@
 {
-  "jest/consistent-test-it": [
-    "error",
-    {
-      "fn": "it"
-    }
-  ],
+  "jest/consistent-test-it": ["error", { "fn": "it" }],
   "jest/expect-expect": "warn",
   "jest/no-alias-methods": "warn",
   "jest/no-commented-out-tests": "warn",
   "jest/no-conditional-expect": "error",
+  "jest/no-conditional-in-test": "error",
   "jest/no-deprecated-functions": "error",
   "jest/no-disabled-tests": "warn",
   "jest/no-done-callback": "error",
@@ -16,7 +12,6 @@
   "jest/no-export": "error",
   "jest/no-focused-tests": "error",
   "jest/no-identical-title": "error",
-  "jest/no-if": "error",
   "jest/no-interpolation-in-snapshots": "error",
   "jest/no-jasmine-globals": "error",
   "jest/no-mocks-import": "error",
@@ -34,12 +29,7 @@
   "jest/no-test-prefixes": "error",
   "jest/no-test-return-statement": "error",
   "jest/prefer-hooks-on-top": "error",
-  "jest/prefer-lowercase-title": [
-    "error",
-    {
-      "ignore": ["describe"]
-    }
-  ],
+  "jest/prefer-lowercase-title": ["error", { "ignore": ["describe"] }],
   "jest/prefer-spy-on": "error",
   "jest/prefer-strict-equal": "error",
   "jest/prefer-to-be": "error",
@@ -49,12 +39,7 @@
   "jest/require-to-throw-message": "error",
   "jest/require-top-level-describe": "error",
   "jest/valid-describe-callback": "error",
-  "jest/valid-expect": [
-    "error",
-    {
-      "alwaysAwait": true
-    }
-  ],
+  "jest/valid-expect": ["error", { "alwaysAwait": true }],
   "jest/valid-expect-in-promise": "error",
   "jest/valid-title": "error"
 }
