@@ -23,19 +23,19 @@ with `@metamask/eslint-config` first, and `@metamask/eslint-config-*` in any
 order thereafter.
 
 ```js
-import base from '@metamask/eslint-config';
+import base, { createConfig } from '@metamask/eslint-config';
 import commonjs from '@metamask/eslint-config-commonjs';
 
-const config = {
-  // Any custom shared config should be added here.
-  // ...
-
-  // This should be added last unless you know what you're doing.
-  ...base,
-  ...commonjs,
-
+const config = createConfig({
   {
-    // Your overrides here.
+    extends: [
+      // Any custom shared config should be added here.
+      // ...
+
+      // This should be added last unless you know what you're doing.
+      base,
+      commonjs,
+    ],
   }
-};
+});
 ```

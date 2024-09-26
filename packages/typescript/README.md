@@ -24,32 +24,31 @@ with `@metamask/eslint-config` first, and `@metamask/eslint-config-*` in any
 order thereafter.
 
 ```js
-import base from '@metamask/eslint-config';
+import base, { createConfig } from '@metamask/eslint-config';
 import typescript from '@metamask/eslint-config-typescript';
-import tseslint from 'typescript-eslint';
 
-const config = tseslint.config({
-  // The TypeScript config disables certain rules that you want to keep for
-  // non-TypeScript files, so it should be added in an override.
-  files: ['**/*.ts', '**/*.mts', '**/*.cts'],
+const config = createConfig({
+  {
+    // The TypeScript config disables certain rules that you want to keep for
+    // non-TypeScript files, so it should be added in an override.
+    files: ['**/*.ts', '**/*.mts', '**/*.cts'],
 
-  extends: [
-    // Any custom shared config should be added here.
-    // ...
+    extends: [
+      // Any custom shared config should be added here.
+      // ...
 
-    // This should be added last unless you know what you're doing.
-    ...base,
-    ...typescript,
-  ],
+      // This should be added last unless you know what you're doing.
+      ...base,
+      ...typescript,
+    ],
 
-  languageOptions: {
-    parserOptions: {
-      // This is required for rules that use type information.
-      // See here for more information: https://typescript-eslint.io/getting-started/typed-linting
-      tsconfigRootDir: import.meta.dirname,
+    languageOptions: {
+      parserOptions: {
+        // This is required for rules that use type information.
+        // See here for more information: https://typescript-eslint.io/getting-started/typed-linting
+        tsconfigRootDir: import.meta.dirname,
+      },
     },
-  },
-
-  // Your overrides here.
+  }
 });
 ```
