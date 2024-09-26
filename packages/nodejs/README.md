@@ -24,21 +24,21 @@ with `@metamask/eslint-config` first, and `@metamask/eslint-config-*` in any
 order thereafter.
 
 ```js
-import base from '@metamask/eslint-config';
-import mocha from '@metamask/eslint-config-mocha';
+import base, { createConfig } from '@metamask/eslint-config';
+import nodejs from '@metamask/eslint-config-nodejs';
 
-const config = {
-  // Any custom shared config should be added here.
-  // ...
-
-  // This should be added last unless you know what you're doing.
-  ...base,
-  ...mocha,
-
+const config = createConfig({
   {
-    // Your overrides here.
+    extends: [
+      // Any custom shared config should be added here.
+      // ...
+
+      // This should be added last unless you know what you're doing.
+      base,
+      nodejs,
+    ],
   }
-};
+});
 ```
 
 To lint the `.eslintrc.js` file itself, you will **need** to add this config in addition to the base config.
