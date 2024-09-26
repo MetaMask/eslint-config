@@ -1,13 +1,11 @@
 // @ts-check
 
-import base from '@metamask/eslint-config';
+import base, { createConfig } from '@metamask/eslint-config';
 import nodejs from '@metamask/eslint-config-nodejs';
 import typescript from '@metamask/eslint-config-typescript';
 import vitest from '@metamask/eslint-config-vitest';
-// eslint-disable-next-line import-x/no-unresolved
-import tseslint from 'typescript-eslint';
 
-const config = tseslint.config(
+const config = createConfig([
   {
     ignores: ['.yarn/'],
   },
@@ -58,6 +56,6 @@ const config = tseslint.config(
       'n/no-unpublished-require': 'off',
     },
   },
-);
+]);
 
 export default config;
