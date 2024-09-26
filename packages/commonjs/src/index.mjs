@@ -1,3 +1,4 @@
+import { createConfig } from '@metamask/eslint-config';
 import globals from 'globals';
 import { createRequire } from 'module';
 
@@ -8,33 +9,18 @@ const environmentRules = customRequire('./environment.json');
 /**
  * @type {import('eslint').Linter.Config[]}
  */
-const config = [
-  {
-    name: '@metamask/eslint-config-commonjs',
+const config = createConfig({
+  name: '@metamask/eslint-config-commonjs',
 
-    files: [
-      '**/*.js',
-      '**/*.jsx',
-      '**/*.mjs',
-      '**/*.cjs',
-      '**/*.ts',
-      '**/*.tsx',
-      '**/*.mts',
-      '**/*.cts',
-      '**/*.mtsx',
-      '**/*.ctsx',
-    ],
-
-    languageOptions: {
-      globals: {
-        ...globals.commonjs,
-      },
-    },
-
-    rules: {
-      ...environmentRules,
+  languageOptions: {
+    globals: {
+      ...globals.commonjs,
     },
   },
-];
+
+  rules: {
+    ...environmentRules,
+  },
+});
 
 export default config;

@@ -1,3 +1,4 @@
+import { createConfig } from '@metamask/eslint-config';
 import * as resolver from 'eslint-import-resolver-typescript';
 import importX from 'eslint-plugin-import-x';
 import jsdoc from 'eslint-plugin-jsdoc';
@@ -5,7 +6,7 @@ import jsdoc from 'eslint-plugin-jsdoc';
 // eslint-disable-next-line import-x/no-unresolved
 import typescript from 'typescript-eslint';
 
-const config = typescript.config({
+const config = createConfig({
   name: '@metamask/eslint-config-typescript',
 
   plugins: {
@@ -13,19 +14,10 @@ const config = typescript.config({
   },
 
   extends: [
-    ...typescript.configs.recommended,
-    ...typescript.configs.recommendedTypeChecked,
+    typescript.configs.recommended,
+    typescript.configs.recommendedTypeChecked,
     importX.flatConfigs.typescript,
     jsdoc.configs['flat/recommended-typescript-error'],
-  ],
-
-  files: [
-    '**/*.ts',
-    '**/*.tsx',
-    '**/*.mts',
-    '**/*.cts',
-    '**/*.mtsx',
-    '**/*.ctsx',
   ],
 
   languageOptions: {
