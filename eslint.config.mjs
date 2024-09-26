@@ -1,9 +1,9 @@
 // @ts-check
 
 import base from '@metamask/eslint-config';
-import jest from '@metamask/eslint-config-jest';
 import nodejs from '@metamask/eslint-config-nodejs';
 import typescript from '@metamask/eslint-config-typescript';
+import vitest from '@metamask/eslint-config-vitest';
 // eslint-disable-next-line import-x/no-unresolved
 import tseslint from 'typescript-eslint';
 
@@ -29,15 +29,7 @@ const config = tseslint.config(
 
   {
     files: ['**/*.test.mjs'],
-    extends: jest,
-    rules: {
-      'no-shadow': [
-        'error',
-        {
-          allow: ['describe', 'it', 'expect'],
-        },
-      ],
-    },
+    extends: vitest,
   },
 
   {
