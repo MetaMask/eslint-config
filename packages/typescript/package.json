@@ -28,7 +28,8 @@
     "!src/**/__test__"
   ],
   "scripts": {
-    "lint:changelog": "auto-changelog validate",
+    "changelog:update": "../../scripts/update-changelog.sh @metamask/eslint-config-typescript",
+    "changelog:validate": "../../scripts/validate-changelog.sh @metamask/eslint-config-typescript",
     "publish": "npm publish",
     "test": "eslint ."
   },

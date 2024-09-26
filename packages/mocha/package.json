@@ -27,7 +27,8 @@
     "!src/**/*.test.mjs"
   ],
   "scripts": {
-    "lint:changelog": "auto-changelog validate",
+    "changelog:update": "../../scripts/update-changelog.sh @metamask/eslint-config-mocha",
+    "changelog:validate": "../../scripts/validate-changelog.sh @metamask/eslint-config-mocha",
     "publish": "npm publish",
     "test": "eslint ."
   },
