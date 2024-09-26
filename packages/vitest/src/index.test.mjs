@@ -1,7 +1,7 @@
 import { ESLint } from 'eslint';
 import { describe, it, expect } from 'vitest';
 
-import config from '.';
+import config from './index.mjs';
 
 describe('index', () => {
   it('is a valid ESLint config', async () => {

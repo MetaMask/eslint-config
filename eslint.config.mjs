@@ -41,8 +41,15 @@ const config = tseslint.config(
     },
 
     rules: {
+      'import-x/extensions': ['error', 'ignorePackages'],
       'import-x/no-dynamic-require': 'off',
       'import-x/no-nodejs-modules': 'off',
+      'import-x/no-useless-path-segments': [
+        'error',
+        {
+          noUselessIndex: false,
+        },
+      ],
       'jsdoc/check-tag-names': 'off',
       'jsdoc/no-types': 'off',
       'n/global-require': 'off',
