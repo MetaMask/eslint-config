@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Uncategorized
+
+- Update workflows and configs ([#376](https://github.com/MetaMask/eslint-config/pull/376))
+- Update all packages to use `createConfig` ([#375](https://github.com/MetaMask/eslint-config/pull/375))
+- Add util for creating extendable ESLint configurations ([#374](https://github.com/MetaMask/eslint-config/pull/374))
+- BREAKING: Bump ESLint to `^9.11.1`, bump related ESLint dependencies, and rewrite configs to use flat configs ([#370](https://github.com/MetaMask/eslint-config/pull/370))
+- Replace Jest with Vitest ([#372](https://github.com/MetaMask/eslint-config/pull/372))
+- Drop support for Node.js <18.18 ([#371](https://github.com/MetaMask/eslint-config/pull/371))
+
 ## [13.0.0]
 
 ### Changed
