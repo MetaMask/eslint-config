@@ -28,7 +28,7 @@
   ],
   "scripts": {
     "changelog:update": "../../scripts/update-changelog.sh @metamask/eslint-config-vitest",
-    "changelog:validate": "../../scripts/validate-changelog.sh @metamask/eslint-config-vitests",
+    "changelog:validate": "../../scripts/validate-changelog.sh @metamask/eslint-config-vitest",
     "publish": "npm publish",
     "test": "eslint ."
   },
