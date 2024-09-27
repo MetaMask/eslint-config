@@ -1129,7 +1129,7 @@ __metadata:
     prettier: "npm:^3.3.3"
     vitest: "npm:^2.1.1"
   peerDependencies:
-    "@metamask/eslint-config": ^13.0.0
+    "@metamask/eslint-config": ^14.0.0
     eslint: ^9.11.0
   languageName: unknown
   linkType: soft
@@ -1150,7 +1150,7 @@ __metadata:
     prettier: "npm:^3.3.3"
     vitest: "npm:^2.1.1"
   peerDependencies:
-    "@metamask/eslint-config": ^13.0.0
+    "@metamask/eslint-config": ^14.0.0
     eslint: ^9.11.0
   languageName: unknown
   linkType: soft
@@ -1162,7 +1162,7 @@ __metadata:
     "@eslint/js": "npm:^9.11.0"
     "@jest/globals": "npm:^29.7.0"
     "@metamask/auto-changelog": "npm:^3.4.4"
-    "@metamask/eslint-config": "npm:^13.0.0"
+    "@metamask/eslint-config": "npm:^14.0.0"
     eslint: "npm:^9.11.0"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-plugin-import-x: "npm:^4.3.0"
@@ -1174,7 +1174,7 @@ __metadata:
     prettier: "npm:^3.3.3"
     vitest: "npm:^2.1.1"
   peerDependencies:
-    "@metamask/eslint-config": ^13.0.0
+    "@metamask/eslint-config": ^14.0.0
     eslint: ^9.11.0
     eslint-plugin-jest: ^28.8.3
   languageName: unknown
@@ -1187,7 +1187,7 @@ __metadata:
     "@eslint/js": "npm:^9.11.0"
     "@jest/globals": "npm:^29.7.0"
     "@metamask/auto-changelog": "npm:^3.4.4"
-    "@metamask/eslint-config": "npm:^13.0.0"
+    "@metamask/eslint-config": "npm:^14.0.0"
     eslint: "npm:^9.11.0"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-plugin-import-x: "npm:^4.3.0"
@@ -1198,7 +1198,7 @@ __metadata:
     prettier: "npm:^3.3.3"
     vitest: "npm:^2.1.1"
   peerDependencies:
-    "@metamask/eslint-config": ^13.0.0
+    "@metamask/eslint-config": ^14.0.0
     eslint: ^9.11.0
     eslint-plugin-mocha: ^10.5.0
   languageName: unknown
@@ -1222,7 +1222,7 @@ __metadata:
     "@eslint/js": "npm:^9.11.0"
     "@jest/globals": "npm:^29.7.0"
     "@metamask/auto-changelog": "npm:^3.4.4"
-    "@metamask/eslint-config": "npm:^13.0.0"
+    "@metamask/eslint-config": "npm:^14.0.0"
     eslint: "npm:^9.11.0"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-plugin-import-x: "npm:^4.3.0"
@@ -1233,7 +1233,7 @@ __metadata:
     prettier: "npm:^3.3.3"
     vitest: "npm:^2.1.1"
   peerDependencies:
-    "@metamask/eslint-config": ^13.0.0
+    "@metamask/eslint-config": ^14.0.0
     eslint: ^9.11.0
     eslint-plugin-n: ^17.10.3
   languageName: unknown
@@ -1248,7 +1248,7 @@ __metadata:
     "@lavamoat/allow-scripts": "npm:^3.0.4"
     "@metamask/auto-changelog": "npm:^3.4.4"
     "@metamask/create-release-branch": "npm:^4.0.0"
-    "@metamask/eslint-config": "npm:^13.0.0"
+    "@metamask/eslint-config": "npm:^14.0.0"
     "@metamask/eslint-config-nodejs": "npm:^13.0.0"
     "@metamask/eslint-config-typescript": "workspace:^"
     "@metamask/eslint-config-vitest": "workspace:^"
@@ -1280,7 +1280,7 @@ __metadata:
     "@eslint/js": "npm:^9.11.0"
     "@jest/globals": "npm:^29.7.0"
     "@metamask/auto-changelog": "npm:^3.4.4"
-    "@metamask/eslint-config": "npm:^13.0.0"
+    "@metamask/eslint-config": "npm:^14.0.0"
     eslint: "npm:^9.11.0"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-import-resolver-typescript: "npm:^3.6.3"
@@ -1293,7 +1293,7 @@ __metadata:
     typescript-eslint: "npm:^8.6.0"
     vitest: "npm:^2.1.1"
   peerDependencies:
-    "@metamask/eslint-config": ^13.0.0
+    "@metamask/eslint-config": ^14.0.0
     eslint: ^9.11.0
     eslint-import-resolver-typescript: ^3.6.3
     eslint-plugin-import-x: ^4.3.0
@@ -1310,7 +1310,7 @@ __metadata:
     "@eslint/js": "npm:^9.11.0"
     "@jest/globals": "npm:^29.7.0"
     "@metamask/auto-changelog": "npm:^3.4.4"
-    "@metamask/eslint-config": "npm:^13.0.0"
+    "@metamask/eslint-config": "npm:^14.0.0"
     "@vitest/eslint-plugin": "npm:^1.1.4"
     eslint: "npm:^9.11.0"
     eslint-config-prettier: "npm:^9.1.0"
@@ -1322,28 +1322,13 @@ __metadata:
     prettier: "npm:^3.3.3"
     vitest: "npm:^2.1.1"
   peerDependencies:
-    "@metamask/eslint-config": ^13.0.0
+    "@metamask/eslint-config": ^14.0.0
     "@vitest/eslint-plugin": ^1.1.4
     eslint: ^9.11.0
   languageName: unknown
   linkType: soft
 
-"@metamask/eslint-config@npm:^13.0.0":
-  version: 13.0.0
-  resolution: "@metamask/eslint-config@npm:13.0.0"
-  peerDependencies:
-    eslint: ^8.57.0
-    eslint-config-prettier: ^8.5.0
-    eslint-plugin-import-x: ^0.5.1
-    eslint-plugin-jsdoc: ">=43.0.7 <48"
-    eslint-plugin-prettier: ^4.2.1
-    eslint-plugin-promise: ^6.1.1
-    prettier: ^2.7.1
-  checksum: 10/0a7a5449b83e380afaf5ab55bc45faa1337585307ee3c4cef3a5109dc62a637ad56944e63c31b4ceead6e14fbb3dd00bfbb52b3f7ae1956aa02f155e03e31477
-  languageName: node
-  linkType: hard
-
-"@metamask/eslint-config@workspace:packages/base":
+"@metamask/eslint-config@npm:^14.0.0, @metamask/eslint-config@workspace:packages/base":
   version: 0.0.0-use.local
   resolution: "@metamask/eslint-config@workspace:packages/base"
   dependencies:
