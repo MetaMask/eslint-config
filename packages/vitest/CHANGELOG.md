@@ -7,4 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Uncategorized
+
+- Update workflows and configs ([#376](https://github.com/MetaMask/eslint-config/pull/376))
+- Update all packages to use `createConfig` ([#375](https://github.com/MetaMask/eslint-config/pull/375))
+- Add util for creating extendable ESLint configurations ([#374](https://github.com/MetaMask/eslint-config/pull/374))
+- Add Vitest config ([#373](https://github.com/MetaMask/eslint-config/pull/373))
+
 [Unreleased]: https://github.com/MetaMask/eslint-config/
