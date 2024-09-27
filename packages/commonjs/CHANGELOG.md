@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [14.0.0]
+
 ### Uncategorized
 
 - Update workflows and configs ([#376](https://github.com/MetaMask/eslint-config/pull/376))
@@ -44,7 +46,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release of this package ([#267](https://github.com/MetaMask/eslint-config/pull/267))
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-commonjs@13.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-commonjs@14.0.0...HEAD
+[14.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-commonjs@13.0.0...@metamask/eslint-config-commonjs@14.0.0
 [13.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-commonjs@12.1.0...@metamask/eslint-config-commonjs@13.0.0
 [12.1.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-commonjs@12.0.0...@metamask/eslint-config-commonjs@12.1.0
 [12.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-commonjs@11.1.0...@metamask/eslint-config-commonjs@12.0.0

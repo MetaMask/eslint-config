@@ -1,6 +1,6 @@
 {
   "name": "@metamask/eslint-config-typescript",
-  "version": "13.0.0",
+  "version": "14.0.0",
   "description": "Shareable MetaMask ESLint config for TypeScript.",
   "homepage": "https://github.com/MetaMask/eslint-config#readme",
   "bugs": {
