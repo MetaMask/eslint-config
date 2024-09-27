@@ -9,12 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.0]
 
-### Uncategorized
+### Added
 
-- Update workflows and configs ([#376](https://github.com/MetaMask/eslint-config/pull/376))
-- Update all packages to use `createConfig` ([#375](https://github.com/MetaMask/eslint-config/pull/375))
-- Add util for creating extendable ESLint configurations ([#374](https://github.com/MetaMask/eslint-config/pull/374))
 - Add Vitest config ([#373](https://github.com/MetaMask/eslint-config/pull/373))
+  - This config is based on the `@metamask/eslint-config-jest` config, but uses
+    the Vitest plugin instead of Jest.
 
 [Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-vitest@1.0.0...HEAD
 [1.0.0]: https://github.com/MetaMask/eslint-config/releases/tag/@metamask/eslint-config-vitest@1.0.0
