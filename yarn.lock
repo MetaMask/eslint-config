@@ -1129,7 +1129,7 @@ __metadata:
     prettier: "npm:^3.3.3"
     vitest: "npm:^2.1.1"
   peerDependencies:
-    "@metamask/eslint-config": ^14.0.0
+    "@metamask/eslint-config": "workspace:^"
     eslint: ^9.11.0
   languageName: unknown
   linkType: soft
@@ -1150,7 +1150,7 @@ __metadata:
     prettier: "npm:^3.3.3"
     vitest: "npm:^2.1.1"
   peerDependencies:
-    "@metamask/eslint-config": ^14.0.0
+    "@metamask/eslint-config": "workspace:^"
     eslint: ^9.11.0
   languageName: unknown
   linkType: soft
@@ -1162,7 +1162,7 @@ __metadata:
     "@eslint/js": "npm:^9.11.0"
     "@jest/globals": "npm:^29.7.0"
     "@metamask/auto-changelog": "npm:^3.4.4"
-    "@metamask/eslint-config": "npm:^14.0.0"
+    "@metamask/eslint-config": "workspace:^"
     eslint: "npm:^9.11.0"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-plugin-import-x: "npm:^4.3.0"
@@ -1174,7 +1174,7 @@ __metadata:
     prettier: "npm:^3.3.3"
     vitest: "npm:^2.1.1"
   peerDependencies:
-    "@metamask/eslint-config": ^14.0.0
+    "@metamask/eslint-config": "workspace:^"
     eslint: ^9.11.0
     eslint-plugin-jest: ^28.8.3
   languageName: unknown
@@ -1187,7 +1187,7 @@ __metadata:
     "@eslint/js": "npm:^9.11.0"
     "@jest/globals": "npm:^29.7.0"
     "@metamask/auto-changelog": "npm:^3.4.4"
-    "@metamask/eslint-config": "npm:^14.0.0"
+    "@metamask/eslint-config": "workspace:^"
     eslint: "npm:^9.11.0"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-plugin-import-x: "npm:^4.3.0"
@@ -1198,31 +1198,20 @@ __metadata:
     prettier: "npm:^3.3.3"
     vitest: "npm:^2.1.1"
   peerDependencies:
-    "@metamask/eslint-config": ^14.0.0
+    "@metamask/eslint-config": "workspace:^"
     eslint: ^9.11.0
     eslint-plugin-mocha: ^10.5.0
   languageName: unknown
   linkType: soft
 
-"@metamask/eslint-config-nodejs@npm:^13.0.0":
-  version: 13.0.0
-  resolution: "@metamask/eslint-config-nodejs@npm:13.0.0"
-  peerDependencies:
-    "@metamask/eslint-config": ^13.0.0
-    eslint: ^8.57.0
-    eslint-plugin-n: ^16.6.2
-  checksum: 10/cb5a9842d366a397839bd23c84d68c92df504094b7467ee31a8846126024bd3f31036372d311df106932ce1b4ba44f982d21f7de06b81f82dac9c34d13cd475f
-  languageName: node
-  linkType: hard
-
-"@metamask/eslint-config-nodejs@workspace:packages/nodejs":
+"@metamask/eslint-config-nodejs@workspace:^, @metamask/eslint-config-nodejs@workspace:packages/nodejs":
   version: 0.0.0-use.local
   resolution: "@metamask/eslint-config-nodejs@workspace:packages/nodejs"
   dependencies:
     "@eslint/js": "npm:^9.11.0"
     "@jest/globals": "npm:^29.7.0"
     "@metamask/auto-changelog": "npm:^3.4.4"
-    "@metamask/eslint-config": "npm:^14.0.0"
+    "@metamask/eslint-config": "workspace:^"
     eslint: "npm:^9.11.0"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-plugin-import-x: "npm:^4.3.0"
@@ -1233,7 +1222,7 @@ __metadata:
     prettier: "npm:^3.3.3"
     vitest: "npm:^2.1.1"
   peerDependencies:
-    "@metamask/eslint-config": ^14.0.0
+    "@metamask/eslint-config": "workspace:^"
     eslint: ^9.11.0
     eslint-plugin-n: ^17.10.3
   languageName: unknown
@@ -1248,8 +1237,8 @@ __metadata:
     "@lavamoat/allow-scripts": "npm:^3.0.4"
     "@metamask/auto-changelog": "npm:^3.4.4"
     "@metamask/create-release-branch": "npm:^4.0.0"
-    "@metamask/eslint-config": "npm:^14.0.0"
-    "@metamask/eslint-config-nodejs": "npm:^13.0.0"
+    "@metamask/eslint-config": "workspace:^"
+    "@metamask/eslint-config-nodejs": "workspace:^"
     "@metamask/eslint-config-typescript": "workspace:^"
     "@metamask/eslint-config-vitest": "workspace:^"
     "@metamask/utils": "npm:^9.1.0"
@@ -1280,7 +1269,7 @@ __metadata:
     "@eslint/js": "npm:^9.11.0"
     "@jest/globals": "npm:^29.7.0"
     "@metamask/auto-changelog": "npm:^3.4.4"
-    "@metamask/eslint-config": "npm:^14.0.0"
+    "@metamask/eslint-config": "workspace:^"
     eslint: "npm:^9.11.0"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-import-resolver-typescript: "npm:^3.6.3"
@@ -1293,7 +1282,7 @@ __metadata:
     typescript-eslint: "npm:^8.6.0"
     vitest: "npm:^2.1.1"
   peerDependencies:
-    "@metamask/eslint-config": ^14.0.0
+    "@metamask/eslint-config": "workspace:^"
     eslint: ^9.11.0
     eslint-import-resolver-typescript: ^3.6.3
     eslint-plugin-import-x: ^4.3.0
@@ -1310,7 +1299,7 @@ __metadata:
     "@eslint/js": "npm:^9.11.0"
     "@jest/globals": "npm:^29.7.0"
     "@metamask/auto-changelog": "npm:^3.4.4"
-    "@metamask/eslint-config": "npm:^14.0.0"
+    "@metamask/eslint-config": "workspace:^"
     "@vitest/eslint-plugin": "npm:^1.1.4"
     eslint: "npm:^9.11.0"
     eslint-config-prettier: "npm:^9.1.0"
@@ -1322,13 +1311,13 @@ __metadata:
     prettier: "npm:^3.3.3"
     vitest: "npm:^2.1.1"
   peerDependencies:
-    "@metamask/eslint-config": ^14.0.0
+    "@metamask/eslint-config": "workspace:^"
     "@vitest/eslint-plugin": ^1.1.4
     eslint: ^9.11.0
   languageName: unknown
   linkType: soft
 
-"@metamask/eslint-config@npm:^14.0.0, @metamask/eslint-config@workspace:packages/base":
+"@metamask/eslint-config@workspace:^, @metamask/eslint-config@workspace:packages/base":
   version: 0.0.0-use.local
   resolution: "@metamask/eslint-config@workspace:packages/base"
   dependencies:
