@@ -6,8 +6,8 @@ MetaMask's [Vitest](https://vitest.dev/) ESLint configuration.
 
 ```bash
 yarn add --dev \
-    @metamask/eslint-config@^13.0.0 \
-    @metamask/eslint-config-vitest@^0.0.0 \
+    @metamask/eslint-config@^14.0.0 \
+    @metamask/eslint-config-vitest@^1.0.0 \
     @vitest/eslint-plugin@^1.1.4 \
     eslint@^9.11.0 \
     eslint-config-prettier@^9.1.0 \

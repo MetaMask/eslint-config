@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [14.0.0]
+
+### Changed
+
+- **BREAKING:** Bump minimum Node.js version from 16 to 18.18 ([#371](https://github.com/MetaMask/eslint-config/pull/371))
+- **BREAKING:** Bump peer dependency on ESLint from `^8.57.0` to `^9.11.0` ([#370](https://github.com/MetaMask/eslint-config/pull/370))
+  - ESLint 9 requires flat configs, so this change also rewrites the configs to
+    use flat configs. The legacy config format is no longer supported.
+- **BREAKING:** Bump peer dependency on `@metamask/eslint-config` from `^13.0.0` to `^14.0.0` ([#377](https://github.com/MetaMask/eslint-config/pull/377))
+- **BREAKING:** Bump peer dependency on `eslint-config-prettier` from `^8.5.0` to `^9.1.0` ([#370](https://github.com/MetaMask/eslint-config/pull/370))
+- **BREAKING:** Bump peer dependency on `eslint-plugin-import-x` from `^0.5.1` to `^4.3.0` ([#370](https://github.com/MetaMask/eslint-config/pull/370))
+- **BREAKING:** Bump peer dependency on `eslint-plugin-jsdoc` from `>=43.0.7 <48` to `^50.2.4` ([#370](https://github.com/MetaMask/eslint-config/pull/370))
+- **BREAKING:** Bump peer dependency on `eslint-plugin-prettier` from `^4.2.1` to `^5.2.1` ([#370](https://github.com/MetaMask/eslint-config/pull/370))
+- **BREAKING:** Bump peer dependency on `eslint-plugin-promise` from `^6.1.1` to `^7.1.0` ([#370](https://github.com/MetaMask/eslint-config/pull/370))
+- **BREAKING:** Bump peer dependency on `prettier` from `^2.7.1` to `^3.3.3` ([#370](https://github.com/MetaMask/eslint-config/pull/370))
+- **BREAKING:** Change package to be pure ESM ([#370](https://github.com/MetaMask/eslint-config/pull/370))
+  - ESLint 9 supports ESM out-of-the-box, so this change updates the package to
+    be pure ESM. This means that the package can no longer be used with CommonJS
+    `require` syntax.
+
 ## [13.0.0]
 
 ### Changed
@@ -244,7 +264,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add base, TypeScript, and Jest configs (#3)
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@13.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@14.0.0...HEAD
+[14.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@13.0.0...@metamask/eslint-config@14.0.0
 [13.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@12.2.0...@metamask/eslint-config@13.0.0
 [12.2.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@12.1.0...@metamask/eslint-config@12.2.0
 [12.1.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@12.0.0...@metamask/eslint-config@12.1.0
