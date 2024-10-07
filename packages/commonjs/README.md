@@ -7,7 +7,7 @@ MetaMask's ESLint configuration for projects using CommonJS.
 ```bash
 yarn add --dev \
     @metamask/eslint-config@^13.0.0 \
-    @metamask/eslint-config-commonjs@^14.0.0 \
+    @metamask/eslint-config-commonjs@^13.0.0 \
     eslint@^9.11.0 \
     eslint-config-prettier@^9.1.0 \
     eslint-plugin-import-x@^4.3.0 \

@@ -7,13 +7,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.0.0]
-
-### Added
-
-- Add Vitest config ([#373](https://github.com/MetaMask/eslint-config/pull/373))
-  - This config is based on the `@metamask/eslint-config-jest` config, but uses
-    the Vitest plugin instead of Jest.
-
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-vitest@1.0.0...HEAD
-[1.0.0]: https://github.com/MetaMask/eslint-config/releases/tag/@metamask/eslint-config-vitest@1.0.0
+[Unreleased]: https://github.com/MetaMask/eslint-config/
