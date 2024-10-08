@@ -7,16 +7,41 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [14.0.0]
+
+### Added
+
+- **BREAKING:** Add peer dependency on `typescript-eslint@^8.6.0`. ([#370](https://github.com/MetaMask/eslint-config/pull/370))
+- **BREAKING:** Add peer dependency on `eslint-import-resolver-typescript@^3.6.3` ([#370](https://github.com/MetaMask/eslint-config/pull/370))
+- **BREAKING:** Add peer dependency on `eslint-plugin-import-x@^4.3.0` ([#370](https://github.com/MetaMask/eslint-config/pull/370))
+- **BREAKING:** Add peer dependency on `eslint-plugin-jsdoc@^50.2.4` ([#370](https://github.com/MetaMask/eslint-config/pull/370))
+
+### Changed
+
+- **BREAKING:** Bump minimum Node.js version from 16 to 18.18 ([#371](https://github.com/MetaMask/eslint-config/pull/371))
+- **BREAKING:** Bump peer dependency on ESLint from `^8.57.0` to `^9.11.0` ([#370](https://github.com/MetaMask/eslint-config/pull/370))
+  - ESLint 9 requires flat configs, so this change also rewrites the configs to
+    use flat configs. The legacy config format is no longer supported.
+- **BREAKING:** Bump peer dependency on `@metamask/eslint-config` from `^13.0.0` to `^14.0.0` ([#377](https://github.com/MetaMask/eslint-config/pull/377))
+- **BREAKING:** Change package to be pure ESM ([#370](https://github.com/MetaMask/eslint-config/pull/370))
+  - ESLint 9 supports ESM out-of-the-box, so this change updates the package to
+    be pure ESM. This means that the package can no longer be used with CommonJS
+    `require` syntax.
+
+### Removed
+
+- Remove peer dependency on `@typescript-eslint/eslint-plugin` and `@typescript-eslint/parser` ([#370](https://github.com/MetaMask/eslint-config/pull/370))
+
 ## [13.0.0]
 
 ### Changed
 
-- **BREAKING**: Bump TypeScript to v5.5 ([#364](https://github.com/MetaMask/eslint-config/pull/364))
+- **BREAKING:** Bump TypeScript to v5.5 ([#364](https://github.com/MetaMask/eslint-config/pull/364))
   - Also bump relevant `@typescript-eslint` packages.
-- **BREAKING**: Replace `eslint-plugin-import` with `eslint-plugin-import-x` ([#366](https://github.com/MetaMask/eslint-config/pull/366))
-- **BREAKING**: Bump all ESLint dependencies ([#351](https://github.com/MetaMask/eslint-config/pull/351))
+- **BREAKING:** Replace `eslint-plugin-import` with `eslint-plugin-import-x` ([#366](https://github.com/MetaMask/eslint-config/pull/366))
+- **BREAKING:** Bump all ESLint dependencies ([#351](https://github.com/MetaMask/eslint-config/pull/351))
   - Bumps all ESLint dependencies to the latest version compatible with Node.js 16.
-- **BREAKING**: Bump minimum Node.js version from 14 to 16 ([#332](https://github.com/MetaMask/eslint-config/pull/332), [#339](https://github.com/MetaMask/eslint-config/pull/339))
+- **BREAKING:** Bump minimum Node.js version from 14 to 16 ([#332](https://github.com/MetaMask/eslint-config/pull/332), [#339](https://github.com/MetaMask/eslint-config/pull/339))
 
 ## [12.1.0]
 
@@ -146,7 +171,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - To continue extending this config, install this package and update your `.eslintrc.js` `extends` array to include `@metamask/eslint-config-typescript` instead of `@metamask/eslint-config/typescript`.
 - Update `eslint` and other ESLint peer dependencies ([#151](https://github.com/MetaMask/eslint-config/pull/151))
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@13.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@14.0.0...HEAD
+[14.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@13.0.0...@metamask/eslint-config-typescript@14.0.0
 [13.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@12.1.0...@metamask/eslint-config-typescript@13.0.0
 [12.1.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@12.0.0...@metamask/eslint-config-typescript@12.1.0
 [12.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@11.1.0...@metamask/eslint-config-typescript@12.0.0
