@@ -38,7 +38,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: yarn --immutable
-      - run: yarn build
 
   publish-npm-dry-run:
     runs-on: ubuntu-latest
@@ -66,8 +65,6 @@ jobs:
         with:
           slack-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
           subteam: S042S7RE4AE # @metamask-npm-publishers
-        env:
-          SKIP_PREPACK: true
 
   publish-npm:
     environment: npm-publish
@@ -94,5 +91,3 @@ jobs:
         uses: MetaMask/action-npm-publish@v5
         with:
           npm-token: ${{ secrets.NPM_TOKEN }}
-        env:
-          SKIP_PREPACK: true
