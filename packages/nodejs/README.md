@@ -6,8 +6,8 @@ MetaMask's [Node.js](https://nodejs.org) ESLint configuration.
 
 ```bash
 yarn add --dev \
-    @metamask/eslint-config@^14.0.0 \
-    @metamask/eslint-config-nodejs@^14.0.0 \
+    @metamask/eslint-config@^13.0.0 \
+    @metamask/eslint-config-nodejs@^12.1.0 \
     eslint@^9.11.0 \
     eslint-config-prettier@^9.1.0 \
     eslint-plugin-import-x@^4.3.0 \

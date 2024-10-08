@@ -1,6 +1,6 @@
 {
   "name": "@metamask/eslint-config-typescript",
-  "version": "14.0.0",
+  "version": "13.0.0",
   "description": "Shareable MetaMask ESLint config for TypeScript.",
   "homepage": "https://github.com/MetaMask/eslint-config#readme",
   "bugs": {
@@ -39,7 +39,7 @@
   "devDependencies": {
     "@jest/globals": "^29.7.0",
     "@metamask/auto-changelog": "^3.4.4",
-    "@metamask/eslint-config": "workspace:^",
+    "@metamask/eslint-config": "^13.0.0",
     "eslint": "^9.11.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.3",
@@ -53,7 +53,7 @@
     "vitest": "^2.1.1"
   },
   "peerDependencies": {
-    "@metamask/eslint-config": "workspace:^",
+    "@metamask/eslint-config": "^13.0.0",
     "eslint": "^9.11.0",
     "eslint-import-resolver-typescript": "^3.6.3",
     "eslint-plugin-import-x": "^4.3.0",

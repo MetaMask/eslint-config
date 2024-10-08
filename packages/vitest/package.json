@@ -1,6 +1,6 @@
 {
   "name": "@metamask/eslint-config-vitest",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Shareable MetaMask ESLint config for Vitest.",
   "homepage": "https://github.com/MetaMask/eslint-config#readme",
   "bugs": {
@@ -28,7 +28,7 @@
   ],
   "scripts": {
     "changelog:update": "../../scripts/update-changelog.sh @metamask/eslint-config-vitest",
-    "changelog:validate": "../../scripts/validate-changelog.sh @metamask/eslint-config-vitest",
+    "changelog:validate": "../../scripts/validate-changelog.sh @metamask/eslint-config-vitests",
     "publish": "npm publish",
     "test": "eslint ."
   },
@@ -39,7 +39,7 @@
   "devDependencies": {
     "@jest/globals": "^29.7.0",
     "@metamask/auto-changelog": "^3.4.4",
-    "@metamask/eslint-config": "workspace:^",
+    "@metamask/eslint-config": "^13.0.0",
     "@vitest/eslint-plugin": "^1.1.4",
     "eslint": "^9.11.0",
     "eslint-config-prettier": "^9.1.0",
@@ -51,7 +51,7 @@
     "vitest": "^2.1.1"
   },
   "peerDependencies": {
-    "@metamask/eslint-config": "workspace:^",
+    "@metamask/eslint-config": "^13.0.0",
     "@vitest/eslint-plugin": "^1.1.4",
     "eslint": "^9.11.0"
   },

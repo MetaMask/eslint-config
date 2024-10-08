@@ -7,21 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [14.0.0]
-
-### Changed
-
-- **BREAKING:** Bump minimum Node.js version from 16 to 18.18 ([#371](https://github.com/MetaMask/eslint-config/pull/371))
-- **BREAKING:** Bump peer dependency on ESLint from `^8.57.0` to `^9.11.0` ([#370](https://github.com/MetaMask/eslint-config/pull/370))
-  - ESLint 9 requires flat configs, so this change also rewrites the configs to
-    use flat configs. The legacy config format is no longer supported.
-- **BREAKING:** Bump peer dependency on `@metamask/eslint-config` from `^13.0.0` to `^14.0.0` ([#377](https://github.com/MetaMask/eslint-config/pull/377))
-- **BREAKING:** Bump peer dependency on `eslint-plugin-jest` from `^27.9.0` to `^28.8.3` ([#370](https://github.com/MetaMask/eslint-config/pull/370))
-- **BREAKING:** Change package to be pure ESM ([#370](https://github.com/MetaMask/eslint-config/pull/370))
-  - ESLint 9 supports ESM out-of-the-box, so this change updates the package to
-    be pure ESM. This means that the package can no longer be used with CommonJS
-    `require` syntax.
-
 ## [13.0.0]
 
 ### Changed
@@ -107,8 +92,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - To continue extending this config, install this package and update your `.eslintrc.js` `extends` array to include `@metamask/eslint-config-jest` instead of `@metamask/eslint-config/jest`.
 - Update `eslint` and other ESLint peer dependencies ([#151](https://github.com/MetaMask/eslint-config/pull/151))
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-jest@14.0.0...HEAD
-[14.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-jest@13.0.0...@metamask/eslint-config-jest@14.0.0
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-jest@13.0.0...HEAD
 [13.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-jest@12.1.0...@metamask/eslint-config-jest@13.0.0
 [12.1.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-jest@12.0.0...@metamask/eslint-config-jest@12.1.0
 [12.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-jest@11.1.0...@metamask/eslint-config-jest@12.0.0

@@ -8,8 +8,8 @@ Our default export contains a base set of ESLint rules for ES6+:
 
 ```bash
 yarn add --dev \
-    @metamask/eslint-config@^14.0.0 \
-    @metamask/eslint-config-browser@^14.0.0 \
+    @metamask/eslint-config@^13.0.0 \
+    @metamask/eslint-config-browser@^13.0.0 \
     eslint@^9.11.0 \
     eslint-config-prettier@^9.1.0 \
     eslint-plugin-import-x@^4.3.0 \

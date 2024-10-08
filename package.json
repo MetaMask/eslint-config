@@ -1,6 +1,6 @@
 {
   "name": "@metamask/eslint-config-root",
-  "version": "14.0.0",
+  "version": "13.0.0",
   "private": true,
   "repository": {
     "type": "git",
@@ -27,8 +27,8 @@
     "@lavamoat/allow-scripts": "^3.0.4",
     "@metamask/auto-changelog": "^3.4.4",
     "@metamask/create-release-branch": "^4.0.0",
-    "@metamask/eslint-config": "workspace:^",
-    "@metamask/eslint-config-nodejs": "workspace:^",
+    "@metamask/eslint-config": "^13.0.0",
+    "@metamask/eslint-config-nodejs": "^13.0.0",
     "@metamask/eslint-config-typescript": "workspace:^",
     "@metamask/eslint-config-vitest": "workspace:^",
     "@metamask/utils": "^9.1.0",
