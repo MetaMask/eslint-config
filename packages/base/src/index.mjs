@@ -418,6 +418,7 @@ const rules = createConfig({
     'jsdoc/valid-types': 'error',
 
     /* promise plugin rules */
+    'promise/always-return': 'off',
     'promise/catch-or-return': [
       'error',
       {
