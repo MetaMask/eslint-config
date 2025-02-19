@@ -141,7 +141,7 @@
   "jsdoc/check-param-names": "error",
   "jsdoc/check-property-names": "error",
   "jsdoc/check-syntax": "off",
-  "jsdoc/check-tag-names": "error",
+  "jsdoc/check-tag-names": ["error", { "definedTags": ["property"] }],
   "jsdoc/check-template-names": "off",
   "jsdoc/check-types": "error",
   "jsdoc/check-values": "error",

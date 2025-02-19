@@ -373,7 +373,12 @@ const rules = createConfig({
     'jsdoc/check-line-alignment': 'error',
     'jsdoc/check-param-names': 'error',
     'jsdoc/check-property-names': 'error',
-    'jsdoc/check-tag-names': 'error',
+    'jsdoc/check-tag-names': [
+      'error',
+      {
+        definedTags: ['property'],
+      },
+    ],
     'jsdoc/check-types': 'error',
     'jsdoc/check-values': 'error',
     'jsdoc/empty-tags': 'error',
