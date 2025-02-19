@@ -1,4 +1,5 @@
 {
+  "@typescript-eslint/unbound-method": "off",
   "jest/consistent-test-it": ["error", { "fn": "it" }],
   "jest/expect-expect": "warn",
   "jest/no-alias-methods": "warn",
