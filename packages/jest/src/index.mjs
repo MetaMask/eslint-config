@@ -17,6 +17,8 @@ const config = createConfig({
   },
 
   rules: {
+    '@typescript-eslint/unbound-method': 'off',
+
     'jest/consistent-test-it': ['error', { fn: 'it' }],
     'jest/no-duplicate-hooks': 'error',
     'jest/no-test-return-statement': 'error',
