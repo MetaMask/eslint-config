@@ -18,6 +18,10 @@
     },
     { "selector": "enumMember", "format": ["PascalCase"] },
     {
+      "selector": "import",
+      "format": ["camelCase", "PascalCase", "snake_case", "UPPER_CASE"]
+    },
+    {
       "selector": "interface",
       "format": ["PascalCase"],
       "custom": { "regex": "^I[A-Z]", "match": false }
@@ -137,7 +141,10 @@
     "error",
     { "allowBoolean": true, "allowNumber": true }
   ],
-  "@typescript-eslint/switch-exhaustiveness-check": "error",
+  "@typescript-eslint/switch-exhaustiveness-check": [
+    "error",
+    { "considerDefaultExhaustiveForUnions": true }
+  ],
   "@typescript-eslint/triple-slash-reference": "error",
   "@typescript-eslint/unbound-method": "error",
   "@typescript-eslint/unified-signatures": "error",
@@ -204,6 +211,7 @@
   "jsdoc/text-escaping": "off",
   "jsdoc/valid-types": "off",
   "no-array-constructor": "off",
+  "no-class-assign": "off",
   "no-const-assign": "off",
   "no-dupe-args": "off",
   "no-dupe-class-members": "off",

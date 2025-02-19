@@ -96,6 +96,10 @@ const config = createConfig({
         format: ['PascalCase'],
       },
       {
+        selector: 'import',
+        format: ['camelCase', 'PascalCase', 'snake_case', 'UPPER_CASE'],
+      },
+      {
         selector: 'interface',
         format: ['PascalCase'],
         custom: {
@@ -166,7 +170,12 @@ const config = createConfig({
         allowNumber: true,
       },
     ],
-    '@typescript-eslint/switch-exhaustiveness-check': 'error',
+    '@typescript-eslint/switch-exhaustiveness-check': [
+      'error',
+      {
+        considerDefaultExhaustiveForUnions: true,
+      },
+    ],
 
     'default-param-last': 'off',
     '@typescript-eslint/default-param-last': 'error',
