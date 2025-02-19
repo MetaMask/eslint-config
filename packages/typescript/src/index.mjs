@@ -166,7 +166,12 @@ const config = createConfig({
         allowNumber: true,
       },
     ],
-    '@typescript-eslint/switch-exhaustiveness-check': 'error',
+    '@typescript-eslint/switch-exhaustiveness-check': [
+      'error',
+      {
+        considerDefaultExhaustiveForUnions: true,
+      },
+    ],
 
     'default-param-last': 'off',
     '@typescript-eslint/default-param-last': 'error',
