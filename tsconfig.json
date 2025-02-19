@@ -12,7 +12,8 @@
     "noUncheckedIndexedAccess": true,
     "resolveJsonModule": true,
     "strict": true,
-    "target": "ES2022"
+    "target": "ES2022",
+    "verbatimModuleSyntax": true
   },
   "include": ["**/*.mjs", "**/*.mts"],
   "exclude": ["./dist", "**/node_modules"]

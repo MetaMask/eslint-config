@@ -38,14 +38,10 @@ const config = createConfig({
   },
 
   rules: {
-    // Handled by TypeScript
-    'import-x/no-unresolved': 'off',
-
     // Our rules
     '@typescript-eslint/array-type': 'error',
     '@typescript-eslint/consistent-type-assertions': 'error',
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
-    '@typescript-eslint/consistent-type-imports': 'error',
     '@typescript-eslint/explicit-function-return-type': 'error',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-namespace': [
@@ -193,6 +189,15 @@ const config = createConfig({
 
     'no-useless-constructor': 'off',
     '@typescript-eslint/no-useless-constructor': 'error',
+
+    /* import-x plugin rules */
+
+    // Handled by TypeScript
+    'import-x/no-unresolved': 'off',
+
+    // Combined with the "verbatimModuleSyntax" tsconfig option, a better option than
+    // @typescript-eslint/consistent-type-imports
+    'import-x/consistent-type-specifier-style': ['error', 'prefer-top-level'],
 
     /* jsdoc plugin rules */
 
