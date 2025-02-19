@@ -96,6 +96,10 @@ const config = createConfig({
         format: ['PascalCase'],
       },
       {
+        selector: 'import',
+        format: ['camelCase', 'PascalCase', 'snake_case', 'UPPER_CASE'],
+      },
+      {
         selector: 'interface',
         format: ['PascalCase'],
         custom: {

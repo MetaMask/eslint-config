@@ -18,6 +18,10 @@
     },
     { "selector": "enumMember", "format": ["PascalCase"] },
     {
+      "selector": "import",
+      "format": ["camelCase", "PascalCase", "snake_case", "UPPER_CASE"]
+    },
+    {
       "selector": "interface",
       "format": ["PascalCase"],
       "custom": { "regex": "^I[A-Z]", "match": false }
