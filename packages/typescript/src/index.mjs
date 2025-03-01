@@ -75,7 +75,6 @@ const config = createConfig({
     // Recommended rules that we do not want to use
     '@typescript-eslint/no-duplicate-type-constituents': 'off',
     '@typescript-eslint/no-redundant-type-constituents': 'off',
-    '@typescript-eslint/prefer-promise-reject-errors': 'off',
     '@typescript-eslint/require-await': 'off',
 
     // Our rules that require type information
@@ -156,6 +155,10 @@ const config = createConfig({
     '@typescript-eslint/prefer-enum-initializers': 'error',
     '@typescript-eslint/prefer-includes': 'error',
     '@typescript-eslint/prefer-nullish-coalescing': 'error',
+    '@typescript-eslint/prefer-promise-reject-errors': [
+      'error',
+      { allowThrowingUnknown: true },
+    ],
     '@typescript-eslint/prefer-readonly': 'error',
     '@typescript-eslint/prefer-reduce-type-parameter': 'error',
     '@typescript-eslint/prefer-string-starts-ends-with': 'error',
