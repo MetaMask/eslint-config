@@ -18,7 +18,6 @@ const config = createConfig({
 
   rules: {
     '@typescript-eslint/unbound-method': 'off',
-
     'jest/consistent-test-it': ['error', { fn: 'it' }],
     'jest/no-duplicate-hooks': 'error',
     'jest/no-test-return-statement': 'error',
@@ -29,6 +28,7 @@ const config = createConfig({
     'jest/prefer-todo': 'error',
     'jest/require-top-level-describe': 'error',
     'jest/require-to-throw-message': 'error',
+    'jest/unbound-method': 'error',
     'jest/valid-expect': ['error', { alwaysAwait: true }],
     'jest/no-restricted-matchers': [
       'error',
