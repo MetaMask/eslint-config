@@ -5,7 +5,6 @@
   "@typescript-eslint/consistent-type-assertions": "error",
   "@typescript-eslint/consistent-type-definitions": ["error", "type"],
   "@typescript-eslint/consistent-type-exports": "error",
-  "@typescript-eslint/consistent-type-imports": "error",
   "@typescript-eslint/default-param-last": "error",
   "@typescript-eslint/explicit-function-return-type": "error",
   "@typescript-eslint/naming-convention": [
@@ -17,6 +16,10 @@
       "trailingUnderscore": "forbid"
     },
     { "selector": "enumMember", "format": ["PascalCase"] },
+    {
+      "selector": "import",
+      "format": ["camelCase", "PascalCase", "snake_case", "UPPER_CASE"]
+    },
     {
       "selector": "interface",
       "format": ["PascalCase"],
@@ -137,13 +140,17 @@
     "error",
     { "allowBoolean": true, "allowNumber": true }
   ],
-  "@typescript-eslint/switch-exhaustiveness-check": "error",
+  "@typescript-eslint/switch-exhaustiveness-check": [
+    "error",
+    { "considerDefaultExhaustiveForUnions": true }
+  ],
   "@typescript-eslint/triple-slash-reference": "error",
   "@typescript-eslint/unbound-method": "error",
   "@typescript-eslint/unified-signatures": "error",
   "constructor-super": "off",
   "default-param-last": "off",
   "getter-return": "off",
+  "import-x/consistent-type-specifier-style": ["error", "prefer-top-level"],
   "import-x/named": "off",
   "import-x/no-unresolved": "off",
   "jsdoc/check-access": "error",
@@ -204,6 +211,7 @@
   "jsdoc/text-escaping": "off",
   "jsdoc/valid-types": "off",
   "no-array-constructor": "off",
+  "no-class-assign": "off",
   "no-const-assign": "off",
   "no-dupe-args": "off",
   "no-dupe-class-members": "off",
