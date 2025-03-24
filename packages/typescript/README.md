@@ -16,7 +16,7 @@ yarn add --dev \
     eslint-plugin-promise@^7.1.0 \
     prettier@^3.3.3 \
     typescript@~5.8.0 \
-    typescript-eslint@^8.27.0
+    typescript-eslint@^8.28.0
 ```
 
 The order in which you extend ESLint rules matters.
