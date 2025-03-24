@@ -15,7 +15,7 @@ yarn add --dev \
     eslint-plugin-prettier@^5.2.1 \
     eslint-plugin-promise@^7.1.0 \
     prettier@^3.3.3 \
-    typescript@^5.8.0 \
+    typescript@~5.8.0 \
     typescript-eslint@^8.27.0
 ```
 
