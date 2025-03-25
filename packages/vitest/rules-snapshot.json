@@ -1,4 +1,5 @@
 {
+  "@typescript-eslint/unbound-method": "off",
   "vitest/consistent-test-it": ["error", { "fn": "it" }],
   "vitest/expect-expect": "error",
   "vitest/no-alias-methods": "error",
