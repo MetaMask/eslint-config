@@ -74,13 +74,12 @@ jobs:
     strategy:
       matrix:
         node-version: [18.x, 20.x, 22.x]
-        package-name: ${{ fromJson(needs.prepare.outputs.child-workspace-package-names) }}
     steps:
       - name: Checkout and setup environment
         uses: MetaMask/action-checkout-and-setup@v1
         with:
           is-high-risk-environment: false
-      - run: yarn workspace ${{ matrix.package-name }} run test
+      - run: yarn test
       - name: Require clean working directory
         shell: bash
         run: |
