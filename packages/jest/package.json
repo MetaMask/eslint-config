@@ -24,7 +24,8 @@
   "types": "./src/index.d.mts",
   "files": [
     "src/",
-    "!src/**/*.test.mjs"
+    "!src/**/*.test.mjs",
+    "!src/__test__/"
   ],
   "scripts": {
     "changelog:update": "../../scripts/update-changelog.sh @metamask/eslint-config-jest",
