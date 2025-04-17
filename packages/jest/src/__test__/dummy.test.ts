@@ -1,2 +1,7 @@
-// This file is only used to test the config.
-console.log('Hello, world!');
+import { describe, expect, it } from 'vitest';
+
+describe('dummy test file', () => {
+  it('does nothing', () => {
+    expect(true).toBe(true);
+  });
+});
