@@ -22,6 +22,13 @@ describe('index', () => {
     const api = new ESLint({
       baseConfig: config,
       overrideConfig: {
+        rules: {
+          // This rule causes an error when importing `describe`, `it`, `expect`
+          // from `vitest` in the `__test__/dummy.test.ts` file. It's not really
+          // relevant to this test, so we disable it here.
+          '@typescript-eslint/no-shadow': 'off',
+        },
+
         languageOptions: {
           globals: {
             ...globals.node,

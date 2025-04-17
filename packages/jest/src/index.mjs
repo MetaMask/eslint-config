@@ -28,7 +28,6 @@ const config = createConfig([
       'jest/prefer-todo': 'error',
       'jest/require-top-level-describe': 'error',
       'jest/require-to-throw-message': 'error',
-      'jest/unbound-method': 'error',
       'jest/valid-expect': ['error', { alwaysAwait: true }],
       'jest/no-restricted-matchers': [
         'error',
