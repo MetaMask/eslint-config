@@ -393,7 +393,24 @@ const rules = createConfig({
       'always',
       { tags: { returns: 'never', template: 'always', throws: 'never' } },
     ],
-    'jsdoc/require-jsdoc': 'error',
+    'jsdoc/require-jsdoc': [
+      'error',
+      {
+        require: {
+          ArrowFunctionExpression: true,
+          ClassDeclaration: true,
+          FunctionDeclaration: true,
+          FunctionExpression: true,
+          MethodDefinition: true,
+        },
+        contexts: [
+          'TSInterfaceDeclaration',
+          'TSTypeAliasDeclaration',
+          'TSEnumDeclaration',
+          'TSPropertySignature',
+        ],
+      },
+    ],
     'jsdoc/require-param-name': 'error',
     'jsdoc/require-param': ['error', { unnamedRootBase: ['options'] }],
     'jsdoc/require-param-description': 'error',
