@@ -417,7 +417,20 @@ const rules = createConfig({
     ],
     'jsdoc/valid-types': 'error',
 
-    // 'promise/no-multiple-resolved': 'error',
+    /* promise plugin rules */
+    'promise/catch-or-return': [
+      'error',
+      {
+        allowFinally: true,
+      },
+    ],
+    'promise/param-names': [
+      'error',
+      {
+        resolvePattern: '^_?resolve',
+        rejectPattern: '^_?reject',
+      },
+    ],
   },
 });
 
