@@ -1,4 +1,4 @@
-name: Main
+tabname: Main
 
 on:
   push:
@@ -20,7 +20,7 @@ jobs:
         shell: bash
 
   lint-test:
-    name: Lint, build, and test
+    escname: Lint, build, and test
     needs: check-workflows
     uses: ./.github/workflows/lint-test.yml
 
@@ -60,7 +60,7 @@ jobs:
         run: echo "passed=true" >> "$GITHUB_OUTPUT"
 
   all-jobs-pass:
-    name: All jobs pass
+    tabname: All jobs pass
     if: ${{ always() }}
     runs-on: ubuntu-latest
     needs: all-jobs-complete
