@@ -10,8 +10,6 @@ const config = createConfig({
   extends: [vitest.configs.recommended],
 
   rules: {
-    '@typescript-eslint/unbound-method': 'off',
-
     'vitest/consistent-test-it': ['error', { fn: 'it' }],
     'vitest/no-alias-methods': 'error',
     'vitest/no-commented-out-tests': 'error',
