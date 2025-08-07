@@ -1,4 +1,5 @@
 {
+  "@typescript-eslint/unbound-method": "off",
   "jest/consistent-test-it": ["error", { "fn": "it" }],
   "jest/expect-expect": "warn",
   "jest/no-alias-methods": "warn",
@@ -37,6 +38,7 @@
   "jest/prefer-todo": "error",
   "jest/require-to-throw-message": "error",
   "jest/require-top-level-describe": "error",
+  "jest/unbound-method": "error",
   "jest/valid-describe-callback": "error",
   "jest/valid-expect": ["error", { "alwaysAwait": true }],
   "jest/valid-expect-in-promise": "error",
