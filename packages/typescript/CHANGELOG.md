@@ -9,14 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [14.1.0]
 
-### Uncategorized
+### Added
 
-- Revert "feat(typescript): Update type import specifier rules" ([#407](https://github.com/MetaMask/eslint-config/pull/407))
+- Add support for TypeScript 5.6.x-5.8.x ([#395](https://github.com/MetaMask/eslint-config/pull/395))
+
+### Changed
+
 - Disable `@typescript-eslint/no-unsafe-enum-comparison` rule ([#387](https://github.com/MetaMask/eslint-config/pull/387))
-- Support TypeScript 5.6.x-5.8.x ([#395](https://github.com/MetaMask/eslint-config/pull/395))
 - Loosen `@typescript-eslint/prefer-promise-reject-errors` rule to allow rejecting with `unknown` ([#389](https://github.com/MetaMask/eslint-config/pull/389))
-- Bump vite and vitest to address security vulns ([#393](https://github.com/MetaMask/eslint-config/pull/393))
-- feat(typescript): Update type import specifier rules ([#381](https://github.com/MetaMask/eslint-config/pull/381))
 - Loosen `@typescript-eslint/naming-convention` rule to allow more formats for import names ([#388](https://github.com/MetaMask/eslint-config/pull/388))
 - Loosen `@typescript-eslint/switch-exhaustiveness-check` rule to allow `default` case ([#390](https://github.com/MetaMask/eslint-config/pull/390))
 

@@ -9,11 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [14.1.0]
 
-### Uncategorized
+### Changed
 
 - Disable `@typescript-eslint/unbound-method` rule in Jest tests ([#391](https://github.com/MetaMask/eslint-config/pull/391))
-- Bump vite and vitest to address security vulns ([#393](https://github.com/MetaMask/eslint-config/pull/393))
-- Remove jest/no-conditional-in-test rule ([#383](https://github.com/MetaMask/eslint-config/pull/383))
+- Remove `jest/no-conditional-in-test` rule ([#383](https://github.com/MetaMask/eslint-config/pull/383))
 
 ## [14.0.0]
 
