@@ -26,7 +26,7 @@
     "@eslint/js": "^9.11.0",
     "@lavamoat/allow-scripts": "^3.0.4",
     "@metamask/auto-changelog": "^3.4.4",
-    "@metamask/create-release-branch": "^4.0.0",
+    "@metamask/create-release-branch": "^4.1.3",
     "@metamask/eslint-config": "workspace:^",
     "@metamask/eslint-config-nodejs": "workspace:^",
     "@metamask/eslint-config-typescript": "workspace:^",
