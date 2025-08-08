@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Uncategorized
+
+- Bump vite and vitest to address security vulns ([#393](https://github.com/MetaMask/eslint-config/pull/393))
+- Loosen `promise/catch-or-return` and `promise/param-names` rules ([#384](https://github.com/MetaMask/eslint-config/pull/384))
+
 ## [14.0.0]
 
 ### Changed
