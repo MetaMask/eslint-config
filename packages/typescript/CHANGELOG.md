@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [14.1.0]
+
+### Added
+
+- Add support for TypeScript 5.6.x-5.8.x ([#395](https://github.com/MetaMask/eslint-config/pull/395))
+
+### Changed
+
+- Disable `@typescript-eslint/no-unsafe-enum-comparison` rule ([#387](https://github.com/MetaMask/eslint-config/pull/387))
+- Loosen `@typescript-eslint/prefer-promise-reject-errors` rule to allow rejecting with `unknown` ([#389](https://github.com/MetaMask/eslint-config/pull/389))
+- Loosen `@typescript-eslint/naming-convention` rule to allow more formats for import names ([#388](https://github.com/MetaMask/eslint-config/pull/388))
+- Loosen `@typescript-eslint/switch-exhaustiveness-check` rule to allow `default` case ([#390](https://github.com/MetaMask/eslint-config/pull/390))
+
 ## [14.0.0]
 
 ### Added
@@ -171,7 +184,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - To continue extending this config, install this package and update your `.eslintrc.js` `extends` array to include `@metamask/eslint-config-typescript` instead of `@metamask/eslint-config/typescript`.
 - Update `eslint` and other ESLint peer dependencies ([#151](https://github.com/MetaMask/eslint-config/pull/151))
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@14.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@14.1.0...HEAD
+[14.1.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@14.0.0...@metamask/eslint-config-typescript@14.1.0
 [14.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@13.0.0...@metamask/eslint-config-typescript@14.0.0
 [13.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@12.1.0...@metamask/eslint-config-typescript@13.0.0
 [12.1.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@12.0.0...@metamask/eslint-config-typescript@12.1.0
