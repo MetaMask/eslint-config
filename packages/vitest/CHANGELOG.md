@@ -7,10 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Uncategorized
-
-- Bump vite and vitest to address security vulns ([#393](https://github.com/MetaMask/eslint-config/pull/393))
-
 ## [1.0.0]
 
 ### Added
