@@ -1,6 +1,6 @@
 {
   "name": "@metamask/eslint-config",
-  "version": "14.1.0",
+  "version": "14.0.0",
   "description": "Shareable MetaMask ESLint config.",
   "homepage": "https://github.com/MetaMask/eslint-config#readme",
   "bugs": {
