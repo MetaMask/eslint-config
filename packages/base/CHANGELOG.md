@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [14.1.0]
+
+### Changed
+
+- Loosen `promise/catch-or-return` and `promise/param-names` rules ([#384](https://github.com/MetaMask/eslint-config/pull/384))
+
 ## [14.0.0]
 
 ### Changed
@@ -264,7 +270,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add base, TypeScript, and Jest configs (#3)
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@14.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@14.1.0...HEAD
+[14.1.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@14.0.0...@metamask/eslint-config@14.1.0
 [14.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@13.0.0...@metamask/eslint-config@14.0.0
 [13.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@12.2.0...@metamask/eslint-config@13.0.0
 [12.2.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@12.1.0...@metamask/eslint-config@12.2.0
