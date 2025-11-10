@@ -11,7 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Disable `@typescript-eslint/unbound-method` rule in Jest tests ([#391](https://github.com/MetaMask/eslint-config/pull/391))
+- Replace `@typescript-eslint/unbound-method` rule with `jest/unbound-method` in Jest tests ([#391](https://github.com/MetaMask/eslint-config/pull/391))
+  - `jest/unbound-method` is looser than `@typescript-eslint/unbound-method`, so this should be a non-breaking change unless `@typescript-eslint/unbound-method` is disabled.
 - Remove `jest/no-conditional-in-test` rule ([#383](https://github.com/MetaMask/eslint-config/pull/383))
 
 ## [14.0.0]
