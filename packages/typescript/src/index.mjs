@@ -113,7 +113,9 @@ const config = createConfig({
       },
       {
         selector: 'objectLiteralProperty',
-        format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+        // Disabled because object literals are often parameters to 3rd party libraries/services,
+        // which we don't set the naming conventions for
+        format: null,
       },
       {
         selector: 'typeLike',

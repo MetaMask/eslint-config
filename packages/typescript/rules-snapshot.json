@@ -29,10 +29,7 @@
       "selector": "objectLiteralMethod",
       "format": ["camelCase", "PascalCase", "UPPER_CASE"]
     },
-    {
-      "selector": "objectLiteralProperty",
-      "format": ["camelCase", "PascalCase", "UPPER_CASE"]
-    },
+    { "selector": "objectLiteralProperty", "format": null },
     { "selector": "typeLike", "format": ["PascalCase"] },
     {
       "selector": "typeParameter",
