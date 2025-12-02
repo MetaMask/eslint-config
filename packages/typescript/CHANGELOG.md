@@ -16,6 +16,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Disable `promise/valid-params` because it's redundant in type-checked projects ([#425](https://github.com/MetaMask/eslint-config/pull/425))
 - Disable `import-x/no-duplicates` ([#427](https://github.com/MetaMask/eslint-config/pull/427))
   - It was a style preference that we may not want, and the auto-fix was broken.
+- Loosen `@typescript-eslint/naming-convention` by not enforcing naming conventions for object literal properties ([#428](https://github.com/MetaMask/eslint-config/pull/428))
+  - Object literals are too often used as parameters for 3rd party libraries/services.
 
 ### Fixed
 
