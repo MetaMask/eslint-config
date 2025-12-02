@@ -221,13 +221,22 @@ const config = createConfig({
     // multi-line JSDoc types.
     'jsdoc/check-indentation': 'error',
 
+    // This recommended rule is disabled because it keeps thinking `@metamask` is an inline tag
+    'jsdoc/escape-inline-tags': 'off',
+
     // Use TypeScript types rather than JSDoc types.
     'jsdoc/no-types': 'error',
 
     // These all conflict with `jsdoc/no-types`.
+    'jsdoc/reject-any-type': 'off',
+    'jsdoc/reject-function-type': 'off',
+    'jsdoc/require-next-type': 'off',
     'jsdoc/require-param-type': 'off',
     'jsdoc/require-property-type': 'off',
     'jsdoc/require-returns-type': 'off',
+    'jsdoc/require-throws-type': 'off',
+    'jsdoc/require-yields-type': 'off',
+    'jsdoc/ts-no-empty-object-type': 'off',
     'jsdoc/valid-types': 'off',
 
     // Prefer hash names over TypeScript's `private` modifier.

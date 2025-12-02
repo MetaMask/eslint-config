@@ -16,6 +16,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - `promise/no-promise-in-callback`
     - `promise/no-return-in-finally`
     - `promise/valid-params`
+- **BREAKING:** Update `eslint-plugin-jsdoc` peer dependency from `^50.2.4` to `^61.4.1` ([#429](https://github.com/MetaMask/eslint-config/pull/429))
+- **BREAKING:** Add new `jsdoc/` rules ([#429](https://github.com/MetaMask/eslint-config/pull/429))
+  - `jsdoc/reject-any-type`: Disallows `any` in JSDoc types
+  - `jsdoc/reject-function-type`: Disallows `Function` in JSDoc types
+  - `jsdoc/require-next-type`: Requires a type to be specified for `@next` directives
+  - `jsdoc/require-throws-type`: Requires a type to be specified for `@throws` directives
+  - `jsdoc/require-yields-type`: Requires a type to be specified for `@yields` directives`
+  - `jsdoc/ts-no-empty-object-type`: Disallows empty objects in JSDoc types (i.e. `{}`)
 
 ## [14.1.0]
 
