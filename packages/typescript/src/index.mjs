@@ -78,6 +78,9 @@ const config = createConfig({
     '@typescript-eslint/no-unsafe-enum-comparison': 'off',
     '@typescript-eslint/require-await': 'off',
 
+    // Disabled because unnecessary type arguments are sometimes helpful for readability
+    '@typescript-eslint/no-unnecessary-type-arguments': 'off',
+
     // Our rules that require type information
     '@typescript-eslint/consistent-type-exports': 'error',
     '@typescript-eslint/naming-convention': [
@@ -152,7 +155,6 @@ const config = createConfig({
     '@typescript-eslint/no-meaningless-void-operator': 'error',
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
     '@typescript-eslint/no-unnecessary-qualifier': 'error',
-    '@typescript-eslint/no-unnecessary-type-arguments': 'error',
     '@typescript-eslint/prefer-enum-initializers': 'error',
     '@typescript-eslint/prefer-includes': 'error',
     '@typescript-eslint/prefer-nullish-coalescing': 'error',
