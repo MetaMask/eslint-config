@@ -14,6 +14,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Disable `@typescript-eslint/no-unnecessary-type-arguments` ([#426](https://github.com/MetaMask/eslint-config/pull/426))
   - We decided that "unnecessary" type arguments make types easier to read sometimes, so we should allow them.
 - Disable `promise/valid-params` because it's redundant in type-checked projects ([#425](https://github.com/MetaMask/eslint-config/pull/425))
+- Disable `import-x/no-duplicates` ([#427](https://github.com/MetaMask/eslint-config/pull/427))
+  - It was a style preference that we may not want, and the auto-fix was broken.
+
+### Fixed
+
+- Prevent non-type imports from being grouped under a type import upon auto-fix ([#427](https://github.com/MetaMask/eslint-config/pull/427))
+  - This was caused by `import-x/no-duplicates`, which is now disabled.
 
 ## [14.1.0]
 
