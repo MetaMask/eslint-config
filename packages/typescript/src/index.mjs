@@ -199,6 +199,11 @@ const config = createConfig({
 
     /* import-x plugin rules */
 
+    // This rule is to aggresive about combining type and non-type imports, which I'm not sure that we want.
+    // But more importantly, the auto-fixer is broken.
+    // See here for details on that bug: https://github.com/un-ts/eslint-plugin-import-x/issues/231
+    'import-x/no-duplicates': 'off',
+
     // Handled by TypeScript
     'import-x/no-unresolved': 'off',
 

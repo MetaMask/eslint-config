@@ -155,6 +155,7 @@
   "getter-return": "off",
   "import-x/consistent-type-specifier-style": ["error", "prefer-top-level"],
   "import-x/named": "off",
+  "import-x/no-duplicates": "off",
   "import-x/no-unresolved": "off",
   "jsdoc/check-access": "error",
   "jsdoc/check-alignment": "error",
