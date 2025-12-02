@@ -1278,7 +1278,7 @@ __metadata:
     eslint-plugin-import-x: ^4.3.0
     eslint-plugin-jsdoc: ^50.2.4
     typescript: ">=4.8.4 <6"
-    typescript-eslint: ^8.24
+    typescript-eslint: ^8.39.0
   languageName: unknown
   linkType: soft
 
