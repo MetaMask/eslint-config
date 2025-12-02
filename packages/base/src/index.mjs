@@ -376,6 +376,8 @@ const rules = createConfig({
     'jsdoc/check-tag-names': 'error',
     'jsdoc/check-types': 'error',
     'jsdoc/check-values': 'error',
+    // This recommended rule is disabled because it keeps thinking `@metamask` is an inline tag
+    'jsdoc/escape-inline-tags': 'off',
     'jsdoc/empty-tags': 'error',
     'jsdoc/implements-on-classes': 'error',
     'jsdoc/match-description': [
