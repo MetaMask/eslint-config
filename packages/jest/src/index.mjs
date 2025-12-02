@@ -19,6 +19,10 @@ const config = createConfig([
 
     rules: {
       'jest/consistent-test-it': ['error', { fn: 'it' }],
+      'jest/expect-expect': 'error',
+      'jest/no-alias-methods': 'error',
+      'jest/no-commented-out-tests': 'error',
+      'jest/no-disabled-tests': 'error',
       'jest/no-duplicate-hooks': 'error',
       'jest/no-test-return-statement': 'error',
       'jest/prefer-hooks-on-top': 'error',

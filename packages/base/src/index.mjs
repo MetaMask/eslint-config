@@ -441,6 +441,10 @@ const rules = createConfig({
         allowFinally: true,
       },
     ],
+    'promise/no-callback-in-promise': 'error',
+    'promise/no-nesting': 'error',
+    'promise/no-promise-in-callback': 'error',
+    'promise/no-return-in-finally': 'error',
     'promise/param-names': [
       'error',
       {
@@ -448,6 +452,7 @@ const rules = createConfig({
         rejectPattern: '^_?reject',
       },
     ],
+    'promise/valid-params': 'error',
   },
 });
 
