@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **BREAKING:** Update `typescript-eslint` peer dependency to have a minimum version of v8.39.0 ([#423](https://github.com/MetaMask/eslint-config/pull/423))
   - This version has a matching supported `typescript` range, and includes some bug fixes for problems we ran into.
+- Disable `@typescript-eslint/no-unnecessary-type-arguments` ([#426](https://github.com/MetaMask/eslint-config/pull/426))
+  - We decided that "unnecessary" type arguments make types easier to read sometimes, so we should allow them.
 
 ## [14.1.0]
 
