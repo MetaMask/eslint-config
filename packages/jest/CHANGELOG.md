@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- **BREAKING:** Convert various rules from `warn` to `error` ([#424](https://github.com/MetaMask/eslint-config/pull/424))
+  - The rules impacted are:
+    - `jest/expect-expect`
+    - `jest/no-alias-methods`
+    - `jest/no-commented-out-tests`
+    - `jest/no-disabled-tests`
+
 ## [14.1.0]
 
 ### Changed

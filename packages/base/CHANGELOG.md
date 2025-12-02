@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- **BREAKING:** Convert various rules from `warn` to `error` ([#424](https://github.com/MetaMask/eslint-config/pull/424))
+  - The rules impacted are:
+    - `promise/no-callback-in-promise`
+    - `promise/no-nesting`
+    - `promise/no-promise-in-callback`
+    - `promise/no-return-in-finally`
+    - `promise/valid-params`
+
 ## [14.1.0]
 
 ### Changed
