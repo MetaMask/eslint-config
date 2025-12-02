@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - This version has a matching supported `typescript` range, and includes some bug fixes for problems we ran into.
 - Disable `@typescript-eslint/no-unnecessary-type-arguments` ([#426](https://github.com/MetaMask/eslint-config/pull/426))
   - We decided that "unnecessary" type arguments make types easier to read sometimes, so we should allow them.
+- Disable `promise/valid-params` because it's redundant in type-checked projects ([#425](https://github.com/MetaMask/eslint-config/pull/425))
 
 ## [14.1.0]
 

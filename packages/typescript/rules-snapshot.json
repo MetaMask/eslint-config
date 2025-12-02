@@ -250,5 +250,6 @@
   "prefer-promise-reject-errors": "off",
   "prefer-rest-params": "error",
   "prefer-spread": "error",
+  "promise/valid-params": "off",
   "require-await": "off"
 }

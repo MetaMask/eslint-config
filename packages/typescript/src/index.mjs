@@ -232,6 +232,11 @@ const config = createConfig({
         message: 'Use a hash name instead.',
       },
     ],
+
+    /* promise plugin rules */
+
+    // TypeScript already validates Promise params, no need to validate them twice
+    'promise/valid-params': 'off',
   },
 });
 
