@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [15.0.0]
+
 ### Uncategorized
 
 - Bump vite and vitest to address security vulns ([#393](https://github.com/MetaMask/eslint-config/pull/393))
@@ -58,7 +60,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release of this package.
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-browser@14.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-browser@15.0.0...HEAD
+[15.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-browser@14.0.0...@metamask/eslint-config-browser@15.0.0
 [14.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-browser@13.0.0...@metamask/eslint-config-browser@14.0.0
 [13.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-browser@12.1.0...@metamask/eslint-config-browser@13.0.0
 [12.1.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-browser@12.0.0...@metamask/eslint-config-browser@12.1.0

@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [15.0.0]
+
 ### Uncategorized
 
 - Bump vite and vitest to address security vulns ([#393](https://github.com/MetaMask/eslint-config/pull/393))
@@ -19,5 +21,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - This config is based on the `@metamask/eslint-config-jest` config, but uses
     the Vitest plugin instead of Jest.
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-vitest@1.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-vitest@15.0.0...HEAD
+[15.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-vitest@1.0.0...@metamask/eslint-config-vitest@15.0.0
 [1.0.0]: https://github.com/MetaMask/eslint-config/releases/tag/@metamask/eslint-config-vitest@1.0.0

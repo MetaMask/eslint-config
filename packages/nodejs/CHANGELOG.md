@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [15.0.0]
+
 ### Uncategorized
 
 - Bump vite and vitest to address security vulns ([#393](https://github.com/MetaMask/eslint-config/pull/393))
@@ -127,7 +129,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - To continue extending this config, install this package and update your `.eslintrc.js` `extends` array to include `@metamask/eslint-config-nodejs` instead of `@metamask/eslint-config/nodejs`.
 - Update `eslint` and other ESLint peer dependencies ([#151](https://github.com/MetaMask/eslint-config/pull/151))
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-nodejs@14.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-nodejs@15.0.0...HEAD
+[15.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-nodejs@14.0.0...@metamask/eslint-config-nodejs@15.0.0
 [14.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-nodejs@13.0.0...@metamask/eslint-config-nodejs@14.0.0
 [13.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-nodejs@12.1.0...@metamask/eslint-config-nodejs@13.0.0
 [12.1.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-nodejs@12.0.0...@metamask/eslint-config-nodejs@12.1.0
