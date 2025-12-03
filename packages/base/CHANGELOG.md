@@ -9,12 +9,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [15.0.0]
 
-### Uncategorized
-
-- BREAKING: Update `jsdoc/require-jsdoc` to require documentation for more things ([#394](https://github.com/MetaMask/eslint-config/pull/394))
-
 ### Changed
 
+- **BREAKING:** Update `jsdoc/require-jsdoc` to require documentation for more things ([#394](https://github.com/MetaMask/eslint-config/pull/394))
+  - New things that now require documentation are:
+    - Arrow functions
+    - Class declarations
+    - TypeScript enum declarations
+    - Function expressions
+    - TypeScript interface declarations
+    - Method definitions
+    - TypeScript type alias declarations
+    - TypeScript property signatures
 - **BREAKING:** Convert various rules from `warn` to `error` ([#424](https://github.com/MetaMask/eslint-config/pull/424))
   - The rules impacted are:
     - `promise/no-callback-in-promise`

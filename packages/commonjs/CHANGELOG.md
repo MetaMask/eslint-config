@@ -9,9 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [15.0.0]
 
-### Uncategorized
+### Changed
 
-- Bump vite and vitest to address security vulns ([#393](https://github.com/MetaMask/eslint-config/pull/393))
+- **BREAKING:** Bump peer dependency on `@metamask/eslint-config` from `^14.0.0` to `^15.0.0` ([#431](https://github.com/MetaMask/eslint-config/pull/431))
 
 ## [14.0.0]
 

@@ -9,15 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [15.0.0]
 
-### Uncategorized
-
-- Allow remaining TypeScript 5.x versions ([#422](https://github.com/MetaMask/eslint-config/pull/422))
-- Revert "Revert "feat(typescript): Update type import specifier rules"" ([#418](https://github.com/MetaMask/eslint-config/pull/418))
-
 ### Changed
 
+- **BREAKING:** Bump peer dependency on `@metamask/eslint-config` from `^14.0.0` to `^15.0.0` ([#431](https://github.com/MetaMask/eslint-config/pull/431))
 - **BREAKING:** Update `typescript-eslint` peer dependency to have a minimum version of v8.39.0 ([#423](https://github.com/MetaMask/eslint-config/pull/423))
   - This version has a matching supported `typescript` range, and includes some bug fixes for problems we ran into.
+- **BREAKING:** Update type import specifier rules ([#381](https://github.com/MetaMask/eslint-config/pull/381))
+  - `@typescript-eslint/consistent-type-imports` has been replaced with `import-x/consistent-type-specifier-style`
+  - The rule now prefers "top-level" type imports over inline. e.g. `import type { a } from 'x'` over `import { type a } from 'x'`
 - Disable `@typescript-eslint/no-unnecessary-type-arguments` ([#426](https://github.com/MetaMask/eslint-config/pull/426))
   - We decided that "unnecessary" type arguments make types easier to read sometimes, so we should allow them.
 - Disable `promise/valid-params` because it's redundant in type-checked projects ([#425](https://github.com/MetaMask/eslint-config/pull/425))
@@ -27,6 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Object literals are too often used as parameters for 3rd party libraries/services.
 - Disable `jsdoc/check-indentation` ([#430](https://github.com/MetaMask/eslint-config/pull/430))
   - Disabled due to a problem with indended sections in TSDoc blocks.
+- Widen `typescript` peer dependency to allow all 5.x versions ([#422](https://github.com/MetaMask/eslint-config/pull/422))
 
 ### Fixed
 

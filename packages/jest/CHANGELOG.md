@@ -9,18 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [15.0.0]
 
-### Uncategorized
-
-- Allow remaining TypeScript 5.x versions ([#422](https://github.com/MetaMask/eslint-config/pull/422))
-
 ### Changed
 
+- **BREAKING:** Bump peer dependency on `@metamask/eslint-config` from `^14.0.0` to `^15.0.0` ([#431](https://github.com/MetaMask/eslint-config/pull/431))
 - **BREAKING:** Convert various rules from `warn` to `error` ([#424](https://github.com/MetaMask/eslint-config/pull/424))
   - The rules impacted are:
     - `jest/expect-expect`
     - `jest/no-alias-methods`
     - `jest/no-commented-out-tests`
     - `jest/no-disabled-tests`
+- Widen `typescript` peer dependency to allow all 5.x versions ([#422](https://github.com/MetaMask/eslint-config/pull/422))
 
 ## [14.1.0]
 
