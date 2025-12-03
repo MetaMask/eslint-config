@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Uncategorized
+
+- Allow remaining TypeScript 5.x versions ([#422](https://github.com/MetaMask/eslint-config/pull/422))
+- Revert "Revert "feat(typescript): Update type import specifier rules"" ([#418](https://github.com/MetaMask/eslint-config/pull/418))
+
 ### Changed
 
 - **BREAKING:** Update `typescript-eslint` peer dependency to have a minimum version of v8.39.0 ([#423](https://github.com/MetaMask/eslint-config/pull/423))
