@@ -217,9 +217,10 @@ const config = createConfig({
 
     'jsdoc/check-syntax': 'error',
 
-    // This is enabled here rather than in the base config because it doesn't play nicely with
-    // multi-line JSDoc types.
-    'jsdoc/check-indentation': 'error',
+    // This is disabled because it doesn't work with bullet lists, and other types of indented
+    // sections. This issue is fixed in later versions, we can re-enable it after updating.
+    // See https://github.com/gajus/eslint-plugin-jsdoc/issues/541 for details
+    'jsdoc/check-indentation': 'off',
 
     // Use TypeScript types rather than JSDoc types.
     'jsdoc/no-types': 'error',

@@ -18,11 +18,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - It was a style preference that we may not want, and the auto-fix was broken.
 - Loosen `@typescript-eslint/naming-convention` by not enforcing naming conventions for object literal properties ([#428](https://github.com/MetaMask/eslint-config/pull/428))
   - Object literals are too often used as parameters for 3rd party libraries/services.
+- Disable `jsdoc/check-indentation` ([#430](https://github.com/MetaMask/eslint-config/pull/430))
+  - Disabled due to a problem with indended sections in TSDoc blocks.
 
 ### Fixed
 
 - Prevent non-type imports from being grouped under a type import upon auto-fix ([#427](https://github.com/MetaMask/eslint-config/pull/427))
   - This was caused by `import-x/no-duplicates`, which is now disabled.
+- Fix false positive lint error on TSDoc blocks with indended sections (e.g. bullet lists) ([#430](https://github.com/MetaMask/eslint-config/pull/430))
 
 ## [14.1.0]
 
