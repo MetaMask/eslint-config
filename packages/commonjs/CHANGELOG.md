@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [15.0.0]
+
+### Changed
+
+- **BREAKING:** Bump peer dependency on `@metamask/eslint-config` from `^14.0.0` to `^15.0.0` ([#431](https://github.com/MetaMask/eslint-config/pull/431))
+
 ## [14.0.0]
 
 ### Changed
@@ -49,7 +55,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release of this package ([#267](https://github.com/MetaMask/eslint-config/pull/267))
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-commonjs@14.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-commonjs@15.0.0...HEAD
+[15.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-commonjs@14.0.0...@metamask/eslint-config-commonjs@15.0.0
 [14.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-commonjs@13.0.0...@metamask/eslint-config-commonjs@14.0.0
 [13.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-commonjs@12.1.0...@metamask/eslint-config-commonjs@13.0.0
 [12.1.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-commonjs@12.0.0...@metamask/eslint-config-commonjs@12.1.0

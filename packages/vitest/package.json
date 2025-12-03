@@ -1,6 +1,6 @@
 {
   "name": "@metamask/eslint-config-vitest",
-  "version": "1.0.0",
+  "version": "15.0.0",
   "description": "Shareable MetaMask ESLint config for Vitest.",
   "homepage": "https://github.com/MetaMask/eslint-config#readme",
   "bugs": {

@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [15.0.0]
+
+### Changed
+
+- **BREAKING:** Bump peer dependency on `@metamask/eslint-config` from `^14.0.0` to `^15.0.0` ([#431](https://github.com/MetaMask/eslint-config/pull/431))
+- Bump version to v15 rather than v2 to synchronize this with the other lint config packages ([#431](https://github.com/MetaMask/eslint-config/pull/431))
+
 ## [1.0.0]
 
 ### Added
@@ -15,5 +22,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - This config is based on the `@metamask/eslint-config-jest` config, but uses
     the Vitest plugin instead of Jest.
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-vitest@1.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-vitest@15.0.0...HEAD
+[15.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-vitest@1.0.0...@metamask/eslint-config-vitest@15.0.0
 [1.0.0]: https://github.com/MetaMask/eslint-config/releases/tag/@metamask/eslint-config-vitest@1.0.0
