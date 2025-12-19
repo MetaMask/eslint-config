@@ -42,7 +42,12 @@ const config = createConfig({
     '@typescript-eslint/array-type': 'error',
     '@typescript-eslint/consistent-type-assertions': 'error',
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
-    '@typescript-eslint/explicit-function-return-type': 'error',
+    '@typescript-eslint/explicit-function-return-type': [
+      'error',
+      {
+        allowExpressions: true,
+      },
+    ],
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-namespace': [
       'error',
@@ -224,6 +229,36 @@ const config = createConfig({
 
     // Use TypeScript types rather than JSDoc types.
     'jsdoc/no-types': 'error',
+
+    // Override rule defined in base config to require JSDoc for
+    // TypeScript-specific symbols.
+    'jsdoc/require-jsdoc': [
+      'error',
+      {
+        require: {
+          // Classes
+          ClassDeclaration: true,
+          // Function declarations
+          FunctionDeclaration: true,
+          // Methods
+          MethodDefinition: true,
+        },
+        contexts: [
+          // Arrow functions that are not contained within plain objects or
+          // are not arguments to functions or methods
+          ':not(Property, NewExpression, CallExpression) > ArrowFunctionExpression',
+          // Function expressions that are not contained within plain objects
+          // or are not arguments to functions or methods
+          ':not(Property, NewExpression, CallExpression) > FunctionExpression',
+          // Type interfaces that are not defined within `declare` blocks
+          ':not(TSModuleBlock) > TSInterfaceDeclaration',
+          // Type aliases
+          'TSTypeAliasDeclaration',
+          // Enums
+          'TSEnumDeclaration',
+        ],
+      },
+    ],
 
     // These all conflict with `jsdoc/no-types`.
     'jsdoc/require-param-type': 'off',
