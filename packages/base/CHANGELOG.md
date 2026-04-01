@@ -12,6 +12,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update `jsdoc/require-jsdoc` to loosen requirements for various kinds of symbols ([#433](https://github.com/MetaMask/eslint-config/pull/433))
   - Instead of requiring JSDoc for all arrow functions and function expressions, require only arrow functions not contained within plain objects or are not arguments to functions or methods.
 
+## [15.0.0]
+
+### Changed
+
+- **BREAKING:** Update `jsdoc/require-jsdoc` to require documentation for more things ([#394](https://github.com/MetaMask/eslint-config/pull/394))
+  - New things that now require documentation are:
+    - Arrow functions
+    - Class declarations
+    - Function expressions
+    - Method definitions
+- **BREAKING:** Convert various rules from `warn` to `error` ([#424](https://github.com/MetaMask/eslint-config/pull/424))
+  - The rules impacted are:
+    - `promise/no-callback-in-promise`
+    - `promise/no-nesting`
+    - `promise/no-promise-in-callback`
+    - `promise/no-return-in-finally`
+    - `promise/valid-params`
+
 ## [14.1.0]
 
 ### Changed
@@ -37,13 +55,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - ESLint 9 supports ESM out-of-the-box, so this change updates the package to
     be pure ESM. This means that the package can no longer be used with CommonJS
     `require` syntax.
-- **BREAKING:** Update `jsdoc/require-jsdoc` to require documentation for more things ([#394](https://github.com/MetaMask/eslint-config/pull/394))
-  - These kinds of symbols are now required to have JSDoc:
-    - Arrow functions
-    - Class declarations
-    - Enum declarations
-    - Function expressions
-    - Method definitions
 
 ## [13.0.0]
 
@@ -282,7 +293,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add base, TypeScript, and Jest configs (#3)
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@14.1.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@15.0.0...HEAD
+[15.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@14.1.0...@metamask/eslint-config@15.0.0
 [14.1.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@14.0.0...@metamask/eslint-config@14.1.0
 [14.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@13.0.0...@metamask/eslint-config@14.0.0
 [13.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@12.2.0...@metamask/eslint-config@13.0.0

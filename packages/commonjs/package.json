@@ -1,6 +1,6 @@
 {
   "name": "@metamask/eslint-config-commonjs",
-  "version": "14.0.0",
+  "version": "15.0.0",
   "description": "Shareable MetaMask ESLint config for CommonJS projects.",
   "homepage": "https://github.com/MetaMask/eslint-config#readme",
   "bugs": {

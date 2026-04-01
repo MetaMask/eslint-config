@@ -114,6 +114,9 @@ const config = createConfig({
     '@typescript-eslint/no-unsafe-enum-comparison': 'off',
     '@typescript-eslint/require-await': 'off',
 
+    // Disabled because unnecessary type arguments are sometimes helpful for readability
+    '@typescript-eslint/no-unnecessary-type-arguments': 'off',
+
     // Our rules that require type information
     '@typescript-eslint/consistent-type-exports': 'error',
     '@typescript-eslint/naming-convention': [
@@ -146,7 +149,9 @@ const config = createConfig({
       },
       {
         selector: 'objectLiteralProperty',
-        format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+        // Disabled because object literals are often parameters to 3rd party libraries/services,
+        // which we don't set the naming conventions for
+        format: null,
       },
       {
         selector: 'typeLike',
@@ -188,7 +193,6 @@ const config = createConfig({
     '@typescript-eslint/no-meaningless-void-operator': 'error',
     '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
     '@typescript-eslint/no-unnecessary-qualifier': 'error',
-    '@typescript-eslint/no-unnecessary-type-arguments': 'error',
     '@typescript-eslint/prefer-enum-initializers': 'error',
     '@typescript-eslint/prefer-includes': 'error',
     '@typescript-eslint/prefer-nullish-coalescing': 'error',
@@ -233,6 +237,11 @@ const config = createConfig({
 
     /* import-x plugin rules */
 
+    // This rule is to aggresive about combining type and non-type imports, which I'm not sure that we want.
+    // But more importantly, the auto-fixer is broken.
+    // See here for details on that bug: https://github.com/un-ts/eslint-plugin-import-x/issues/231
+    'import-x/no-duplicates': 'off',
+
     // Handled by TypeScript
     'import-x/no-unresolved': 'off',
 
@@ -244,9 +253,10 @@ const config = createConfig({
 
     'jsdoc/check-syntax': 'error',
 
-    // This is enabled here rather than in the base config because it doesn't play nicely with
-    // multi-line JSDoc types.
-    'jsdoc/check-indentation': 'error',
+    // This is disabled because it doesn't work with bullet lists, and other types of indented
+    // sections. This issue is fixed in later versions, we can re-enable it after updating.
+    // See https://github.com/gajus/eslint-plugin-jsdoc/issues/541 for details
+    'jsdoc/check-indentation': 'off',
 
     // Use TypeScript types rather than JSDoc types.
     'jsdoc/no-types': 'error',
@@ -284,6 +294,11 @@ const config = createConfig({
         message: 'Use a hash name instead.',
       },
     ],
+
+    /* promise plugin rules */
+
+    // TypeScript already validates Promise params, no need to validate them twice
+    'promise/valid-params': 'off',
   },
 });
 

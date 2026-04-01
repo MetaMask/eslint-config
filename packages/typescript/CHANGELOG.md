@@ -14,6 +14,43 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Instead of requiring JSDoc for all interfaces or type aliases, require only those that do not appear in declare blocks (ambient declarations).
   - Instead of requiring JSDoc for all object types in return types, require only object types in "root" types.
 
+## [15.0.0]
+
+### Changed
+
+- **BREAKING:** Bump peer dependency on `@metamask/eslint-config` from `^14.0.0` to `^15.0.0` ([#431](https://github.com/MetaMask/eslint-config/pull/431))
+- **BREAKING:** Update `typescript-eslint` peer dependency to have a minimum version of v8.39.0 ([#423](https://github.com/MetaMask/eslint-config/pull/423))
+  - This version has a matching supported `typescript` range, and includes some bug fixes for problems we ran into.
+- **BREAKING:** Update type import specifier rules ([#381](https://github.com/MetaMask/eslint-config/pull/381))
+  - `@typescript-eslint/consistent-type-imports` has been replaced with `import-x/consistent-type-specifier-style`
+  - The rule now prefers "top-level" type imports over inline. e.g. `import type { a } from 'x'` over `import { type a } from 'x'`
+- **BREAKING:** Update `jsdoc/require-jsdoc` to require documentation for more things ([#394](https://github.com/MetaMask/eslint-config/pull/394))
+  - New things that now require documentation are:
+    - Arrow functions
+    - Class declarations
+    - Function expressions
+    - Method definitions
+    - TypeScript enum declarations
+    - TypeScript interface declarations
+    - TypeScript type alias declarations
+    - TypeScript property signatures
+- Disable `@typescript-eslint/no-unnecessary-type-arguments` ([#426](https://github.com/MetaMask/eslint-config/pull/426))
+  - We decided that "unnecessary" type arguments make types easier to read sometimes, so we should allow them.
+- Disable `promise/valid-params` because it's redundant in type-checked projects ([#425](https://github.com/MetaMask/eslint-config/pull/425))
+- Disable `import-x/no-duplicates` ([#427](https://github.com/MetaMask/eslint-config/pull/427))
+  - It was a style preference that we may not want, and the auto-fix was broken.
+- Loosen `@typescript-eslint/naming-convention` by not enforcing naming conventions for object literal properties ([#428](https://github.com/MetaMask/eslint-config/pull/428))
+  - Object literals are too often used as parameters for 3rd party libraries/services.
+- Disable `jsdoc/check-indentation` ([#430](https://github.com/MetaMask/eslint-config/pull/430))
+  - Disabled due to a problem with indended sections in TSDoc blocks.
+- Widen `typescript` peer dependency to allow all 5.x versions ([#422](https://github.com/MetaMask/eslint-config/pull/422))
+
+### Fixed
+
+- Prevent non-type imports from being grouped under a type import upon auto-fix ([#427](https://github.com/MetaMask/eslint-config/pull/427))
+  - This was caused by `import-x/no-duplicates`, which is now disabled.
+- Fix false positive lint error on TSDoc blocks with indended sections (e.g. bullet lists) ([#430](https://github.com/MetaMask/eslint-config/pull/430))
+
 ## [14.1.0]
 
 ### Added
@@ -47,16 +84,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - ESLint 9 supports ESM out-of-the-box, so this change updates the package to
     be pure ESM. This means that the package can no longer be used with CommonJS
     `require` syntax.
-- **BREAKING:** Update `jsdoc/require-jsdoc` to require documentation for more things ([#394](https://github.com/MetaMask/eslint-config/pull/394))
-  - These kinds of symbols are now required to have JSDoc:
-    - Arrow functions
-    - Class declarations
-    - Enum declarations
-    - Function expressions
-    - Method definitions
-    - TypeScript interface declarations
-    - TypeScript type alias declarations
-    - TypeScript property signatures
 
 ### Removed
 
@@ -201,7 +228,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - To continue extending this config, install this package and update your `.eslintrc.js` `extends` array to include `@metamask/eslint-config-typescript` instead of `@metamask/eslint-config/typescript`.
 - Update `eslint` and other ESLint peer dependencies ([#151](https://github.com/MetaMask/eslint-config/pull/151))
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@14.1.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@15.0.0...HEAD
+[15.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@14.1.0...@metamask/eslint-config-typescript@15.0.0
 [14.1.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@14.0.0...@metamask/eslint-config-typescript@14.1.0
 [14.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@13.0.0...@metamask/eslint-config-typescript@14.0.0
 [13.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@12.1.0...@metamask/eslint-config-typescript@13.0.0
