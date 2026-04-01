@@ -73,12 +73,7 @@ const config = createConfig({
     '@typescript-eslint/array-type': 'error',
     '@typescript-eslint/consistent-type-assertions': 'error',
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
-    '@typescript-eslint/explicit-function-return-type': [
-      'error',
-      {
-        allowExpressions: true,
-      },
-    ],
+    '@typescript-eslint/explicit-function-return-type': 'error',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-namespace': [
       'error',
