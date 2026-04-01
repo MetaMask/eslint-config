@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- **BREAKING:** Restrict usage of `with`, `in`, and sequence expressions, which should have been inherited from the base config but were overwritten
+
 ## [15.0.0]
 
 ### Changed

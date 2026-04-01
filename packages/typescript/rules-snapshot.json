@@ -227,6 +227,18 @@
   "no-restricted-syntax": [
     "error",
     {
+      "selector": "WithStatement",
+      "message": "With statements are not allowed"
+    },
+    {
+      "selector": "BinaryExpression[operator='in']",
+      "message": "The \"in\" operator is not allowed"
+    },
+    {
+      "selector": "SequenceExpression",
+      "message": "Sequence expressions are not allowed"
+    },
+    {
       "selector": "PropertyDefinition[accessibility='private'], MethodDefinition[accessibility='private'], TSParameterProperty[accessibility='private']",
       "message": "Use a hash name instead."
     }
