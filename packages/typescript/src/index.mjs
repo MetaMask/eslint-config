@@ -32,6 +32,11 @@ function collectExistingRuleOptions(ruleName, configs) {
   });
 }
 
+const existingJsdocRuleOptions = collectExistingRuleOptions(
+  'jsdoc/require-jsdoc',
+  base,
+);
+
 const config = createConfig({
   name: '@metamask/eslint-config-typescript',
 
@@ -246,23 +251,14 @@ const config = createConfig({
     // Use TypeScript types rather than JSDoc types.
     'jsdoc/no-types': 'error',
 
-    // Override rule defined in base config to require JSDoc for
+    // Extend rule defined in base config to require JSDoc for
     // TypeScript-specific symbols.
     'jsdoc/require-jsdoc': [
       'error',
       {
-        require: {
-          // Classes
-          ClassDeclaration: true,
-          // Function declarations
-          FunctionDeclaration: true,
-          // Methods
-          MethodDefinition: true,
-        },
+        require: existingJsdocRuleOptions[0].require,
         contexts: [
-          ...collectExistingRuleOptions('jsdoc/require-jsdoc', base)[0]
-            .contexts,
-
+          ...existingJsdocRuleOptions[0].contexts,
           // Type interfaces that are not defined within `declare` blocks
           ':not(TSModuleBlock) > TSInterfaceDeclaration',
           // Type aliases that are not defined within `declare` blocks
