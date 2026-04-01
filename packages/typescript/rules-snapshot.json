@@ -206,7 +206,6 @@
       "contexts": [
         ":not(Property, NewExpression, CallExpression) > ArrowFunctionExpression",
         ":not(Property, NewExpression, CallExpression) > FunctionExpression",
-        "ExportNamedDeclaration:has(> VariableDeclaration)",
         ":not(TSModuleBlock) > TSInterfaceDeclaration",
         ":not(TSModuleBlock) > TSTypeAliasDeclaration",
         "TSEnumDeclaration"
@@ -265,6 +264,7 @@
   "no-use-before-define": "off",
   "no-useless-constructor": "off",
   "no-var": "error",
+  "no-with": "off",
   "prefer-const": "error",
   "prefer-promise-reject-errors": "off",
   "prefer-rest-params": "error",
