@@ -411,6 +411,8 @@ const rules = createConfig({
           // Function expressions that are not contained within plain objects
           // or are not arguments to functions or methods
           ':not(Property, NewExpression, CallExpression) > FunctionExpression',
+          // Exported variables
+          'ExportNamedDeclaration:has(> VariableDeclaration)',
         ],
       },
     ],

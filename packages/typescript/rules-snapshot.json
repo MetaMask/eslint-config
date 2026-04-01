@@ -201,6 +201,7 @@
       "contexts": [
         ":not(Property, NewExpression, CallExpression) > ArrowFunctionExpression",
         ":not(Property, NewExpression, CallExpression) > FunctionExpression",
+        "ExportNamedDeclaration:has(> VariableDeclaration)",
         ":not(TSModuleBlock, TSModuleBlock > ExportNamedDeclaration) > TSInterfaceDeclaration",
         ":not(TSModuleBlock, TSModuleBlock > ExportNamedDeclaration) > TSTypeAliasDeclaration",
         ":not(TSModuleBlock, TSModuleBlock > ExportNamedDeclaration) > TSEnumDeclaration",
