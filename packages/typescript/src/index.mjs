@@ -1,10 +1,36 @@
-import { createConfig } from '@metamask/eslint-config';
+import base, { createConfig } from '@metamask/eslint-config';
 import * as resolver from 'eslint-import-resolver-typescript';
 import importX from 'eslint-plugin-import-x';
 import jsdoc from 'eslint-plugin-jsdoc';
 // TODO: Look into why this doesn't resolve.
 // eslint-disable-next-line import-x/no-unresolved
 import typescript from 'typescript-eslint';
+
+/**
+ * Collects all options for a given array-valued rule across one or more flat
+ * config arrays, excluding the leading severity element.
+ *
+ * ESLint flat config does not merge array-valued rules across config objects —
+ * a later config silently replaces earlier ones. This helper makes it possible
+ * to extend an upstream rule configuration rather than copy-pasting its options.
+ *
+ * @param {string} ruleName - The rule to collect options for.
+ * @param {import('eslint').Linter.Config[][]} configs - Flat config arrays to
+ * collect options from.
+ * @returns {unknown[]} The options from all matching rule entries, with the
+ * leading severity element omitted.
+ */
+function collectExistingRuleOptions(ruleName, configs) {
+  return configs.flat().flatMap((config) => {
+    const rule = config.rules?.[ruleName];
+    if (!Array.isArray(rule)) {
+      return [];
+    }
+    // Rule entries are ['error' | 'warn' | number, ...options].
+    // Skip the first element (severity) and collect the rest.
+    return rule.slice(1);
+  });
+}
 
 const config = createConfig({
   name: '@metamask/eslint-config-typescript',
@@ -234,16 +260,13 @@ const config = createConfig({
           MethodDefinition: true,
         },
         contexts: [
-          // Arrow functions that are not contained within plain objects or
-          // are not arguments to functions or methods
-          ':not(Property, NewExpression, CallExpression) > ArrowFunctionExpression',
-          // Function expressions that are not contained within plain objects
-          // or are not arguments to functions or methods
-          ':not(Property, NewExpression, CallExpression) > FunctionExpression',
+          ...collectExistingRuleOptions('jsdoc/require-jsdoc', base)[0]
+            .contexts,
+
           // Type interfaces that are not defined within `declare` blocks
           ':not(TSModuleBlock) > TSInterfaceDeclaration',
-          // Type aliases
-          'TSTypeAliasDeclaration',
+          // Type aliases that are not defined within `declare` blocks
+          ':not(TSModuleBlock) > TSTypeAliasDeclaration',
           // Enums
           'TSEnumDeclaration',
         ],
