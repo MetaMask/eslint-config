@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Update `jsdoc/require-jsdoc` to loosen requirements for various kinds of symbols ([#433](https://github.com/MetaMask/eslint-config/pull/433))
+  - Instead of requiring JSDoc for all arrow functions and function expressions, require only arrow functions not contained within plain objects or are not arguments to functions or methods.
+  - Instead of requiring JSDoc for all interfaces or type aliases, require only those that do not appear in declare blocks (ambient declarations).
+  - Instead of requiring JSDoc for all object types in return types, require only object types in "root" types.
+
 ## [14.1.0]
 
 ### Added
@@ -40,6 +47,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - ESLint 9 supports ESM out-of-the-box, so this change updates the package to
     be pure ESM. This means that the package can no longer be used with CommonJS
     `require` syntax.
+- **BREAKING:** Update `jsdoc/require-jsdoc` to require documentation for more things ([#394](https://github.com/MetaMask/eslint-config/pull/394))
+  - These kinds of symbols are now required to have JSDoc:
+    - Arrow functions
+    - Class declarations
+    - Enum declarations
+    - Function expressions
+    - Method definitions
+    - TypeScript interface declarations
+    - TypeScript type alias declarations
+    - TypeScript property signatures
 
 ### Removed
 
