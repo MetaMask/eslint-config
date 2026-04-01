@@ -32,7 +32,7 @@ function collectExistingRuleOptions(ruleName, configs) {
   });
 }
 
-const existingJsdocRuleOptions = collectExistingRuleOptions(
+const baseJsdocRuleOptions = collectExistingRuleOptions(
   'jsdoc/require-jsdoc',
   base,
 );
@@ -256,9 +256,9 @@ const config = createConfig({
     'jsdoc/require-jsdoc': [
       'error',
       {
-        require: existingJsdocRuleOptions[0].require,
+        require: baseJsdocRuleOptions[0].require,
         contexts: [
-          ...existingJsdocRuleOptions[0].contexts,
+          ...baseJsdocRuleOptions[0].contexts,
           // Type interfaces that are not defined within `declare` blocks
           ':not(TSModuleBlock) > TSInterfaceDeclaration',
           // Type aliases that are not defined within `declare` blocks
