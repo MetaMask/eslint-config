@@ -10,23 +10,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Update `jsdoc/require-jsdoc` to loosen requirements for various kinds of symbols ([#433](https://github.com/MetaMask/eslint-config/pull/433))
+
   - JSDoc is no longer required for arrow functions or function expressions which are values of object properties:
+
     ```typescript
     const foo = {
       // This arrow function is no longer required to be documented
       bar: () => {
         // ...
-      }
+      },
     };
 
     const foo = {
       // This function expression is no longer required to be documented
-      bar: function() {
+      bar: function () {
         // ...
-      }
+      },
     };
     ```
+
   - JSDoc is no longer required for arrow functions or function expressions which are arguments to functions or methods:
+
     ```typescript
     // This arrow function is no longer required to be documented
     foo(() => {
@@ -38,11 +42,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
       // ...
     });
     ```
+
   - JSDoc is no longer required for interfaces, type aliases, or enums that appear in `declare` blocks (even if they are exported):
+
     ```typescript
-    declare module 'some-module' {
+    declare module "some-module" {
       // This type is no longer required to be documented
-      type Bar = 'baz';
+      type Bar = "baz";
 
       // This interface is no longer required to be documented, even though it
       // is exported
@@ -52,15 +58,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
       // This enum is no longer required to be documented
       enum Fooz {
-        Bar = 'baz',
+        Bar = "baz",
       }
     }
     ```
+
   - JSDoc is no longer required for inline object types in return types:
     ```typescript
     // This object type is no longer required to be documented
     function foo(): {
-      bar: 'baz';
+      bar: "baz";
     } {
       // ...
     }
