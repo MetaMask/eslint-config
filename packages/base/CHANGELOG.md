@@ -17,26 +17,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
       bar: () => {
         // ...
       }
-    });
+    };
 
     const foo = {
       // This function expression is no longer required to be documented
       bar: function() {
         // ...
       }
-    });
+    };
     ```
   - JSDoc is no longer required for arrow functions or function expressions which are arguments to functions or methods:
     ```typescript
     // This arrow function is no longer required to be documented
     foo(() => {
       // ...
-    })
+    });
 
     // This function expression is no longer required to be documented
     foo(function () {
       // ...
-    })
+    }):
     ```
 
 ## [15.0.0]
