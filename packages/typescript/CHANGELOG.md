@@ -17,26 +17,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
       bar: () => {
         // ...
       }
-    });
+    };
 
     const foo = {
       // This function expression is no longer required to be documented
       bar: function() {
         // ...
       }
-    });
+    };
     ```
   - JSDoc is no longer required for arrow functions or function expressions which are arguments to functions or methods:
     ```typescript
     // This arrow function is no longer required to be documented
     foo(() => {
       // ...
-    })
+    });
 
     // This function expression is no longer required to be documented
     foo(function () {
       // ...
-    })
+    });
     ```
   - JSDoc is no longer required for interfaces, type aliases, or enums that appear in `declare` blocks (even if they are exported):
     ```typescript
@@ -47,7 +47,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
       // This interface is no longer required to be documented, even though it
       // is exported
       export interface Y {
-        // whatever
+        // ...
       }
 
       // This enum is no longer required to be documented
@@ -61,7 +61,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     // This object type is no longer required to be documented
     function foo(): {
       bar: 'baz';
-      qux: 'blargh';
     } {
       // ...
     }
