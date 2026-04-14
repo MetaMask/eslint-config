@@ -10,7 +10,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Update `jsdoc/require-jsdoc` to loosen requirements for various kinds of symbols ([#433](https://github.com/MetaMask/eslint-config/pull/433))
-  - Instead of requiring JSDoc for all arrow functions and function expressions, require only arrow functions not contained within plain objects or are not arguments to functions or methods.
+  - JSDoc is no longer required for arrow functions or function expressions which are values of object properties:
+    ```typescript
+    const foo = {
+      // This arrow function is no longer required to be documented
+      bar: () => {
+        // ...
+      }
+    });
+
+    const foo = {
+      // This function expression is no longer required to be documented
+      bar: function() {
+        // ...
+      }
+    });
+    ```
+  - JSDoc is no longer required for arrow functions or function expressions which are arguments to functions or methods:
+    ```typescript
+    // This arrow function is no longer required to be documented
+    foo(() => {
+      // ...
+    })
+
+    // This function expression is no longer required to be documented
+    foo(function () {
+      // ...
+    })
+    ```
 
 ## [15.0.0]
 
