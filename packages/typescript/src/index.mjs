@@ -264,12 +264,15 @@ const config = createConfig({
         require: baseJsdocRuleOptions[0].require,
         contexts: [
           ...baseJsdocRuleOptions[0].contexts,
-          // Type interfaces that are not defined within `declare` blocks
-          ':not(TSModuleBlock) > TSInterfaceDeclaration',
-          // Type aliases that are not defined within `declare` blocks
-          ':not(TSModuleBlock) > TSTypeAliasDeclaration',
-          // Enums
-          'TSEnumDeclaration',
+          // Type interfaces that are not defined within `declare` blocks,
+          // even if they are exported
+          ':not(TSModuleBlock, TSModuleBlock > ExportNamedDeclaration) > TSInterfaceDeclaration',
+          // Type aliases that are not defined within `declare` blocks,
+          // even if they are exported
+          ':not(TSModuleBlock, TSModuleBlock > ExportNamedDeclaration) > TSTypeAliasDeclaration',
+          // Enums that are not defined within `declare` blocks,
+          // even if they are exported
+          ':not(TSModuleBlock, TSModuleBlock > ExportNamedDeclaration) > TSEnumDeclaration',
         ],
       },
     ],
