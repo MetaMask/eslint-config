@@ -273,6 +273,12 @@ const config = createConfig({
           // Enums that are not defined within `declare` blocks,
           // even if they are exported
           ':not(TSModuleBlock, TSModuleBlock > ExportNamedDeclaration) > TSEnumDeclaration',
+          // Properties that are part of a named interface, not inline within a
+          // return type
+          'TSInterfaceDeclaration TSPropertySignature',
+          // Properties that are part of a named type alias, not inline within a
+          // return type
+          'TSTypeAliasDeclaration TSPropertySignature',
         ],
       },
     ],
