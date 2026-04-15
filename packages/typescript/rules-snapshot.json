@@ -203,7 +203,9 @@
         ":not(Property, NewExpression, CallExpression) > FunctionExpression",
         ":not(TSModuleBlock, TSModuleBlock > ExportNamedDeclaration) > TSInterfaceDeclaration",
         ":not(TSModuleBlock, TSModuleBlock > ExportNamedDeclaration) > TSTypeAliasDeclaration",
-        ":not(TSModuleBlock, TSModuleBlock > ExportNamedDeclaration) > TSEnumDeclaration"
+        ":not(TSModuleBlock, TSModuleBlock > ExportNamedDeclaration) > TSEnumDeclaration",
+        "TSInterfaceDeclaration TSPropertySignature",
+        "TSTypeAliasDeclaration TSPropertySignature"
       ]
     }
   ],
