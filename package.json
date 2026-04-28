@@ -32,7 +32,7 @@
     "@metamask/eslint-config-nodejs": "workspace:^",
     "@metamask/eslint-config-typescript": "workspace:^",
     "@metamask/eslint-config-vitest": "workspace:^",
-    "@metamask/utils": "^9.1.0",
+    "@metamask/utils": "^11.11.0",
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^22.5.5",
     "depcheck": "^1.4.7",
