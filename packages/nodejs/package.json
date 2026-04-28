@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
-    "@metamask/auto-changelog": "^3.4.4",
+    "@metamask/auto-changelog": "^6.1.0",
     "@metamask/eslint-config": "workspace:^",
     "eslint": "^9.11.0",
     "eslint-config-prettier": "^9.1.0",
