@@ -51,6 +51,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - New things that now require documentation are:
     - Arrow functions
     - Class declarations
+    - Function declarations
     - Function expressions
     - Method definitions
 - **BREAKING:** Convert various rules from `warn` to `error` ([#424](https://github.com/MetaMask/eslint-config/pull/424))

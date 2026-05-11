@@ -9,69 +9,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Update `jsdoc/require-jsdoc` to loosen requirements for various kinds of symbols ([#433](https://github.com/MetaMask/eslint-config/pull/433))
-
-  - JSDoc is no longer required for arrow functions or function expressions which are values of object properties:
-
-    ```typescript
-    const foo = {
-      // This arrow function is no longer required to be documented
-      bar: () => {
-        // ...
-      },
-    };
-
-    const foo = {
-      // This function expression is no longer required to be documented
-      bar: function () {
-        // ...
-      },
-    };
-    ```
-
-  - JSDoc is no longer required for arrow functions or function expressions which are arguments to functions or methods:
-
-    ```typescript
-    // This arrow function is no longer required to be documented
-    foo(() => {
-      // ...
-    });
-
-    // This function expression is no longer required to be documented
-    foo(function () {
-      // ...
-    });
-    ```
-
-  - JSDoc is no longer required for interfaces, type aliases, or enums that appear in `declare` blocks (even if they are exported):
-
-    ```typescript
-    declare module "some-module" {
-      // This type is no longer required to be documented
-      type Bar = "baz";
-
-      // This interface is no longer required to be documented, even though it
-      // is exported
-      export interface Y {
-        // ...
-      }
-
-      // This enum is no longer required to be documented
-      enum Fooz {
-        Bar = "baz",
-      }
-    }
-    ```
-
-  - JSDoc is no longer required for inline object types in return types:
-    ```typescript
-    // This object type is no longer required to be documented
-    function foo(): {
-      bar: "baz";
-    } {
-      // ...
-    }
-    ```
+- **BREAKING:** Update `jsdoc/require-jsdoc` to require documentation for more things ([#394](https://github.com/MetaMask/eslint-config/pull/394))
+  - New things that now require documentation are:
+    - Arrow functions (except those which are arguments to functions/methods or values of object properties)
+    - Class declarations
+    - Function declarations
+    - Function expressions (except those which are arguments to functions/methods or values of object properties)
+    - Method definitions
+    - TypeScript enum declarations (except those defined in a `declare` block)
+    - TypeScript interface declarations (except those defined in a `declare` block)
+    - TypeScript type alias declarations (except those defined in a `declare` block)
+    - TypeScript property signatures withiin interfaces or type aliases
 
 ## [15.0.0]
 
@@ -83,16 +31,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **BREAKING:** Update type import specifier rules ([#381](https://github.com/MetaMask/eslint-config/pull/381))
   - `@typescript-eslint/consistent-type-imports` has been replaced with `import-x/consistent-type-specifier-style`
   - The rule now prefers "top-level" type imports over inline. e.g. `import type { a } from 'x'` over `import { type a } from 'x'`
-- **BREAKING:** Update `jsdoc/require-jsdoc` to require documentation for more things ([#394](https://github.com/MetaMask/eslint-config/pull/394))
-  - New things that now require documentation are:
-    - Arrow functions
-    - Class declarations
-    - Function expressions
-    - Method definitions
-    - TypeScript enum declarations
-    - TypeScript interface declarations
-    - TypeScript type alias declarations
-    - TypeScript property signatures
 - Disable `@typescript-eslint/no-unnecessary-type-arguments` ([#426](https://github.com/MetaMask/eslint-config/pull/426))
   - We decided that "unnecessary" type arguments make types easier to read sometimes, so we should allow them.
 - Disable `promise/valid-params` because it's redundant in type-checked projects ([#425](https://github.com/MetaMask/eslint-config/pull/425))
