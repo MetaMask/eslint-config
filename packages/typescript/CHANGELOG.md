@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- **BREAKING:** Update `jsdoc/require-jsdoc` to require documentation for more things ([#394](https://github.com/MetaMask/eslint-config/pull/394), ([#437](https://github.com/MetaMask/eslint-config/pull/437))
+- **BREAKING:** Update `jsdoc/require-jsdoc` to require documentation for more things ([#394](https://github.com/MetaMask/eslint-config/pull/394), [#437](https://github.com/MetaMask/eslint-config/pull/437))
   - New things that now require documentation are:
     - Arrow functions (except those which are arguments to functions/methods or values of object properties)
     - Class declarations
