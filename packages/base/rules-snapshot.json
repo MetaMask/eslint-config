@@ -180,17 +180,13 @@
     "error",
     {
       "require": {
-        "ArrowFunctionExpression": true,
         "ClassDeclaration": true,
         "FunctionDeclaration": true,
-        "FunctionExpression": true,
         "MethodDefinition": true
       },
       "contexts": [
-        "TSInterfaceDeclaration",
-        "TSTypeAliasDeclaration",
-        "TSEnumDeclaration",
-        "TSPropertySignature"
+        ":not(Property, NewExpression, CallExpression) > ArrowFunctionExpression",
+        ":not(Property, NewExpression, CallExpression) > FunctionExpression"
       ]
     }
   ],

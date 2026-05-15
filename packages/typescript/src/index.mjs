@@ -32,6 +32,11 @@ function collectExistingRuleOptions(ruleName, configs) {
   });
 }
 
+const baseJsdocRuleOptions = collectExistingRuleOptions(
+  'jsdoc/require-jsdoc',
+  base,
+);
+
 const baseNoRestrictedSyntaxOptions = collectExistingRuleOptions(
   'no-restricted-syntax',
   base,
@@ -255,6 +260,33 @@ const config = createConfig({
 
     // Use TypeScript types rather than JSDoc types.
     'jsdoc/no-types': 'error',
+
+    // Extend rule defined in base config to require JSDoc for
+    // TypeScript-specific symbols.
+    'jsdoc/require-jsdoc': [
+      'error',
+      {
+        require: baseJsdocRuleOptions[0].require,
+        contexts: [
+          ...baseJsdocRuleOptions[0].contexts,
+          // Type interfaces that are not defined within `declare` blocks,
+          // even if they are exported
+          ':not(TSModuleBlock, TSModuleBlock > ExportNamedDeclaration) > TSInterfaceDeclaration',
+          // Type aliases that are not defined within `declare` blocks,
+          // even if they are exported
+          ':not(TSModuleBlock, TSModuleBlock > ExportNamedDeclaration) > TSTypeAliasDeclaration',
+          // Enums that are not defined within `declare` blocks,
+          // even if they are exported
+          ':not(TSModuleBlock, TSModuleBlock > ExportNamedDeclaration) > TSEnumDeclaration',
+          // Properties that are part of a named interface, not inline within a
+          // return type
+          'TSInterfaceDeclaration TSPropertySignature',
+          // Properties that are part of a named type alias, not inline within a
+          // return type
+          'TSTypeAliasDeclaration TSPropertySignature',
+        ],
+      },
+    ],
 
     // These all conflict with `jsdoc/no-types`.
     'jsdoc/require-param-type': 'off',

@@ -190,7 +190,25 @@
   "jsdoc/require-example": "off",
   "jsdoc/require-file-overview": "off",
   "jsdoc/require-hyphen-before-param-description": "off",
-  "jsdoc/require-jsdoc": "error",
+  "jsdoc/require-jsdoc": [
+    "error",
+    {
+      "require": {
+        "ClassDeclaration": true,
+        "FunctionDeclaration": true,
+        "MethodDefinition": true
+      },
+      "contexts": [
+        ":not(Property, NewExpression, CallExpression) > ArrowFunctionExpression",
+        ":not(Property, NewExpression, CallExpression) > FunctionExpression",
+        ":not(TSModuleBlock, TSModuleBlock > ExportNamedDeclaration) > TSInterfaceDeclaration",
+        ":not(TSModuleBlock, TSModuleBlock > ExportNamedDeclaration) > TSTypeAliasDeclaration",
+        ":not(TSModuleBlock, TSModuleBlock > ExportNamedDeclaration) > TSEnumDeclaration",
+        "TSInterfaceDeclaration TSPropertySignature",
+        "TSTypeAliasDeclaration TSPropertySignature"
+      ]
+    }
+  ],
   "jsdoc/require-param": "error",
   "jsdoc/require-param-description": "error",
   "jsdoc/require-param-name": "error",
