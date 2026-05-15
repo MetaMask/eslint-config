@@ -37,6 +37,11 @@ const baseJsdocRuleOptions = collectExistingRuleOptions(
   base,
 );
 
+const baseNoRestrictedSyntaxOptions = collectExistingRuleOptions(
+  'no-restricted-syntax',
+  base,
+);
+
 const config = createConfig({
   name: '@metamask/eslint-config-typescript',
 
@@ -292,6 +297,7 @@ const config = createConfig({
     // Prefer hash names over TypeScript's `private` modifier.
     'no-restricted-syntax': [
       'error',
+      ...baseNoRestrictedSyntaxOptions,
       {
         selector:
           "PropertyDefinition[accessibility='private'], MethodDefinition[accessibility='private'], TSParameterProperty[accessibility='private']",

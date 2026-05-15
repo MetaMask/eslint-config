@@ -21,6 +21,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - TypeScript type alias declarations (except those defined in a `declare` block)
     - TypeScript property signatures withiin interfaces or type aliases
 
+### Fixed
+
+- **BREAKING:** Restrict usage of `with`, `in`, and sequence expressions, which should have been inherited from the base config but were mistakenly overridden ([#436](https://github.com/MetaMask/eslint-config/pull/436))
+
 ## [15.0.0]
 
 ### Changed
