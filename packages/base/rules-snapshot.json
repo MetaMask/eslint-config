@@ -186,7 +186,8 @@
       },
       "contexts": [
         ":not(Property, NewExpression, CallExpression) > ArrowFunctionExpression",
-        ":not(Property, NewExpression, CallExpression) > FunctionExpression"
+        ":not(Property, NewExpression, CallExpression) > FunctionExpression",
+        "ExportNamedDeclaration:has(> VariableDeclaration)"
       ]
     }
   ],

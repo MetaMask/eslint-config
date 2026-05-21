@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- **BREAKING:** Update `jsdoc/require-jsdoc` to require JSDoc for exported variable declarations ([#437](https://github.com/MetaMask/eslint-config/pull/437))
 - Update `jsdoc/require-jsdoc` to loosen requirements for various kinds of symbols ([#433](https://github.com/MetaMask/eslint-config/pull/433))
 
   - JSDoc is no longer required for arrow functions or function expressions which are values of object properties:
