@@ -1302,7 +1302,7 @@ __metadata:
   peerDependencies:
     "@metamask/eslint-config": "workspace:^"
     eslint: ^9.11.0
-    eslint-import-resolver-typescript: ^4.4.0
+    eslint-import-resolver-typescript: ^4.0.0
     eslint-plugin-import-x: ^4.3.0
     eslint-plugin-jsdoc: ^50.2.4
     typescript: ">=4.8.4 <6"
