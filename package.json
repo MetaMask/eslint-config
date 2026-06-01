@@ -58,6 +58,7 @@
   "lavamoat": {
     "allowScripts": {
       "@lavamoat/preinstall-always-fail": false,
+      "@metamask/eslint-config-typescript>eslint-import-resolver-typescript>unrs-resolver": false,
       "vite>esbuild": true
     }
   }

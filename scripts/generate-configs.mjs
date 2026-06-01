@@ -2,7 +2,14 @@
 
 import fs from 'fs/promises';
 import globals from 'globals';
-import { resolve } from 'path';
+import { dirname, resolve } from 'path';
+import { fileURLToPath } from 'url';
+
+// `import.meta.dirname` was only backported to Node 20.11/21.2/22.16, but the
+// repo's engines field allows Node `^18.18 || >=20` (which includes 20.0–20.10
+// where it doesn't exist). Compute the directory from `import.meta.url` so the
+// script works on every supported version.
+const scriptDir = dirname(fileURLToPath(import.meta.url));
 
 /**
  * @typedef {keyof import('globals')} Globals
@@ -88,7 +95,7 @@ const writeRules = async () => {
     const rules = generateRules({ environments, name });
 
     await fs.writeFile(
-      resolve(import.meta.dirname, location),
+      resolve(scriptDir, location),
       `${JSON.stringify(rules, null, 2)}\n`,
     );
   }

@@ -1,9 +1,12 @@
 import { ESLint } from 'eslint';
 import globals from 'globals';
-import { resolve } from 'path';
+import { dirname, resolve } from 'path';
+import { fileURLToPath } from 'url';
 import { describe, it, expect } from 'vitest';
 
 import config from './index.mjs';
+
+const testDir = dirname(fileURLToPath(import.meta.url));
 
 describe('index', () => {
   it('is a valid ESLint config', async () => {
@@ -15,7 +18,7 @@ describe('index', () => {
             ...globals.node,
           },
           parserOptions: {
-            tsconfigRootDir: resolve(import.meta.dirname, '..'),
+            tsconfigRootDir: resolve(testDir, '..'),
           },
         },
       },
@@ -24,9 +27,7 @@ describe('index', () => {
     // In order to test rules that require type information, we need to actually
     // compile the file with TypeScript, so rather than using `api.lintText()`,
     // we use `api.lintFiles()` and pass in a file that we know will pass.
-    const result = await api.lintFiles(
-      resolve(import.meta.dirname, '__test__/dummy.ts'),
-    );
+    const result = await api.lintFiles(resolve(testDir, '__test__/dummy.ts'));
 
     expect(result[0].messages).toStrictEqual([]);
     expect(result[0].warningCount).toBe(0);
