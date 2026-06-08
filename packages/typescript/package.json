@@ -50,7 +50,7 @@
     "prettier": "^3.3.3",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.47.0",
-    "vitest": "^2.1.9"
+    "vitest": "^4.1.8"
   },
   "peerDependencies": {
     "@metamask/eslint-config": "workspace:^",

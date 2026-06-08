@@ -47,7 +47,7 @@
     "eslint-plugin-prettier": "^5.2.1",
     "globals": "^15.9.0",
     "prettier": "^3.3.3",
-    "vitest": "^2.1.9"
+    "vitest": "^4.1.8"
   },
   "peerDependencies": {
     "@metamask/eslint-config": "workspace:^",
