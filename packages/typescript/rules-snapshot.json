@@ -190,7 +190,26 @@
   "jsdoc/require-example": "off",
   "jsdoc/require-file-overview": "off",
   "jsdoc/require-hyphen-before-param-description": "off",
-  "jsdoc/require-jsdoc": "error",
+  "jsdoc/require-jsdoc": [
+    "error",
+    {
+      "require": {
+        "ClassDeclaration": true,
+        "FunctionDeclaration": true,
+        "MethodDefinition": true
+      },
+      "contexts": [
+        ":not(Property, NewExpression, CallExpression) > ArrowFunctionExpression",
+        ":not(Property, NewExpression, CallExpression) > FunctionExpression",
+        "ExportNamedDeclaration:has(> VariableDeclaration)",
+        ":not(TSModuleBlock, TSModuleBlock > ExportNamedDeclaration) > TSInterfaceDeclaration",
+        ":not(TSModuleBlock, TSModuleBlock > ExportNamedDeclaration) > TSTypeAliasDeclaration",
+        ":not(TSModuleBlock, TSModuleBlock > ExportNamedDeclaration) > TSEnumDeclaration",
+        "TSInterfaceDeclaration TSPropertySignature",
+        "TSTypeAliasDeclaration TSPropertySignature"
+      ]
+    }
+  ],
   "jsdoc/require-param": "error",
   "jsdoc/require-param-description": "error",
   "jsdoc/require-param-name": "error",
@@ -226,6 +245,18 @@
   "no-redeclare": "off",
   "no-restricted-syntax": [
     "error",
+    {
+      "selector": "WithStatement",
+      "message": "With statements are not allowed"
+    },
+    {
+      "selector": "BinaryExpression[operator='in']",
+      "message": "The \"in\" operator is not allowed"
+    },
+    {
+      "selector": "SequenceExpression",
+      "message": "Sequence expressions are not allowed"
+    },
     {
       "selector": "PropertyDefinition[accessibility='private'], MethodDefinition[accessibility='private'], TSParameterProperty[accessibility='private']",
       "message": "Use a hash name instead."

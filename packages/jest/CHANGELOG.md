@@ -26,6 +26,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - `jest/no-disabled-tests`
 - Widen `typescript` peer dependency to allow all 5.x versions ([#422](https://github.com/MetaMask/eslint-config/pull/422))
 
+## [14.1.1] [BACKPORT]
+
+### Fixed
+
+- Allow import from CommonJS ([#453](https://github.com/MetaMask/eslint-config/pull/453))
+
 ## [14.1.0]
 
 ### Changed
@@ -136,7 +142,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-jest@15.0.1...HEAD
 [15.0.1]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-jest@15.0.0...@metamask/eslint-config-jest@15.0.1
-[15.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-jest@14.1.0...@metamask/eslint-config-jest@15.0.0
+[15.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-jest@14.1.1...@metamask/eslint-config-jest@15.0.0
+[14.1.1]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-jest@14.1.0...@metamask/eslint-config-jest@14.1.1
 [14.1.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-jest@14.0.0...@metamask/eslint-config-jest@14.1.0
 [14.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-jest@13.0.0...@metamask/eslint-config-jest@14.0.0
 [13.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-jest@12.1.0...@metamask/eslint-config-jest@13.0.0

@@ -7,6 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- **BREAKING:** Update `jsdoc/require-jsdoc` to require documentation for more things ([#394](https://github.com/MetaMask/eslint-config/pull/394), [#437](https://github.com/MetaMask/eslint-config/pull/437))
+  - New things that now require documentation are:
+    - Arrow functions (except those which are arguments to functions/methods or values of object properties)
+    - Class declarations
+    - Function declarations
+    - Function expressions (except those which are arguments to functions/methods or values of object properties)
+    - Method definitions
+    - TypeScript enum declarations (except those defined in a `declare` block)
+    - TypeScript interface declarations (except those defined in a `declare` block)
+    - TypeScript type alias declarations (except those defined in a `declare` block)
+    - TypeScript property signatures withiin interfaces or type aliases
+    - Exported variable declarations
+
+### Fixed
+
+- **BREAKING:** Restrict usage of `with`, `in`, and sequence expressions, which should have been inherited from the base config but were mistakenly overridden ([#436](https://github.com/MetaMask/eslint-config/pull/436))
+
 ## [15.0.1] [BACKPORT]
 
 ### Fixed
@@ -39,6 +58,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Prevent non-type imports from being grouped under a type import upon auto-fix ([#427](https://github.com/MetaMask/eslint-config/pull/427))
   - This was caused by `import-x/no-duplicates`, which is now disabled.
 - Fix false positive lint error on TSDoc blocks with indended sections (e.g. bullet lists) ([#430](https://github.com/MetaMask/eslint-config/pull/430))
+
+## [14.1.1] [BACKPORT]
+
+### Fixed
+
+- Allow import from CommonJS ([#453](https://github.com/MetaMask/eslint-config/pull/453))
 
 ## [14.1.0]
 
@@ -219,7 +244,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@15.0.1...HEAD
 [15.0.1]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@15.0.0...@metamask/eslint-config-typescript@15.0.1
-[15.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@14.1.0...@metamask/eslint-config-typescript@15.0.0
+[15.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@14.1.1...@metamask/eslint-config-typescript@15.0.0
+[14.1.1]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@14.1.0...@metamask/eslint-config-typescript@14.1.1
 [14.1.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@14.0.0...@metamask/eslint-config-typescript@14.1.0
 [14.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@13.0.0...@metamask/eslint-config-typescript@14.0.0
 [13.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@12.1.0...@metamask/eslint-config-typescript@13.0.0

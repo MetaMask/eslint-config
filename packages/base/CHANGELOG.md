@@ -7,6 +7,43 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- **BREAKING:** Update `jsdoc/require-jsdoc` to require JSDoc for exported variable declarations ([#437](https://github.com/MetaMask/eslint-config/pull/437))
+- Update `jsdoc/require-jsdoc` to loosen requirements for various kinds of symbols ([#433](https://github.com/MetaMask/eslint-config/pull/433))
+
+  - JSDoc is no longer required for arrow functions or function expressions which are values of object properties:
+
+    ```typescript
+    const foo = {
+      // This arrow function is no longer required to be documented
+      bar: () => {
+        // ...
+      },
+    };
+
+    const foo = {
+      // This function expression is no longer required to be documented
+      bar: function () {
+        // ...
+      },
+    };
+    ```
+
+  - JSDoc is no longer required for arrow functions or function expressions which are arguments to functions or methods:
+
+    ```typescript
+    // This arrow function is no longer required to be documented
+    foo(() => {
+      // ...
+    });
+
+    // This function expression is no longer required to be documented
+    foo(function () {
+      // ...
+    }):
+    ```
+
 ## [15.0.1] [BACKPORT]
 
 ### Fixed
@@ -21,12 +58,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - New things that now require documentation are:
     - Arrow functions
     - Class declarations
-    - TypeScript enum declarations
+    - Function declarations
     - Function expressions
-    - TypeScript interface declarations
     - Method definitions
-    - TypeScript type alias declarations
-    - TypeScript property signatures
 - **BREAKING:** Convert various rules from `warn` to `error` ([#424](https://github.com/MetaMask/eslint-config/pull/424))
   - The rules impacted are:
     - `promise/no-callback-in-promise`
@@ -34,6 +68,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - `promise/no-promise-in-callback`
     - `promise/no-return-in-finally`
     - `promise/valid-params`
+
+## [14.1.1] [BACKPORT]
+
+### Fixed
+
+- Allow import from CommonJS ([#453](https://github.com/MetaMask/eslint-config/pull/453))
 
 ## [14.1.0]
 
@@ -300,7 +340,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@15.0.1...HEAD
 [15.0.1]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@15.0.0...@metamask/eslint-config@15.0.1
-[15.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@14.1.0...@metamask/eslint-config@15.0.0
+[15.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@14.1.1...@metamask/eslint-config@15.0.0
+[14.1.1]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@14.1.0...@metamask/eslint-config@14.1.1
 [14.1.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@14.0.0...@metamask/eslint-config@14.1.0
 [14.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@13.0.0...@metamask/eslint-config@14.0.0
 [13.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config@12.2.0...@metamask/eslint-config@13.0.0
