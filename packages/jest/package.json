@@ -14,10 +14,8 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": {
-        "types": "./src/index.d.mts",
-        "default": "./src/index.mjs"
-      }
+      "types": "./src/index.d.mts",
+      "default": "./src/index.mjs"
     }
   },
   "main": "./src/index.mjs",
