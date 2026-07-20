@@ -35,7 +35,6 @@ describe('index', () => {
           },
           parserOptions: {
             tsconfigRootDir: resolve(import.meta.dirname, '..'),
-            project: 'tsconfig.json',
           },
         },
       },

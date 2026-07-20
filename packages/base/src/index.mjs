@@ -393,7 +393,29 @@ const rules = createConfig({
       'always',
       { tags: { returns: 'never', template: 'always', throws: 'never' } },
     ],
-    'jsdoc/require-jsdoc': 'error',
+    'jsdoc/require-jsdoc': [
+      'error',
+      {
+        require: {
+          // Classes
+          ClassDeclaration: true,
+          // Function declarations
+          FunctionDeclaration: true,
+          // Methods
+          MethodDefinition: true,
+        },
+        contexts: [
+          // Arrow functions that are not contained within plain objects or
+          // are not arguments to functions or methods
+          ':not(Property, NewExpression, CallExpression) > ArrowFunctionExpression',
+          // Function expressions that are not contained within plain objects
+          // or are not arguments to functions or methods
+          ':not(Property, NewExpression, CallExpression) > FunctionExpression',
+          // Exported variables
+          'ExportNamedDeclaration:has(> VariableDeclaration)',
+        ],
+      },
+    ],
     'jsdoc/require-param-name': 'error',
     'jsdoc/require-param': ['error', { unnamedRootBase: ['options'] }],
     'jsdoc/require-param-description': 'error',
@@ -424,6 +446,10 @@ const rules = createConfig({
         allowFinally: true,
       },
     ],
+    'promise/no-callback-in-promise': 'error',
+    'promise/no-nesting': 'error',
+    'promise/no-promise-in-callback': 'error',
+    'promise/no-return-in-finally': 'error',
     'promise/param-names': [
       'error',
       {
@@ -431,6 +457,7 @@ const rules = createConfig({
         rejectPattern: '^_?reject',
       },
     ],
+    'promise/valid-params': 'error',
   },
 });
 

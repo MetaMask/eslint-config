@@ -5,7 +5,6 @@
   "@typescript-eslint/consistent-type-assertions": "error",
   "@typescript-eslint/consistent-type-definitions": ["error", "type"],
   "@typescript-eslint/consistent-type-exports": "error",
-  "@typescript-eslint/consistent-type-imports": "error",
   "@typescript-eslint/default-param-last": "error",
   "@typescript-eslint/explicit-function-return-type": "error",
   "@typescript-eslint/naming-convention": [
@@ -30,10 +29,7 @@
       "selector": "objectLiteralMethod",
       "format": ["camelCase", "PascalCase", "UPPER_CASE"]
     },
-    {
-      "selector": "objectLiteralProperty",
-      "format": ["camelCase", "PascalCase", "UPPER_CASE"]
-    },
+    { "selector": "objectLiteralProperty", "format": null },
     { "selector": "typeLike", "format": ["PascalCase"] },
     {
       "selector": "typeParameter",
@@ -92,7 +88,7 @@
   "@typescript-eslint/no-this-alias": "error",
   "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
   "@typescript-eslint/no-unnecessary-qualifier": "error",
-  "@typescript-eslint/no-unnecessary-type-arguments": "error",
+  "@typescript-eslint/no-unnecessary-type-arguments": "off",
   "@typescript-eslint/no-unnecessary-type-assertion": "error",
   "@typescript-eslint/no-unnecessary-type-constraint": "error",
   "@typescript-eslint/no-unsafe-argument": "off",
@@ -154,12 +150,14 @@
   "constructor-super": "off",
   "default-param-last": "off",
   "getter-return": "off",
+  "import-x/consistent-type-specifier-style": ["error", "prefer-top-level"],
   "import-x/named": "off",
+  "import-x/no-duplicates": "off",
   "import-x/no-unresolved": "off",
   "jsdoc/check-access": "error",
   "jsdoc/check-alignment": "error",
   "jsdoc/check-examples": "off",
-  "jsdoc/check-indentation": "error",
+  "jsdoc/check-indentation": "off",
   "jsdoc/check-line-alignment": "off",
   "jsdoc/check-param-names": "error",
   "jsdoc/check-property-names": "error",
@@ -192,7 +190,26 @@
   "jsdoc/require-example": "off",
   "jsdoc/require-file-overview": "off",
   "jsdoc/require-hyphen-before-param-description": "off",
-  "jsdoc/require-jsdoc": "error",
+  "jsdoc/require-jsdoc": [
+    "error",
+    {
+      "require": {
+        "ClassDeclaration": true,
+        "FunctionDeclaration": true,
+        "MethodDefinition": true
+      },
+      "contexts": [
+        ":not(Property, NewExpression, CallExpression) > ArrowFunctionExpression",
+        ":not(Property, NewExpression, CallExpression) > FunctionExpression",
+        "ExportNamedDeclaration:has(> VariableDeclaration)",
+        ":not(TSModuleBlock, TSModuleBlock > ExportNamedDeclaration) > TSInterfaceDeclaration",
+        ":not(TSModuleBlock, TSModuleBlock > ExportNamedDeclaration) > TSTypeAliasDeclaration",
+        ":not(TSModuleBlock, TSModuleBlock > ExportNamedDeclaration) > TSEnumDeclaration",
+        "TSInterfaceDeclaration TSPropertySignature",
+        "TSTypeAliasDeclaration TSPropertySignature"
+      ]
+    }
+  ],
   "jsdoc/require-param": "error",
   "jsdoc/require-param-description": "error",
   "jsdoc/require-param-name": "error",
@@ -229,6 +246,18 @@
   "no-restricted-syntax": [
     "error",
     {
+      "selector": "WithStatement",
+      "message": "With statements are not allowed"
+    },
+    {
+      "selector": "BinaryExpression[operator='in']",
+      "message": "The \"in\" operator is not allowed"
+    },
+    {
+      "selector": "SequenceExpression",
+      "message": "Sequence expressions are not allowed"
+    },
+    {
       "selector": "PropertyDefinition[accessibility='private'], MethodDefinition[accessibility='private'], TSParameterProperty[accessibility='private']",
       "message": "Use a hash name instead."
     }
@@ -245,9 +274,11 @@
   "no-use-before-define": "off",
   "no-useless-constructor": "off",
   "no-var": "error",
+  "no-with": "off",
   "prefer-const": "error",
   "prefer-promise-reject-errors": "off",
   "prefer-rest-params": "error",
   "prefer-spread": "error",
+  "promise/valid-params": "off",
   "require-await": "off"
 }

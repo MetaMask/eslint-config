@@ -176,7 +176,21 @@
     "always",
     { "tags": { "returns": "never", "template": "always", "throws": "never" } }
   ],
-  "jsdoc/require-jsdoc": "error",
+  "jsdoc/require-jsdoc": [
+    "error",
+    {
+      "require": {
+        "ClassDeclaration": true,
+        "FunctionDeclaration": true,
+        "MethodDefinition": true
+      },
+      "contexts": [
+        ":not(Property, NewExpression, CallExpression) > ArrowFunctionExpression",
+        ":not(Property, NewExpression, CallExpression) > FunctionExpression",
+        "ExportNamedDeclaration:has(> VariableDeclaration)"
+      ]
+    }
+  ],
   "jsdoc/require-param": ["error", { "unnamedRootBase": ["options"] }],
   "jsdoc/require-param-description": "error",
   "jsdoc/require-param-name": "error",
@@ -3249,18 +3263,18 @@
   "promise/always-return": "error",
   "promise/avoid-new": "off",
   "promise/catch-or-return": ["error", { "allowFinally": true }],
-  "promise/no-callback-in-promise": "warn",
+  "promise/no-callback-in-promise": "error",
   "promise/no-native": "off",
-  "promise/no-nesting": "warn",
+  "promise/no-nesting": "error",
   "promise/no-new-statics": "error",
-  "promise/no-promise-in-callback": "warn",
-  "promise/no-return-in-finally": "warn",
+  "promise/no-promise-in-callback": "error",
+  "promise/no-return-in-finally": "error",
   "promise/no-return-wrap": "error",
   "promise/param-names": [
     "error",
     { "resolvePattern": "^_?resolve", "rejectPattern": "^_?reject" }
   ],
-  "promise/valid-params": "warn",
+  "promise/valid-params": "error",
   "quote-props": "off",
   "quotes": "off",
   "radix": "error",

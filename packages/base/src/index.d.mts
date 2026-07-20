@@ -11,6 +11,10 @@ declare module '@metamask/eslint-config' {
    * can only be used with the {@link createConfig} function.
    */
   type ConfigWithExtends = Config & {
+    /**
+     * The configuration(s) to extend. This can be a single configuration, an
+     * array of configurations, or an array of arrays of configurations.
+     */
     extends?: Config | Config[] | Config[][];
   };
 
