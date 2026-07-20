@@ -54,6 +54,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - This was caused by `import-x/no-duplicates`, which is now disabled.
 - Fix false positive lint error on TSDoc blocks with indended sections (e.g. bullet lists) ([#430](https://github.com/MetaMask/eslint-config/pull/430))
 
+## [14.1.1] [BACKPORT]
+
+### Fixed
+
+- Allow import from CommonJS ([#453](https://github.com/MetaMask/eslint-config/pull/453))
+
 ## [14.1.0]
 
 ### Added
@@ -232,7 +238,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update `eslint` and other ESLint peer dependencies ([#151](https://github.com/MetaMask/eslint-config/pull/151))
 
 [Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@15.0.0...HEAD
-[15.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@14.1.0...@metamask/eslint-config-typescript@15.0.0
+[15.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@14.1.1...@metamask/eslint-config-typescript@15.0.0
+[14.1.1]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@14.1.0...@metamask/eslint-config-typescript@14.1.1
 [14.1.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@14.0.0...@metamask/eslint-config-typescript@14.1.0
 [14.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@13.0.0...@metamask/eslint-config-typescript@14.0.0
 [13.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-typescript@12.1.0...@metamask/eslint-config-typescript@13.0.0
