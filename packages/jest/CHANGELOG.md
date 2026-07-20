@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [15.0.1] [BACKPORT]
+
 ### Fixed
 
 - Allow import from CommonJS ([#453](https://github.com/MetaMask/eslint-config/pull/453))
@@ -132,7 +134,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - To continue extending this config, install this package and update your `.eslintrc.js` `extends` array to include `@metamask/eslint-config-jest` instead of `@metamask/eslint-config/jest`.
 - Update `eslint` and other ESLint peer dependencies ([#151](https://github.com/MetaMask/eslint-config/pull/151))
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-jest@15.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-jest@15.0.1...HEAD
+[15.0.1]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-jest@15.0.0...@metamask/eslint-config-jest@15.0.1
 [15.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-jest@14.1.0...@metamask/eslint-config-jest@15.0.0
 [14.1.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-jest@14.0.0...@metamask/eslint-config-jest@14.1.0
 [14.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-jest@13.0.0...@metamask/eslint-config-jest@14.0.0
