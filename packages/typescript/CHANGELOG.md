@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - **BREAKING:** Restrict usage of `with`, `in`, and sequence expressions, which should have been inherited from the base config but were mistakenly overridden ([#436](https://github.com/MetaMask/eslint-config/pull/436))
+- Allow import from CommonJS ([#453](https://github.com/MetaMask/eslint-config/pull/453))
 
 ## [15.0.0]
 
