@@ -44,6 +44,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     }):
     ```
 
+### Fixed
+
+- Allow import from CommonJS ([#453](https://github.com/MetaMask/eslint-config/pull/453))
+
 ## [15.0.0]
 
 ### Changed
