@@ -1,6 +1,6 @@
 {
   "name": "@metamask/eslint-config-jest",
-  "version": "15.0.0",
+  "version": "15.0.1",
   "description": "Shareable MetaMask ESLint config for Jest.",
   "homepage": "https://github.com/MetaMask/eslint-config#readme",
   "bugs": {
@@ -14,10 +14,8 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": {
-        "types": "./src/index.d.mts",
-        "default": "./src/index.mjs"
-      }
+      "types": "./src/index.d.mts",
+      "default": "./src/index.mjs"
     }
   },
   "main": "./src/index.mjs",
