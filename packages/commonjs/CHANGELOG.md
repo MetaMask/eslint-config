@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [15.0.1] [BACKPORT]
+
 ### Fixed
 
 - Allow import from CommonJS ([#453](https://github.com/MetaMask/eslint-config/pull/453))
@@ -65,7 +67,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release of this package ([#267](https://github.com/MetaMask/eslint-config/pull/267))
 
-[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-commonjs@15.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-commonjs@15.0.1...HEAD
+[15.0.1]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-commonjs@15.0.0...@metamask/eslint-config-commonjs@15.0.1
 [15.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-commonjs@14.0.1...@metamask/eslint-config-commonjs@15.0.0
 [14.0.1]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-commonjs@14.0.0...@metamask/eslint-config-commonjs@14.0.1
 [14.0.0]: https://github.com/MetaMask/eslint-config/compare/@metamask/eslint-config-commonjs@13.0.0...@metamask/eslint-config-commonjs@14.0.0
