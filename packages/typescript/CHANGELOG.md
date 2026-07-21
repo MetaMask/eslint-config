@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- **BREAKING:** Bump peer dependency on `eslint-import-resolver-typescript` from `^3.6.3` to `^4.0.0` ([#444](https://github.com/MetaMask/eslint-config/pull/444))
+  - The `4.x` line tightens path-resolution behaviour for TypeScript projects; consumers should reinstall and run `yarn lint` to surface any unresolved imports.
 - **BREAKING:** Update `jsdoc/require-jsdoc` to require documentation for more things ([#394](https://github.com/MetaMask/eslint-config/pull/394), [#437](https://github.com/MetaMask/eslint-config/pull/437))
   - New things that now require documentation are:
     - Arrow functions (except those which are arguments to functions/methods or values of object properties)
